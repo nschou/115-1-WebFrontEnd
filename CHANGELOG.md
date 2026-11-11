@@ -16,6 +16,7 @@
 - 建立 GitHub repository／Pages 部署基礎：根目錄入口、`.nojekyll`、`.gitignore`、`.github/workflows/deploy-pages.yml` 與 repository README；網站以完整 repository 為靜態根目錄。
 - 補上 GitHub Pages 第一次啟用的操作：repository Settings → Pages → Source 選擇 GitHub Actions。
 - 補充 Pages API 回傳 `Get Pages site failed` 時的處理：先以 `main`／`/(root)` 暫時啟用 branch publishing，再切回 GitHub Actions；不新增 Jekyll 或 Static HTML 的重複 workflow。
+- GitHub Pages 已可使用；教學網站入口為 `https://nschou.github.io/115-1-WebFrontEnd/00_%E6%95%99%E6%A1%88%E7%B6%B2%E7%AB%99/index.html`。
 ### 驗證
 
 - 已檢查現行主線引用，舊檔名改為 `00_方法論主線與檢查點.md`。
