@@ -41,6 +41,8 @@ https://nschou.github.io/115-1-WebFrontEnd/
 
 第一次啟用 GitHub Pages 時，請在 repository 的 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。設定完成後，`.github/workflows/deploy-pages.yml` 會在 `main` 推送時自動驗證並部署。
 
+若 workflow 在 `actions/configure-pages@v5` 顯示 `Get Pages site failed` 或 `Not Found`，先在 **Settings → Pages** 暫時選 **Deploy from a branch**，指定 `main` 與 `/(root)` 並按 **Save**；Pages site 建立後，再改回 **GitHub Actions**。不要按 Jekyll 或 Static HTML 的 `Configure`，也不要保留第二個部署 workflow；最後重新執行 `Deploy course website`。
+
 ## Prompt 使用規則
 
 1. 先讀本階段的輸入文件與完成條件。

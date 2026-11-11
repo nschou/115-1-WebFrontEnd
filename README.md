@@ -36,6 +36,10 @@ npx serve .
 
 Workflow 會先驗證網站 JavaScript 與 19 個學習節點的教材連結，再把整個 repository 部署為靜態網站。根目錄入口會導向 `00_教案網站/index.html`。
 
+### Pages 顯示 `Get Pages site failed`
+
+若 workflow 在 `actions/configure-pages@v5` 顯示 `Not Found`，表示 repository 的 Pages site 尚未真正建立；這不是教材網站或 Markdown reader 的錯誤。先到 **Settings → Pages**，暫時將 **Source** 設為 **Deploy from a branch**，選 `main` 與 `/(root)`，按出現的 **Save**；設定建立後，再把 **Source** 改回 **GitHub Actions**。不需要按 Jekyll 或 Static HTML 的 `Configure`，也不要建立第二個部署 workflow。最後到 **Actions → Deploy course website** 重新執行工作。
+
 ## 正式來源規則
 
 網站是教材導覽層，不取代原始文件。正式來源仍是 W1–W7 文件、`00_學生發布版/`、`98_示範案例/` 與 Prototype。修改教材後，應重新執行相應檢查與 GitHub Pages workflow。

@@ -15,7 +15,7 @@
 - 新增 `00_教案網站/reader.html` 與閱讀器資產，使用固定版本的 marked、DOMPurify、Mermaid；教材連結可進入美化閱讀頁，並保留原始 Markdown 連結與檔案白名單。
 - 建立 GitHub repository／Pages 部署基礎：根目錄入口、`.nojekyll`、`.gitignore`、`.github/workflows/deploy-pages.yml` 與 repository README；網站以完整 repository 為靜態根目錄。
 - 補上 GitHub Pages 第一次啟用的操作：repository Settings → Pages → Source 選擇 GitHub Actions。
-
+- 補充 Pages API 回傳 `Get Pages site failed` 時的處理：先以 `main`／`/(root)` 暫時啟用 branch publishing，再切回 GitHub Actions；不新增 Jekyll 或 Static HTML 的重複 workflow。
 ### 驗證
 
 - 已檢查現行主線引用，舊檔名改為 `00_方法論主線與檢查點.md`。
