@@ -38,7 +38,7 @@ Workflow 會先驗證網站 JavaScript 與 19 個學習節點的教材連結，�
 
 ### Pages 顯示 `Get Pages site failed`
 
-若 workflow 在 `actions/configure-pages@v5` 顯示 `Not Found`，表示 repository 的 Pages site 尚未真正建立；這不是教材網站或 Markdown reader 的錯誤。先到 **Settings → Pages**，暫時將 **Source** 設為 **Deploy from a branch**，選 `main` 與 `/(root)`，按出現的 **Save**；設定建立後，再把 **Source** 改回 **GitHub Actions**。不需要按 Jekyll 或 Static HTML 的 `Configure`，也不要建立第二個部署 workflow。最後到 **Actions → Deploy course website** 重新執行工作。
+若 workflow 在 `actions/configure-pages@v5` 顯示 `Not Found`，表示 repository 的 Pages site 尚未真正建立；這不是教材網站或 Markdown reader 的錯誤。先到 **Settings → Pages**，暫時將 **Source** 設為 **Deploy from a branch**，選 `main` 與 `/(root)`。若 **Save** 是灰色，先重新整理頁面；若目前已經是 `main`／`/(root)`，灰色通常表示沒有新的設定變更。請確認登入帳號具有 repository 管理權限；本 repository 的擁有者是 `nschou`。設定建立後，再把 **Source** 改回 **GitHub Actions**。不需要按 Jekyll 或 Static HTML 的 `Configure`，也不要建立第二個部署 workflow。最後到 **Actions → Deploy course website** 重新執行工作。
 
 ## 正式來源規則
 
