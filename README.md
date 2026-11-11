@@ -14,6 +14,7 @@
 - 19 個學習節點（W1 工作區＋18 檔主線）
 - 每個階段的 AI 參考 Prompt
 - Markdown、表格、程式碼與 Mermaid 閱讀器
+- 三張可互動的全局架構圖：課程產生流程、Prototype 前端架構、示範服務系統架構
 - Prototype、validation 與完整性檢查工具連結
 
 ## 本地啟動

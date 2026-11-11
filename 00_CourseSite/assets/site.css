@@ -85,6 +85,18 @@ h2 { margin: 5px 0 12px; font-size: clamp(24px, 4vw, 42px); line-height: 1.2; le
 .week-card { min-height: 91px; padding: 12px; border-radius: 11px; background: #f7f9fa; border: 1px solid var(--line); }
 .week-card strong { display: block; color: var(--accent-strong); font-size: 12px; }
 .week-card span { display: block; margin-top: 7px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.architecture { padding: clamp(20px, 3vw, 32px); }
+.architecture-intro { max-width: 760px; margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+.diagram-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.diagram-card { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fbfdfd; }
+.diagram-card-head { display: flex; gap: 10px; align-items: flex-start; min-height: 82px; padding: 14px; border-bottom: 1px solid var(--line); }
+.diagram-step { display: grid; place-items: center; flex: 0 0 30px; height: 30px; border-radius: 9px; color: white; background: var(--accent); font-size: 11px; font-weight: 800; }
+.diagram-card h3 { margin: 0; color: var(--ink); font-size: 14px; line-height: 1.4; }
+.diagram-card p { margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.diagram-card iframe { display: block; width: 100%; height: 390px; border: 0; background: #111820; }
+.diagram-link { display: block; padding: 10px 14px; border-top: 1px solid var(--line); color: var(--accent-strong); background: white; font-size: 11px; text-decoration: none; }
+.diagram-link:hover { background: var(--accent-soft); }
+.architecture-note { margin: 16px 0 0; padding: 12px 14px; border-left: 3px solid var(--accent); color: var(--muted); background: #f2fbf9; font-size: 12px; line-height: 1.7; }
 
 .stage-header { display: flex; justify-content: space-between; gap: 20px; align-items: start; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
 .stage-kicker { color: var(--accent); font-size: 12px; font-weight: 800; }
@@ -122,6 +134,7 @@ h2 { margin: 5px 0 12px; font-size: clamp(24px, 4vw, 42px); line-height: 1.2; le
   .stage-link { min-width: 105px; }
   .content { padding: 20px; }
   .map-strip { grid-template-columns: repeat(4, 1fr); }
+  .diagram-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 650px) {
   .topbar { align-items: stretch; flex-direction: column; gap: 9px; }

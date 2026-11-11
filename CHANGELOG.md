@@ -17,6 +17,7 @@
 - 補上 GitHub Pages 第一次啟用的操作：repository Settings → Pages → Source 選擇 GitHub Actions。
 - 補充 Pages API 回傳 `Get Pages site failed` 時的處理：先以 `main`／`/(root)` 暫時啟用 branch publishing，再切回 GitHub Actions；不新增 Jekyll 或 Static HTML 的重複 workflow。
 - GitHub Pages 已可使用；教學網站入口為 `https://nschou.github.io/115-1-WebFrontEnd/00_CourseSite/index.html`。
+- 將 `.archify/` 中三張互動架構圖整合到 `00_CourseSite` 首頁，依序呈現 `01_market → 18_spec` 流程、Prototype 前端架構與示範服務系統架構；首頁以 iframe 嵌入，並保留另開完整互動圖連結。
 ### 驗證
 
 - 已檢查現行主線引用，舊檔名改為 `00_方法論主線與檢查點.md`。

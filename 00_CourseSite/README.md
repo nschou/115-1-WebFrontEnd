@@ -11,6 +11,16 @@
 - 閱讀器保留原始檔連結，並以 `guide-data.js` 的文件清單作為白名單
 - 既有學生教材、示範案例、Prototype 與完整性檢查工具入口
 
+## 全局架構圖
+
+首頁的「全局架構」區塊嵌入三張 `.archify` 產生的互動 HTML：
+
+1. `architecture/course-flow.html`：`01_market` 到 `18_spec` 的產生與交接流程。
+2. `architecture/prototype-architecture.html`：Prototype 的畫面、共用狀態、故事資料、Design Token 與驗證工具。
+3. `architecture/service-architecture.html`：示範服務的顧客、店務、製作、取餐與資料服務架構。
+
+這三張圖是全局導覽與學習輔助，不取代正式 Markdown、Prototype 或 validation 證據。原始 Archify 產物仍保留在 repository 的 `.archify/`，網站使用 `architecture/` 中的部署副本，避免網站依賴隱藏目錄路徑。
+
 ## 啟動
 
 從專案根目錄啟動靜態伺服器：
