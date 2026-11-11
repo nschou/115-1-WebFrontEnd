@@ -39,6 +39,8 @@ https://nschou.github.io/115-1-WebFrontEnd/
 
 根目錄 `index.html` 會導向 `00_教案網站/index.html`。不要只上傳 `00_教案網站/` 子目錄，因為閱讀器需要讀取同一 repository 內的教材 Markdown、Prototype 與檢查工具。
 
+第一次啟用 GitHub Pages 時，請在 repository 的 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。設定完成後，`.github/workflows/deploy-pages.yml` 會在 `main` 推送時自動驗證並部署。
+
 ## Prompt 使用規則
 
 1. 先讀本階段的輸入文件與完成條件。

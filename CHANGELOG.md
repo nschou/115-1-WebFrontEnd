@@ -14,6 +14,7 @@
 - 新增 `00_教案網站/` 學習導航網站：包含 W1 起步、18 檔主線、19 個學習節點、每階段 AI 參考 Prompt、文件連結、進度標記與搜尋。
 - 新增 `00_教案網站/reader.html` 與閱讀器資產，使用固定版本的 marked、DOMPurify、Mermaid；教材連結可進入美化閱讀頁，並保留原始 Markdown 連結與檔案白名單。
 - 建立 GitHub repository／Pages 部署基礎：根目錄入口、`.nojekyll`、`.gitignore`、`.github/workflows/deploy-pages.yml` 與 repository README；網站以完整 repository 為靜態根目錄。
+- 補上 GitHub Pages 第一次啟用的操作：repository Settings → Pages → Source 選擇 GitHub Actions。
 
 ### 驗證
 

@@ -26,6 +26,16 @@ npx serve .
 
 開啟 `00_教案網站/index.html`。不要以 `file://` 直接開啟，因為 Markdown reader 需要 HTTP fetch 與 CDN 資源。
 
+## 啟用 GitHub Pages
+
+第一次需要由 repository 管理者開啟一次：
+
+1. 開啟 GitHub repository 的 **Settings → Pages**。
+2. 在 **Build and deployment → Source** 選擇 **GitHub Actions**。
+3. 儲存後重新執行 `Deploy course website` workflow，或再推送一次 commit。
+
+Workflow 會先驗證網站 JavaScript 與 19 個學習節點的教材連結，再把整個 repository 部署為靜態網站。根目錄入口會導向 `00_教案網站/index.html`。
+
 ## 正式來源規則
 
 網站是教材導覽層，不取代原始文件。正式來源仍是 W1–W7 文件、`00_學生發布版/`、`98_示範案例/` 與 Prototype。修改教材後，應重新執行相應檢查與 GitHub Pages workflow。
