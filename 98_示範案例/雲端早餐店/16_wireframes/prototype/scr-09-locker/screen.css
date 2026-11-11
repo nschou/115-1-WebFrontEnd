@@ -1,0 +1,29 @@
+/* SCR-09 專屬：768 直立、1 公尺觀看、可觸控 */
+.k-title { margin: var(--space-lg) 0 var(--space-md); font-size: var(--dsp-title); text-align: center; }
+.k-title.ok { color: var(--color-primary); }
+.k-title.err { color: var(--color-error); }
+.k-hint { font-size: var(--dsp-item); color: var(--color-muted); text-align: center; }
+.k-count { font-size: var(--dsp-label); color: var(--color-muted); text-align: center; }
+.code-dots { display: flex; justify-content: center; gap: var(--space-lg); margin-bottom: var(--space-lg); }
+.code-dots i { width: var(--space-xl); height: var(--space-xl); border-bottom: var(--space-xs) solid var(--color-primary); }
+.keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); padding: 0 var(--space-xl); }
+.keypad button {
+  min-height: var(--dsp-tap-h); border: var(--hairline) solid var(--color-border);
+  border-radius: var(--radius-md); background: var(--color-surface);
+  font: 700 var(--dsp-order)/1 var(--font-sans); color: var(--color-text); cursor: pointer;
+}
+.keypad .ok { background: var(--color-primary); color: var(--color-on-primary); border-color: var(--color-primary); }
+.keypad .warn { background: var(--color-surface-alt); color: var(--color-muted); }
+.k-big {
+  display: block; width: calc(100% - var(--space-xl) * 2); margin: var(--space-lg) auto 0;
+  min-height: var(--dsp-tap-h); border: 0; border-radius: var(--radius-md);
+  background: var(--color-primary); color: var(--color-on-primary);
+  font: 700 var(--dsp-label)/1 var(--font-sans); cursor: pointer;
+}
+
+.k-scan {
+  display: block; width: calc(100% - var(--space-xl) * 2); margin: var(--space-md) auto 0;
+  min-height: var(--dsp-tap-h); border: var(--hairline) solid var(--color-primary);
+  border-radius: var(--radius-md); background: var(--color-surface);
+  color: var(--color-primary); font: 700 var(--dsp-label)/1 var(--font-sans); cursor: pointer;
+}

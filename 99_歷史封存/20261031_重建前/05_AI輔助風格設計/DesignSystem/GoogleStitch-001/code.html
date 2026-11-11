@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#c4c5d7","tertiary-fixed":"#cce5ff","surface":"#faf8ff","on-tertiary-container":"#b2d9ff","outline":"#747686","on-primary-fixed-variant":"#0039b5","surface-container-high":"#e2e7ff","on-background":"#131b2e","surface-tint":"#2151da","on-secondary-fixed-variant":"#00504a","on-primary-fixed":"#001551","error-container":"#ffdad6","on-primary-container":"#cad3ff","primary-fixed-dim":"#b7c4ff","surface-container":"#eaedff","inverse-primary":"#b7c4ff","on-tertiary-fixed":"#001d31","secondary-container":"#99efe5","surface-dim":"#d2d9f4","on-surface-variant":"#434655","secondary":"#006a63","secondary-fixed-dim":"#80d5cb","on-secondary":"#ffffff","on-tertiary":"#ffffff","on-primary":"#ffffff","tertiary-fixed-dim":"#93ccff","surface-container-highest":"#dae2fd","primary-container":"#1d4ed8","primary":"#0037b0","on-secondary-container":"#006f67","secondary-fixed":"#9cf2e8","tertiary":"#004870","surface-variant":"#dae2fd","on-tertiary-fixed-variant":"#004b73","error":"#ba1a1a","on-surface":"#131b2e","inverse-on-surface":"#eef0ff","tertiary-container":"#006194","primary-fixed":"#dce1ff","background":"#faf8ff","on-error-container":"#93000a","on-error":"#ffffff","surface-bright":"#faf8ff","surface-container-lowest":"#ffffff","inverse-surface":"#283044","on-secondary-fixed":"#00201d","surface-container-low":"#f2f3ff"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-md":"1rem","space-xs":"0.25rem",margin:"2rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-lg":"1.5rem","gutter-mobile":"1rem"},fontFamily:{"headline-xl-mobile":["Space Grotesk"],"label-sm":["Noto Sans"],"body-md":["Noto Sans"],"headline-sm":["Space Grotesk"],"body-lg":["Noto Sans"],"body-sm":["Noto Sans"],"headline-md":["Space Grotesk"],"headline-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-md":["Noto Sans"]},fontSize:{"headline-xl-mobile":["2rem",{lineHeight:"2.625rem",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1.125rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.65rem",letterSpacing:"0",fontWeight:"400"}],"headline-sm":["1.25rem",{lineHeight:"1.875rem",letterSpacing:"0",fontWeight:"600"}],"body-lg":["1.125rem",{lineHeight:"1.9125rem",letterSpacing:"0",fontWeight:"400"}],"body-sm":["0.875rem",{lineHeight:"1.4875rem",letterSpacing:"0",fontWeight:"400"}],"headline-md":["1.5rem",{lineHeight:"2.125rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["3rem",{lineHeight:"3.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["2.25rem",{lineHeight:"3rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.375rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["0.875rem",{lineHeight:"1.3125rem",letterSpacing:"0.01em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">NEXUS</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">/ 核心設計規範</span></div><span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">v1.0.0 Stable</span><span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">WCAG AA Verified</span></div><div class="flex-1 max-w-md mx-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm text-outline flex-1">搜尋規範、Tokens 與組件...</span><span class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-outline">⌘K</span></div></div><div class="flex items-center gap-space-lg"><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tokens" href="#">Tokens 色彩與文字</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="components" href="#">Components 組件庫</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="accessibility" href="#">Accessibility 無障礙指南</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="guidelines" href="#">Guidelines 設計準則</a></nav><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>4.5:1 Contrast OK</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.02)] overflow-y-auto pt-space-lg pb-space-xl px-space-md z-40"><nav class="flex flex-col gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-semibold"><section class="flex flex-col gap-1"><div class="px-space-sm py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Design Tokens</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="brand-personality" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>品牌核心與設計調性</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-all bg-primary-container text-on-primary font-semibold" data-path="color-palette-tokens" href="#"><span class="material-symbols-outlined text-[18px]">palette</span>色彩矩陣與對比度</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="chinese-typography-scale" href="#"><span class="material-symbols-outlined text-[18px]">match_case</span>中文字體級距系統</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="elevation-and-spacing" href="#"><span class="material-symbols-outlined text-[18px]">layers</span>階層深度與間距規範</a></section><section class="flex flex-col gap-1"><div class="px-space-sm py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Core Components</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="buttons" href="#"><span class="material-symbols-outlined text-[18px]">smart_button</span>Buttons 按鈕體系</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="form-inputs" href="#"><span class="material-symbols-outlined text-[18px]">edit_note</span>Form Inputs 輸入控件</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="status-badges" href="#"><span class="material-symbols-outlined text-[18px]">new_releases</span>Status Badges 狀態微標</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="cards" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span>Cards 容器面板</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="alert-banners" href="#"><span class="material-symbols-outlined text-[18px]">announcement</span>Alert Banners 系統提示</a></section><section class="flex flex-col gap-1"><div class="px-space-sm py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Accessibility</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="wcag-checklist" href="#"><span class="material-symbols-outlined text-[18px]">checklist</span>WCAG AA 驗證清單</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="focus-ring" href="#"><span class="material-symbols-outlined text-[18px]">center_focus_strong</span>焦點狀態與鍵盤引導</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-all" data-path="reduced-motion" href="#"><span class="material-symbols-outlined text-[18px]">motion_photos_off</span>減少動態與降噪規範</a></section></nav></aside><div class="pl-72"><main class="w-full min-h-screen pt-16 px-space-xl py-space-xl bg-surface"><div class="flex flex-col w-full">
+<!-- Top Telemetry & Directional Notice -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-lg mb-space-xl shadow-sm">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg relative z-10">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wide uppercase font-semibold">Token Architecture</span>
+<span class="font-label-sm text-label-sm text-outline">WCAG 2.1 Level AA &amp; AAA Verified</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">即時驗證已啟用</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          色彩規範與 Token 體系 <span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">/ Color Palette &amp; Tokens</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          基於「俐落、現代、可信賴」品牌人格與 WCAG AA 嚴格對比標準設計，建構高清晰度、無視覺負擔的系統化界面基底。
+        </p>
+</div>
+<!-- Action & Meta Capsule -->
+<div class="flex items-center gap-space-md self-start lg:self-center bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Active Space</span>
+<span class="font-headline-sm text-headline-sm text-primary">sRGB Standard</span>
+</div>
+<div class="w-px h-8 bg-surface-container"></div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary rounded text-label-md font-label-md hover:bg-primary-container transition-all" id="quickCopyAllBtn">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>匯出 Token 宣告</span>
+</button>
+</div>
+</div>
+<!-- Core Philosophy Banner Bar -->
+<div class="mt-space-lg pt-space-md bg-surface-container-lowest/80 rounded-lg p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-space-sm">
+<span class="font-label-md text-label-md font-semibold text-secondary">設計核心準則：</span>
+<span class="font-body-sm text-body-sm text-on-surface">放大：高效科技感、舒適、安心</span>
+<span class="hidden sm:inline text-outline-variant">|</span>
+<span class="font-body-sm text-body-sm text-error font-medium">杜絕：油膩、混亂與焦慮感</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<span>最低字元對比限制：<strong>4.5 : 1</strong></span>
+<span>UI 幾何元件基準：<strong>3.0 : 1</strong></span>
+</div>
+</div>
+</div>
+<!-- Section 1: Brand Swatches & Interactive Token Catalog -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-xs">
+<div>
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">01. Swatches &amp; Roles</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">品牌核心色階與語意 Token</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+        依據功能權重分類，點擊色塊可直接複製 HEX 色碼與 CSS 變數引用語法。
+      </p>
+</div>
+<!-- Primary Color Family: Trust Blue -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Primary Trust Blue (主色 / 可信賴深藍)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">系統穩定樞紐、主互動按鈕、強焦點引導</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Deep Cobalt -->
+<div class="color-card group cursor-pointer bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm transition-transform hover:-translate-y-0.5 shadow-sm" data-hex="#0037B0" data-var="var(--color-primary)">
+<div class="w-full h-24 rounded bg-primary flex items-end p-space-sm justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-primary font-mono tracking-wider">#0037B0</span>
+<span class="material-symbols-outlined text-on-primary text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primary Core</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">primary</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">全局主要動作引導、品牌識別標頭、關鍵節點指示。</p>
+</div>
+</div>
+<!-- Precision Cobalt Container -->
+<div class="color-card group cursor-pointer bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm transition-transform hover:-translate-y-0.5 shadow-sm" data-hex="#1D4ED8" data-var="var(--color-primary-container)">
+<div class="w-full h-24 rounded bg-primary-container flex items-end p-space-sm justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-primary font-mono tracking-wider">#1D4ED8</span>
+<span class="material-symbols-outlined text-on-primary text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primary Active Hover</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">primary-container</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">互動反饋懸停態、焦點外圈（Focus Ring）、主進度條槽位。</p>
+</div>
+</div>
+<!-- Light Fixed Dim -->
+<div class="color-card group cursor-pointer bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm transition-transform hover:-translate-y-0.5 shadow-sm" data-hex="#DCE1FF" data-var="var(--color-primary-fixed)">
+<div class="w-full h-24 rounded bg-primary-fixed flex items-end p-space-sm justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-primary-fixed font-mono tracking-wider">#DCE1FF</span>
+<span class="material-symbols-outlined text-on-primary-fixed text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primary Soft Canvas</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">primary-fixed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">主動作弱化襯底、已選取項目背景標注、徽章底色。</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Tech Slate Palette -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Secondary Tech Slate (輔助 / 科技石板冷灰)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">精確冷感中性階層，去除色偏焦慮，確保資料高對比穿透</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Obsidian Dark Text -->
+<div class="color-card group cursor-pointer bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-sm hover:-translate-y-0.5 transition-transform" data-hex="#131B2E" data-var="var(--color-on-surface)">
+<div class="w-full h-20 rounded bg-on-surface flex items-end p-space-sm justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-surface font-mono">#131B2E</span>
+<span class="material-symbols-outlined text-surface text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Text Primary</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">主要標題、核心數據數值、終端指令字元。</span>
+</div>
+<!-- Muted Slate Text -->
+<div class="color-card group cursor-pointer bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-sm hover:-translate-y-0.5 transition-transform" data-hex="#434655" data-var="var(--color-on-surface-variant)">
+<div class="w-full h-20 rounded bg-on-surface-variant flex items-end p-space-sm justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-surface font-mono">#434655</span>
+<span class="material-symbols-outlined text-surface text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Text Secondary</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">次要說明段落、表格表頭欄位標籤、輔助文字。</span>
+</div>
+<!-- Structural Hairline Outline -->
+<div class="color-card group cursor-pointer bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-sm hover:-translate-y-0.5 transition-transform" data-hex="#747686" data-var="var(--color-outline)">
+<div class="w-full h-20 rounded bg-outline flex items-end p-space-sm justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-surface font-mono">#747686</span>
+<span class="material-symbols-outlined text-surface text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Outline / Hairline</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">輸入框外輪廓、微分隔層次、未選中狀態邊框。</span>
+</div>
+<!-- Slate Neutral Tint Background -->
+<div class="color-card group cursor-pointer bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-sm hover:-translate-y-0.5 transition-transform" data-hex="#EAEDFF" data-var="var(--color-surface-container)">
+<div class="w-full h-20 rounded bg-surface-container flex items-end p-space-sm justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface font-mono">#EAEDFF</span>
+<span class="material-symbols-outlined text-on-surface text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Surface Slate Fill</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">面板分區塊級填色、表格偶數行底色、交互懸浮塊。</span>
+</div>
+</div>
+</div>
+<!-- Semantic Status Roles (Security, Warning, Alert, Guide) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Success / Security Emerald -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">format_image_left</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Security 綠</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Verified</span>
+</div>
+<div class="color-card group cursor-pointer w-full h-20 rounded bg-secondary flex items-end p-space-sm justify-between shadow-sm mt-1" data-hex="#006A63" data-var="var(--color-secondary)">
+<span class="font-label-sm text-label-sm text-on-secondary font-mono">#006A63</span>
+<span class="material-symbols-outlined text-on-secondary text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">安全通訊加密確認、身份審核合格、無障礙檢核合格指示。</p>
+<div class="bg-surface-container-low p-space-xs rounded flex items-center justify-between text-on-secondary-container font-label-sm text-label-sm">
+<span>次階底色 (Badge Fill)</span>
+<span class="font-mono">#99EFE5</span>
+</div>
+</div>
+<!-- Warning / Alert Amber -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">warning</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Alert 琥珀金</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Notice</span>
+</div>
+<div class="color-card group cursor-pointer w-full h-20 rounded bg-tertiary-container flex items-end p-space-sm justify-between shadow-sm mt-1" data-hex="#006194" data-var="var(--color-tertiary-container)">
+<span class="font-label-sm text-label-sm text-on-tertiary font-mono">#006194</span>
+<span class="material-symbols-outlined text-on-tertiary text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">需要操作注意、資源配額即將超載預警、憑證將於 7 日內到期。</p>
+<div class="bg-surface-container-low p-space-xs rounded flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>高亮提醒度</span>
+<span class="font-mono">7.8:1 AAA</span>
+</div>
+</div>
+<!-- Danger / Error Crimson -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[20px]">dangerous</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Danger 緊急紅</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Critical</span>
+</div>
+<div class="color-card group cursor-pointer w-full h-20 rounded bg-error flex items-end p-space-sm justify-between shadow-sm mt-1" data-hex="#BA1A1A" data-var="var(--color-error)">
+<span class="font-label-sm text-label-sm text-on-error font-mono">#BA1A1A</span>
+<span class="material-symbols-outlined text-on-error text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">連線阻斷攔截、驗證失敗、非可逆性刪除操作按鍵警報。</p>
+<div class="bg-surface-container-low p-space-xs rounded flex items-center justify-between text-on-error-container font-label-sm text-label-sm">
+<span>次階底色 (Badge Fill)</span>
+<span class="font-mono">#FFDAD6</span>
+</div>
+</div>
+<!-- Info / Guide Cyan -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">info</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Guide 青藍</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Inform</span>
+</div>
+<div class="color-card group cursor-pointer w-full h-20 rounded bg-tertiary flex items-end p-space-sm justify-between shadow-sm mt-1" data-hex="#004870" data-var="var(--color-tertiary)">
+<span class="font-label-sm text-label-sm text-on-tertiary font-mono">#004870</span>
+<span class="material-symbols-outlined text-on-tertiary text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">架構指南提示、非破壞性系統引導、即時參數輔助數值。</p>
+<div class="bg-surface-container-low p-space-xs rounded flex items-center justify-between text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span>弱化裝飾標籤</span>
+<span class="font-mono">#CCE5FF</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: WCAG AA Contrast Compliance Matrix -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-xs">
+<div>
+<div class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">02. Accessibility Audit</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">WCAG AA / AAA 對比度驗證矩陣表</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 100% ผ่าน檢測
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">符合 W3C WCAG 2.1 對比標竿規範</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Compliance Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-md px-space-lg">底色 Token (Background)</th>
+<th class="py-space-md px-space-lg">前景項目 (Foreground)</th>
+<th class="py-space-md px-space-lg">情境渲染預覽 (Render Spec)</th>
+<th class="py-space-md px-space-lg text-center">計算對比度 (Ratio)</th>
+<th class="py-space-md px-space-lg text-right">合規等級與狀態</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-surface-container-lowest shadow-sm"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">surface-container-lowest</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#FFFFFF</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-on-surface"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Text Primary (on-surface)</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#131B2E</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="inline-flex items-center px-3 py-1 rounded bg-surface-container-lowest shadow-sm">
+<span class="text-on-surface font-label-md text-label-md font-semibold">全局最高優先級長文閱讀</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-center font-mono font-bold text-headline-sm text-secondary">
+                16.2 : 1
+              </td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Pass AAA
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-surface-container-low shadow-sm"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">surface-container-low</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#F2F3FF</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-on-surface-variant"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Text Secondary (variant)</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#434655</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="inline-flex items-center px-3 py-1 rounded bg-surface-container-low">
+<span class="text-on-surface-variant font-label-md text-label-md">側邊選單導覽與屬性標注說明</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-center font-mono font-bold text-headline-sm text-secondary">
+                9.8 : 1
+              </td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Pass AAA
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-primary"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">primary</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#0037B0</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-on-primary shadow-sm"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">White Icon / Text</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#FFFFFF</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<button class="px-3 py-1 rounded bg-primary text-on-primary font-label-md text-label-md shadow-sm">
+                  主要按鈕動作 (Solid Button)
+                </button>
+</td>
+<td class="py-space-md px-space-lg text-center font-mono font-bold text-headline-sm text-primary">
+                8.7 : 1
+              </td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Pass AAA
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-error"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">error</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#BA1A1A</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-on-error shadow-sm"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">White Text (on-error)</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#FFFFFF</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded bg-error text-on-error font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]">warning</span> 危險刪除按鈕
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-center font-mono font-bold text-headline-sm text-on-surface">
+                5.8 : 1
+              </td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span> Pass AA
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-secondary-fixed"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">secondary-fixed</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#9CF2E8</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-on-secondary-fixed-variant"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">on-secondary-fixed-variant</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#00504A</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 狀態微標 (Security Chip)
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-center font-mono font-bold text-headline-sm text-secondary">
+                7.4 : 1
+              </td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Pass AAA
+                </span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-surface-container-lowest shadow-sm"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">surface-container-lowest</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#FFFFFF</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded bg-outline"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Interactive UI Boundary (outline)</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">#747686</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container-lowest shadow-sm">
+<div class="w-3.5 h-3.5 rounded bg-outline"></div>
+<span class="text-on-surface-variant font-label-sm text-label-sm">輸入框幾何外框輪廓</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-center font-mono font-bold text-headline-sm text-outline">
+                3.4 : 1
+              </td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">tune</span> Non-Text Pass
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Matrix Footer note -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+          大尺寸字體（18pt / 14pt 粗體以上）合規門檻為 3:1；一般內文門檻為 4.5:1。
+        </span>
+<span class="font-mono text-outline">Automated Contrast Check v4.1.2</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Surface & Architectural Elevation Hierarchy -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-xs">
+<div>
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">03. Tactile Tonal Architecture</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">表面層級與背景階層 (Surface Elevation)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+        高明度階層層次引導視線，杜絕多餘陰影產生的視覺油膩感
+      </p>
+</div>
+<!-- Tier Stack Cards (Bento Showcase) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Tier 0: Lowest -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between h-64 relative overflow-hidden group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-label-sm font-bold text-primary">LEVEL 01</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Card Basis</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-2">surface-container-lowest</h4>
+<span class="font-mono text-label-sm text-outline">#FFFFFF</span>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">主要卡片主體、輸入欄位底色、彈出浮層最高聚焦點。</p>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest shadow-inner"></div>
+</div>
+</div>
+<!-- Tier 1: Low -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col justify-between h-64 relative overflow-hidden group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-label-sm font-bold text-primary">LEVEL 02</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Sidebar &amp; Shell</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-2">surface-container-low</h4>
+<span class="font-mono text-label-sm text-outline">#F2F3FF</span>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">固定導覽側欄、輔助工具抽屜底板、系統輔助區段。</p>
+<div class="w-full h-2 rounded-full bg-surface-container-low"></div>
+</div>
+</div>
+<!-- Tier 2: Regular Container -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between h-64 relative overflow-hidden group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-label-sm font-bold text-primary">LEVEL 03</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm">Canvas Track</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-2">surface-container</h4>
+<span class="font-mono text-label-sm text-outline">#EAEDFF</span>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">次級面板嵌入、表格滑動槽底、按鈕懸停預備態。</p>
+<div class="w-full h-2 rounded-full bg-surface-container"></div>
+</div>
+</div>
+<!-- Tier 3: High Container -->
+<div class="bg-surface-container-high rounded-xl p-space-lg shadow-sm flex flex-col justify-between h-64 relative overflow-hidden group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-label-sm font-bold text-primary">LEVEL 04</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">Divider Frame</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-2">surface-container-high</h4>
+<span class="font-mono text-label-sm text-outline">#E2E7FF</span>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">微層級分隔背景條、已失效禁用元件底色、指示點槽。</p>
+<div class="w-full h-2 rounded-full bg-surface-container-high"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Token Code Export Snippet (CSS Variables & Tailwind) -->
+<section class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">工程匯出範本 (Code Export Snippet)</h3>
+</div>
+<!-- Tab Switcher -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1 rounded text-label-sm font-label-sm font-semibold bg-surface-container-lowest text-primary shadow-sm transition-all" id="tabCssBtn">
+          CSS Variables
+        </button>
+<button class="px-3 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="tabTailwindBtn">
+          Tailwind Config
+        </button>
+</div>
+</div>
+<!-- Code Display Block -->
+<div class="relative bg-inverse-surface rounded-xl p-space-lg text-inverse-on-surface shadow-md">
+<button class="absolute top-4 right-4 flex items-center gap-1 px-3 py-1.5 rounded bg-surface-container-low/10 hover:bg-surface-container-low/20 text-inverse-on-surface text-label-sm font-mono transition-colors" id="copySnippetBtn">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="copyBtnText">複製語法</span>
+</button>
+<!-- CSS Vars View -->
+<pre class="overflow-x-auto font-mono text-label-md text-label-md leading-relaxed selection:bg-primary-container" id="codeCssView"><code class="text-tertiary-fixed">:root {
+  /* Nexus Brand Core */
+  --color-primary: #0037b0;
+  --color-primary-container: #1d4ed8;
+  --color-primary-fixed: #dce1ff;
+  --color-on-primary: #ffffff;
+  
+  /* Tech Slate Neutral */
+  --color-surface: #faf8ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-on-surface: #131b2e;
+  --color-on-surface-variant: #434655;
+  --color-outline: #747686;
+  
+  /* Semantic Verifications */
+  --color-secondary: #006a63; /* Security Emerald */
+  --color-secondary-fixed: #9cf2e8;
+  --color-tertiary: #004870;  /* Info Cyan */
+  --color-error: #ba1a1a;     /* Alert Crimson */
+}</code></pre>
+<!-- Tailwind Config View (Hidden initially) -->
+<pre class="hidden overflow-x-auto font-mono text-label-md text-label-md leading-relaxed selection:bg-primary-container" id="codeTailwindView"><code class="text-secondary-fixed">module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0037b0",
+        "primary-container": "#1d4ed8",
+        "primary-fixed": "#dce1ff",
+        secondary: "#006a63",
+        "secondary-fixed": "#9cf2e8",
+        surface: "#faf8ff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3ff",
+        "surface-container": "#eaedff",
+        "on-surface": "#131b2e",
+        "on-surface-variant": "#434655",
+        outline: "#747686",
+        error: "#ba1a1a"
+      }
+    }
+  }
+}</code></pre>
+</div>
+</section>
+<!-- Notification Toast for Copy Operations -->
+<div class="fixed bottom-8 right-8 pointer-events-none transform translate-y-12 opacity-0 transition-all duration-200 z-50 flex items-center gap-2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-lg shadow-xl font-label-md text-label-md" id="copyToast">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span id="copyToastMsg">Token 色碼已成功複製至剪貼簿</span>
+</div>
+</div>
+<script>
+  (function initTokensScreen() {
+    const toast = document.getElementById('copyToast');
+    const toastMsg = document.getElementById('copyToastMsg');
+
+    function triggerToast(message) {
+      if (!toast) return;
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-12', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-12', 'opacity-0');
+      }, 2200);
+    }
+
+    // Interactive Card Click to Copy
+    document.querySelectorAll('.color-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const hex = card.getAttribute('data-hex');
+        const cssVar = card.getAttribute('data-var');
+        const textToCopy = `${hex} /* ${cssVar} */`;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          triggerToast(`已複製：${textToCopy}`);
+        }).catch(() => {
+          triggerToast(`色碼複製成功：${hex}`);
+        });
+      });
+    });
+
+    // Tab Switching for Code Snippet
+    const tabCssBtn = document.getElementById('tabCssBtn');
+    const tabTailwindBtn = document.getElementById('tabTailwindBtn');
+    const codeCssView = document.getElementById('codeCssView');
+    const codeTailwindView = document.getElementById('codeTailwindView');
+    const copySnippetBtn = document.getElementById('copySnippetBtn');
+    const copyBtnText = document.getElementById('copyBtnText');
+
+    let activeTab = 'css';
+
+    if (tabCssBtn && tabTailwindBtn) {
+      tabCssBtn.addEventListener('click', () => {
+        activeTab = 'css';
+        tabCssBtn.className = 'px-3 py-1 rounded text-label-sm font-label-sm font-semibold bg-surface-container-lowest text-primary shadow-sm transition-all';
+        tabTailwindBtn.className = 'px-3 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all';
+        codeCssView.classList.remove('hidden');
+        codeTailwindView.classList.add('hidden');
+      });
+
+      tabTailwindBtn.addEventListener('click', () => {
+        activeTab = 'tailwind';
+        tabTailwindBtn.className = 'px-3 py-1 rounded text-label-sm font-label-sm font-semibold bg-surface-container-lowest text-primary shadow-sm transition-all';
+        tabCssBtn.className = 'px-3 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all';
+        codeTailwindView.classList.remove('hidden');
+        codeCssView.classList.add('hidden');
+      });
+    }
+
+    // Copy Code Block
+    if (copySnippetBtn) {
+      copySnippetBtn.addEventListener('click', () => {
+        const text = activeTab === 'css' 
+          ? codeCssView.innerText 
+          : codeTailwindView.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          copyBtnText.textContent = '已完成複製！';
+          triggerToast('程式碼區塊已複製至剪貼簿');
+          setTimeout(() => {
+            copyBtnText.textContent = '複製語法';
+          }, 2000);
+        });
+      });
+    }
+
+    // Top Bar Quick Export Button
+    const quickCopyAllBtn = document.getElementById('quickCopyAllBtn');
+    if (quickCopyAllBtn) {
+      quickCopyAllBtn.addEventListener('click', () => {
+        const cssContent = codeCssView.innerText;
+        navigator.clipboard.writeText(cssContent).then(() => {
+          triggerToast('已成功匯出全域 CSS Root Tokens');
+        });
+      });
+    }
+  })();
+</script></main></div></body></html>

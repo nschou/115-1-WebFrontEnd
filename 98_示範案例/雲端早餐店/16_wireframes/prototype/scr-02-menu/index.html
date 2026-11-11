@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCR-02 菜單｜線框原型</title>
+<link rel="stylesheet" href="../assets/tokens.css"><link rel="stylesheet" href="../assets/wire.css">
+<link rel="stylesheet" href="../assets/base.css"><link rel="stylesheet" href="screen.css"></head>
+<body data-state="default" data-mode="color">
+<div class="devbar" role="group" aria-label="狀態切換">
+  <strong>SCR-02</strong><span>菜單</span><span class="spacer"></span><button data-set-state="default">default</button><button data-set-state="loading">loading</button><button data-set-state="empty">empty</button><button data-set-state="error">error</button><button data-set-state="interrupted">interrupted</button><button data-toggle-mode>線框模式</button>
+</div>
+<main class="app " aria-live="polite">
+  <section class="state state-default">
+    <div class="chips"><button class="chip on">主餐</button><button class="chip" data-action="switch-category">套餐</button><button class="chip">飲品</button><button class="chip">加購</button></div>
+    <ul class="menu">
+      <li><span data-element="E-06" class="img-slot img-slot--thumb">品項照</span><div><b data-element="E-05">全麥三明治</b><span class="muted">生菜／蛋／火腿</span></div><span data-element="E-07" class="price">NT$45</span><button class="add" data-action="add-to-cart">＋</button></li>
+      <li><span class="img-slot img-slot--thumb">品項照</span><div><b>蛋餅</b><span class="muted">原味／加蛋</span></div><span class="price">NT$35</span><button class="add" data-action="add-to-cart">＋</button></li>
+      <li data-element="E-08" class="sold"><div><b>漢堡</b><span class="muted">今日售完</span></div><span class="price">NT$50</span><button class="add" disabled>＋</button></li>
+    </ul>
+    <div class="cartbar"><span>2 件 · NT$100</span><a class="btn-primary sm" href="#" data-action="goto-checkout">前往結帳</a></div>
+  </section>
+  <section class="state state-loading">
+    <p class="hint" data-loading>正在載入菜單⋯</p>
+    <div class="skel skel-line"></div><div class="skel skel-block"></div><div class="skel skel-block"></div>
+  </section>
+  <section class="state state-empty">
+    <h2 class="status">今天的品項都賣完了</h2><p class="hint">明天 06:00 再來看看。</p>
+  </section>
+  <section class="state state-error">
+    <div class="banner banner-error" role="alert"><strong>菜單載入失敗</strong><span>重新整理即可。</span></div><button class="btn-secondary">重新整理</button>
+  </section>
+  <section class="state state-interrupted">
+    <div class="banner banner-warn" role="alert"><strong>你選的品項剛剛賣完</strong><span>已幫你保留其他品項，換一個試試？</span></div><button class="btn-secondary">換品項</button>
+  </section>
+  <footer class="foot" data-wire-outline><span class="msg-id">SCR-02</span></footer>
+</main>
+<script src="../assets/theme.js"></script>
+<script src="../assets/state-switcher.js"></script>
+<script src="../assets/story-data.js"></script>
+<script src="../assets/story-runner.js"></script>
+</body></html>

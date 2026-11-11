@@ -1,0 +1,32 @@
+/* SCR-08 專屬：1920×1080、4 公尺觀看、無互動（尺度來自 tokens-display.css） */
+.board-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: var(--dsp-pad-y) var(--dsp-pad) var(--space-xl);
+}
+.board-head h1 { margin: 0; font-size: var(--dsp-title); color: var(--color-primary); }
+.board-clock { font-size: var(--dsp-clock); color: var(--color-muted); font-variant-numeric: tabular-nums; }
+
+.board-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--dsp-gap); padding: var(--space-xl) var(--dsp-pad); }
+.board-cell {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: var(--dsp-cell-h);
+  background: var(--color-surface);
+  border: var(--hairline) solid var(--color-border);
+  border-left: var(--space-lg) solid var(--color-success);
+  border-radius: var(--radius-lg);
+}
+.board-cell b { font-size: var(--dsp-number); line-height: var(--line-tight); color: var(--color-primary); letter-spacing: .02em; }
+.board-cell span { margin-top: var(--space-sm); font-size: var(--dsp-label); color: var(--color-muted); }
+.is-new { border-left-color: var(--color-accent); }
+
+.board-sub {
+  display: flex; align-items: center; gap: var(--space-lg);
+  margin: var(--space-xl) var(--dsp-pad);
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--color-surface-alt); border-radius: var(--radius-lg);
+}
+.board-sub span { font-size: var(--dsp-label); color: var(--color-muted); }
+.board-sub b { font-size: var(--dsp-sub); letter-spacing: .02em; }
+
+.board-note { padding: var(--dsp-note-pad) var(--dsp-pad); font-size: var(--dsp-note); color: var(--color-muted); text-align: center; }
+.board-note small { display: block; margin-top: var(--space-md); font-size: var(--dsp-note-sm); }

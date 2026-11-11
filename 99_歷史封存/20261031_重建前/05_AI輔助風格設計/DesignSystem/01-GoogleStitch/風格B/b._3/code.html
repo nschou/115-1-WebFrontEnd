@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f4;color:#1c1c19;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","outline-variant":"#d9c2ba","on-surface":"#1c1c19","secondary-fixed-dim":"#ffb68e","tertiary-container":"#186a21","on-tertiary":"#ffffff","secondary":"#9b4500","surface-tint":"#8f4c31","inverse-surface":"#31302d","primary-fixed-dim":"#ffb599","surface-container-low":"#f6f3ee","on-tertiary-container":"#95e88f","primary-fixed":"#ffdbce","on-secondary-fixed-variant":"#763300","tertiary-fixed-dim":"#88d982","on-secondary-fixed":"#331200","on-surface-variant":"#53433d","inverse-primary":"#ffb599","primary-container":"#8c4a2f","surface-container-highest":"#e5e2dd","surface-container":"#f0ede9","on-error-container":"#93000a","secondary-fixed":"#ffdbca","tertiary-fixed":"#a3f69c","on-secondary-container":"#682c00","surface-bright":"#fcf9f4","on-primary-fixed-variant":"#72361c","on-background":"#1c1c19","background":"#fcf9f4","outline":"#86736c","on-tertiary-fixed-variant":"#005312","surface-variant":"#e5e2dd","on-primary-container":"#ffc9b5","inverse-on-surface":"#f3f0eb","on-error":"#ffffff","on-primary-fixed":"#370e00","surface-dim":"#dcdad5","error":"#ba1a1a","tertiary":"#005011","surface-container-high":"#ebe8e3","primary":"#6f331a","secondary-container":"#fd8a42","on-primary":"#ffffff","on-secondary":"#ffffff","surface":"#fcf9f4","error-container":"#ffdad6","on-tertiary-fixed":"#002204"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-md":"2rem","space-sm":"0.5rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-md":"1.5rem","gutter":"1rem","margin":"1rem","gutter-lg":"2rem","space-md":"1rem","margin-lg":"3rem","space-xs":"0.25rem"},fontFamily:{"headline-xl":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-lg":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-md":["16px",{lineHeight:"26px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="返回上一頁" class="w-11 h-11 flex items-center justify-center -ml-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">Checkout Flow</h1></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-32">
+<!-- 頂部即時溫控狀態指示條 -->
+<div class="px-gutter pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-tertiary/10 text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+<span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">智慧廚房備餐時序即時同步中</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">尖峰保溫專用通道已預留就緒</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">thermostat</span>
+<span class="font-label-sm text-label-sm text-secondary">雙溫區</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 領餐地點卡片 -->
+<div class="px-gutter pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">智慧溫控取餐櫃</span>
+<span class="bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full">連線中</span>
+</div>
+<p class="font-body-md text-body-md text-primary font-semibold mt-0.5">B棟通勤閘口櫃位</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">捷運 3 號出口連通道直行 15 公尺即達</p>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline shrink-0 pt-1" type="button">
+          路徑引導
+        </button>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container-low rounded-lg p-space-sm flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">零接觸取餐 · 抵達出示條碼或藍牙即刻解鎖</span>
+</div>
+</div>
+</div>
+<!-- 預計取餐時間片 (Commute Slot) -->
+<div class="px-gutter pt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">通勤取餐時段</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">精準鎖定新鮮風味</span>
+</div>
+<!-- 橫向捲動時段卡片 -->
+<div class="flex gap-space-sm overflow-x-auto pb-1 -mx-gutter px-gutter" id="timeSlotContainer">
+<!-- 選中項目 -->
+<button class="time-slot-btn shrink-0 w-44 p-space-md rounded-xl bg-primary-container text-on-primary text-left shadow-md transition-all flex flex-col justify-between" data-selected="true" onclick="selectSlot(this)" type="button">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-primary-container bg-primary/30 px-2 py-0.5 rounded-full">抵達即拿</span>
+<span class="material-symbols-outlined text-[18px] text-on-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="font-headline-md text-headline-md mt-2 tracking-tight">08:25</div>
+</div>
+<div class="mt-3 pt-2 bg-primary/20 rounded p-1.5 font-label-sm text-label-sm text-on-primary-container">
+          預計 08:23 準時入櫃
+        </div>
+</button>
+<!-- 未選中項目 1 -->
+<button class="time-slot-btn shrink-0 w-40 p-space-md rounded-xl bg-surface-container-lowest text-on-surface text-left shadow-sm hover:bg-surface-container-low transition-all flex flex-col justify-between" data-selected="false" onclick="selectSlot(this)" type="button">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-full">標準區間</span>
+</div>
+<div class="font-headline-md text-headline-md mt-2 tracking-tight">08:30</div>
+</div>
+<div class="mt-3 pt-2 font-label-sm text-label-sm text-on-surface-variant">
+          全程恆溫 60°C 保溫
+        </div>
+</button>
+<!-- 未選中項目 2 -->
+<button class="time-slot-btn shrink-0 w-40 p-space-md rounded-xl bg-surface-container-lowest text-on-surface text-left shadow-sm hover:bg-surface-container-low transition-all flex flex-col justify-between" data-selected="false" onclick="selectSlot(this)" type="button">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-full">稍晚取餐</span>
+</div>
+<div class="font-headline-md text-headline-md mt-2 tracking-tight">08:35</div>
+</div>
+<div class="mt-3 pt-2 font-label-sm text-label-sm text-on-surface-variant">
+          維持脆度與溫熱
+        </div>
+</button>
+<!-- 未選中項目 3 -->
+<button class="time-slot-btn shrink-0 w-40 p-space-md rounded-xl bg-surface-container-lowest text-on-surface text-left shadow-sm hover:bg-surface-container-low transition-all flex flex-col justify-between" data-selected="false" onclick="selectSlot(this)" type="button">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-full">彈性延遲</span>
+</div>
+<div class="font-headline-md text-headline-md mt-2 tracking-tight">08:40</div>
+</div>
+<div class="mt-3 pt-2 font-label-sm text-label-sm text-on-surface-variant">
+          恆溫倉儲無憂等候
+        </div>
+</button>
+</div>
+</div>
+<!-- 預約餐點清單 (2件) -->
+<div class="px-gutter pt-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">預約餐點清單</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">共 2 件品項</span>
+</div>
+<!-- 品項 1 -->
+<div class="flex gap-space-md py-space-sm">
+<div class="w-18 h-18 w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A warm artisan high-protein sourdough rye burger with melted cheese and a fluffy tender egg, sitting on a rustic ceramic plate bathed in gentle natural morning sunlight with soft warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCE5CmB4qWdZWPGk8lClMYTDdgzEnsuJKOT78N5nhqh3_aZIrBbBufHb7JIa_g8OcNEnS-nWu-ctAXn7yTaD9gOW2N9FxDmcc5XG4-D26-PilvnT9wu1oSVAaE6bv_xjB-9u22NHo0CmSNYFg9mdFuUnyLvG86oC1BiYpdh78uktN2OkkZE_QWsAb_QIjGYcNGsAs0f-n1_vEXqjWP_yZANepo0EDX0BDlsVnfhfW5CBSMgjAck4yDKg"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">高蛋白起司嫩蛋黑麥堡</h3>
+<span class="font-headline-sm text-headline-sm text-on-surface shrink-0">NT$ 85</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">半熟蛋 · 無美乃滋</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="inline-flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+              溫控保溫 62°C
+            </span>
+<span class="font-label-md text-label-md text-on-surface-variant">× 1</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-surface-container-high my-space-sm"></div>
+<!-- 品項 2 -->
+<div class="flex gap-space-md py-space-sm">
+<div class="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A chilled glass bottle filled with smooth cold brew oat milk tea, subtle condensation beads on glass, warm morning bakery ambience with natural oat and terracotta tabletop styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4lGM5amnZIcQIdrboNP-F0Lwprqa37TZQbl1QugpIuwbymlZJTJlu5eYpS2vXE8_P1UnraKrE8LYuQVZBWA8q3KAwmbB9iSuC6rQNAHn76GhIYneRI_tSPPu6vdeRVMIvrOtXENsbM52TvgiOMk4Wm-XvxNRVrF6s8pztdvl87hqj1RNsdYlX7N1txy1QZ1DMzpp05gd6T7hTRRc-saRHvQYaHrrKvbeflbpadFXQouWKqRjFaMy1tA"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">低GI冷萃燕麥奶茶</h3>
+<span class="font-headline-sm text-headline-sm text-on-surface shrink-0">NT$ 55</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">甜度冰塊：無糖 · 微冰</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">ac_unit</span>
+              低溫冷藏 4°C
+            </span>
+<span class="font-label-md text-label-md text-on-surface-variant">× 1</span>
+</div>
+</div>
+</div>
+<!-- 包裝與小計說明 -->
+<div class="mt-space-md pt-space-md bg-surface-container-low rounded-lg p-space-md">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">eco</span>
+            生物可分解植纖包裝與保溫袋
+          </span>
+<span class="text-tertiary font-label-sm text-label-sm">免費附贈</span>
+</div>
+<div class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface pt-space-xs mt-space-xs">
+<span>餐點合計</span>
+<span class="font-bold">NT$ 140</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 溫控取餐櫃聯動承諾說明卡 -->
+<div class="px-gutter pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-lg text-label-lg text-on-surface">智慧入櫃即時推播通知</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            餐點完成並放入專屬溫控取餐櫃後，系統將第一時間推送「取餐格編號」與「高對比感應條碼」，確保通勤人潮中3秒順暢快取。
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- 快速支付方式選擇卡片 -->
+<div class="px-gutter pt-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">快速支付方式</h2>
+<div class="flex flex-col gap-space-sm" id="paymentOptions">
+<!-- Apple Pay (選中) -->
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low cursor-pointer transition-colors" onclick="selectPayment(this)">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[22px]">contactless</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Apple Pay</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">快速指紋/臉部感應支付</p>
+</div>
+</div>
+<div class="pay-radio w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</label>
+<!-- LINE Pay -->
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors" onclick="selectPayment(this)">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">LINE Pay</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">享 LINE POINTS 點數折抵回饋</p>
+</div>
+</div>
+<div class="pay-radio w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</label>
+<!-- 信用卡快捷支付 -->
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors" onclick="selectPayment(this)">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">credit_card</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">信用卡快捷支付</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">國泰世華 (••• 4289)</p>
+</div>
+</div>
+<div class="pay-radio w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 底部固定主按鈕區 -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-md px-gutter pt-space-md pb-safe shadow-xl">
+<div class="max-w-md mx-auto flex flex-col items-center">
+<button class="w-full h-14 bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform" type="button">
+<span>確認支付 NT$ 140 · 預約 08:25 取餐</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-1.5 mt-2.5 mb-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">health_and_safety</span>
+<span>智慧溫控廚房直連保證 · 逾時 30 分鐘自動冷藏密封</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectSlot(clickedBtn) {
+    const container = document.getElementById('timeSlotContainer');
+    const buttons = container.querySelectorAll('.time-slot-btn');
+    
+    buttons.forEach(btn => {
+      btn.dataset.selected = "false";
+      btn.className = "time-slot-btn shrink-0 w-40 p-space-md rounded-xl bg-surface-container-lowest text-on-surface text-left shadow-sm hover:bg-surface-container-low transition-all flex flex-col justify-between";
+      const checkIcon = btn.querySelector('.material-symbols-outlined');
+      if (checkIcon) checkIcon.remove();
+    });
+
+    clickedBtn.dataset.selected = "true";
+    clickedBtn.className = "time-slot-btn shrink-0 w-44 p-space-md rounded-xl bg-primary-container text-on-primary text-left shadow-md transition-all flex flex-col justify-between";
+    
+    const topRow = clickedBtn.querySelector('.flex.items-center.justify-between');
+    if (topRow && !topRow.querySelector('.material-symbols-outlined')) {
+      const icon = document.createElement('span');
+      icon.className = 'material-symbols-outlined text-[18px] text-on-primary';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.textContent = 'check_circle';
+      topRow.appendChild(icon);
+    }
+  }
+
+  function selectPayment(clickedLabel) {
+    const parent = document.getElementById('paymentOptions');
+    const labels = parent.querySelectorAll('label');
+    
+    labels.forEach(l => {
+      l.className = "flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors";
+      const radio = l.querySelector('.pay-radio');
+      radio.className = "pay-radio w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent";
+    });
+
+    clickedLabel.className = "flex items-center justify-between p-space-md rounded-xl bg-surface-container-low cursor-pointer transition-colors";
+    const activeRadio = clickedLabel.querySelector('.pay-radio');
+    activeRadio.className = "pay-radio w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary";
+  }
+</script></main></body></html>

@@ -1,0 +1,13 @@
+/* ===========================================================
+   tokens.blue.css — 示範主題：只換主色
+   作法：先 @import 原始 tokens.css，再覆寫 4 個 m3 值。
+   這是「換風格只改一檔」的最小示範（ADR-004）。
+   =========================================================== */
+@import url("tokens.css");
+
+:root {
+  --m3-primary: #1E3A8A;
+  --m3-primary-container: #1D4ED8;
+  --m3-on-primary-container: #BFDBFE;
+  --m3-surface-tint: #3B82F6;
+}

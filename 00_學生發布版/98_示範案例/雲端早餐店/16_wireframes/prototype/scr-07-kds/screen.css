@@ -1,0 +1,46 @@
+/* SCR-07 專屬：1920×1080 廚房顯示器（尺度來自 tokens-display.css） */
+.kds-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-xl) var(--dsp-pad);
+  border-bottom: var(--hairline) solid var(--color-border);
+}
+.kds-head h1 { margin: 0; font-size: var(--dsp-head); }
+.kds-clock { font-size: var(--dsp-clock); font-variant-numeric: tabular-nums; color: var(--color-muted); }
+
+.kds-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--dsp-gap); padding: var(--space-xl) var(--dsp-pad); }
+.kds-card {
+  background: var(--color-surface);
+  border: var(--hairline) solid var(--color-border);
+  border-top: var(--space-xs) solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex; flex-direction: column;
+  min-height: var(--dsp-card-h);
+}
+.kds-card header { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-sm); margin-bottom: var(--space-md); }
+.kds-card header b { flex: 0 0 auto; }
+.kds-card header span { text-align: right; }
+.kds-card header b { font-size: var(--dsp-order); }
+.kds-card header span { font-size: var(--dsp-banner); color: var(--color-muted); }
+.kds-card ul { margin: 0 0 auto; padding: 0; list-style: none; }
+.kds-card li { font-size: var(--dsp-item); line-height: var(--line-base); }
+.kds-card footer { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); }
+.timer { font-size: var(--dsp-timer); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.kds-btn {
+  min-height: var(--dsp-tap-h); min-width: var(--dsp-tap-w);
+  border: 0; border-radius: var(--radius-md);
+  background: var(--color-primary); color: var(--color-on-primary);
+  font: 700 var(--dsp-label)/1.2 var(--font-sans); cursor: pointer;
+}
+.heat-amber { border-top-color: var(--color-warn); }
+.heat-red { border-top-color: var(--color-error); }
+.heat-red .timer { color: var(--color-error); }
+.heat-amber .timer { color: var(--color-warn); }
+.done { border-top-color: var(--color-success); }
+.flag { border-top-color: var(--color-warn); }
+.kds-btn.ghost { background: var(--color-surface-alt); color: var(--color-muted); }
+.kds-btn.warn { background: var(--color-accent); }
+.kds-empty { padding: var(--space-xl); font-size: var(--dsp-head); color: var(--color-muted); }
+.kds-banner { margin: var(--space-xl) var(--dsp-pad); font-size: var(--dsp-banner); }
+.kds-note { padding: 0 var(--dsp-pad); font-size: var(--dsp-banner); color: var(--color-muted); }

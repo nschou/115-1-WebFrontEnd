@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCR-06 店員訂單台｜線框原型</title>
+<link rel="stylesheet" href="../assets/tokens.css"><link rel="stylesheet" href="../assets/wire.css">
+<link rel="stylesheet" href="../assets/base.css"><link rel="stylesheet" href="screen.css"></head>
+<body data-state="default" data-mode="color">
+<div class="devbar" role="group" aria-label="狀態切換">
+  <strong>SCR-06</strong><span>店員訂單台</span><span class="spacer"></span>
+  <button data-set-state="default">default</button><button data-set-state="loading">loading</button>
+  <button data-set-state="empty">empty</button><button data-set-state="error">error</button>
+  <button data-set-state="success">success</button><button data-set-state="interrupted">interrupted</button>
+  <button data-toggle-mode>線框模式</button>
+</div>
+<main class="app app--tablet">
+    <header class="topbar" data-wire-outline><h1>待處理訂單</h1><span class="order-no">店員端</span></header>
+  <section class="state state-default">
+    <div class="chips" data-wire-outline>
+      <button class="chip on">待處理 3</button><button class="chip">進行中 2</button><button class="chip">可取餐 1</button>
+    </div>
+    <ul class="orders">
+      <li class="order urgent"><span class="no">#1045</span><span data-element="E-28" class="meta">08:20 取餐 · 剩 2 分</span><button class="btn-primary sm" data-action="staff-confirm">確認接單</button></li>
+      <li class="order"><span class="no">#1044</span><span class="meta">08:25 取餐 · 剩 5 分</span><button class="btn-primary sm" data-action="staff-confirm">確認接單</button></li>
+      <li class="order"><span class="no">#1043</span><span class="meta">已完成 · 待入櫃</span><button class="btn-primary sm" data-action="staff-locker">入櫃並通知</button></li>
+    </ul>
+  </section>
+  <section class="state state-loading"><p class="hint" data-loading>正在同步訂單⋯</p><div class="skel skel-title"></div><div class="skel skel-block"></div></section>
+  <section class="state state-empty"><h2 class="status">目前沒有待處理訂單</h2><p class="hint">新訂單進來會自動出現在最上面。</p></section>
+  <section class="state state-error"><div class="banner banner-error" role="alert"><strong>連線中斷</strong><span>正在重試，恢復後會自動同步。</span></div><button class="btn-secondary" data-action="staff-retry">手動重試</button></section>
+  <section class="state state-success">
+    <ul class="orders"><li class="order is-new"><span class="no">#1046</span><span class="meta">新訂單 · 08:30 取餐</span><button class="btn-primary sm" data-action="staff-confirm">確認接單</button></li></ul>
+    <p class="hint">新單會高亮 3 秒並發出提示音。</p>
+  </section>
+  <section class="state state-interrupted">
+    <ul class="orders">
+      <li class="order flag"><span class="no">#1047</span><span class="meta">顧客取消</span><span class="tag">已取消</span></li>
+      <li class="order flag"><span class="no">#1048</span><span class="meta">品項缺貨：蛋餅</span><span class="tag tag-warn">需換品項</span></li>
+    </ul>
+  </section>
+
+</main>
+<script src="../assets/theme.js"></script>
+<script src="../assets/state-switcher.js"></script>
+<script src="../assets/story-data.js"></script>
+<script src="../assets/story-runner.js"></script>
+</body></html>

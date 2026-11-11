@@ -1,0 +1,18 @@
+/* SCR-10 專屬：768 平板、列表 + 供應開關 */
+.chips { display: flex; gap: var(--space-sm); padding: 0 var(--space-md) var(--space-sm); }
+.chip {
+  padding: var(--space-xs) var(--space-md); border-radius: var(--radius-full);
+  border: var(--hairline) solid var(--color-border); background: var(--color-surface);
+  font: 600 var(--text-sm)/1.4 var(--font-sans); color: var(--color-muted); cursor: pointer;
+}
+.chip.on { background: var(--color-primary); color: var(--color-on-primary); border-color: var(--color-primary); }
+.admin { list-style: none; margin: 0; padding: 0 var(--space-md); }
+.admin li {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+  padding: var(--space-md); margin-bottom: var(--space-sm);
+  background: var(--color-surface); border: var(--hairline) solid var(--color-border);
+  border-radius: var(--radius-default);
+}
+.admin b { display: block; }
+.admin .muted { font-size: var(--text-sm); }
+.sw { font-size: var(--text-sm); color: var(--color-muted); display: flex; align-items: center; gap: var(--space-xs); }

@@ -1,0 +1,23 @@
+# Local runtime and dependency output
+node_modules/
+.npm/
+*.log
+
+# Local machine files
+.dsh-meow/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+
+# Temporary editor and browser output
+.vscode/
+.idea/
+*.tmp
+*.swp
+
+# Keep course deliverables, ZIP packages, .archify evidence, and prototype shots.

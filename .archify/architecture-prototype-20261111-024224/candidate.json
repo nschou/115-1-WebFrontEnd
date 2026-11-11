@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "雲端早餐店 Prototype 前端網站架構",
+    "subtitle": "11 個靜態畫面共用一套狀態、故事、主題與驗證資產",
+    "locale": "zh-TW",
+    "output": "prototype-frontend-architecture.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "customer",
+      "type": "external",
+      "label": "顧客",
+      "sublabel": "手機觸控｜SCR-01～05",
+      "icon": "person",
+      "pos": [40, 100],
+      "size": [180, 76]
+    },
+    {
+      "id": "staff",
+      "type": "external",
+      "label": "店員",
+      "sublabel": "平板觸控｜SCR-06",
+      "icon": "person",
+      "pos": [40, 300],
+      "size": [180, 76]
+    },
+    {
+      "id": "chef",
+      "type": "external",
+      "label": "廚師",
+      "sublabel": "KDS 觸控｜SCR-07",
+      "icon": "person",
+      "pos": [40, 500],
+      "size": [180, 76]
+    },
+    {
+      "id": "owner",
+      "type": "external",
+      "label": "老闆",
+      "sublabel": "平板觸控｜SCR-10～11",
+      "icon": "person",
+      "pos": [40, 700],
+      "size": [180, 76]
+    },
+    {
+      "id": "pickup-user",
+      "type": "external",
+      "label": "取餐顧客／店內設備",
+      "sublabel": "看板無操作；櫃面板可觸控",
+      "icon": "external",
+      "pos": [40, 900],
+      "size": [180, 76]
+    },
+    {
+      "id": "customer-pages",
+      "type": "frontend",
+      "label": "顧客流程頁",
+      "sublabel": "SCR-01～05｜首頁→菜單→確認→付款→狀態",
+      "tag": "手機 375",
+      "icon": "frontend",
+      "pos": [230, 100],
+      "size": [240, 82]
+    },
+    {
+      "id": "staff-page",
+      "type": "frontend",
+      "label": "店員訂單台",
+      "sublabel": "SCR-06｜接單、入櫃並通知、重試",
+      "tag": "平板 768",
+      "icon": "frontend",
+      "pos": [230, 300],
+      "size": [240, 82]
+    },
+    {
+      "id": "kitchen-page",
+      "type": "frontend",
+      "label": "廚房顯示器",
+      "sublabel": "SCR-07｜排序、計時、完成、缺貨",
+      "tag": "顯示器 1920",
+      "icon": "frontend",
+      "pos": [230, 500],
+      "size": [240, 82]
+    },
+    {
+      "id": "pickup-pages",
+      "type": "frontend",
+      "label": "取餐介面",
+      "sublabel": "SCR-08 看板＋SCR-09 櫃面板",
+      "tag": "看板 1920／面板 768",
+      "icon": "frontend",
+      "pos": [230, 700],
+      "size": [240, 82]
+    },
+    {
+      "id": "owner-pages",
+      "type": "frontend",
+      "label": "老闆後台頁",
+      "sublabel": "SCR-10 菜單維護＋SCR-11 銷售報表",
+      "tag": "平板 768",
+      "icon": "frontend",
+      "pos": [230, 900],
+      "size": [240, 82]
+    },
+    {
+      "id": "shared-runtime",
+      "type": "frontend",
+      "label": "共用互動執行層",
+      "sublabel": "theme.js｜state-switcher.js｜story-runner.js",
+      "tag": "瀏覽器端",
+      "icon": "frontend",
+      "pos": [600, 100],
+      "size": [240, 82]
+    },
+    {
+      "id": "story-data",
+      "type": "frontend",
+      "label": "故事與驗收單一事實來源",
+      "sublabel": "story-data.js｜23 AC｜stories／actions／checks",
+      "tag": "共用資料",
+      "icon": "database",
+      "pos": [600, 300],
+      "size": [240, 82]
+    },
+    {
+      "id": "style-assets",
+      "type": "frontend",
+      "label": "共用樣式與設計 Token",
+      "sublabel": "tokens.css｜base.css｜wire.css｜tokens.blue.css",
+      "tag": "所有頁面載入",
+      "icon": "frontend",
+      "pos": [600, 500],
+      "size": [240, 82]
+    },
+    {
+      "id": "verification-suite",
+      "type": "backend",
+      "label": "靜態驗證工具鏈",
+      "sublabel": "verify-stories｜lint-tokens｜check-all｜smoke-dom",
+      "tag": "Node CLI",
+      "icon": "backend",
+      "pos": [600, 700],
+      "size": [240, 82]
+    },
+    {
+      "id": "review-workbench",
+      "type": "frontend",
+      "label": "人工走查台",
+      "sublabel": "review.html｜review.js｜體驗層證據",
+      "tag": "瀏覽器端",
+      "icon": "frontend",
+      "pos": [600, 900],
+      "size": [240, 82]
+    },
+    {
+      "id": "payment-external",
+      "type": "cloud",
+      "label": "外部支付頁面",
+      "sublabel": "Prototype 只模擬成功／失敗",
+      "tag": "未串接真實金流",
+      "icon": "cloud",
+      "pos": [870, 100],
+      "size": [190, 82]
+    },
+    {
+      "id": "browser-storage",
+      "type": "database",
+      "label": "瀏覽器 localStorage",
+      "sublabel": "theme 偏好｜review-state-v1",
+      "tag": "本機持久化",
+      "icon": "database",
+      "pos": [870, 500],
+      "size": [190, 82]
+    },
+    {
+      "id": "generated-reports",
+      "type": "database",
+      "label": "產出報告檔",
+      "sublabel": "checks-report／summary／review-report",
+      "tag": "入口頁讀取",
+      "icon": "database",
+      "pos": [870, 700],
+      "size": [190, 82]
+    },
+    {
+      "id": "prototype-hub",
+      "type": "frontend",
+      "label": "Prototype 入口與監看",
+      "sublabel": "index.html｜故事矩陣、檢查結果、指令",
+      "tag": "統整視圖",
+      "icon": "frontend",
+      "pos": [870, 900],
+      "size": [190, 82]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "11 個靜態畫面",
+      "wraps": ["customer-pages", "staff-page", "kitchen-page", "pickup-pages", "owner-pages"],
+      "pad": 28
+    },
+    {
+      "kind": "region",
+      "label": "瀏覽器共用資產",
+      "wraps": ["shared-runtime", "story-data", "style-assets"],
+      "pad": 28
+    }
+  ],
+  "connections": [
+    { "id": "customer-to-pages", "from": "customer", "to": "customer-pages", "label": "點餐／付款／查進度", "variant": "emphasis" },
+    { "id": "staff-to-page", "from": "staff", "to": "staff-page", "label": "接單／入櫃並通知", "variant": "emphasis" },
+    { "id": "chef-to-page", "from": "chef", "to": "kitchen-page", "label": "開始製作／完成／缺貨", "variant": "emphasis" },
+    { "id": "owner-to-pages", "from": "owner", "to": "owner-pages", "label": "維護菜單／看報表", "variant": "emphasis" },
+    { "id": "pickup-to-pages", "from": "pickup-user", "to": "pickup-pages", "label": "看號碼／輸入或掃碼開櫃", "variant": "emphasis" },
+    { "id": "customer-pages-to-runtime", "from": "customer-pages", "to": "shared-runtime", "label": "載入共用互動與故事模式" },
+    { "id": "staff-page-to-runtime", "from": "staff-page", "to": "shared-runtime", "label": "載入六態與動作攔截" },
+    { "id": "kitchen-page-to-runtime", "from": "kitchen-page", "to": "shared-runtime", "label": "載入動作與自動檢查" },
+    { "id": "pickup-pages-to-runtime", "from": "pickup-pages", "to": "shared-runtime", "label": "載入狀態切換與走查" },
+    { "id": "owner-pages-to-runtime", "from": "owner-pages", "to": "shared-runtime", "label": "載入主題與動作說明" },
+    { "id": "runtime-to-story-data", "from": "shared-runtime", "to": "story-data", "label": "讀取 notes／stories／actions／checks" },
+    { "id": "runtime-to-payment", "from": "shared-runtime", "to": "payment-external", "label": "pay：模擬成功／失敗", "variant": "security" },
+    { "id": "runtime-to-storage", "from": "shared-runtime", "to": "browser-storage", "label": "儲存主題偏好" },
+    { "id": "review-to-storage", "from": "review-workbench", "to": "browser-storage", "label": "儲存走查狀態與證據" },
+    { "id": "story-to-verification", "from": "story-data", "to": "verification-suite", "label": "提供故事／AC／元素定義" },
+    { "id": "verification-to-reports", "from": "verification-suite", "to": "generated-reports", "label": "產生檢查與四層摘要", "variant": "dashed" },
+    { "id": "review-to-report", "from": "review-workbench", "to": "generated-reports", "label": "複製人工走查報告", "variant": "dashed" },
+    { "id": "reports-to-hub", "from": "generated-reports", "to": "prototype-hub", "label": "入口頁載入上次結果" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "頁面與共用執行方式",
+      "items": [
+        "11 個畫面都是獨立 HTML；每頁共用 theme.js、state-switcher.js、story-data.js、story-runner.js。",
+        "state-switcher.js 以 URL query 或按鈕切換 default／loading／empty／error／success／interrupted。",
+        "story-runner.js 把 data-action 轉成內部跳頁、外部支付模擬或延遲後的狀態變更。"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "原型刻意保留的業務閘門",
+      "items": [
+        "廚房完成只顯示「待店員確認」，不通知顧客、不上取餐看板。",
+        "店員的「入櫃並通知」一次完成 S5→S6 與通知；取餐櫃驗證後才進 S7。",
+        "付款是外部系統動作，原型不串接真實金流，只讓走查者選擇成功或失敗。"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "驗證與證據邊界",
+      "items": [
+        "verify-stories.mjs 讀取 story-data、HTML 與任務／元素資料，檢查故事路徑、AC 與頁面結構。",
+        "check-all.mjs 串起業務、資訊、版面、實作與負向測試，產生入口頁讀取的摘要。",
+        "review.html／review.js 保存人工體驗走查；這與自動規則檢查分開。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "來源範圍",
+      "items": [
+        "架構依據：06_W06_UX/16_wireframes/prototype/README.md、assets/README.md、index.html、assets/*.js、各 SCR README。",
+        "這是靜態原型架構，不代表已存在的正式 API、資料庫或部署環境。"
+      ]
+    }
+  ]
+}

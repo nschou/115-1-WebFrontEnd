@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCR-08 取餐看板｜線框原型</title>
+<link rel="stylesheet" href="../assets/tokens.css"><link rel="stylesheet" href="../assets/wire.css">
+<link rel="stylesheet" href="../assets/base.css"><link rel="stylesheet" href="../assets/tokens-display.css">
+<link rel="stylesheet" href="screen.css"></head>
+<body data-state="default" data-mode="color">
+<div class="devbar" role="group" aria-label="狀態切換">
+  <strong>SCR-08</strong><span>取餐看板（純顯示）</span><span class="spacer"></span>
+  <button data-set-state="default">default</button><button data-set-state="loading">loading</button>
+  <button data-set-state="empty">empty</button><button data-set-state="error">error</button>
+  <button data-set-state="success">success</button><button data-set-state="interrupted">interrupted</button>
+  <button data-toggle-mode>線框模式</button>
+</div>
+<main class="app app--display" data-fit data-fit-width="1920">
+  <header class="board-head" data-wire-outline><h1>可取餐</h1><span class="board-clock">08:24</span></header>
+
+  <section class="state state-default">
+    <div class="board-grid">
+      <div class="board-cell"><b>A-03</b><span>可取餐</span></div>
+      <div class="board-cell"><b>A-05</b><span>可取餐</span></div>
+      <div class="board-cell"><b>B-01</b><span>可取餐</span></div>
+      <div class="board-cell"><b>B-04</b><span>可取餐</span></div>
+    </div>
+    <div class="board-sub" data-wire-outline><span>製作中</span><b>#1046 · #1047 · #1048</b></div>
+  </section>
+
+  <section class="state state-loading"><p class="board-note">更新中⋯</p></section>
+  <section class="state state-empty"><p class="board-note">目前沒有可取餐號碼</p></section>
+  <section class="state state-error"><p class="board-note">連線中斷 · 最後更新 08:01<br><small>請看櫃台螢幕或詢問店員</small></p></section>
+  <section class="state state-success">
+    <div class="board-grid">
+      <div class="board-cell is-new"><b>A-03</b><span>可取餐</span></div>
+      <div class="board-cell"><b>A-05</b><span>可取餐</span></div>
+      <div class="board-cell"><b>B-01</b><span>可取餐</span></div>
+      <div class="board-cell"><b>B-04</b><span>可取餐</span></div>
+      <div class="board-cell is-new"><b>C-02</b><span>可取餐</span></div>
+    </div>
+    <p class="board-note">新號碼淡入 300ms 後靜止</p>
+  </section>
+  <section class="state state-interrupted"><p class="board-note">系統維護中 · 請詢問店員</p></section>
+</main>
+<script src="../assets/theme.js"></script>
+<script src="../assets/state-switcher.js"></script>
+<script src="../assets/story-data.js"></script>
+<script src="../assets/story-runner.js"></script>
+</body></html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>原型入口｜故事、動作與檢查</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/wire.css">
+<link rel="stylesheet" href="assets/hub.css">
+</head>
+<body data-mode="color">
+<header class="hub-head">
+  <div>
+    <h1>原型入口</h1>
+    <p class="muted">雲端早餐店｜11 個畫面｜10 條故事｜可點 → 可查 → 可驗</p>
+  </div>
+  <div class="hub-actions">
+    <button id="toggle-mode">線框模式</button>
+    <span data-theme-slot></span>
+  </div>
+</header>
+
+<div id="boot-error" class="boot-error" hidden></div>
+<section class="hub-stats" id="stats"></section>
+
+<section class="hub-block">
+  <h2>故事（點「開始走」就在原型裡跑一遍）</h2>
+  <div id="stories" class="story-grid"></div>
+</section>
+
+<section class="hub-block">
+  <h2>故事 × AC 覆蓋矩陣<span class="muted" id="cov-summary"></span></h2>
+  <p class="muted">綠＝有自動檢查（會紅）；灰＝人工檢查；橘＝只能人判斷。</p>
+  <table id="coverage" class="hub-table"></table>
+  <div id="gaps" class="gaps"></div>
+</section>
+
+<section class="hub-block">
+  <h2>自動檢查結果<span class="muted" id="report-time"></span></h2>
+  <p class="muted">由 <code>node verify-stories.mjs</code> 產生；改過畫面要重跑。</p>
+  <table id="checks" class="hub-table"></table>
+</section>
+
+<section class="hub-block">
+  <h2>動作定義</h2>
+  <p class="muted">每個動作都有「意圖／會改什麼／驗收條件」；面板內容由這份資料驅動。</p>
+  <table id="actions" class="hub-table"></table>
+</section>
+
+<section class="hub-block">
+  <h2>四層檢查<span class="muted" id="layers-time"></span></h2>
+  <p class="muted">由 <code>node check-all.mjs</code> 一次跑完，結果寫在 assets/checks-summary.js。</p>
+  <div id="layers" class="four-layers"></div>
+</section>
+
+<section class="hub-block">
+  <h2>兩層證據</h2>
+  <div id="twolayer" class="two-layer"></div>
+  <p class="muted">規則層（會紅的斷言）自動判定；體驗層（好不好用）只能人做，到 <a href="review.html">走查台</a> 勾選。</p>
+</section>
+
+<section class="hub-block">
+  <h2>怎麼跑（兩種方式）</h2>
+  <table class="hub-table">
+    <tr><th>方式</th><th>做什麼</th><th>會看到</th></tr>
+    <tr><td><b>A. 在瀏覽器</b></td><td>點上面故事卡的「開始走」，或下表右側的「稽核」</td><td>頁面上方出現稽核列 → 按「執行檢查」→ PASS／FAIL</td></tr>
+    <tr><td><b>B. 在終端機</b></td><td>在 <code>prototype/</code> 資料夾執行下列指令</td><td>產生報告檔，重新整理本頁就會更新</td></tr>
+  </table>
+  <p class="muted">本頁顯示的是「上一次終端機執行的結果」；要即時驗某一頁，用 A 的稽核模式。</p>
+</section>
+
+<section class="hub-block">
+  <h2>指令</h2>
+  <pre class="hub-code">node lint-tokens.mjs        # 版面規範：token／色碼／狀態數
+node verify-stories.mjs     # 故事與 AC：結構＋內容
+node selftest-stories.mjs   # 負向測試：故意做錯，確認檢查會紅</pre>
+</section>
+
+<footer class="hub-foot muted">
+  畫面：<span id="screens"></span>
+</footer>
+
+<script src="assets/theme.js"></script>
+<script src="assets/story-data.js"></script>
+<script src="assets/checks-report.js"></script>
+<script src="assets/checks-summary.js"></script>
+<script src="assets/review-data.js"></script>
+<script src="assets/review-report.js"></script>
+<script src="assets/hub.js"></script>
+</body></html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="網站前端課程：從服務問題到可驗收規格的學習導航與 AI 協作提示。">
+  <title>服務設計到 Spec｜學生學習導航</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="回到課程首頁">
+      <span class="brand-mark">18</span>
+      <span><b>服務設計到 Spec</b><small>學生學習導航</small></span>
+    </a>
+    <div class="top-actions">
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋階段、問題或 Prompt" aria-label="搜尋教材"></label>
+      <button class="ghost" id="reset-progress" type="button">清除進度</button>
+    </div>
+  </header>
+
+  <main id="top" class="app-shell">
+    <aside class="sidebar" aria-label="課程階段導覽">
+      <div class="sidebar-intro">
+        <p class="eyebrow">COURSE MAP</p>
+        <h1>從問題到規格</h1>
+        <p>先建立證據，再做決定；先完成上游，再進入下游。</p>
+      </div>
+      <nav id="stage-nav" class="stage-nav"></nav>
+    </aside>
+
+    <section class="content">
+      <section class="hero panel">
+        <div>
+          <p class="eyebrow">LEARNING PATH</p>
+          <h2>不要從畫面開始，從可追溯的問題開始。</h2>
+          <p class="hero-copy">這個網站是教材的導覽層。原始 Markdown、Prototype 與檢查腳本仍是正式來源；這裡負責告訴你現在在哪裡、下一步做什麼，以及如何安全地請 AI 協助。</p>
+          <div class="hero-actions">
+            <a class="primary" href="#stage-00">從 W1 開始</a>
+            <a class="secondary" href="#ai-rules">先看 AI 使用規則</a>
+          </div>
+        </div>
+        <div class="progress-card" aria-live="polite">
+          <span class="progress-label">你的學習進度</span>
+          <strong id="progress-count">0 / 19</strong>
+          <div class="progress-track"><span id="progress-bar"></span></div>
+          <small>完成每階段後，在頁面底部標記完成。</small>
+        </div>
+      </section>
+
+      <section id="ai-rules" class="rules panel">
+        <div class="section-heading"><div><p class="eyebrow">AI COLLABORATION</p><h2>先給 AI 證據，再要求 AI 推導</h2></div><span class="badge warning">不可跳過上游</span></div>
+        <div class="rule-grid">
+          <article><b>1. 提供上下文</b><p>附上本階段輸入、文件索引、ID 規則與已知限制。</p></article>
+          <article><b>2. 禁止虛構</b><p>沒有來源的內容必須標成「待確認」，不能自行補成事實。</p></article>
+          <article><b>3. 要求追溯</b><p>每個結論都要回指來源、欄位、狀態或決策。</p></article>
+          <article><b>4. 人工驗證</b><p>AI 產生的是草稿；正式文件要經過檢查與人工交叉比對。</p></article>
+        </div>
+        <div class="notice"><b>使用方法：</b>選擇階段 → 閱讀輸入與完成條件 → 複製 Prompt → 附上自己的文件 → 要 AI 先列出缺資料與矛盾，再產生草稿。</div>
+      </section>
+
+      <section class="overview panel">
+        <div class="section-heading"><div><p class="eyebrow">LEARNING MAP</p><h2>主線不是文件清單，而是因果鏈</h2></div><span class="muted">W1–W7</span></div>
+        <div id="map-strip" class="map-strip"></div>
+      </section>
+
+      <section id="stage-detail" class="stage-detail panel" aria-live="polite"></section>
+
+      <footer class="site-footer">
+        <span>教材來源：W1–W7 學生工具包與示範案例</span>
+        <span><a href="reader.html?file=..%2F00_%E5%AD%B8%E7%94%9F%E7%99%BC%E5%B8%83%E7%89%88%2F00_%E5%AD%B8%E7%94%9F%E6%95%99%E6%9D%90%E5%85%A5%E5%8F%A3_GoogleDoc.md">閱讀學生教材入口</a> · <a href="reader.html?file=..%2F00_%E8%AA%B2%E7%A8%8B%E4%B8%AD%E9%96%93%E5%9B%9E%E9%A1%A7%E8%88%87%E6%80%9D%E8%80%83%E6%A1%86%E6%9E%B6.md">閱讀中段回顧</a></span>
+      </footer>
+    </section>
+  </main>
+  <script src="assets/guide-data.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

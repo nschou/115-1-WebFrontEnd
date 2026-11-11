@@ -1,0 +1,981 @@
+<!doctype html>
+
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              outline: "#76777d",
+              "on-secondary-fixed": "#001d31",
+              "tertiary-fixed-dim": "#b9c7e0",
+              "surface-container-low": "#eff4ff",
+              "on-secondary-fixed-variant": "#004b73",
+              "on-surface-variant": "#45464d",
+              "on-error": "#ffffff",
+              "surface-bright": "#f8f9ff",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#7c839b",
+              "on-primary": "#ffffff",
+              "on-background": "#0b1c30",
+              "secondary-fixed": "#cce5ff",
+              "outline-variant": "#c6c6cd",
+              "secondary-container": "#5bb8fe",
+              "on-surface": "#0b1c30",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#d5e3fd",
+              "surface-tint": "#565e74",
+              "primary-container": "#131b2e",
+              "tertiary-container": "#0d1c2f",
+              "surface-variant": "#d3e4fe",
+              "surface-container-highest": "#d3e4fe",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dae2fd",
+              "inverse-surface": "#213145",
+              "surface-dim": "#cbdbf5",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#eaf1ff",
+              secondary: "#006398",
+              tertiary: "#000000",
+              "secondary-fixed-dim": "#93ccff",
+              "on-secondary-container": "#00476e",
+              "on-primary-fixed-variant": "#3f465c",
+              "primary-fixed-dim": "#bec6e0",
+              surface: "#f8f9ff",
+              "surface-container": "#e5eeff",
+              "on-tertiary-container": "#76859b",
+              "on-tertiary-fixed-variant": "#3a485c",
+              "on-tertiary-fixed": "#0d1c2f",
+              "surface-container-high": "#dce9ff",
+              background: "#f8f9ff",
+              "inverse-primary": "#bec6e0",
+              error: "#ba1a1a",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#131b2e",
+              primary: "#000000",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              gutter: "0.75rem",
+              margin: "1rem",
+              "space-md": "0.75rem",
+              "space-xl": "1.5rem",
+              "margin-desktop": "2rem",
+              "space-sm": "0.5rem",
+              "space-lg": "1rem",
+              "space-xs": "0.25rem",
+              "gutter-desktop": "1.25rem",
+            },
+            fontFamily: {
+              "body-md": ["Geist"],
+              "label-code": ["JetBrains Mono"],
+              "label-telemetry": ["JetBrains Mono"],
+              "display-lg": ["Geist"],
+              "body-lg": ["Geist"],
+              "headline-md": ["Geist"],
+              "display-lg-mobile": ["Geist"],
+              "body-sm": ["Geist"],
+              "headline-sm": ["Geist"],
+            },
+            fontSize: {
+              "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "label-code": ["13px", { lineHeight: "18px", fontWeight: "500" }],
+              "label-telemetry": [
+                "11px",
+                { lineHeight: "14px", fontWeight: "600" },
+              ],
+              "display-lg": ["32px", { lineHeight: "38px", fontWeight: "600" }],
+              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-md": [
+                "22px",
+                { lineHeight: "28px", fontWeight: "600" },
+              ],
+              "display-lg-mobile": [
+                "26px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+              "headline-sm": [
+                "18px",
+                { lineHeight: "24px", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100vw;
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div class="h-16 px-margin flex items-center justify-between">
+        <div class="flex items-center gap-space-sm">
+          <div
+            class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center shrink-0"
+          >
+            <span
+              class="material-symbols-outlined text-primary-fixed text-[18px]"
+              >memory</span
+            >
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-space-xs">
+              <span
+                class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold"
+                >雲端早餐</span
+              ><span
+                class="font-label-telemetry text-label-telemetry text-secondary uppercase tracking-wider"
+                >v2.4</span
+              >
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span class="font-body-sm text-body-sm text-on-surface-variant"
+                >信義數位旗艦店</span
+              ><span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+              <div class="flex items-center gap-1">
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"
+                ></span
+                ><span
+                  class="font-label-telemetry text-label-telemetry text-secondary"
+                  >4-6 MIN</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs">
+          <button
+            aria-label="系統遙測狀態"
+            class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+          >
+            <span class="material-symbols-outlined text-[20px]">tune</span>
+          </button>
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"
+    >
+      <div class="flex flex-col w-full px-margin py-space-sm space-y-space-md">
+        <!-- Status Notification Banner -->
+        <div
+          class="w-full bg-surface-container rounded-lg p-space-sm shadow-sm flex items-center justify-between"
+        >
+          <div class="flex items-center gap-space-sm min-w-0">
+            <div
+              class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0 relative flex items-center justify-center"
+            >
+              <span
+                class="absolute w-4 h-4 rounded-full bg-secondary-container/40 animate-ping"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"
+              ></span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-space-xs">
+                <span
+                  class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold"
+                  >餐點已備妥，請至智慧櫃取餐</span
+                >
+              </div>
+              <p
+                class="font-body-sm text-body-sm text-on-surface-variant truncate"
+              >
+                信義數位旗艦店 · 入口右側取餐牆
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 pl-space-xs">
+            <span
+              class="font-label-telemetry text-label-telemetry bg-secondary-fixed text-on-secondary-fixed px-space-xs py-0.5 rounded uppercase"
+              >LIVE</span
+            >
+          </div>
+        </div>
+        <!-- Hero Locker Billboard -->
+        <div
+          class="w-full bg-primary-container text-on-primary rounded-xl p-space-lg shadow-md relative overflow-hidden"
+        >
+          <div class="flex items-center justify-between pb-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span
+                class="material-symbols-outlined text-secondary-container text-[18px]"
+                >lock_clock</span
+              >
+              <span
+                class="font-label-telemetry text-label-telemetry text-on-primary-container tracking-wider uppercase"
+                >智慧保溫儲物格</span
+              >
+            </div>
+            <span
+              class="font-label-code text-label-code text-secondary-container bg-surface-container-highest/10 px-space-xs py-0.5 rounded"
+              >ID: LOCKER-B07</span
+            >
+          </div>
+          <!-- Huge Number Header -->
+          <div class="py-space-sm flex flex-col">
+            <div class="flex items-baseline justify-between">
+              <h1
+                class="font-display-lg text-display-lg font-semibold tracking-tight text-surface-container-lowest"
+              >
+                B 區 07 號櫃
+              </h1>
+              <div
+                class="flex items-center gap-1.5 bg-tertiary-container px-space-sm py-1 rounded"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"
+                ></span>
+                <span
+                  class="font-label-telemetry text-label-telemetry text-secondary-container"
+                  >62°C 恆溫保持</span
+                >
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-primary-container mt-1">
+              已入櫃 1 分鐘 · 最佳賞味剩餘
+              <span
+                class="font-label-code text-label-code text-surface-container-lowest font-medium"
+                id="countdown-timer"
+                >13:58</span
+              >
+            </p>
+          </div>
+          <!-- 4-Digit Unlock Code Cards -->
+          <div class="my-space-md pt-space-xs">
+            <div class="flex items-center justify-between mb-space-xs">
+              <span class="font-body-sm text-body-sm text-on-primary-container"
+                >櫃門解鎖驗證碼</span
+              >
+              <button
+                class="font-label-telemetry text-label-telemetry text-secondary-container flex items-center gap-0.5"
+                id="copy-code-btn"
+              >
+                <span class="material-symbols-outlined text-[14px]"
+                  >content_copy</span
+                >
+                <span>複製</span>
+              </button>
+            </div>
+            <div class="grid grid-cols-4 gap-space-sm text-center">
+              <div
+                class="bg-surface-container-highest/15 rounded-lg py-3 flex items-center justify-center shadow-inner"
+              >
+                <span
+                  class="font-label-code text-headline-md font-semibold text-surface-container-lowest"
+                  >8</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-highest/15 rounded-lg py-3 flex items-center justify-center shadow-inner"
+              >
+                <span
+                  class="font-label-code text-headline-md font-semibold text-surface-container-lowest"
+                  >2</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-highest/15 rounded-lg py-3 flex items-center justify-center shadow-inner"
+              >
+                <span
+                  class="font-label-code text-headline-md font-semibold text-surface-container-lowest"
+                  >0</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-highest/15 rounded-lg py-3 flex items-center justify-center shadow-inner"
+              >
+                <span
+                  class="font-label-code text-headline-md font-semibold text-surface-container-lowest"
+                  >4</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Primary Action Triggers -->
+          <div class="flex flex-col gap-space-sm pt-space-xs">
+            <button
+              class="w-full h-11 bg-secondary text-on-secondary rounded-lg font-body-md font-medium flex items-center justify-center gap-space-xs hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm"
+              id="bluetooth-unlock-btn"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >bluetooth_searching</span
+              >
+              <span>一鍵藍牙感應開櫃</span>
+            </button>
+            <button
+              class="w-full h-10 bg-surface-container-highest/20 text-surface-container-lowest rounded-lg font-body-md font-medium flex items-center justify-center gap-space-xs hover:bg-surface-container-highest/30 transition-colors"
+              id="qr-toggle-btn"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >qr_code_2</span
+              >
+              <span>出示取餐 QR Code / 條碼</span>
+            </button>
+          </div>
+          <!-- Expandable QR Code Drawer -->
+          <div
+            class="hidden mt-space-md pt-space-md bg-surface-container-lowest text-on-surface rounded-lg p-space-md text-center transition-all"
+            id="qr-display-panel"
+          >
+            <div class="flex items-center justify-between pb-space-xs">
+              <span
+                class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase"
+                >櫃門感應掃描</span
+              >
+              <span
+                class="font-label-code text-label-code text-secondary font-semibold"
+                >T-SYNC 100%</span
+              >
+            </div>
+            <div
+              class="w-44 h-44 mx-auto my-space-xs bg-surface-container-low rounded-lg p-space-sm flex items-center justify-center"
+            >
+              <!-- Technical Precision QR SVG representation -->
+              <svg
+                class="w-full h-full text-primary"
+                fill="currentColor"
+                viewbox="0 0 100 100"
+              >
+                <rect
+                  fill="#0b1c30"
+                  height="30"
+                  rx="3"
+                  width="30"
+                  x="0"
+                  y="0"
+                ></rect>
+                <rect
+                  fill="#ffffff"
+                  height="20"
+                  rx="2"
+                  width="20"
+                  x="5"
+                  y="5"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="10"
+                  width="10"
+                  x="10"
+                  y="10"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="30"
+                  rx="3"
+                  width="30"
+                  x="70"
+                  y="0"
+                ></rect>
+                <rect
+                  fill="#ffffff"
+                  height="20"
+                  rx="2"
+                  width="20"
+                  x="75"
+                  y="5"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="10"
+                  width="10"
+                  x="80"
+                  y="10"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="30"
+                  rx="3"
+                  width="30"
+                  x="0"
+                  y="70"
+                ></rect>
+                <rect
+                  fill="#ffffff"
+                  height="20"
+                  rx="2"
+                  width="20"
+                  x="5"
+                  y="75"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="10"
+                  width="10"
+                  x="10"
+                  y="80"
+                ></rect>
+                <rect fill="#006398" height="8" width="20" x="40" y="10"></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="15"
+                  width="10"
+                  x="40"
+                  y="25"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="15"
+                  width="15"
+                  x="25"
+                  y="40"
+                ></rect>
+                <rect
+                  fill="#006398"
+                  height="16"
+                  rx="2"
+                  width="16"
+                  x="48"
+                  y="48"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="20"
+                  width="10"
+                  x="70"
+                  y="40"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="10"
+                  width="15"
+                  x="85"
+                  y="40"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="10"
+                  width="20"
+                  x="40"
+                  y="70"
+                ></rect>
+                <rect
+                  fill="#006398"
+                  height="15"
+                  width="10"
+                  x="40"
+                  y="85"
+                ></rect>
+                <rect
+                  fill="#0b1c30"
+                  height="25"
+                  width="15"
+                  x="70"
+                  y="75"
+                ></rect>
+              </svg>
+            </div>
+            <p class="font-label-code text-label-code text-on-surface-variant">
+              CODE: 8204-CB2048
+            </p>
+          </div>
+        </div>
+        <!-- Direct Route / Navigation Pathway -->
+        <div
+          class="w-full bg-surface-container rounded-xl p-space-md shadow-sm"
+        >
+          <div class="flex items-center justify-between pb-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-[20px]"
+                >directions_walk</span
+              >
+              <span
+                class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                >實體取餐動線</span
+              >
+            </div>
+            <span
+              class="font-label-telemetry text-label-telemetry text-secondary bg-secondary-fixed px-space-xs py-0.5 rounded uppercase"
+              >無需排隊</span
+            >
+          </div>
+          <!-- Stepper Pathway Flow -->
+          <div class="grid grid-cols-3 gap-space-xs my-space-xs">
+            <div
+              class="bg-surface-container-low rounded-lg p-space-sm text-center flex flex-col items-center"
+            >
+              <span
+                class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase"
+                >STEP 01</span
+              >
+              <span
+                class="material-symbols-outlined text-on-surface text-[20px] my-1"
+                >sensor_door</span
+              >
+              <span
+                class="font-body-sm text-body-sm font-semibold text-on-surface"
+                >門市入口</span
+              >
+            </div>
+            <div
+              class="bg-surface-container-low rounded-lg p-space-sm text-center flex flex-col items-center"
+            >
+              <span
+                class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase"
+                >STEP 02</span
+              >
+              <span
+                class="material-symbols-outlined text-on-surface text-[20px] my-1"
+                >wall_art</span
+              >
+              <span
+                class="font-body-sm text-body-sm font-semibold text-on-surface"
+                >B 區保溫牆</span
+              >
+            </div>
+            <div
+              class="bg-surface-container-highest rounded-lg p-space-sm text-center flex flex-col items-center shadow-sm"
+            >
+              <span
+                class="font-label-telemetry text-label-telemetry text-secondary uppercase font-semibold"
+                >TARGET</span
+              >
+              <span
+                class="material-symbols-outlined text-secondary text-[20px] my-1"
+                >inventory_2</span
+              >
+              <span
+                class="font-body-sm text-body-sm font-semibold text-secondary"
+                >07 號櫃</span
+              >
+            </div>
+          </div>
+          <div
+            class="mt-space-sm bg-surface-container-low rounded-lg p-space-sm flex items-start gap-space-xs"
+          >
+            <span
+              class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5"
+              >info</span
+            >
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+            >
+              走入門市無須向收銀櫃檯回報，直接走向右側保溫牆，開啟手機藍牙或對準鏡頭感應開櫃。
+            </p>
+          </div>
+        </div>
+        <!-- Order Items & Pickup Confirmation -->
+        <div
+          class="w-full bg-surface-container rounded-xl p-space-md shadow-sm"
+        >
+          <div class="flex items-center justify-between pb-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span
+                class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                >訂單明細</span
+              >
+              <span
+                class="font-label-code text-label-code text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded"
+                >#CB-2048</span
+              >
+            </div>
+            <span
+              class="font-label-telemetry text-label-telemetry text-on-surface-variant"
+              >共 2 件品項</span
+            >
+          </div>
+          <!-- Items List -->
+          <div class="space-y-space-sm my-space-xs">
+            <div
+              class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between"
+            >
+              <div class="flex items-center gap-space-sm min-w-0">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container-highest shrink-0 overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Close up studio photograph of a gourmet sous-vide chicken breast toast with soft-boiled poached egg and fresh herbs, clean slate slate background, modern minimalist plating"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5O5NAteJrK8Dl6mNl-Sg_2s40sX-nC5vSJkkkn1IN0qizUE1pucYiIYk7mEh2vcbfFyLGWO-BPO8ptTPkwESZtmUi0mCY3UH5oA1zY7KgPtTQmpjtaxfsib48jh8tE02Sv5pcvagYILAzSwjX_YE4gzC96udHi3E40z3JnR4qJce5znV0JG3cltGlikj-YG6jJ0ScBokIYGuuiEBRQBOD5f53umK3563A_0eVfdQjKxOC8GzhcMEq"
+                  />
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-body-md text-body-md text-on-surface font-medium truncate"
+                    >舒肥雞胸溫泉蛋吐司</span
+                  >
+                  <span
+                    class="font-label-telemetry text-label-telemetry text-on-surface-variant"
+                    >蛋白質 32G · 熱食保溫</span
+                  >
+                </div>
+              </div>
+              <div class="text-right shrink-0 pl-space-xs">
+                <span
+                  class="font-label-code text-body-md text-on-surface font-semibold"
+                  >× 1</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between"
+            >
+              <div class="flex items-center gap-space-sm min-w-0">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container-highest shrink-0 overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Minimalist cold brew black coffee in a sleek glass container with ice cubes, dark slate surface, clean studio lighting, high precision beverage photography"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYAmv2MZ8ExS1vvzQjXexY6UP-nJPxsp09QdCF8cR_5bHHrO9IHtq_5Vxvd5wjVdLlmExbDCvJlTERb-HcL8WbNBVcCbvnv5NKAhm-jg0PBQkNow0Nsk6AwXnf8iJKLQ1nFwPQo3zkyh4CdQatTmQLzaCLacoFk8Lcexb0g93PMc8pPy0t8z0HJIlSfOX3QhH-ICtshfHeyaPCK6e_hzM-0OUGF1TBxs2ZDFf1Q4CHcMe_pmp6XAoZ"
+                  />
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-body-md text-body-md text-on-surface font-medium truncate"
+                    >冰冷萃黑咖啡</span
+                  >
+                  <span
+                    class="font-label-telemetry text-label-telemetry text-on-surface-variant"
+                    >淺焙耶加雪菲 · 去冰無糖</span
+                  >
+                </div>
+              </div>
+              <div class="text-right shrink-0 pl-space-xs">
+                <span
+                  class="font-label-code text-body-md text-on-surface font-semibold"
+                  >× 1</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Pickup Completion Confirmation Button -->
+          <div class="mt-space-md">
+            <button
+              class="w-full h-11 bg-primary text-on-primary rounded-lg font-body-md font-medium flex items-center justify-center gap-space-xs hover:bg-surface-variant hover:text-on-surface transition-colors shadow-sm"
+              id="confirm-finish-btn"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >check_circle</span
+              >
+              <span>我已拿出餐點，關閉櫃門</span>
+            </button>
+          </div>
+        </div>
+        <!-- Kitchen Support / Issue Help -->
+        <div
+          class="w-full pt-space-xs pb-space-lg flex items-center justify-between"
+        >
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-outline text-[18px]"
+              >contact_support</span
+            >
+            <span class="font-body-sm text-body-sm text-on-surface-variant"
+              >無法開櫃或餐點有誤？</span
+            >
+          </div>
+          <button
+            class="font-body-sm text-body-sm text-secondary bg-surface-container-low px-space-sm py-1.5 rounded-lg font-medium flex items-center gap-1 hover:bg-surface-container transition-colors"
+            id="help-btn"
+          >
+            <span>呼叫門市店員</span>
+            <span class="material-symbols-outlined text-[16px]"
+              >arrow_forward</span
+            >
+          </button>
+        </div>
+        <!-- Interactive Feedback Overlay Modal (Hidden by default) -->
+        <div
+          class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 hidden flex items-center justify-center px-margin"
+          id="modal-backdrop"
+        >
+          <div
+            class="bg-surface-container-lowest rounded-xl p-space-lg w-full max-w-sm shadow-xl space-y-space-md"
+          >
+            <div class="flex items-center gap-space-sm">
+              <div
+                class="w-9 h-9 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px]"
+                  id="modal-icon"
+                  >check</span
+                >
+              </div>
+              <div>
+                <h2
+                  class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                  id="modal-title"
+                >
+                  藍牙感應成功
+                </h2>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant"
+                  id="modal-sub"
+                >
+                  儲存櫃門已自動解鎖開啟
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-low p-space-sm rounded-lg text-center"
+            >
+              <p
+                class="font-label-code text-label-code text-secondary font-semibold"
+                id="modal-desc"
+              >
+                LOCKER #B07 DOOR OPEN
+              </p>
+            </div>
+            <button
+              class="w-full h-10 bg-primary text-on-primary rounded-lg font-body-md font-medium"
+              id="modal-close-btn"
+            >
+              關閉通知
+            </button>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          // Countdown Timer logic
+          let remainingSeconds = 14 * 60 - 2;
+          const timerEl = document.getElementById("countdown-timer");
+          const timerInterval = setInterval(() => {
+            if (remainingSeconds <= 0) {
+              clearInterval(timerInterval);
+              if (timerEl) timerEl.textContent = "00:00";
+              return;
+            }
+            remainingSeconds--;
+            const mins = Math.floor(remainingSeconds / 60);
+            const secs = remainingSeconds % 60;
+            if (timerEl) {
+              timerEl.textContent =
+                (mins < 10 ? "0" : "") +
+                mins +
+                ":" +
+                (secs < 10 ? "0" : "") +
+                secs;
+            }
+          }, 1000);
+
+          // QR Code Drawer Toggle
+          const qrBtn = document.getElementById("qr-toggle-btn");
+          const qrPanel = document.getElementById("qr-display-panel");
+          if (qrBtn && qrPanel) {
+            qrBtn.addEventListener("click", () => {
+              qrPanel.classList.toggle("hidden");
+              if (!qrPanel.classList.contains("hidden")) {
+                qrPanel.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                });
+              }
+            });
+          }
+
+          // Modal Display Logic
+          const backdrop = document.getElementById("modal-backdrop");
+          const modalTitle = document.getElementById("modal-title");
+          const modalSub = document.getElementById("modal-sub");
+          const modalDesc = document.getElementById("modal-desc");
+          const modalIcon = document.getElementById("modal-icon");
+          const modalClose = document.getElementById("modal-close-btn");
+
+          function showModal(title, sub, desc, iconName) {
+            if (!backdrop) return;
+            modalTitle.textContent = title;
+            modalSub.textContent = sub;
+            modalDesc.textContent = desc;
+            modalIcon.textContent = iconName;
+            backdrop.classList.remove("hidden");
+          }
+
+          if (modalClose && backdrop) {
+            modalClose.addEventListener("click", () => {
+              backdrop.classList.add("hidden");
+            });
+          }
+
+          // Bluetooth Open trigger
+          const bluetoothBtn = document.getElementById("bluetooth-unlock-btn");
+          if (bluetoothBtn) {
+            bluetoothBtn.addEventListener("click", () => {
+              bluetoothBtn.disabled = true;
+              bluetoothBtn.classList.add("opacity-75");
+              bluetoothBtn.innerHTML =
+                '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>藍牙連線配對中...</span>';
+              setTimeout(() => {
+                bluetoothBtn.disabled = false;
+                bluetoothBtn.classList.remove("opacity-75");
+                bluetoothBtn.innerHTML =
+                  '<span class="material-symbols-outlined text-[20px]">lock_open</span><span>B07 櫃門已解鎖</span>';
+                showModal(
+                  "藍牙感應成功",
+                  "B 區 07 號智慧櫃門已彈開",
+                  "STATUS: UNLOCKED &#183; PLEASE RETRIEVE MEAL",
+                  "lock_open",
+                );
+              }, 1200);
+            });
+          }
+
+          // Confirm Pickup trigger
+          const confirmBtn = document.getElementById("confirm-finish-btn");
+          if (confirmBtn) {
+            confirmBtn.addEventListener("click", () => {
+              showModal(
+                "取餐已完成",
+                "感謝使用雲端早餐，祝您有美好的一天！",
+                "ORDER #CB-2048 CLOSED",
+                "task_alt",
+              );
+            });
+          }
+
+          // Copy Code trigger
+          const copyBtn = document.getElementById("copy-code-btn");
+          if (copyBtn) {
+            copyBtn.addEventListener("click", () => {
+              const text = "8204";
+              navigator.clipboard
+                ?.writeText(text)
+                .then(() => {
+                  copyBtn.innerHTML =
+                    '<span class="material-symbols-outlined text-[14px]">check</span><span>已複製</span>';
+                  setTimeout(() => {
+                    copyBtn.innerHTML =
+                      '<span class="material-symbols-outlined text-[14px]">content_copy</span><span>複製</span>';
+                  }, 1800);
+                })
+                .catch(() => {
+                  copyBtn.innerHTML =
+                    '<span class="material-symbols-outlined text-[14px]">check</span><span>8204</span>';
+                });
+            });
+          }
+
+          // Help Button
+          const helpBtn = document.getElementById("help-btn");
+          if (helpBtn) {
+            helpBtn.addEventListener("click", () => {
+              showModal(
+                "已呼叫門市服務",
+                "信義旗艦店值班夥伴將在 30 秒內前來協助。",
+                "SUPPORT DISPATCHED &#183; STATION B",
+                "support_agent",
+              );
+            });
+          }
+        })();
+      </script>
+    </main>
+    <nav
+      class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]"
+      data-active-classes="text-on-surface bg-surface-container font-medium"
+    >
+      <div class="flex items-center justify-around h-16 px-space-xs">
+        <a
+          class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="menu-feed"
+          href="#"
+          ><span class="material-symbols-outlined text-[22px]">restaurant</span
+          ><span class="font-body-sm text-body-sm tracking-tight"
+            >點餐首頁</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="live-order"
+          href="#"
+          ><span class="material-symbols-outlined text-[22px]"
+            >receipt_long</span
+          ><span class="font-body-sm text-body-sm tracking-tight"
+            >即時訂單</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="prep-progress"
+          href="#"
+          ><span class="material-symbols-outlined text-[22px]"
+            >hourglass_top</span
+          ><span class="font-body-sm text-body-sm tracking-tight"
+            >等待進度</span
+          ></a
+        ><a
+          aria-current="page"
+          class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg transition-colors text-on-surface bg-surface-container font-medium"
+          data-path="locker-pickup"
+          href="#"
+          ><span class="material-symbols-outlined text-[22px]"
+            >mark_email_unread</span
+          ><span class="font-body-sm text-body-sm tracking-tight"
+            >取餐通知</span
+          ></a
+        >
+      </div>
+    </nav>
+  </body>
+</html>

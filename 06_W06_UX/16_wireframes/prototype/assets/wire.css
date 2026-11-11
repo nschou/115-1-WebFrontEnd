@@ -1,0 +1,138 @@
+/* ===========================================================
+   wire.css — 線框模式與開發列
+   mode=wire 時整頁去飽和：先驗結構，不談美感。
+   =========================================================== */
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+/* 開發列（原型專用，實作時刪掉） */
+.devbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; flex-wrap: wrap; gap: var(--space-sm); align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary); color: var(--color-on-primary);
+  font: 500 var(--text-xs)/1.4 var(--font-sans);
+}
+.devbar button {
+  font: inherit; cursor: pointer; padding: 4px 10px;
+  border-radius: 999px; border: 1px solid rgba(255,255,255,.45);
+  background: transparent; color: inherit;
+}
+.devbar button[aria-pressed="true"] { background: var(--color-on-primary); color: var(--color-primary); }
+.devbar .spacer { flex: 1 1 auto; }
+
+/* ===========================================================
+   線框模式：只驗結構，不談美感
+   ① 去色：背景一律白、文字一律深灰（保留字級與間距＝結構）
+   ② 去裝飾：無圓角、無陰影、無漸層、無品牌色
+   ③ 留骨架：框線、分隔、層級、對齊
+   ④ 圖片：斜線佔位（看得出來「這裡有圖」，不猜內容）
+   =========================================================== */
+body[data-mode="wire"] .app,
+body[data-mode="wire"] .app * {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  color: #0F172A !important;
+  text-shadow: none !important;
+  border-color: #CBD5E1 !important;
+}
+body[data-mode="wire"] .app { background: #FFFFFF !important; }
+
+/* 次要文字：保留灰階層級，否則整個畫面看不出主次 */
+body[data-mode="wire"] .app .muted,
+body[data-mode="wire"] .app .hint,
+body[data-mode="wire"] .app .meta,
+body[data-mode="wire"] .app .sr-ac,
+body[data-mode="wire"] .app .order-no { color: #64748B !important; }
+
+/* 區塊：一律 1px 實線（原本的卡片、列表、橫幅都變成方框） */
+body[data-mode="wire"] .app .topbar,
+body[data-mode="wire"] .app .cartbar,
+body[data-mode="wire"] .app .banner,
+body[data-mode="wire"] .app .card,
+body[data-mode="wire"] .app .panel,
+body[data-mode="wire"] .app .track,
+body[data-mode="wire"] .app li { border: 1px solid #94A3B8 !important; }
+
+/* 按鈕：一律空心（線框圖不表現「哪顆是主按鈕」，只表現位置） */
+body[data-mode="wire"] .app button,
+body[data-mode="wire"] .app .btn-primary,
+body[data-mode="wire"] .app .btn-secondary,
+body[data-mode="wire"] .app .chip,
+body[data-mode="wire"] .app a.btn-primary,
+body[data-mode="wire"] .app a.btn-secondary {
+  background: #FFFFFF !important;
+  border: 1.5px solid #334155 !important;
+  color: #0F172A !important;
+}
+
+/* 圖片與骨架屏：斜線佔位 */
+body[data-mode="wire"] .app .img-slot,
+body[data-mode="wire"] .app .skel-line,
+body[data-mode="wire"] .app .skel-block {
+  background: repeating-linear-gradient(45deg, #F1F5F9 0 6px, #E2E8F0 6px 12px) !important;
+  border: 1px dashed #94A3B8 !important;
+  color: #64748B !important;
+}
+
+/* 每個狀態的第一層子節點：虛線外框，方便看「一頁有幾個區塊」 */
+body[data-mode="wire"] .app .state > * { outline: 1px dashed #E2E8F0; outline-offset: 2px; }
+body[data-mode="wire"] .app [data-wire-outline] { outline: 1px dashed #94A3B8 !important; outline-offset: -1px; }
+
+/* ===== story-runner ===== */
+.sr-bar {
+  display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-accent-weak); color: var(--color-text);
+  font: 600 var(--text-xs)/1.4 var(--font-sans);
+  border-bottom: var(--hairline) solid var(--color-border);
+}
+.sr-bar .spacer { flex: 1 1 auto; }
+.sr-panel {
+  position: fixed; right: var(--space-md); bottom: var(--space-md); z-index: 99;
+  width: 360px; max-height: 70vh; overflow: auto;
+  padding: var(--space-md); background: var(--color-surface);
+  border: var(--hairline) solid var(--color-border); border-radius: var(--radius-lg);
+  box-shadow: var(--elev-3); font: 400 var(--text-sm)/1.6 var(--font-sans);
+}
+.sr-panel h3 { margin: 0 0 var(--space-sm); font-size: var(--text-base); }
+.sr-panel ul { margin: var(--space-xs) 0 var(--space-sm); padding-left: var(--space-lg); }
+.sr-close { position: absolute; right: var(--space-sm); top: var(--space-sm); border: 0; background: none; font-size: var(--text-lg); cursor: pointer; }
+.sr-guard { padding: var(--space-sm); background: var(--color-accent-weak); border-radius: var(--radius-default); }
+.sr-pass { color: var(--color-primary); }
+.sr-fail { color: var(--color-error); font-weight: 700; }
+.sr-ac { color: var(--color-muted); font-size: var(--text-xs); }
+.sr-hot { outline: var(--space-xs) solid var(--color-accent); outline-offset: 2px; }
+.sr-dim { opacity: .45; }
+
+/* 持續提示條：重要操作回饋不得自動消失 */
+.sr-toast {
+  position: fixed; left: 50%; bottom: var(--space-xl); transform: translateX(-50%);
+  z-index: 120; display: flex; align-items: center; gap: var(--space-md);
+  max-width: min(90vw, 32rem); padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary); color: var(--color-on-primary);
+  border-radius: var(--radius-full); font: 600 var(--text-sm)/1.4 var(--font-sans);
+  box-shadow: var(--elev-3);
+}
+.sr-toast-close {
+  flex: 0 0 auto; padding: .25rem .5rem; border: var(--hairline) solid currentColor;
+  border-radius: var(--radius-default); background: transparent; color: inherit;
+  font: 600 var(--text-xs)/1.2 var(--font-sans); cursor: pointer;
+}
+.sr-note { font-size: var(--text-sm); color: var(--color-text); }
+.sr-progress { padding: var(--space-sm); background: var(--color-surface-alt); border-radius: var(--radius-default); font-weight: 700; }
+.sr-choices { display: flex; gap: var(--space-sm); }
+.sr-choices button {
+  flex: 1; padding: var(--space-sm); border-radius: var(--radius-default);
+  border: var(--hairline) solid var(--color-primary); background: var(--color-primary);
+  color: var(--color-on-primary); font: 600 var(--text-sm)/1.4 var(--font-sans); cursor: pointer;
+}
+.sr-choices button[data-out="error"] { background: var(--color-surface); color: var(--color-error); border-color: var(--color-error); }
+
+/* 狀態在線框模式下改用「粗細」表達（顏色被去掉了，但結構仍要說得出狀態） */
+body[data-mode="wire"] .app .done,
+body[data-mode="wire"] .app .heat-done { border-top: 3px solid #334155 !important; }
+body[data-mode="wire"] .app .is-new  { border-left: 3px solid #334155 !important; }
+body[data-mode="wire"] .app .current { border-bottom: 3px solid #334155 !important; }

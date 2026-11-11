@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "雲端早餐店網站前端系統架構",
+    "subtitle": "以顧客點餐、付款、製作、入櫃到取餐為主路徑的邏輯架構",
+    "locale": "zh-TW",
+    "output": "cloud-breakfast-frontend.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "customer",
+      "type": "external",
+      "label": "顧客",
+      "sublabel": "通勤自取",
+      "icon": "person",
+      "pos": [40, 100],
+      "size": [170, 72]
+    },
+    {
+      "id": "manager",
+      "type": "external",
+      "label": "店長",
+      "sublabel": "接單與交付控制",
+      "icon": "person",
+      "pos": [40, 300],
+      "size": [170, 72]
+    },
+    {
+      "id": "chef",
+      "type": "external",
+      "label": "廚師",
+      "sublabel": "製作與缺貨回報",
+      "icon": "person",
+      "pos": [40, 500],
+      "size": [170, 72]
+    },
+    {
+      "id": "customer-app",
+      "type": "frontend",
+      "label": "顧客點餐網站",
+      "sublabel": "SCR-01～05｜菜單、結帳、進度",
+      "tag": "顧客端",
+      "icon": "frontend",
+      "pos": [270, 100],
+      "size": [230, 76]
+    },
+    {
+      "id": "manager-app",
+      "type": "frontend",
+      "label": "店長訂單台",
+      "sublabel": "SCR-06｜確認接單、入櫃、重試",
+      "tag": "店長端",
+      "icon": "frontend",
+      "pos": [270, 300],
+      "size": [230, 76]
+    },
+    {
+      "id": "kitchen-app",
+      "type": "frontend",
+      "label": "廚房顯示",
+      "sublabel": "SCR-07｜排序、計時、完成、缺貨",
+      "tag": "廚師端",
+      "icon": "frontend",
+      "pos": [270, 500],
+      "size": [230, 76]
+    },
+    {
+      "id": "pickup-board",
+      "type": "frontend",
+      "label": "取餐看板",
+      "sublabel": "SCR-08｜可取餐號碼、製作中",
+      "tag": "店內設施",
+      "icon": "frontend",
+      "pos": [270, 680],
+      "size": [230, 76]
+    },
+    {
+      "id": "locker-panel",
+      "type": "frontend",
+      "label": "取餐櫃面板",
+      "sublabel": "SCR-09｜輸入、掃描、確認",
+      "tag": "店內設施",
+      "icon": "frontend",
+      "pos": [270, 860],
+      "size": [230, 76]
+    },
+    {
+      "id": "order-service",
+      "type": "backend",
+      "label": "訂單與狀態服務",
+      "sublabel": "建立訂單｜推進 S1～S7｜即時查詢",
+      "tag": "核心業務",
+      "icon": "backend",
+      "pos": [590, 100],
+      "size": [250, 76]
+    },
+    {
+      "id": "store-service",
+      "type": "backend",
+      "label": "菜單、庫存與營運服務",
+      "sublabel": "供應開關｜扣庫存｜營收彙總",
+      "tag": "店務資料",
+      "icon": "backend",
+      "pos": [590, 300],
+      "size": [250, 76]
+    },
+    {
+      "id": "production-service",
+      "type": "backend",
+      "label": "製作協作服務",
+      "sublabel": "待製作排序｜完成回報｜缺貨事件",
+      "tag": "廚房協作",
+      "icon": "backend",
+      "pos": [590, 500],
+      "size": [250, 76]
+    },
+    {
+      "id": "pickup-service",
+      "type": "backend",
+      "label": "取餐與櫃位服務",
+      "sublabel": "發號｜入櫃｜驗證｜完成取餐",
+      "tag": "交付控制",
+      "icon": "backend",
+      "pos": [590, 680],
+      "size": [250, 76]
+    },
+    {
+      "id": "order-store",
+      "type": "database",
+      "label": "訂單資料",
+      "sublabel": "訂單、狀態、取餐時段",
+      "icon": "database",
+      "pos": [900, 100],
+      "size": [220, 76]
+    },
+    {
+      "id": "catalog-store",
+      "type": "database",
+      "label": "菜單與庫存資料",
+      "sublabel": "品項、供應狀態、庫存",
+      "icon": "database",
+      "pos": [900, 300],
+      "size": [220, 76]
+    },
+    {
+      "id": "payment-service",
+      "type": "cloud",
+      "label": "付款服務",
+      "sublabel": "付款方式｜處理中防重複扣款",
+      "icon": "cloud",
+      "pos": [900, 500],
+      "size": [220, 76]
+    },
+    {
+      "id": "notification-service",
+      "type": "cloud",
+      "label": "通知服務",
+      "sublabel": "狀態通知；失敗時回看板",
+      "icon": "cloud",
+      "pos": [900, 680],
+      "size": [220, 76]
+    },
+    {
+      "id": "revenue-store",
+      "type": "database",
+      "label": "營收報表資料",
+      "sublabel": "營收、客單價、熱銷品項",
+      "icon": "database",
+      "pos": [900, 860],
+      "size": [220, 76]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "多端前端介面", "wraps": ["customer-app", "manager-app", "kitchen-app", "pickup-board", "locker-panel"], "pad": 28 },
+    { "kind": "region", "label": "訂單與店務業務服務", "wraps": ["order-service", "store-service", "production-service", "pickup-service"], "pad": 28 },
+    { "kind": "region", "label": "資料與外部整合", "wraps": ["order-store", "catalog-store", "payment-service", "notification-service", "revenue-store"], "pad": 28 }
+  ],
+  "connections": [
+    { "id": "customer-to-customer-app", "from": "customer", "to": "customer-app", "label": "瀏覽／點餐／查進度", "variant": "emphasis" },
+    { "id": "manager-to-manager-app", "from": "manager", "to": "manager-app", "label": "接單／入櫃／報表", "variant": "emphasis" },
+    { "id": "chef-to-kitchen-app", "from": "chef", "to": "kitchen-app", "label": "製作／完成／缺貨", "variant": "emphasis" },
+    { "id": "customer-app-to-order", "from": "customer-app", "to": "order-service", "label": "下單／付款前確認／狀態查詢", "variant": "emphasis" },
+    { "id": "manager-app-to-order", "from": "manager-app", "to": "order-service", "label": "確認接單／入櫃", "variant": "emphasis" },
+    { "id": "manager-app-to-store", "from": "manager-app", "to": "store-service", "label": "維護菜單／查看營收" },
+    { "id": "kitchen-app-to-production", "from": "kitchen-app", "to": "production-service", "label": "待製作／完成回報／缺貨" },
+    { "id": "pickup-board-to-pickup", "from": "pickup-board", "to": "pickup-service", "label": "顯示可取餐號碼與進度", "variant": "dashed" },
+    { "id": "locker-to-pickup", "from": "locker-panel", "to": "pickup-service", "label": "驗證開櫃／回報取餐", "variant": "emphasis" },
+    { "id": "order-to-order-store", "from": "order-service", "to": "order-store", "label": "讀寫訂單與狀態" },
+    { "id": "store-to-catalog", "from": "store-service", "to": "catalog-store", "label": "菜單／庫存讀寫" },
+    { "id": "store-to-revenue", "from": "store-service", "to": "revenue-store", "label": "累計營收", "variant": "dashed" },
+    { "id": "order-to-payment", "from": "order-service", "to": "payment-service", "label": "付款請求／結果", "variant": "security" },
+    { "id": "order-to-notification", "from": "order-service", "to": "notification-service", "label": "狀態通知", "variant": "dashed" },
+    { "id": "production-to-order", "from": "production-service", "to": "order-service", "label": "取得訂單／回報製作狀態", "fromSide": "top", "toSide": "bottom" },
+    { "id": "pickup-to-order", "from": "pickup-service", "to": "order-service", "label": "取得可取餐／完成取餐", "fromSide": "top", "toSide": "bottom" },
+    { "id": "notification-to-customer", "from": "notification-service", "to": "customer-app", "label": "推送狀態；失敗改看板", "variant": "dashed", "fromSide": "right", "toSide": "right", "via": [[1140, 718], [1140, 40], [540, 40], [540, 138]] }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "主流程",
+      "items": [
+        "顧客端先選取餐時段，再送出訂單與付款。",
+        "訂單狀態提供顧客、店長、廚師與看板同步讀取。",
+        "狀態變更目標：1 秒內讓顧客端可見；新單 3 秒內出現在廚房顯示。"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "不可繞過的控制點",
+      "items": [
+        "廚師按完成只進入「待店長確認」，不能直接通知顧客或上看板。",
+        "只有店長能把 S5 推進到 S6；入櫃與通知是同一個動作。",
+        "製作中不顯示取餐號碼，避免顧客過早取餐。"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "降級與例外",
+      "items": [
+        "通知失敗時，顧客改由店內取餐看板取得資訊。",
+        "付款失敗可重試或換方式；銀行確認中不得重複扣款。",
+        "缺貨由廚師標記，店長再通知顧客換品項。"
+      ]
+    }
+  ]
+}

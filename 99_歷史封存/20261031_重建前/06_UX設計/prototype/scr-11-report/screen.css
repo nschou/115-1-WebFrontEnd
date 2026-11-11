@@ -1,0 +1,12 @@
+/* SCR-11 專屬：768 平板、KPI 卡 */
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); padding: 0 var(--space-md); margin-bottom: var(--space-lg); }
+.kpi {
+  padding: var(--space-lg); background: var(--color-surface);
+  border: var(--hairline) solid var(--color-border); border-radius: var(--radius-md);
+}
+.kpi span { display: block; font-size: var(--text-sm); color: var(--color-muted); margin-bottom: var(--space-xs); }
+.kpi b { font-size: var(--text-xl); font-variant-numeric: tabular-nums; }
+.sub { margin: 0 var(--space-md) var(--space-sm); font-size: var(--text-base); }
+.top { margin: 0 var(--space-md); padding-left: var(--space-lg); }
+.top li { padding: var(--space-xs) 0; font-size: var(--text-base); }
+.top .muted { font-size: var(--text-sm); }

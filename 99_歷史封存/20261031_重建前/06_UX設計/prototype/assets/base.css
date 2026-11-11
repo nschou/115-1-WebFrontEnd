@@ -1,0 +1,99 @@
+/* ===========================================================
+   base.css — 所有畫面共用（手機／平板／遠距）
+   只放「結構與元件骨架」，不放任何色碼（全部走 token）。
+   =========================================================== */
+
+/* 畫布 */
+.app {
+  margin: 0 auto var(--space-xl);
+  background: var(--color-bg); color: var(--color-text);
+  font: 400 var(--text-base)/var(--line-base) var(--font-sans);
+  min-height: var(--canvas-mobile-h); padding-bottom: var(--space-lg);
+  max-width: var(--canvas-mobile);
+}
+.app--tablet  { max-width: var(--canvas-tablet); min-height: 600px; }
+.app--display {
+  width: var(--canvas-display); max-width: none; min-height: 1080px;
+  transform: scale(var(--fit, 0.6)); transform-origin: top left;
+}
+
+/* 頂列 */
+.topbar {
+  display: flex; align-items: center; gap: var(--space-sm);
+  padding: var(--space-md); background: var(--color-surface);
+  border-bottom: var(--hairline) solid var(--color-border);
+}
+.topbar h1 { flex: 1; margin: 0; font-size: var(--text-base); font-weight: 700; }
+.back { color: var(--color-text); text-decoration: none; font-size: var(--text-lg); }
+.order-no { color: var(--color-muted); font-size: var(--text-sm); }
+
+/* 六態切換（每頁都有六個 .state-*） */
+.state { display: none; padding: var(--space-lg) var(--space-md); }
+body[data-state="default"]     .state-default,
+body[data-state="loading"]     .state-loading,
+body[data-state="empty"]       .state-empty,
+body[data-state="error"]       .state-error,
+body[data-state="success"]     .state-success,
+body[data-state="interrupted"] .state-interrupted { display: block; }
+
+/* 文字 */
+.status { margin: 0 0 var(--space-sm); font-size: var(--text-xl); font-weight: 700; line-height: var(--line-tight); }
+.status-success { color: var(--color-primary); }
+.eta { margin: 0 0 var(--space-lg); color: var(--color-muted); font-size: var(--text-sm); }
+.eta strong { color: var(--color-text); font-size: var(--text-lg); }
+.hint { color: var(--color-muted); font-size: var(--text-sm); }
+.mono { font-variant-numeric: tabular-nums; }
+
+/* 提示條 */
+.banner {
+  padding: var(--space-md); border-radius: var(--radius-default);
+  border-left: var(--space-xs) solid var(--color-warn);
+  background: var(--color-accent-weak); font-size: var(--text-sm);
+}
+.banner strong { display: block; margin-bottom: var(--space-xs); }
+.banner-info { border-left-color: var(--color-primary); background: var(--color-surface-alt); }
+.banner-error { border-left-color: var(--color-error); background: var(--color-error-weak); }
+
+/* 按鈕 */
+.btn-primary, .btn-secondary, .btn-danger {
+  display: inline-block; margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-default); border: 0; cursor: pointer;
+  font: 700 var(--text-base)/1.4 var(--font-sans);
+  text-decoration: none; text-align: center;
+}
+.btn-primary { background: var(--color-primary); color: var(--color-on-primary); }
+.btn-secondary { background: var(--color-surface); color: var(--color-primary); border: var(--hairline) solid var(--color-primary); }
+.btn-danger { background: var(--color-error); color: var(--color-on-primary); }
+
+/* 卡片與清單 */
+.card {
+  padding: var(--space-md); background: var(--color-surface);
+  border: var(--hairline) solid var(--color-border); border-radius: var(--radius-default);
+  margin-bottom: var(--space-sm);
+}
+.row { display: flex; justify-content: space-between; gap: var(--space-sm); }
+.muted { color: var(--color-muted); }
+
+/* skeleton */
+.skel { background: var(--color-surface-alt); border-radius: var(--radius-default); }
+.skel-title { height: var(--space-xl); width: 40%; margin-bottom: var(--space-md); }
+.skel-line { height: var(--space-md); width: 70%; margin-bottom: var(--space-lg); }
+.skel-block { height: calc(var(--space-xl) * 3); }
+
+.empty-icon { font-size: var(--text-xl); margin: 0 0 var(--space-sm); }
+
+/* 頁尾（示範用） */
+.foot { padding: var(--space-md); border-top: var(--hairline) solid var(--color-border); }
+.msg-id { color: var(--color-muted); font-size: var(--text-xs); letter-spacing: .04em; }
+
+/* 圖位（佔位，代表「這裡會有一張圖」；比例由物件屬性決定） */
+.img-slot {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-surface-alt);
+  border: var(--hairline) dashed var(--color-border);
+  border-radius: var(--radius-food-image);
+  color: var(--color-muted); font-size: var(--text-xs); text-align: center;
+}
+.img-slot--16x9 { aspect-ratio: 16 / 9; width: 100%; margin-bottom: var(--space-sm); }
+.img-slot--thumb { width: var(--size-thumb); height: var(--size-thumb); flex: 0 0 auto; }

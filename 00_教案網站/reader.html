@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="課程 Markdown 與 Mermaid 閱讀器。">
+  <title>教材閱讀器｜服務設計到 Spec</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/reader.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html#stage-00" aria-label="回到課程導航">
+      <span class="brand-mark">18</span>
+      <span><b>服務設計到 Spec</b><small>教材閱讀器</small></span>
+    </a>
+    <div class="top-actions">
+      <a class="ghost reader-home" href="index.html">回到學習導航</a>
+    </div>
+  </header>
+
+  <main class="reader-shell">
+    <section class="reader-toolbar" aria-label="文件資訊">
+      <div>
+        <p class="eyebrow">SOURCE READER</p>
+        <h1 id="doc-title">載入教材中…</h1>
+        <p id="doc-path" class="doc-path"></p>
+      </div>
+      <div class="reader-actions">
+        <a id="raw-link" class="secondary" href="#" target="_blank" rel="noopener">檢視原始 Markdown</a>
+        <button id="copy-link" class="ghost" type="button">複製閱讀連結</button>
+      </div>
+    </section>
+
+    <div id="reader-status" class="reader-status" role="status">正在載入文件…</div>
+    <article id="document" class="markdown-body" aria-live="polite"></article>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+  <script src="assets/guide-data.js"></script>
+  <script src="assets/reader.js"></script>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCR-07 廚房顯示器｜線框原型</title>
+<link rel="stylesheet" href="../assets/tokens.css"><link rel="stylesheet" href="../assets/wire.css">
+<link rel="stylesheet" href="../assets/base.css"><link rel="stylesheet" href="../assets/tokens-display.css">
+<link rel="stylesheet" href="screen.css"></head>
+<body data-state="default" data-mode="color">
+<div class="devbar" role="group" aria-label="狀態切換">
+  <strong>SCR-07</strong><span>廚房顯示器</span><span class="spacer"></span>
+  <button data-set-state="default">default</button><button data-set-state="loading">loading</button>
+  <button data-set-state="empty">empty</button><button data-set-state="error">error</button>
+  <button data-set-state="success">success</button><button data-set-state="interrupted">interrupted</button>
+  <button data-toggle-mode>線框模式</button>
+</div>
+<main class="app app--display" data-fit data-fit-width="1920">
+    <header class="kds-head" data-wire-outline><h1>待製作 4</h1><span class="kds-clock">08:12</span></header>
+  <section class="state state-default">
+    <div class="kds-grid">
+      <article class="kds-card heat-red"><header><b>#1045</b><span>08:20 取餐</span></header><ul><li>三明治 ×2</li><li>紅茶 ×1</li></ul><footer><span data-element="E-33" class="timer">03:12</span><button class="kds-btn" data-action="kds-complete">開始製作</button></footer></article>
+      <article class="kds-card heat-amber"><header><b>#1046</b><span>08:25 取餐</span></header><ul><li>蛋餅 ×1</li><li>豆漿 ×1</li></ul><footer><span class="timer">01:40</span><button class="kds-btn" data-action="kds-complete">開始製作</button></footer></article>
+      <article class="kds-card"><header><b>#1047</b><span>08:30 取餐</span></header><ul><li>漢堡 ×1</li><li>薯條 ×1</li></ul><footer><span class="timer">00:20</span><button class="kds-btn" data-action="kds-complete">開始製作</button></footer></article>
+      <article class="kds-card"><header><b>#1048</b><span>08:35 取餐</span></header><ul><li>拿鐵 ×2</li></ul><footer><span class="timer">00:05</span><button class="kds-btn" data-action="kds-complete">開始製作</button></footer></article>
+    </div>
+  </section>
+  <section class="state state-loading"><p class="hint" data-loading>正在同步佇列⋯</p><div class="kds-grid"><div class="skel kds-card"></div><div class="skel kds-card"></div><div class="skel kds-card"></div><div class="skel kds-card"></div></div></section>
+  <section class="state state-empty"><h2 class="kds-empty">目前沒有待製作</h2></section>
+  <section class="state state-error"><div class="banner banner-error kds-banner"><strong>與系統斷線</strong><span>正在重試，已完成的單不會遺失。</span></div></section>
+  <section class="state state-success">
+    <div class="kds-grid"><article class="kds-card done" data-kds-done><header><b>#1049</b><span>待店員確認</span></header><ul><li>三明治 ×1</li></ul><footer><span class="timer">—</span><button class="kds-btn ghost" disabled>已按完成</button></footer></article></div>
+    <p class="kds-note">完成後不會通知顧客，等店員確認入櫃。</p>
+  </section>
+  <section class="state state-interrupted">
+    <div class="kds-grid"><article class="kds-card flag"><header><b>#1050</b><span>缺貨：蛋餅</span></header><ul><li>蛋餅 ×1</li></ul><footer><span class="timer">—</span><button data-element="E-35" class="kds-btn warn" data-action="kds-oos">通知店員</button></footer></article></div>
+  </section>
+
+</main>
+<script src="../assets/theme.js"></script>
+<script src="../assets/state-switcher.js"></script>
+<script src="../assets/story-data.js"></script>
+<script src="../assets/story-runner.js"></script>
+</body></html>

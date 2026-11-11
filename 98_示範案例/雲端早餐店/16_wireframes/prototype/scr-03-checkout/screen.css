@@ -1,0 +1,20 @@
+/* SCR-03 專屬：表單、品項清單、總計 */
+.field { display: block; margin-bottom: var(--space-md); }
+.field-label { display: block; font-size: var(--text-sm); color: var(--color-muted); margin-bottom: var(--space-xs); }
+.input {
+  width: 100%; padding: var(--space-sm) var(--space-md);
+  font: 400 var(--text-base)/1.4 var(--font-sans); color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--hairline) solid var(--color-border); border-radius: var(--radius-default);
+}
+.field-error .input { border-color: var(--color-error); }
+.error-text { display: block; margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-error); }
+.items { list-style: none; margin: 0 0 var(--space-md); padding: 0; }
+.items li {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: var(--space-sm) 0; border-bottom: var(--hairline) solid var(--color-border);
+  font-size: var(--text-base);
+}
+.items em { display: block; font-size: var(--text-sm); color: var(--color-muted); font-style: normal; }
+.total { padding: var(--space-sm) 0 var(--space-md); font-size: var(--text-lg); font-weight: 700; }
+.btn-block { display: block; }

@@ -1,0 +1,2262 @@
+{
+  "created": "2026-10-31",
+  "sourceItems": [
+    "00_方法論主線與閘門.md",
+    "package-student.mjs",
+    "01_課程總覽",
+    "02_服務設計_行業分析＆Persona",
+    "03_CJM_顧客旅程",
+    "04_ServiceBlueprint_服務藍圖",
+    "05_AI輔助風格設計",
+    "06_UX設計",
+    "07_Spec"
+  ],
+  "fileCount": 449,
+  "files": [
+    {
+      "path": "00_方法論主線與閘門.md",
+      "bytes": 13238,
+      "sha256": "5fa18404fe44ed559f3499c6f5187aec3028ee0adfcd958a19ddd32cbb8f7928"
+    },
+    {
+      "path": "package-student.mjs",
+      "bytes": 8819,
+      "sha256": "2dc39714969f016155dfd8f0f878b8814d9514b89d8a9512c2f1df35eb1bb0e2"
+    },
+    {
+      "path": "01_課程總覽/00_課程地圖.md",
+      "bytes": 1864,
+      "sha256": "6469c44b27a30dec1187fff4cea65102b587e69efc11a26f175c663aba8e0e76"
+    },
+    {
+      "path": "01_課程總覽/Claude_Code_DeepSeek_快速上手指南.md",
+      "bytes": 8478,
+      "sha256": "9c59f47536be83f22f7ce729172733aafa6b256328938506ace1199b2a913ed1"
+    },
+    {
+      "path": "01_課程總覽/docx2md.py",
+      "bytes": 2447,
+      "sha256": "7144b061d8b17d033f7b51d04e59cd9f4bbb1fb3c57d7e5ccbb4de0e0da9fc86"
+    },
+    {
+      "path": "01_課程總覽/下載清單_第1-4週.md",
+      "bytes": 2355,
+      "sha256": "3fe0ba2d546481e9e8e5dd61daad5df95e2e21c64eb62453f8f5e559226204d8"
+    },
+    {
+      "path": "01_課程總覽/第01週_課程大綱.docx",
+      "bytes": 222601,
+      "sha256": "dd766d0449b33e33017247eb442fdb3ff39b35b7193d54a79fc1edea3ed4980d"
+    },
+    {
+      "path": "01_課程總覽/第01週_課程大綱.md",
+      "bytes": 12668,
+      "sha256": "ba04bb7ed585f86643e86eb28283002266e2702e811fba355097ce731491eaea"
+    },
+    {
+      "path": "01_課程總覽/第01週_課程大綱.pptx",
+      "bytes": 64624,
+      "sha256": "3398299645366660302bab0151dc291f13921d6f953619ab28cc722e56fa4f0d"
+    },
+    {
+      "path": "01_課程總覽/課程綱要_第2-16週.md",
+      "bytes": 14539,
+      "sha256": "f02ed22290be5ed15dd98412a1a4e55d13f7af27a4a17b3e67993a569f1a8c8a"
+    },
+    {
+      "path": "01_課程總覽/課程說明投影片.pptx",
+      "bytes": 281408,
+      "sha256": "78316726c0e66344f1833f6f264eeec10c07e5e88933bf1d66721e588e25146e"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint_初版.docx",
+      "bytes": 946038,
+      "sha256": "0686f6fbc842500cd994ab8d8e62546ea13f8a574e5a804a36abfa936b150ba4"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint_初版.md",
+      "bytes": 36612,
+      "sha256": "ad1d0f67d1b85633843ff0cc02ce77aad32cc9241f505addcb54d31706f5ca8f"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint_初版.pptx",
+      "bytes": 123810,
+      "sha256": "2ef6b05d593a3ea4869325b4fd9783fcd60bc4c41822703b4eeaf1fd18ddac8b"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint_回滾修正.docx",
+      "bytes": 947642,
+      "sha256": "8b48f020e00a6f4f1d6b549401187e30a65f7f1499313ef1baf0e422e1b5520e"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint_回滾修正.md",
+      "bytes": 38666,
+      "sha256": "43ad44713f6fbf41f8ce8ee3778a57071f017f6593feb1d24499e8ad41a39e05"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint_回滾修正.pptx",
+      "bytes": 128891,
+      "sha256": "c07ef707107759f6928e13e9c058114597c0f91a534db950ef1a5868d743b3e2"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint服務藍圖.md",
+      "bytes": 39057,
+      "sha256": "0d05f079a8058d48575e54de0fe8cbbff871dc64c9320ecd832b24a27555460a"
+    },
+    {
+      "path": "04_ServiceBlueprint_服務藍圖/第04週_ServiceBlueprint服務藍圖.pptx",
+      "bytes": 677053,
+      "sha256": "fc06010487d002e0cb6b8fa16c78caad10a78add06f6c378dc657f664a09db79"
+    },
+    {
+      "path": "07_Spec/00_README_導讀.md",
+      "bytes": 2235,
+      "sha256": "ee95cc08adbe063c70219599427251f09e5d5479e8a058f85fe8280a709688ef"
+    },
+    {
+      "path": "07_Spec/01_第07週講義_v1.md",
+      "bytes": 6519,
+      "sha256": "5640f2b230974e73b46d35d83158fbe3d1aca8ed06819db73ecfcd39efee7218"
+    },
+    {
+      "path": "07_Spec/02_學生操作手冊_第7週.md",
+      "bytes": 6038,
+      "sha256": "1e7cd2c8dca50927b33abe1fae134f90d10cddbf1fcc81b74cbcef4c8c1beed4"
+    },
+    {
+      "path": "07_Spec/03_CHANGELOG.md",
+      "bytes": 3695,
+      "sha256": "7739a2ca38cfb06ead6abb5add4ba3398f68f025079ebaba138507570e25cae7"
+    },
+    {
+      "path": "07_Spec/04_教師教學指引_第7週.md",
+      "bytes": 4315,
+      "sha256": "1069b626b9fce327954f0a507d5f7c321d208ef0aff5f9b0eb627d8ad4ff18d1"
+    },
+    {
+      "path": "07_Spec/05_spec_範本.md",
+      "bytes": 3178,
+      "sha256": "5b668b9ca1b2b5bca5519c57145f8ad8fa77dedfe26ef7e877faf1719c2cc22b"
+    },
+    {
+      "path": "07_Spec/06_spec_示範答案.md",
+      "bytes": 13621,
+      "sha256": "372c4f521a9eac12d697ea1399ca62968642a1cd875f99f0301a7f0a28d9b37b"
+    },
+    {
+      "path": "07_Spec/07_第07週簡報_v1.pptx",
+      "bytes": 60430,
+      "sha256": "656189fe98b06321117a9a5e56d0c0c1f2fd4986b306de3b53d27646de1d6658"
+    },
+    {
+      "path": "07_Spec/check-spec.mjs",
+      "bytes": 2929,
+      "sha256": "46d78b8e0f0e5f4ccc43c4eb6dfd291b2c10e7e38b9385fb8a012f22fbda5db5"
+    },
+    {
+      "path": "07_Spec/START_HERE_第7週.md",
+      "bytes": 1439,
+      "sha256": "5bf89a64436f3eab4a1537dc516d7783c2ce3f4103c384ea6d459c59abfaea16"
+    },
+    {
+      "path": "07_Spec/week7-student.zip",
+      "bytes": 97439,
+      "sha256": "067fbdd511f121ab996874f9f4411d6f2503fd4208823f2efe3bc1d72af58542"
+    },
+    {
+      "path": "07_Spec/week7-student/02_學生操作手冊.md",
+      "bytes": 6038,
+      "sha256": "1e7cd2c8dca50927b33abe1fae134f90d10cddbf1fcc81b74cbcef4c8c1beed4"
+    },
+    {
+      "path": "07_Spec/week7-student/START_HERE.md",
+      "bytes": 1439,
+      "sha256": "5bf89a64436f3eab4a1537dc516d7783c2ce3f4103c384ea6d459c59abfaea16"
+    },
+    {
+      "path": "07_Spec/week7-student/lecture/01_第07週講義_v1.md",
+      "bytes": 6519,
+      "sha256": "5640f2b230974e73b46d35d83158fbe3d1aca8ed06819db73ecfcd39efee7218"
+    },
+    {
+      "path": "07_Spec/week7-student/lecture/07_第07週簡報_v1.pptx",
+      "bytes": 60430,
+      "sha256": "656189fe98b06321117a9a5e56d0c0c1f2fd4986b306de3b53d27646de1d6658"
+    },
+    {
+      "path": "07_Spec/week7-student/reference/00_README_導讀.md",
+      "bytes": 2235,
+      "sha256": "ee95cc08adbe063c70219599427251f09e5d5479e8a058f85fe8280a709688ef"
+    },
+    {
+      "path": "07_Spec/week7-student/reference/06_spec_示範答案.md",
+      "bytes": 13621,
+      "sha256": "372c4f521a9eac12d697ea1399ca62968642a1cd875f99f0301a7f0a28d9b37b"
+    },
+    {
+      "path": "07_Spec/week7-student/templates/05_spec_範本.md",
+      "bytes": 3178,
+      "sha256": "5b668b9ca1b2b5bca5519c57145f8ad8fa77dedfe26ef7e877faf1719c2cc22b"
+    },
+    {
+      "path": "07_Spec/week7-student/tools/check-spec.mjs",
+      "bytes": 2929,
+      "sha256": "46d78b8e0f0e5f4ccc43c4eb6dfd291b2c10e7e38b9385fb8a012f22fbda5db5"
+    },
+    {
+      "path": "07_Spec/_src/build_deck_w7.py",
+      "bytes": 18026,
+      "sha256": "a0b1d32251b23ac6107e6a6928137258224e6faa859552e42464e86c03822404"
+    },
+    {
+      "path": "06_UX設計/00_README_導讀與決策紀錄.md",
+      "bytes": 8315,
+      "sha256": "7cf68883d522005b4b12bb31270d981cbb42913a8d377608dd341177278417cd"
+    },
+    {
+      "path": "06_UX設計/01_推理_為什麼UX從Blueprint切入.md",
+      "bytes": 7591,
+      "sha256": "843f58d7db7c314b4f89ba91cd2b13991f21219f6e64d33dfc86d3d237f6a355"
+    },
+    {
+      "path": "06_UX設計/02_範疇_MVP分級與理由.md",
+      "bytes": 5234,
+      "sha256": "b207ab72494f88b3bb1930d62e9206c0599c4bdc62082289110a7378c2284b8c"
+    },
+    {
+      "path": "06_UX設計/03_遠距顯示_獨立Designmd規格與Prompt.md",
+      "bytes": 8236,
+      "sha256": "bb7c0a5c4aefb864458050952b60c459ff3514020846cd4b8ec4a36e0e8419d9"
+    },
+    {
+      "path": "06_UX設計/04_ux_rd_template.md",
+      "bytes": 3202,
+      "sha256": "11b3e38dd7ebd6f956cd99c6061e97e4995c5ef21373e9d66ba483071d6b403b"
+    },
+    {
+      "path": "06_UX設計/04_ux_README.md",
+      "bytes": 7085,
+      "sha256": "fa47b6e991f210894ccb321ac6599b17e50ecf3792605401edbf9f36993ff2a8"
+    },
+    {
+      "path": "06_UX設計/04_ux_template.md",
+      "bytes": 4777,
+      "sha256": "c0dadd9275d4affb89d47fa22bd728b92ff93eca175892f0a325846aa624af04"
+    },
+    {
+      "path": "06_UX設計/05_頁面拆分機制.md",
+      "bytes": 8222,
+      "sha256": "48440550ff4fb5c734d5fb25de3b9c78b2dc968ae4aaa8e97d9fe3dc404023c3"
+    },
+    {
+      "path": "06_UX設計/06_重算_SCR清單與狀態視圖.md",
+      "bytes": 7467,
+      "sha256": "2dab66357597e69667937d3030dc29a0872b333277d1a0763448ca6c421bd909"
+    },
+    {
+      "path": "06_UX設計/07_第06週講義_v1.md",
+      "bytes": 70739,
+      "sha256": "4a8723278abcc41b7dbc883a346f2adc95c5f99c388850a1ddbec3ea34386649"
+    },
+    {
+      "path": "06_UX設計/08_CHANGELOG_改版紀錄.md",
+      "bytes": 40362,
+      "sha256": "6bbee4eb25a1409fbb437748a77b74356666bc5f58848c7253533b41a5bcd274"
+    },
+    {
+      "path": "06_UX設計/09_第06週簡報_v1.pptx",
+      "bytes": 170234,
+      "sha256": "e8bb6c20ce53b602a4e32b4433cdf0411e303d6f27671873e3bceba1e654c5a3"
+    },
+    {
+      "path": "06_UX設計/09_第06週簡報_v2.pptx",
+      "bytes": 81495,
+      "sha256": "c6c434ca101ac21de6e9ad847ce349b1531ecfd9343a2135dfe26ae4155995ff"
+    },
+    {
+      "path": "06_UX設計/10_DESIGN-DISPLAY_示範答案.md",
+      "bytes": 6822,
+      "sha256": "144fb8484c85fab5780c14e78d22a9f2e7434517ac7125526cce31ca4044f9d3"
+    },
+    {
+      "path": "06_UX設計/11_欄位命名規則.md",
+      "bytes": 5741,
+      "sha256": "2530814459660d54493f16f79f9f9575387197099e79bc669d6e7f0dd0322131"
+    },
+    {
+      "path": "06_UX設計/12_UX_示範答案.md",
+      "bytes": 9587,
+      "sha256": "9b403f197d6176daf50ddb467be63170f02b133b91f6a87a58b0dc1cba966d5d"
+    },
+    {
+      "path": "06_UX設計/13_STORIES_示範答案.md",
+      "bytes": 7862,
+      "sha256": "61d1132fe08c372280f7cf8571501acd8947a39ca66572949274e1cc52906455"
+    },
+    {
+      "path": "06_UX設計/13_裝置與互動能力矩陣.md",
+      "bytes": 4360,
+      "sha256": "053d470c10a7e6525dd019092e8d02f877708bd411d369d96016aa5c1f6edeb8"
+    },
+    {
+      "path": "06_UX設計/14_線框_示範答案.md",
+      "bytes": 5259,
+      "sha256": "29f285886026fcf75f4d6c37e78ad263386da0862c5855d355b0d6873cefb151"
+    },
+    {
+      "path": "06_UX設計/15_走查紀錄_示範答案.md",
+      "bytes": 1863,
+      "sha256": "c38aa4d7a03b95b21c680d5263c192b809b605df5d370457d76bfabd81180b35"
+    },
+    {
+      "path": "06_UX設計/16_全面落地規格.md",
+      "bytes": 5691,
+      "sha256": "61782bb79b00ac25c0d25912ad64119a187d51a163ca7e46f9b5750bb1bf9ec8"
+    },
+    {
+      "path": "06_UX設計/17_走查作業手冊.md",
+      "bytes": 4217,
+      "sha256": "b37af788b1cd56e291c709075c50e856c43055e116618d3d017f9e6eba794310"
+    },
+    {
+      "path": "06_UX設計/18_推導修正的思考軌跡.md",
+      "bytes": 9429,
+      "sha256": "2b7d94c7aba673265cc7a8f4e82237263514f9ebdf93cc684569a7ad660da54c"
+    },
+    {
+      "path": "06_UX設計/20_任務句與元素表.md",
+      "bytes": 12612,
+      "sha256": "39d09b3eee9ec3c9c3393e62d2aaeb9aafef6f7e9b702f0cb7bd4685a0f78f72"
+    },
+    {
+      "path": "06_UX設計/21_SCR推展表.md",
+      "bytes": 7121,
+      "sha256": "bd1e3173b833faffaaf96631364651464603556dbf7c439b40c4415d22ecc5c9"
+    },
+    {
+      "path": "06_UX設計/21_WIRE推展表.md",
+      "bytes": 7207,
+      "sha256": "4ddaec0b4684dbc190adbcd876de229642534fff4e1367caeb2d48a50c40e955"
+    },
+    {
+      "path": "06_UX設計/22_版面順序對照.md",
+      "bytes": 3727,
+      "sha256": "acdc4c8a5a5c435fe773aa9e00e52082d0d5a9bbaa6485318ce57fe7e61a50d4"
+    },
+    {
+      "path": "06_UX設計/23_教師教學指引_第6週.md",
+      "bytes": 8791,
+      "sha256": "5592ba91baf32d01674aae2e7c46bfa368ee49e3b948e309f8236ebecf5d7fbf"
+    },
+    {
+      "path": "06_UX設計/24_學生操作手冊_第6週.md",
+      "bytes": 10312,
+      "sha256": "20cc90e19d87eedc136dbf6f5c2a5b501fa141a8f4c7d42a66f553eda8dd70ac"
+    },
+    {
+      "path": "06_UX設計/25_學生資料包清單.md",
+      "bytes": 6542,
+      "sha256": "2278913ea8bae6083a04f57b3545cc9d19cbb9e8847b4411415885816016146e"
+    },
+    {
+      "path": "06_UX設計/START_HERE.md",
+      "bytes": 2163,
+      "sha256": "d2a6a682c3ea95a5628e490ab851c0ed33aee57d15a1e2fd038fa443ef9f9350"
+    },
+    {
+      "path": "06_UX設計/week6-student.zip",
+      "bytes": 468475,
+      "sha256": "e42d4832785547fd437945c723ebb29b841660818e99d630b21e653876e8afa0"
+    },
+    {
+      "path": "06_UX設計/adr/000_範本.md",
+      "bytes": 1152,
+      "sha256": "8622ffb87370d5487f5a6d39efee4d9fb876f3de90862f9aec128b03192f914a"
+    },
+    {
+      "path": "06_UX設計/adr/ADR-001_任務表述層升級.md",
+      "bytes": 6963,
+      "sha256": "ea0fcf135315554ca9a062f0ac5784113aef78817de77e3c54bbe10d1613ef26"
+    },
+    {
+      "path": "06_UX設計/adr/ADR-002_全面改名SCR到WIRE.md",
+      "bytes": 4374,
+      "sha256": "f90e139a7ac48a90b9d5aac0bbe5ba2f231885dd09b0c3af5ca43856ace9177d"
+    },
+    {
+      "path": "06_UX設計/adr/ADR-003_還原SCR命名.md",
+      "bytes": 3991,
+      "sha256": "e92a2957ef83033e16fd3152be75f84b535266fc0d48b6b20debc39de37b0b91"
+    },
+    {
+      "path": "06_UX設計/adr/ADR-004_語意別名指向m3.md",
+      "bytes": 2962,
+      "sha256": "339a1267b8f9a579f2ccc56691e4db76facf83d37b8a7fa6debb1bbf19c1b7fe"
+    },
+    {
+      "path": "06_UX設計/adr/ADR-005_服務需求與UX契約分層.md",
+      "bytes": 8241,
+      "sha256": "ab147ed30f53ee157cdece24ee6669b35fad0ba7927142a241301cbcbcfc0f0c"
+    },
+    {
+      "path": "06_UX設計/prototype/check-all.mjs",
+      "bytes": 2056,
+      "sha256": "a1e5d192d89d6d70f29d3dc285fd060546a77b714b9369077d5d4ee5af070da3"
+    },
+    {
+      "path": "06_UX設計/prototype/check-layout-order.mjs",
+      "bytes": 3545,
+      "sha256": "be62abcfcdd494ba5547ff13bca025b3e2012ecf1b4d237bebccc7dd53db6885"
+    },
+    {
+      "path": "06_UX設計/prototype/derive-wires.mjs",
+      "bytes": 4630,
+      "sha256": "fc71bc291c93f8b28a8dd0b92da0fca2bf98fed4e9e3646fc6cbd6fbb916efd2"
+    },
+    {
+      "path": "06_UX設計/prototype/gen-stories.mjs",
+      "bytes": 2490,
+      "sha256": "041c281b258c92e6b21cfda26854fd20a1f0096ffc14db32d374d14898cefd28"
+    },
+    {
+      "path": "06_UX設計/prototype/gen-tables.mjs",
+      "bytes": 1825,
+      "sha256": "ba9e365096fbe32a4e03e4abcbaa82c418a3fc699bdc29124f724113e0eed3a8"
+    },
+    {
+      "path": "06_UX設計/prototype/index.html",
+      "bytes": 3664,
+      "sha256": "d0f1638adad7502660606858dc61beefda0123c8862a64bdaee212ccbfaf10a1"
+    },
+    {
+      "path": "06_UX設計/prototype/lint-tokens.mjs",
+      "bytes": 7351,
+      "sha256": "939e15ef5fe481ada7417ec38027c768ae4d1499a926edd9683e677466afb464"
+    },
+    {
+      "path": "06_UX設計/prototype/README.md",
+      "bytes": 7635,
+      "sha256": "fc5490f9671c0fc3a1f0e5a955c8cb3f3431b7d17cf6039d8521bd2cb229629b"
+    },
+    {
+      "path": "06_UX設計/prototype/review.html",
+      "bytes": 1236,
+      "sha256": "8702630e3cb5545112df3f2f21ed97c7b7558814a2af2970b065eb91f05735fb"
+    },
+    {
+      "path": "06_UX設計/prototype/selftest-stories.mjs",
+      "bytes": 3487,
+      "sha256": "ddbdbbe281fd76ef8c7886a611adab828f52490dad635ffee8caf20b07b9c216"
+    },
+    {
+      "path": "06_UX設計/prototype/smoke-dom.mjs",
+      "bytes": 3830,
+      "sha256": "0814b679bbc19cce60338e5d1a28f476d2cb8329893c1660528e39fa9ead334f"
+    },
+    {
+      "path": "06_UX設計/prototype/verify-stories.mjs",
+      "bytes": 13064,
+      "sha256": "97b540a7dec8c9096a4a534490066a0024211c3c6725a3773a78c7c507882693"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/base.css",
+      "bytes": 4693,
+      "sha256": "85f142bc32609ea49555900be3ebcdd3dece8a49114e9d03ce1b2627ac6a72e4"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/checks-report.js",
+      "bytes": 4194,
+      "sha256": "d492f9916e70f902cc1086b0d0fed4598aedeabf6fe8a2fa3bb66bab6f072809"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/checks-summary.js",
+      "bytes": 1300,
+      "sha256": "519f6fa46ec09371ac0af0f706ed1234f6b45cacd4a5e113861841a39dca6c1a"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/elements.js",
+      "bytes": 16680,
+      "sha256": "9f298ac593e89823b452b9e88f39c62d3271a614ec4c26caf1b81e0c1fc04bcb"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/hub.css",
+      "bytes": 5921,
+      "sha256": "b2c9995959d0b5a60e2e2571a084e57e539eefc42825118a7f0758d7b64d8552"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/hub.js",
+      "bytes": 8501,
+      "sha256": "aece25790441818fa1a55a5374968bab8c9ffecb0c33b5063049a40560867fd1"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/README.md",
+      "bytes": 966,
+      "sha256": "01dfd7390fff725cb6661c606f6a99089a3b1836e3e37a1aeef91daa87e87ca7"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/review-data.js",
+      "bytes": 4714,
+      "sha256": "2cced6ea718004655601128e000ea9099572af47c28712a5b64a6237d57959a5"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/review-report.js",
+      "bytes": 508,
+      "sha256": "45f77100e10b2c16babffa823660551e77132f4e3cdc6d12adf51b806545d60f"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/review.css",
+      "bytes": 2824,
+      "sha256": "bdf256a8656ea07b87861a209843aa580a4263b28b8d4f38e308786010f4e598"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/review.js",
+      "bytes": 3644,
+      "sha256": "6bd113e84d2e3733620199afc79dd64139886245715df437a50aa3f6d1985057"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/state-switcher.js",
+      "bytes": 1980,
+      "sha256": "1781ba65a1742075d220e63b64ca7820af681230f1d2d04cffec72b42a364f1c"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/story-data.js",
+      "bytes": 17980,
+      "sha256": "d7fa3c2d15a72cae60217f09733fef4e3be185c9f7770eaadc32bef792b5838f"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/story-runner.js",
+      "bytes": 9560,
+      "sha256": "d344bc715332b78d41706ced07bb40aedde09c2c392c5f2aa458658121699932"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/tasks.js",
+      "bytes": 3389,
+      "sha256": "d3ab06f3439ac0d193a28eec69f30d3d3b7d11378dcebdc17fe0c7de9eda339e"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/theme.js",
+      "bytes": 1863,
+      "sha256": "a5fb0de24ff02d49eae82ade6e251e5ebb82db83910e72e27fccd4c9b2c90d14"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/tokens-display.css",
+      "bytes": 1259,
+      "sha256": "3a69578703275809e7ad3131196e4aa04a2a0cd2ee8777aaf0115d40487705ed"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/tokens.blue.css",
+      "bytes": 484,
+      "sha256": "424f496408aa9c75e9f656ccee19342c07bf90f169930ef327db32241678395a"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/tokens.css",
+      "bytes": 6681,
+      "sha256": "e7e953bf8d4996d3010d51401e0da3d472db5c1152373cc857143d4a7cce4492"
+    },
+    {
+      "path": "06_UX設計/prototype/assets/wire.css",
+      "bytes": 6484,
+      "sha256": "305a1eb0866e7d06f4dc0ffc4a56cb08811f6a27c0b6673c95901581477c0ec0"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-01-home/index.html",
+      "bytes": 2873,
+      "sha256": "3cf8d8c9ac789549470d6003edb6a5fdf49329a9bb25a1f520b9d6e99b2c61b2"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-01-home/README.md",
+      "bytes": 716,
+      "sha256": "418e83c39de29102007e56a88707fa152de1f2d55299162523383ff2b78fd012"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-01-home/screen.css",
+      "bytes": 840,
+      "sha256": "b61a8fd48dca4f66786625ecf3a0d06e314fbf25beaaac9f1e7e962bd688f948"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-02-menu/index.html",
+      "bytes": 3208,
+      "sha256": "41227419e7f8481ae7d9ddacd03ae93dda4eed8bbc17f9345c3530c2a89f68e9"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-02-menu/README.md",
+      "bytes": 710,
+      "sha256": "a523e577bbeaf739be75f81892880f5d44d0d5b16d20c4be09c60963adddfcc5"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-02-menu/screen.css",
+      "bytes": 1862,
+      "sha256": "ccfc84f5eb424436a3adfcbb0c0cbd61df8106db36425ddfcb004e78faa122cc"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-03-checkout/index.html",
+      "bytes": 3650,
+      "sha256": "f72daeb30b245d19fadf3e48dc8ca5474cd9af07fa4536a0fa24a0f94c86bb4a"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-03-checkout/README.md",
+      "bytes": 773,
+      "sha256": "d2f141149f549b2e614f601e7487a6b6f74b4bf229e78d77b2a39ab69379adee"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-03-checkout/screen.css",
+      "bytes": 1186,
+      "sha256": "1b14170ee9f67f550f6a6bc71faf404beb777788d51783743ab262b677d1df8c"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-04-payment/index.html",
+      "bytes": 3283,
+      "sha256": "030467adfc04d39b9fca10c8f72f2cd32194f154d75ce9793a4364127a713a43"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-04-payment/README.md",
+      "bytes": 797,
+      "sha256": "58718fa9126c9fba6f57a7d5827fa492b19ccc667c8f312a38e53262626d2cdd"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-04-payment/screen.css",
+      "bytes": 578,
+      "sha256": "653d1ca61d98230f62fc541c17e4b89c9de95ce9b9a8a2fc647eb5ec8c1d6d81"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-05-order-status/index.html",
+      "bytes": 3694,
+      "sha256": "652995a8bcc343050d74340c7e958e2174f38a736a5ea74aad3947935dd29511"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-05-order-status/README.md",
+      "bytes": 1490,
+      "sha256": "0f64e044eaa01e133000cbeb4f0495be7a7264408bbfb80249a4338820cd0d1d"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-05-order-status/screen.css",
+      "bytes": 1789,
+      "sha256": "a1a7a87ed165576726bf02b4a11575c05b5cf20e89739390c55385df9ab9aa73"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-06-staff-orders/index.html",
+      "bytes": 3489,
+      "sha256": "154e73c89cbde6bb8a7371e5a29d65b77119a7c1066e7585e83c366a92e9b80f"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-06-staff-orders/README.md",
+      "bytes": 933,
+      "sha256": "65be8515f3f478e7656d3b240e181fac76dcfac9f2ea099c56e2b9bba863f7c1"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-06-staff-orders/screen.css",
+      "bytes": 1596,
+      "sha256": "f2ec8ad46498975d1cdb1d854ec2f0d7a181416c8282a1a284db2b46e9426022"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-07-kds/index.html",
+      "bytes": 3882,
+      "sha256": "ddaad9cf8b9e7a7f21ffcce16f2347eefcda9be1e890a90719bfbe68e49caf72"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-07-kds/README.md",
+      "bytes": 924,
+      "sha256": "fb1c55362b5b0f27086ce125af6d1c7eb2d6943879821d5cc2a5c996a2a23660"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-07-kds/screen.css",
+      "bytes": 2546,
+      "sha256": "4beb549f06bb02d8cf24dcb03762d98091d60a6d900d5c44025eec0cc859711f"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-08-pickup-board/index.html",
+      "bytes": 2855,
+      "sha256": "8255590cdc33eb2d340c08da83bf8382cbe313c8b9860081c1813c172a2865e8"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-08-pickup-board/README.md",
+      "bytes": 835,
+      "sha256": "e117754aa79cb0a581ff336af20d467b55015a9598e0cfd26eff3bedaa77f4f5"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-08-pickup-board/screen.css",
+      "bytes": 1799,
+      "sha256": "00ad2754944cb73a98f87529fb1c9ed212c3f3c3d1c1c1c942051816a6c4e846"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-09-locker/index.html",
+      "bytes": 2771,
+      "sha256": "7455333d99b7bef838f7d3f3c239556b160389f35634ee8c593c5218af0f6607"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-09-locker/README.md",
+      "bytes": 682,
+      "sha256": "4a608e8049f43b86949ac2d3d7706eb0e8a055ed9c95d9d7ef960fa874c952f7"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-09-locker/screen.css",
+      "bytes": 1910,
+      "sha256": "847e863a1ac52bc6106fedbc8e7946285bcee013794cd9e8837a6592e11e70ed"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-10-menu-admin/index.html",
+      "bytes": 3430,
+      "sha256": "28a76002133475afe78a80f4fcbc7a8af39bca571ee22f1100fb16034ad7e417"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-10-menu-admin/README.md",
+      "bytes": 815,
+      "sha256": "4f4ed0c8b129d9c967d15cfd28abec23bf13f75242b6c3e2f9e81e3407f7b5ed"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-10-menu-admin/screen.css",
+      "bytes": 1088,
+      "sha256": "465e9bc793eafa521d8238e2f081c343588816074718dfe167b9a57622c8e9e1"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-11-report/index.html",
+      "bytes": 2372,
+      "sha256": "d099bee9538f071eddb40eabea6f900ae757eb2f9501d187f7a72ed4731d3f1a"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-11-report/README.md",
+      "bytes": 548,
+      "sha256": "c4108e23fb4b129d0ea3c42460b91800b732e8d1b219a10ee7764b34c5ea755c"
+    },
+    {
+      "path": "06_UX設計/prototype/scr-11-report/screen.css",
+      "bytes": 796,
+      "sha256": "22ac947726faac152f6926cc79cf5a149a418d384e0dc34cfd2ae9175642048b"
+    },
+    {
+      "path": "06_UX設計/prototype/_shots/2026-10-29-tokens/board-color.png",
+      "bytes": 47683,
+      "sha256": "b7dfc04926ad943dc72a26aa75d2340db77bf8e7be9e8a53d61915066dc6830f"
+    },
+    {
+      "path": "06_UX設計/prototype/_shots/2026-10-29-tokens/board-wire.png",
+      "bytes": 63714,
+      "sha256": "73a53aa342dd7cca0d5e9ac8657c7abe4c1d9cf5619efe634d01c6316ae29c1f"
+    },
+    {
+      "path": "06_UX設計/prototype/_shots/2026-10-29-tokens/kds-color.png",
+      "bytes": 34208,
+      "sha256": "0f66e9e46526d233dc756472709255d847293c1a0e41e6e3a9bb64c94856d2a3"
+    },
+    {
+      "path": "06_UX設計/prototype/_shots/2026-10-29-tokens/kds-wire.png",
+      "bytes": 47625,
+      "sha256": "218dc420011e50dc009b865b98a84de08ab056991ce8d7ebf4e2c6359345d079"
+    },
+    {
+      "path": "06_UX設計/week6-student/11_欄位命名規則.md",
+      "bytes": 5741,
+      "sha256": "2530814459660d54493f16f79f9f9575387197099e79bc669d6e7f0dd0322131"
+    },
+    {
+      "path": "06_UX設計/week6-student/17_走查作業手冊.md",
+      "bytes": 4217,
+      "sha256": "b37af788b1cd56e291c709075c50e856c43055e116618d3d017f9e6eba794310"
+    },
+    {
+      "path": "06_UX設計/week6-student/24_學生操作手冊.md",
+      "bytes": 10312,
+      "sha256": "20cc90e19d87eedc136dbf6f5c2a5b501fa141a8f4c7d42a66f553eda8dd70ac"
+    },
+    {
+      "path": "06_UX設計/week6-student/START_HERE.md",
+      "bytes": 2163,
+      "sha256": "d2a6a682c3ea95a5628e490ab851c0ed33aee57d15a1e2fd038fa443ef9f9350"
+    },
+    {
+      "path": "06_UX設計/week6-student/lecture/07_第06週講義_v1.md",
+      "bytes": 70739,
+      "sha256": "4a8723278abcc41b7dbc883a346f2adc95c5f99c388850a1ddbec3ea34386649"
+    },
+    {
+      "path": "06_UX設計/week6-student/lecture/09_第06週簡報_v2.pptx",
+      "bytes": 81495,
+      "sha256": "c6c434ca101ac21de6e9ad847ce349b1531ecfd9343a2135dfe26ae4155995ff"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/check-all.mjs",
+      "bytes": 2056,
+      "sha256": "a1e5d192d89d6d70f29d3dc285fd060546a77b714b9369077d5d4ee5af070da3"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/check-layout-order.mjs",
+      "bytes": 3545,
+      "sha256": "be62abcfcdd494ba5547ff13bca025b3e2012ecf1b4d237bebccc7dd53db6885"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/derive-wires.mjs",
+      "bytes": 4630,
+      "sha256": "fc71bc291c93f8b28a8dd0b92da0fca2bf98fed4e9e3646fc6cbd6fbb916efd2"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/gen-stories.mjs",
+      "bytes": 2490,
+      "sha256": "041c281b258c92e6b21cfda26854fd20a1f0096ffc14db32d374d14898cefd28"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/gen-tables.mjs",
+      "bytes": 1825,
+      "sha256": "ba9e365096fbe32a4e03e4abcbaa82c418a3fc699bdc29124f724113e0eed3a8"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/index.html",
+      "bytes": 3664,
+      "sha256": "d0f1638adad7502660606858dc61beefda0123c8862a64bdaee212ccbfaf10a1"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/lint-tokens.mjs",
+      "bytes": 7351,
+      "sha256": "939e15ef5fe481ada7417ec38027c768ae4d1499a926edd9683e677466afb464"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/README.md",
+      "bytes": 7635,
+      "sha256": "fc5490f9671c0fc3a1f0e5a955c8cb3f3431b7d17cf6039d8521bd2cb229629b"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/review.html",
+      "bytes": 1236,
+      "sha256": "8702630e3cb5545112df3f2f21ed97c7b7558814a2af2970b065eb91f05735fb"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/selftest-stories.mjs",
+      "bytes": 3487,
+      "sha256": "ddbdbbe281fd76ef8c7886a611adab828f52490dad635ffee8caf20b07b9c216"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/smoke-dom.mjs",
+      "bytes": 3830,
+      "sha256": "0814b679bbc19cce60338e5d1a28f476d2cb8329893c1660528e39fa9ead334f"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/verify-stories.mjs",
+      "bytes": 13064,
+      "sha256": "97b540a7dec8c9096a4a534490066a0024211c3c6725a3773a78c7c507882693"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/base.css",
+      "bytes": 4693,
+      "sha256": "85f142bc32609ea49555900be3ebcdd3dece8a49114e9d03ce1b2627ac6a72e4"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/checks-report.js",
+      "bytes": 4194,
+      "sha256": "d492f9916e70f902cc1086b0d0fed4598aedeabf6fe8a2fa3bb66bab6f072809"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/checks-summary.js",
+      "bytes": 1300,
+      "sha256": "519f6fa46ec09371ac0af0f706ed1234f6b45cacd4a5e113861841a39dca6c1a"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/elements.js",
+      "bytes": 16680,
+      "sha256": "9f298ac593e89823b452b9e88f39c62d3271a614ec4c26caf1b81e0c1fc04bcb"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/hub.css",
+      "bytes": 5921,
+      "sha256": "b2c9995959d0b5a60e2e2571a084e57e539eefc42825118a7f0758d7b64d8552"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/hub.js",
+      "bytes": 8501,
+      "sha256": "aece25790441818fa1a55a5374968bab8c9ffecb0c33b5063049a40560867fd1"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/README.md",
+      "bytes": 966,
+      "sha256": "01dfd7390fff725cb6661c606f6a99089a3b1836e3e37a1aeef91daa87e87ca7"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/review-data.js",
+      "bytes": 4714,
+      "sha256": "2cced6ea718004655601128e000ea9099572af47c28712a5b64a6237d57959a5"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/review-report.js",
+      "bytes": 508,
+      "sha256": "45f77100e10b2c16babffa823660551e77132f4e3cdc6d12adf51b806545d60f"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/review.css",
+      "bytes": 2824,
+      "sha256": "bdf256a8656ea07b87861a209843aa580a4263b28b8d4f38e308786010f4e598"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/review.js",
+      "bytes": 3644,
+      "sha256": "6bd113e84d2e3733620199afc79dd64139886245715df437a50aa3f6d1985057"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/state-switcher.js",
+      "bytes": 1980,
+      "sha256": "1781ba65a1742075d220e63b64ca7820af681230f1d2d04cffec72b42a364f1c"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/story-data.js",
+      "bytes": 17980,
+      "sha256": "d7fa3c2d15a72cae60217f09733fef4e3be185c9f7770eaadc32bef792b5838f"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/story-runner.js",
+      "bytes": 9560,
+      "sha256": "d344bc715332b78d41706ced07bb40aedde09c2c392c5f2aa458658121699932"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/tasks.js",
+      "bytes": 3389,
+      "sha256": "d3ab06f3439ac0d193a28eec69f30d3d3b7d11378dcebdc17fe0c7de9eda339e"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/theme.js",
+      "bytes": 1863,
+      "sha256": "a5fb0de24ff02d49eae82ade6e251e5ebb82db83910e72e27fccd4c9b2c90d14"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/tokens-display.css",
+      "bytes": 1259,
+      "sha256": "3a69578703275809e7ad3131196e4aa04a2a0cd2ee8777aaf0115d40487705ed"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/tokens.blue.css",
+      "bytes": 484,
+      "sha256": "424f496408aa9c75e9f656ccee19342c07bf90f169930ef327db32241678395a"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/tokens.css",
+      "bytes": 6681,
+      "sha256": "e7e953bf8d4996d3010d51401e0da3d472db5c1152373cc857143d4a7cce4492"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/assets/wire.css",
+      "bytes": 6484,
+      "sha256": "305a1eb0866e7d06f4dc0ffc4a56cb08811f6a27c0b6673c95901581477c0ec0"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-01-home/index.html",
+      "bytes": 2873,
+      "sha256": "3cf8d8c9ac789549470d6003edb6a5fdf49329a9bb25a1f520b9d6e99b2c61b2"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-01-home/README.md",
+      "bytes": 716,
+      "sha256": "418e83c39de29102007e56a88707fa152de1f2d55299162523383ff2b78fd012"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-01-home/screen.css",
+      "bytes": 840,
+      "sha256": "b61a8fd48dca4f66786625ecf3a0d06e314fbf25beaaac9f1e7e962bd688f948"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-02-menu/index.html",
+      "bytes": 3208,
+      "sha256": "41227419e7f8481ae7d9ddacd03ae93dda4eed8bbc17f9345c3530c2a89f68e9"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-02-menu/README.md",
+      "bytes": 710,
+      "sha256": "a523e577bbeaf739be75f81892880f5d44d0d5b16d20c4be09c60963adddfcc5"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-02-menu/screen.css",
+      "bytes": 1862,
+      "sha256": "ccfc84f5eb424436a3adfcbb0c0cbd61df8106db36425ddfcb004e78faa122cc"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-03-checkout/index.html",
+      "bytes": 3650,
+      "sha256": "f72daeb30b245d19fadf3e48dc8ca5474cd9af07fa4536a0fa24a0f94c86bb4a"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-03-checkout/README.md",
+      "bytes": 773,
+      "sha256": "d2f141149f549b2e614f601e7487a6b6f74b4bf229e78d77b2a39ab69379adee"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-03-checkout/screen.css",
+      "bytes": 1186,
+      "sha256": "1b14170ee9f67f550f6a6bc71faf404beb777788d51783743ab262b677d1df8c"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-04-payment/index.html",
+      "bytes": 3283,
+      "sha256": "030467adfc04d39b9fca10c8f72f2cd32194f154d75ce9793a4364127a713a43"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-04-payment/README.md",
+      "bytes": 797,
+      "sha256": "58718fa9126c9fba6f57a7d5827fa492b19ccc667c8f312a38e53262626d2cdd"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-04-payment/screen.css",
+      "bytes": 578,
+      "sha256": "653d1ca61d98230f62fc541c17e4b89c9de95ce9b9a8a2fc647eb5ec8c1d6d81"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-05-order-status/index.html",
+      "bytes": 3694,
+      "sha256": "652995a8bcc343050d74340c7e958e2174f38a736a5ea74aad3947935dd29511"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-05-order-status/README.md",
+      "bytes": 1490,
+      "sha256": "0f64e044eaa01e133000cbeb4f0495be7a7264408bbfb80249a4338820cd0d1d"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-05-order-status/screen.css",
+      "bytes": 1789,
+      "sha256": "a1a7a87ed165576726bf02b4a11575c05b5cf20e89739390c55385df9ab9aa73"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-06-staff-orders/index.html",
+      "bytes": 3489,
+      "sha256": "154e73c89cbde6bb8a7371e5a29d65b77119a7c1066e7585e83c366a92e9b80f"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-06-staff-orders/README.md",
+      "bytes": 933,
+      "sha256": "65be8515f3f478e7656d3b240e181fac76dcfac9f2ea099c56e2b9bba863f7c1"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-06-staff-orders/screen.css",
+      "bytes": 1596,
+      "sha256": "f2ec8ad46498975d1cdb1d854ec2f0d7a181416c8282a1a284db2b46e9426022"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-07-kds/index.html",
+      "bytes": 3882,
+      "sha256": "ddaad9cf8b9e7a7f21ffcce16f2347eefcda9be1e890a90719bfbe68e49caf72"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-07-kds/README.md",
+      "bytes": 924,
+      "sha256": "fb1c55362b5b0f27086ce125af6d1c7eb2d6943879821d5cc2a5c996a2a23660"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-07-kds/screen.css",
+      "bytes": 2546,
+      "sha256": "4beb549f06bb02d8cf24dcb03762d98091d60a6d900d5c44025eec0cc859711f"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-08-pickup-board/index.html",
+      "bytes": 2855,
+      "sha256": "8255590cdc33eb2d340c08da83bf8382cbe313c8b9860081c1813c172a2865e8"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-08-pickup-board/README.md",
+      "bytes": 835,
+      "sha256": "e117754aa79cb0a581ff336af20d467b55015a9598e0cfd26eff3bedaa77f4f5"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-08-pickup-board/screen.css",
+      "bytes": 1799,
+      "sha256": "00ad2754944cb73a98f87529fb1c9ed212c3f3c3d1c1c1c942051816a6c4e846"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-09-locker/index.html",
+      "bytes": 2771,
+      "sha256": "7455333d99b7bef838f7d3f3c239556b160389f35634ee8c593c5218af0f6607"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-09-locker/README.md",
+      "bytes": 682,
+      "sha256": "4a608e8049f43b86949ac2d3d7706eb0e8a055ed9c95d9d7ef960fa874c952f7"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-09-locker/screen.css",
+      "bytes": 1910,
+      "sha256": "847e863a1ac52bc6106fedbc8e7946285bcee013794cd9e8837a6592e11e70ed"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-10-menu-admin/index.html",
+      "bytes": 3430,
+      "sha256": "28a76002133475afe78a80f4fcbc7a8af39bca571ee22f1100fb16034ad7e417"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-10-menu-admin/README.md",
+      "bytes": 815,
+      "sha256": "4f4ed0c8b129d9c967d15cfd28abec23bf13f75242b6c3e2f9e81e3407f7b5ed"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-10-menu-admin/screen.css",
+      "bytes": 1088,
+      "sha256": "465e9bc793eafa521d8238e2f081c343588816074718dfe167b9a57622c8e9e1"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-11-report/index.html",
+      "bytes": 2372,
+      "sha256": "d099bee9538f071eddb40eabea6f900ae757eb2f9501d187f7a72ed4731d3f1a"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-11-report/README.md",
+      "bytes": 548,
+      "sha256": "c4108e23fb4b129d0ea3c42460b91800b732e8d1b219a10ee7764b34c5ea755c"
+    },
+    {
+      "path": "06_UX設計/week6-student/prototype/scr-11-report/screen.css",
+      "bytes": 796,
+      "sha256": "22ac947726faac152f6926cc79cf5a149a418d384e0dc34cfd2ae9175642048b"
+    },
+    {
+      "path": "06_UX設計/week6-student/reference/12_UX_示範答案.md",
+      "bytes": 9587,
+      "sha256": "9b403f197d6176daf50ddb467be63170f02b133b91f6a87a58b0dc1cba966d5d"
+    },
+    {
+      "path": "06_UX設計/week6-student/reference/13_STORIES_示範答案.md",
+      "bytes": 7862,
+      "sha256": "61d1132fe08c372280f7cf8571501acd8947a39ca66572949274e1cc52906455"
+    },
+    {
+      "path": "06_UX設計/week6-student/reference/14_線框_示範答案.md",
+      "bytes": 5259,
+      "sha256": "29f285886026fcf75f4d6c37e78ad263386da0862c5855d355b0d6873cefb151"
+    },
+    {
+      "path": "06_UX設計/week6-student/reference/18_推導修正的思考軌跡.md",
+      "bytes": 9429,
+      "sha256": "2b7d94c7aba673265cc7a8f4e82237263514f9ebdf93cc684569a7ad660da54c"
+    },
+    {
+      "path": "06_UX設計/week6-student/reference/20_任務句與元素表.md",
+      "bytes": 12612,
+      "sha256": "39d09b3eee9ec3c9c3393e62d2aaeb9aafef6f7e9b702f0cb7bd4685a0f78f72"
+    },
+    {
+      "path": "06_UX設計/week6-student/reference/21_SCR推展表.md",
+      "bytes": 7121,
+      "sha256": "bd1e3173b833faffaaf96631364651464603556dbf7c439b40c4415d22ecc5c9"
+    },
+    {
+      "path": "06_UX設計/week6-student/reference/22_版面順序對照.md",
+      "bytes": 3727,
+      "sha256": "acdc4c8a5a5c435fe773aa9e00e52082d0d5a9bbaa6485318ce57fe7e61a50d4"
+    },
+    {
+      "path": "06_UX設計/week6-student/templates/04_ux_rd_template.md",
+      "bytes": 3202,
+      "sha256": "11b3e38dd7ebd6f956cd99c6061e97e4995c5ef21373e9d66ba483071d6b403b"
+    },
+    {
+      "path": "06_UX設計/week6-student/templates/04_ux_template.md",
+      "bytes": 4777,
+      "sha256": "c0dadd9275d4affb89d47fa22bd728b92ff93eca175892f0a325846aa624af04"
+    },
+    {
+      "path": "06_UX設計/_src/build_deck_w6.py",
+      "bytes": 44810,
+      "sha256": "e2f132b70557e9a6eeed09beb84a6e47a0b9bcdfb829f2381dd8a59343ff5cd4"
+    },
+    {
+      "path": "06_UX設計/_src/build_deck_w6_v2.py",
+      "bytes": 24951,
+      "sha256": "3914270e3415f4fa959a61ea7c19bd911a03d438244bd971978f18cbe4e91283"
+    },
+    {
+      "path": "05_AI輔助風格設計/00_新版入口.md",
+      "bytes": 1093,
+      "sha256": "b76c20e35b733692d99d034955365c9c17d25ba84483b7ee83d7e735530128f0"
+    },
+    {
+      "path": "05_AI輔助風格設計/service-design-baseline.md",
+      "bytes": 33856,
+      "sha256": "2da0aab11f3a3a47c2f28a8999bf2a75989c9ecbfea6adb90e7af307dea306fe"
+    },
+    {
+      "path": "05_AI輔助風格設計/第05週_AI輔助風格設計5.md",
+      "bytes": 153145,
+      "sha256": "5ae3e9482ac1964111e66a4ccfbb14627749acb40bd4e956e48afe997f25ff57"
+    },
+    {
+      "path": "05_AI輔助風格設計/第05週_AI輔助風格設計5.pptx",
+      "bytes": 1446332,
+      "sha256": "758abb037a4210b6ddd0426793a7cfe325385c0a700fd1b6d1b97ac9b1106368"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/00_README_導讀與版本治理.md",
+      "bytes": 6642,
+      "sha256": "ca7759858818720987dfebfdbd423030d533a884e5d86f3836d96dfdab885022"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/01_第05週講義_v6_設計規格驅動.md",
+      "bytes": 55058,
+      "sha256": "54761e38e0d926cfe13c1c7108f916c34f932ad4f10f2f4379ee30e1049cd613"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/02_附錄A_Designmd十章骨架範本.md",
+      "bytes": 5597,
+      "sha256": "4b1bc976e70ec30100962a9c5b8eee25d5a499809ed9eb6af63f0c23f22acf7e"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/03_附錄B_三章Prompt骨架與審計清單.md",
+      "bytes": 5517,
+      "sha256": "fbdcdeaff22098097f48d80c690342987df05c2fc1553470ff28c4f0666f5ced"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/04_附錄C_評分規準與審計Rubric.md",
+      "bytes": 4564,
+      "sha256": "cb39557438b12d7dd0db69a7088538fc3c2274cbc2d65e3dc159f7072b00ad85"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/05_簡報改版內容稿_4頁.md",
+      "bytes": 3435,
+      "sha256": "c26394bdc222de6befe7372e7ebf82124af519b7a28c6fad25400a99056d8cdf"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/06_CHANGELOG_改版紀錄.md",
+      "bytes": 21302,
+      "sha256": "f0f105378850aadb651f8ba91fa2084af7dc7a53a20d8bcc84415e663970ea10"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/07_第05週講義_v6.pptx",
+      "bytes": 164857,
+      "sha256": "d99d0e70a8ca83881becb5b00e2a6a892882dc7811b8cb3938cad7b239dd7600"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/12_物件與資訊架構.md",
+      "bytes": 9414,
+      "sha256": "f0700dda4e4bd417f31f01de4c251da54098874db29daff14986e9ceccf8a48b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/14_資訊流與動態需求.md",
+      "bytes": 6783,
+      "sha256": "208bacf5b3b2e212856e23a5ecafb10ca6e10521d3af4a8b86a4e344aea9ae3b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/26_教師教學指引_第5週.md",
+      "bytes": 6145,
+      "sha256": "5c1991fbacb6d950bd9a72d53df6b199e70cf6bd88d6316611269656c3c02b03"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/27_學生操作手冊_第5週.md",
+      "bytes": 6988,
+      "sha256": "ab2f477f6b20b05d8e2b13a0e0b5ce53956c4eab69e1fb25378bb04e89585a23"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/START_HERE_第5週.md",
+      "bytes": 1594,
+      "sha256": "7899578277d55ee4543b524e8341d25850b2b5f67d585d09c92e40a69c858426"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student.zip",
+      "bytes": 205718,
+      "sha256": "e4ca90d27463910ac376bdbfd6e6cd0d9312188ad1a0e155d225c85f822b629f"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/00_toolkit_使用說明.md",
+      "bytes": 6778,
+      "sha256": "93cc86e638e10b942a7e1e1dbc225861c36e6a80c8ea4a04acb4fbb34e276a36"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/01_market_rd_template.md",
+      "bytes": 3195,
+      "sha256": "661e7c68abe8699e5bff7db3940993ee796bcd80540cecc7ddf9092efada4929"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/01_market_README.md",
+      "bytes": 4179,
+      "sha256": "f3cad91bca47eb2206eb1191cca206e30d11647cb0051381d218c8117cff8922"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/01_market_template.md",
+      "bytes": 1691,
+      "sha256": "4d7f7b5e6f675803c6034decb871ab6cc240ae52e086ce4d09e7399b99784491"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/02_persona_rd_template.md",
+      "bytes": 1551,
+      "sha256": "eb76c14cdd189d03e0845f4eff88ed69dc9989a37d9e8b30b105e6d4d024e916"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/02_persona_README.md",
+      "bytes": 2729,
+      "sha256": "9f5b2db85c8717833976301fe59bcaf1a6631bd9191beaa1b91b7bba9f05d62e"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/02_persona_template.md",
+      "bytes": 1132,
+      "sha256": "b1cd111d9fa110b29e901e8dcd0c862354d9da8e11c39a4e182a62def509d9b0"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/03_cjm_rd_template.md",
+      "bytes": 1580,
+      "sha256": "4648b16facb3bdfa7a56712d5287544ac6bf196378e065a8da3f7bdc1fe3e749"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/03_cjm_README.md",
+      "bytes": 2249,
+      "sha256": "86a8db2f0e866d9fa9bdc0d55688c47165e0b419dce261f1da97934feeb06468"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/03_cjm_template.md",
+      "bytes": 1744,
+      "sha256": "6cbffdb3af6223b5a9fe8f32a56603551c9d959b88013315dd4bc34facc71b0c"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/04_blueprint_rd_template.md",
+      "bytes": 1800,
+      "sha256": "7149f1c0395b0c548de4ac23c916bc0fc364d8b1464a1d524c37bbc98751c81f"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/04_blueprint_README.md",
+      "bytes": 2601,
+      "sha256": "dd11af36e75ed2cc4d534e3a4a39ad21e90216bf5a3e30fce8ec662978df0af4"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/04_blueprint_template.md",
+      "bytes": 4315,
+      "sha256": "961e95142ef1f87766fe432949174acb13570ad6127e77bd64740d276aadc123"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/05_decisions_rd_template.md",
+      "bytes": 2135,
+      "sha256": "59276d8d631223331df85b975e745f5125320a5667ed8166f8145dc693b3eb77"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/05_decisions_README.md",
+      "bytes": 3159,
+      "sha256": "3e3ac14566ddc4b12eb12a04b1a54df859b67eec9ba0f8fadbf6aa0159e4339e"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/05_decisions_template.md",
+      "bytes": 4109,
+      "sha256": "e2e8190313cbfc683d8852d6d76445cf323d24237476053b4ed98f94c00bee99"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/06_designmd_audit_record.md",
+      "bytes": 3279,
+      "sha256": "231ca143f058240d7cb957bec39f414ddeae37662e5f56be442c1092c3c621ac"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/06_designmd_rd_template.md",
+      "bytes": 2774,
+      "sha256": "d9f2fe12632bda6c0f2a8e4bfcb2d6edf663e6da309446bc5cfb82dbf358d40d"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/06_designmd_README.md",
+      "bytes": 6525,
+      "sha256": "1af7c126f32e350081e460f4c0e23b7bb626a9edf72f5fba0e5b75c934aeee3b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/06_designmd_template.md",
+      "bytes": 3215,
+      "sha256": "9a65a25cbc4db49ec34eed9b62a126534cef9f8d519d10c41c0ac68a38e0e85d"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/baseline_README.md",
+      "bytes": 2511,
+      "sha256": "f7699fca816ddcbd1be8747cbf1b1101e0284c86e663341ce6e0db7a15bfa9b8"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/omp-design-md-guide.md",
+      "bytes": 8131,
+      "sha256": "3d76e71374a752842182b9e4d9f71808d85d18ed7982c92f7ae871d0790528d9"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/service-design-baseline-template.md",
+      "bytes": 9019,
+      "sha256": "88a5cf353d18897b210afe77f506ecbee7226decda20175e74883573788382d9"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/service-design-baseline.md",
+      "bytes": 36607,
+      "sha256": "94e52dacd3e710b3ee8133fa1fc303e02da22bfe3e4228de95dc13aa75560bb2"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/stitch-prompt-checklist.md",
+      "bytes": 2851,
+      "sha256": "62a13aeef0036af5e042d01b8ba44f4922642c739af63893301b574ff7764fe4"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/stitch-prompt-template.md",
+      "bytes": 7362,
+      "sha256": "85b9a5eba08db5043e2eb5e25d7e79998b6909f7b5154c85939b8e93edc5c710"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/stitch-prompts.md",
+      "bytes": 7546,
+      "sha256": "5857a8a402367cd8c84110e56b42cf973f0d895e68f361a8734af678923578f7"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_DESIGN_10章_平衡現代/DESIGN.md",
+      "bytes": 19424,
+      "sha256": "4f2d0a44421b7c425b82c47a98df5057f6c4e6d7a80c084806c5980c1bea01dd"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_DESIGN_10章_平衡現代/README.md",
+      "bytes": 2416,
+      "sha256": "da739027d08f2820ac65806130fbf4eaf6be1c956ddeaa6b2005a962780749df"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_DESIGN_10章_平衡現代/tokens.css",
+      "bytes": 6438,
+      "sha256": "7e5bbf8d6939f1da9b6a14e8286d78748f230cccb4f5495a7a418f78caf59e6c"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_DESIGN_10章_平衡現代/_N.txt",
+      "bytes": 2,
+      "sha256": "8722616204217eddb39e7df969e0698aed8e599ba62ed2de1ce49b03ade0fede"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_DESIGN_10章_平衡現代/整併紀錄.md",
+      "bytes": 2366,
+      "sha256": "da7ac856971b2da23bb6144447501748c39fad0fcdb81055290640f430d76c0b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/README.md",
+      "bytes": 1065,
+      "sha256": "9f0ac4649133e07d1bf7ba11d798c51cb73a559544378b5258cdd95c571e4ec8"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/Style_C_AI-01.md",
+      "bytes": 5414,
+      "sha256": "15ca4e990c40ea4072a865e3ee355d8cff0d060ea4d04f07443b9a3966badac9"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/balanced_modern_morning/DESIGN.md",
+      "bytes": 9248,
+      "sha256": "93500b77cbf347a1d60acfffa738fe248e2f7a53b578efc836853a908a8be307"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_1/code.html",
+      "bytes": 22226,
+      "sha256": "2ec0bbdafd9cbab68e4e4b632704fdd9ad13682ad880a420cde7b56d749f3153"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_1/screen.png",
+      "bytes": 270874,
+      "sha256": "59c406e776d346cccdda3c9baa39d34b0e92e225fe4798aa66979a1d7dc22e7d"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_2/code.html",
+      "bytes": 21979,
+      "sha256": "5ddc138e45f9a2757fc95d7e1399bd64b352c24d51874c0d90a6856655b5d371"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_2/screen.png",
+      "bytes": 232089,
+      "sha256": "dc4713dc62148f582a0eaa5d8d80990146154634dc48ea5bf5e0640fcbf545d3"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_3/code.html",
+      "bytes": 26978,
+      "sha256": "b3282b395680cfad39bbddfd31d5d8c4bb0181672b19d688b099e535009cd4d0"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_3/screen.png",
+      "bytes": 274831,
+      "sha256": "40a561fc5044445384ca5f4ba95be4985b6ee33429b732dd55fe3ae320a46137"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_4/code.html",
+      "bytes": 26780,
+      "sha256": "29f92f727958157feeb40803538f8d591ca742032c41652a6bd715d9f4f2a107"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/toolkit/範例_Stitch原始輸出/New-Style_C/_4/screen.png",
+      "bytes": 353294,
+      "sha256": "18fd60da5ccfd253f71327717b0c1d27099c9bf1e9b45f663dfe4af67f023d8c"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/27_學生操作手冊.md",
+      "bytes": 6988,
+      "sha256": "ab2f477f6b20b05d8e2b13a0e0b5ce53956c4eab69e1fb25378bb04e89585a23"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/START_HERE.md",
+      "bytes": 1594,
+      "sha256": "7899578277d55ee4543b524e8341d25850b2b5f67d585d09c92e40a69c858426"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/lecture/01_第05週講義_v6.md",
+      "bytes": 55058,
+      "sha256": "54761e38e0d926cfe13c1c7108f916c34f932ad4f10f2f4379ee30e1049cd613"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/00_toolkit_使用說明.md",
+      "bytes": 6778,
+      "sha256": "93cc86e638e10b942a7e1e1dbc225861c36e6a80c8ea4a04acb4fbb34e276a36"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/12_物件與資訊架構.md",
+      "bytes": 9414,
+      "sha256": "f0700dda4e4bd417f31f01de4c251da54098874db29daff14986e9ceccf8a48b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/14_資訊流與動態需求.md",
+      "bytes": 6783,
+      "sha256": "208bacf5b3b2e212856e23a5ecafb10ca6e10521d3af4a8b86a4e344aea9ae3b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/service-design-baseline-template.md",
+      "bytes": 9019,
+      "sha256": "88a5cf353d18897b210afe77f506ecbee7226decda20175e74883573788382d9"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/service-design-baseline.md",
+      "bytes": 36607,
+      "sha256": "94e52dacd3e710b3ee8133fa1fc303e02da22bfe3e4228de95dc13aa75560bb2"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/範例_DESIGN_10章/DESIGN.md",
+      "bytes": 19424,
+      "sha256": "4f2d0a44421b7c425b82c47a98df5057f6c4e6d7a80c084806c5980c1bea01dd"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/範例_DESIGN_10章/README.md",
+      "bytes": 2416,
+      "sha256": "da739027d08f2820ac65806130fbf4eaf6be1c956ddeaa6b2005a962780749df"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/範例_DESIGN_10章/tokens.css",
+      "bytes": 6438,
+      "sha256": "7e5bbf8d6939f1da9b6a14e8286d78748f230cccb4f5495a7a418f78caf59e6c"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/reference/範例_DESIGN_10章/整併紀錄.md",
+      "bytes": 2366,
+      "sha256": "da7ac856971b2da23bb6144447501748c39fad0fcdb81055290640f430d76c0b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/01_market_rd_template.md",
+      "bytes": 3195,
+      "sha256": "661e7c68abe8699e5bff7db3940993ee796bcd80540cecc7ddf9092efada4929"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/01_market_template.md",
+      "bytes": 1691,
+      "sha256": "4d7f7b5e6f675803c6034decb871ab6cc240ae52e086ce4d09e7399b99784491"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/02_persona_rd_template.md",
+      "bytes": 1551,
+      "sha256": "eb76c14cdd189d03e0845f4eff88ed69dc9989a37d9e8b30b105e6d4d024e916"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/02_persona_template.md",
+      "bytes": 1132,
+      "sha256": "b1cd111d9fa110b29e901e8dcd0c862354d9da8e11c39a4e182a62def509d9b0"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/03_cjm_rd_template.md",
+      "bytes": 1580,
+      "sha256": "4648b16facb3bdfa7a56712d5287544ac6bf196378e065a8da3f7bdc1fe3e749"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/03_cjm_template.md",
+      "bytes": 1744,
+      "sha256": "6cbffdb3af6223b5a9fe8f32a56603551c9d959b88013315dd4bc34facc71b0c"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/04_blueprint_rd_template.md",
+      "bytes": 1800,
+      "sha256": "7149f1c0395b0c548de4ac23c916bc0fc364d8b1464a1d524c37bbc98751c81f"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/04_blueprint_template.md",
+      "bytes": 4315,
+      "sha256": "961e95142ef1f87766fe432949174acb13570ad6127e77bd64740d276aadc123"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/05_decisions_rd_template.md",
+      "bytes": 2135,
+      "sha256": "59276d8d631223331df85b975e745f5125320a5667ed8166f8145dc693b3eb77"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/05_decisions_template.md",
+      "bytes": 4109,
+      "sha256": "e2e8190313cbfc683d8852d6d76445cf323d24237476053b4ed98f94c00bee99"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/06_designmd_audit_record.md",
+      "bytes": 3279,
+      "sha256": "231ca143f058240d7cb957bec39f414ddeae37662e5f56be442c1092c3c621ac"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/06_designmd_rd_template.md",
+      "bytes": 2774,
+      "sha256": "d9f2fe12632bda6c0f2a8e4bfcb2d6edf663e6da309446bc5cfb82dbf358d40d"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/06_designmd_README.md",
+      "bytes": 6525,
+      "sha256": "1af7c126f32e350081e460f4c0e23b7bb626a9edf72f5fba0e5b75c934aeee3b"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/week5-student/templates/06_designmd_template.md",
+      "bytes": 3215,
+      "sha256": "9a65a25cbc4db49ec34eed9b62a126534cef9f8d519d10c41c0ac68a38e0e85d"
+    },
+    {
+      "path": "05_AI輔助風格設計/06_新版_Design規格驅動/_src/build_deck_v6.py",
+      "bytes": 46661,
+      "sha256": "4048c161a0c4cc1a7a0b85937bb339938f4685828fc8a097ca572867178b7266"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/參考答案_早餐店案例.zip",
+      "bytes": 20639,
+      "sha256": "59dde1316e339b9486bd43d61b71d7760da1b2361a6e572b6335fdc5beec4a01"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/課程範本與工具包.zip",
+      "bytes": 49850,
+      "sha256": "e5981d97582cd84f708f2c92827ac1c79f3e39070b6661c2ac679529913c83c5"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/01_market_template.md",
+      "bytes": 3339,
+      "sha256": "6fb9ffc632e829e5de3e6c7e2a98e76ef2015acf761f4a8ad89ba43569a1e49b"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/02_persona_template.md",
+      "bytes": 2715,
+      "sha256": "6a97e34347e16354891316178a5672a7588675edccce2282379fcd8aaf2ab2d3"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/03_cjm_template.md",
+      "bytes": 2840,
+      "sha256": "a8fded3be567d751d419cd1a7c6df6e191902cb01cfc915ae9f1ad81cdc96a0b"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/04_blueprint_template.md",
+      "bytes": 4453,
+      "sha256": "32407f877da29bca057b8a71c5f56645b5a7153788034009f03227502456c209"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/05_decisions_template.md",
+      "bytes": 6068,
+      "sha256": "b58098a81726ba6212641f195b2430bbbbe4c2fc112cb250630d5cc82fa8f00a"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/omp-design-md-guide.md",
+      "bytes": 8660,
+      "sha256": "e4c2ee2f56b507d45aaa021a4c38a61694421c42ca66c53fc009579f4cdbfbb0"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/service-design-baseline-template.md",
+      "bytes": 9520,
+      "sha256": "7f6e6ccb362d0c9924bab78c6f920426921400e5808a2376dab09639545f3ec7"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/stitch-prompt-checklist.md",
+      "bytes": 2756,
+      "sha256": "d0b2e7a01629d07286cb33114a10558ef03d40f37a778b0a4c2c24e5e3395e90"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/stitch-prompt-template.md",
+      "bytes": 7683,
+      "sha256": "943cfcfefbe2b6d3400f01ad4e5cc9b78e9c2dc22d34ee22e5efa943e7035fc8"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-1-課程範本-V0(仍然要用)/stitch-prompts.md",
+      "bytes": 6888,
+      "sha256": "4bcb9f97861314a3500f640e71bb56dabd983395f2e4ccc3c51c8acd9ef83408"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/01_market_rd_template.md",
+      "bytes": 3195,
+      "sha256": "661e7c68abe8699e5bff7db3940993ee796bcd80540cecc7ddf9092efada4929"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/01_market_README.md",
+      "bytes": 4179,
+      "sha256": "f3cad91bca47eb2206eb1191cca206e30d11647cb0051381d218c8117cff8922"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/01_market_template.md",
+      "bytes": 1691,
+      "sha256": "4d7f7b5e6f675803c6034decb871ab6cc240ae52e086ce4d09e7399b99784491"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/02_persona_rd_template.md",
+      "bytes": 1551,
+      "sha256": "eb76c14cdd189d03e0845f4eff88ed69dc9989a37d9e8b30b105e6d4d024e916"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/02_persona_README.md",
+      "bytes": 2729,
+      "sha256": "9f5b2db85c8717833976301fe59bcaf1a6631bd9191beaa1b91b7bba9f05d62e"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/02_persona_template.md",
+      "bytes": 1132,
+      "sha256": "b1cd111d9fa110b29e901e8dcd0c862354d9da8e11c39a4e182a62def509d9b0"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/03_cjm_rd_template.md",
+      "bytes": 1580,
+      "sha256": "4648b16facb3bdfa7a56712d5287544ac6bf196378e065a8da3f7bdc1fe3e749"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/03_cjm_README.md",
+      "bytes": 2249,
+      "sha256": "86a8db2f0e866d9fa9bdc0d55688c47165e0b419dce261f1da97934feeb06468"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/03_cjm_template.md",
+      "bytes": 1186,
+      "sha256": "43a4b637d905d33308760d5d97fb9f9bd39b88eb3716507e2c66819f3b32adfa"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/04_blueprint_rd_template.md",
+      "bytes": 1800,
+      "sha256": "7149f1c0395b0c548de4ac23c916bc0fc364d8b1464a1d524c37bbc98751c81f"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/04_blueprint_README.md",
+      "bytes": 2601,
+      "sha256": "dd11af36e75ed2cc4d534e3a4a39ad21e90216bf5a3e30fce8ec662978df0af4"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/04_blueprint_template.md",
+      "bytes": 2539,
+      "sha256": "7c1f2949d01c6594cdfb41cbcff969e58a06f46a2d23c3a7a7953fa842aab07f"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/05_decisions_rd_template.md",
+      "bytes": 2135,
+      "sha256": "59276d8d631223331df85b975e745f5125320a5667ed8166f8145dc693b3eb77"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/05_decisions_README.md",
+      "bytes": 3159,
+      "sha256": "3e3ac14566ddc4b12eb12a04b1a54df859b67eec9ba0f8fadbf6aa0159e4339e"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/05_decisions_template.md",
+      "bytes": 3384,
+      "sha256": "37d2d4dd9983c810c97800e1c32af1fbb1a5762f2df5ed7a19495a8fe9a98641"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/baseline_README.md",
+      "bytes": 1965,
+      "sha256": "e8bc13edae2f7cddba9e9525f3a4539e9674d2af83cab093c7d88fa08802e53e"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/omp-design-md-guide.md",
+      "bytes": 8660,
+      "sha256": "e4c2ee2f56b507d45aaa021a4c38a61694421c42ca66c53fc009579f4cdbfbb0"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/service-design-baseline-template.md",
+      "bytes": 9019,
+      "sha256": "88a5cf353d18897b210afe77f506ecbee7226decda20175e74883573788382d9"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/service-design-baseline.md",
+      "bytes": 33856,
+      "sha256": "2da0aab11f3a3a47c2f28a8999bf2a75989c9ecbfea6adb90e7af307dea306fe"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/stitch-prompt-checklist.md",
+      "bytes": 2392,
+      "sha256": "c73716293a97b26c7def5718481f616b84097765b1a36367a35fbeb426b0ab7b"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/stitch-prompt-template.md",
+      "bytes": 7144,
+      "sha256": "9efdef86421bbf15a79621d8081e9df75ba593725af0d39c006b3085e6fb5d99"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/stitch-prompts.md",
+      "bytes": 6888,
+      "sha256": "4bcb9f97861314a3500f640e71bb56dabd983395f2e4ccc3c51c8acd9ef83408"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/00-2-課程範本與工具包/_本目錄已凍結_請改用toolkit.md",
+      "bytes": 1290,
+      "sha256": "fab57df67cb169ddb31ba65b7f3ad7455df2c8b3701be240897002ee288957b4"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/三套風格參數綜合對照表.md",
+      "bytes": 9754,
+      "sha256": "70a257ff374e642f5364d015a5f3a01805a3dc3f97f9afd74e1cb2ac6fa1d8a4"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/stitch_ (1).zip",
+      "bytes": 1252645,
+      "sha256": "97b25c825d71be3fba8365d9427c04c8ebcb371e23fd7f50e569cc2cfed789a4"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/Style_A_AI-01.md",
+      "bytes": 2284,
+      "sha256": "f1b8416111d26291928c210a41f1e5d8a1edac7841ae8709241336eeae980c54"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/kinetic_slate/DESIGN.md",
+      "bytes": 9167,
+      "sha256": "32683cc866a2def0e3378ea228f22e650417a769d3665a8bedcb57155145853a"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_1/code.html",
+      "bytes": 38631,
+      "sha256": "2e0cef426cb9186a06b92e38e92e6b7c7064a63172f5f625ae5e7abc91160e84"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_1/screen.png",
+      "bytes": 256593,
+      "sha256": "aa2a01989e0eed86ebc4424ee1dda4e659140d9e5332c2e16ade3c08b4f78950"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_2/code.html",
+      "bytes": 27655,
+      "sha256": "a5681abb305ac18b17da813229f5d0ba030d753ff1e676016e766bc26b1365e1"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_2/screen.png",
+      "bytes": 346090,
+      "sha256": "fa2438add1dc537b10fa2677986b4a3b6c2fc1427786043dfa160cb7b04aaf5d"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_3/code.html",
+      "bytes": 23033,
+      "sha256": "4111a3123059cd87be7e054eff320b3055c5d0e577aebd5f5a3904d2d1897952"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_3/screen.png",
+      "bytes": 290453,
+      "sha256": "9b637731be684c8f0ea8472efbfb265d128faf94a39541825ac654fc5739da24"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_4/code.html",
+      "bytes": 21827,
+      "sha256": "ed71a847b82d795b44a7cc488897767d76a4c94797884d233ab6a5452c4ca080"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_A/_4/screen.png",
+      "bytes": 338793,
+      "sha256": "cd06e8e4ce8febd2a5a2069c4de752cb3f2cf2f3662a90d784369abd0c4dcee8"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/stitch_ (2).zip",
+      "bytes": 1230399,
+      "sha256": "0924f7c53b407269b525240165be791afd332cce1b2f0c451f6965597f49284d"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/warm_trustworthy_morning/DESIGN.md",
+      "bytes": 10591,
+      "sha256": "26a712eff78fde9f26eedc85ff0545aeb4948ff0b0d10cd843deb1a3dc43b464"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_1/code.html",
+      "bytes": 23829,
+      "sha256": "0740f31903a6a23747ecc2a89b437248b9b225e27fef8f43b470ab33d13bcffb"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_1/screen.png",
+      "bytes": 243582,
+      "sha256": "725abaf5588cdaafa6f0dc2ff64077fa3c17d0b0c42c59a50a01b5ab437b936f"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_2/code.html",
+      "bytes": 28542,
+      "sha256": "7762f99db6070748125581d60c109356360d4efc99c5bc4201e947d023824952"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_2/screen.png",
+      "bytes": 204483,
+      "sha256": "81d34ba9332ead4835556577ccc154c3ae7f75fa829f755d9b15b2d0f7369f37"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_3/code.html",
+      "bytes": 23889,
+      "sha256": "c960e67d22be8db848f8b5ba8f74169be52295ca0cd4730561529d842dc8311f"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_3/screen.png",
+      "bytes": 444515,
+      "sha256": "426cbf46b528004fac7d4304c869ed6d2f0f6e846646368012b6158dd559abdd"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_4/code.html",
+      "bytes": 23945,
+      "sha256": "d08277aaabd7f3b965d67b56301e84638749d1c6eb27d584f793f382573fe352"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_B/_4/screen.png",
+      "bytes": 309787,
+      "sha256": "3a3cb3ecea0f01b33a92b12ff51f9f3fac4cc756d93b8cd407f770b4508c4499"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/stitch_.zip",
+      "bytes": 1156288,
+      "sha256": "0e307c30f4f7bd0a10b20b9be5ff6047841512eca45e4f0e5baed1011387e781"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/Style_C_AI-01.md",
+      "bytes": 5414,
+      "sha256": "15ca4e990c40ea4072a865e3ee355d8cff0d060ea4d04f07443b9a3966badac9"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/balanced_modern_morning/DESIGN.md",
+      "bytes": 9248,
+      "sha256": "93500b77cbf347a1d60acfffa738fe248e2f7a53b578efc836853a908a8be307"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_1/code.html",
+      "bytes": 22226,
+      "sha256": "2ec0bbdafd9cbab68e4e4b632704fdd9ad13682ad880a420cde7b56d749f3153"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_1/screen.png",
+      "bytes": 270874,
+      "sha256": "59c406e776d346cccdda3c9baa39d34b0e92e225fe4798aa66979a1d7dc22e7d"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_2/code.html",
+      "bytes": 21979,
+      "sha256": "5ddc138e45f9a2757fc95d7e1399bd64b352c24d51874c0d90a6856655b5d371"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_2/screen.png",
+      "bytes": 232089,
+      "sha256": "dc4713dc62148f582a0eaa5d8d80990146154634dc48ea5bf5e0640fcbf545d3"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_3/code.html",
+      "bytes": 26978,
+      "sha256": "b3282b395680cfad39bbddfd31d5d8c4bb0181672b19d688b099e535009cd4d0"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_3/screen.png",
+      "bytes": 274831,
+      "sha256": "40a561fc5044445384ca5f4ba95be4985b6ee33429b732dd55fe3ae320a46137"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_4/code.html",
+      "bytes": 26780,
+      "sha256": "29f92f727958157feeb40803538f8d591ca742032c41652a6bd715d9f4f2a107"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/New-Style_C/_4/screen.png",
+      "bytes": 353294,
+      "sha256": "18fd60da5ccfd253f71327717b0c1d27099c9bf1e9b45f663dfe4af67f023d8c"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/stitch_modern_accessible_ui_guidelines (2).zip",
+      "bytes": 1274125,
+      "sha256": "7477034d479b26096d553721364dbcc0e1a9fef8c602b0c195a2c0e5648b7d14"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._1/code.html",
+      "bytes": 19469,
+      "sha256": "0f28a7bd0e6016b0e107ae91d8535fff70429f90f846c1d42366fea792a37a1d"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._1/screen.png",
+      "bytes": 357754,
+      "sha256": "9821980e0c55feff0904a4ced1da66986001e87799741665233ed2b32f7ef779"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._2/code.html",
+      "bytes": 20248,
+      "sha256": "445c05abf551ec001d59500bed8a11e3837f7a7d62550579ac3ec4b9542e9b9e"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._2/screen.png",
+      "bytes": 258839,
+      "sha256": "9337e2f43008f085080448f8710ef466e0ccba7f887bdf0a40aaf62f547f0daf"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._3/code.html",
+      "bytes": 23070,
+      "sha256": "bde08c0c4abe1d773437b28a07e69b9df3062e4403cab2959a105a5669f45056"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._3/screen.png",
+      "bytes": 275075,
+      "sha256": "7b47ecd84332f5f130e0393d4a38ccc3afbd89f7b5e6d08da71d0eb542c147d2"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._4/code.html",
+      "bytes": 25452,
+      "sha256": "b38c784e8ae73a3c25053c8f26288058c627c389d099e3e04cf3477b149a9885"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/a._4/screen.png",
+      "bytes": 356732,
+      "sha256": "2521b15cc6f0fbf1f8404369c0baf3cba86dca6d455d89bedfb8bb474f079a68"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/tech_crisp_morning/DESIGN.md",
+      "bytes": 10984,
+      "sha256": "c4fdfb74349371697476becba86988e52dd77fc84499516f6a13cfad79935e7f"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格A/warm_trust_breakfast/DESIGN.md",
+      "bytes": 11409,
+      "sha256": "9416386f1b23d2251db2e3e64f08d41ad06edf00e6118f3871a864bb31403c72"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/stitch_modern_accessible_ui_guidelines (3).zip",
+      "bytes": 1091629,
+      "sha256": "1c401c95ea320806e81eefc9218922423b11543bf32f1b51fd5f73d198fcfb7f"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._1/code.html",
+      "bytes": 20581,
+      "sha256": "1b5cac74f1a17c6aa6915ddd91e9ba5ef24f317af120e1e66fef461b7d20c075"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._1/screen.png",
+      "bytes": 225810,
+      "sha256": "e5c13c3eb4f69a4e054a554f3302c5ed092571e02294e6e1e6efdac3e7a3a43d"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._2/code.html",
+      "bytes": 20888,
+      "sha256": "51c6537cde400b5bf5b3f0279c609a7ba4ff5d19e18ac28099812ff973332bcd"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._2/screen.png",
+      "bytes": 287849,
+      "sha256": "2f7ffa3ebad0be3ce0ec945a0e7eb18ad24a2a3491ec06b13cec98ae938b4e4e"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._3/code.html",
+      "bytes": 22234,
+      "sha256": "e7f95d8482c9a711c5dca8a38e6324cfa4d585b96652366a1e2c03de201fe5ad"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._3/screen.png",
+      "bytes": 236247,
+      "sha256": "b98f1c762d53a8062b4bd781a5b7d5d9171de097415ea7bd4093e81c920e6868"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._4/code.html",
+      "bytes": 22979,
+      "sha256": "653f4126062c9da1aa975f2b07a05ffedb9b6381b576295fb15106a59940a019"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/b._4/screen.png",
+      "bytes": 320850,
+      "sha256": "ee93f2c5f6e635830509049ea84fa484ee60158294dd2395d1b23c8a6c778654"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格B/warm_trust_breakfast/DESIGN.md",
+      "bytes": 11409,
+      "sha256": "9416386f1b23d2251db2e3e64f08d41ad06edf00e6118f3871a864bb31403c72"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/stitch_modern_accessible_ui_guidelines (4).zip",
+      "bytes": 1127768,
+      "sha256": "ca896fcb6fa3a9a1c0a4f1e44965df339a3dd169282af6ea31270712f0f538d5"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/balanced_morning_studio/DESIGN.md",
+      "bytes": 11144,
+      "sha256": "dc91edd05056ad9b129259c6d6a8dd08486ff39cd9f6e1af42a9cfae0001088c"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._1/code.html",
+      "bytes": 21647,
+      "sha256": "4078908ad913d4110fffe21b9c57e636863fa25fd1ac29f5c15578c29b7203fc"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._1/screen.png",
+      "bytes": 199123,
+      "sha256": "688fc53d5d2025cc5c219cd6c6c21f08fc52f25456f30737a061daf40f176117"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._2/code.html",
+      "bytes": 22387,
+      "sha256": "17c09c917eaf19ff1511e25103adb7fe96c6e5dc53b7641eb80d9ed151079167"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._2/screen.png",
+      "bytes": 269398,
+      "sha256": "39cc457b15abfd8e6d64b7e4ef822cb661933d5e450508ba627ffafde16a6e5c"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._3/code.html",
+      "bytes": 20667,
+      "sha256": "87166e518e2f90587ebef3ab200d2c560fd512649e82199ae5d9737051acd9e0"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._3/screen.png",
+      "bytes": 270426,
+      "sha256": "f1f845f6ddedb789e6496124eca37ffe2bfc35c039df45ba75e309104b882b36"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._4/code.html",
+      "bytes": 22868,
+      "sha256": "f317d1fa97d8e22ca530aac5c1150dd62be773c11039cfc6cc1209402fc2a479"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/01-GoogleStitch/風格C/c._4/screen.png",
+      "bytes": 366493,
+      "sha256": "70507096b1d413e6e3124e5aa9a8301e5c62937055cbd37dba70a86d5cd20389"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/GoogleStitch-001/code.html",
+      "bytes": 51093,
+      "sha256": "cb20b0aa645686a838f779eb1d5715fcf0f009aa264318525f4bde32f6ef9478"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/GoogleStitch-001/DESIGN.md",
+      "bytes": 12158,
+      "sha256": "d5c75533277a63c29dfc2ff961c115ff893455af7f75020147bd0a1d6d16418f"
+    },
+    {
+      "path": "05_AI輔助風格設計/DesignSystem/GoogleStitch-001/screen.png",
+      "bytes": 308356,
+      "sha256": "256e2b3b8dd70e5950d572e5fdfe65135db87f432d102d2e66da6dbd44b760ad"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計.md",
+      "bytes": 89166,
+      "sha256": "6a8e4f5c5528a45359bdd0c1ce882e1158e7135c67c0a5531fe05157741418e9"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計.pptx",
+      "bytes": 1279001,
+      "sha256": "1d6623b3d5a5fe5b418ac824374d88bcdc892997fde6037a672c9ff8f96dd2b2"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計2.md",
+      "bytes": 110225,
+      "sha256": "43bbf3161e97444e362d94259a2dd82affb55adb8ad961f059d5d03bf06e5b81"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計2.pptx",
+      "bytes": 1414985,
+      "sha256": "6622b981cc0ef4672a55eb59a57ad0e6d32a0cd2fd8a3652095b5fc3aa82baef"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計3.md",
+      "bytes": 111699,
+      "sha256": "dcb3d086a7f5bbcf3fc77a8b0b9d4925208782556522359666a42571f431b8ff"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計3.pptx",
+      "bytes": 1449377,
+      "sha256": "224e8f142b078746bb11d74954e1ce6d0aeb5c64d9d25a180035d275374566fe"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計4.md",
+      "bytes": 111502,
+      "sha256": "060305dca16344071feb4591b31fb4fb082eece73823b7df7fac28984a6edcae"
+    },
+    {
+      "path": "05_AI輔助風格設計/OldVersion/第05週_AI輔助風格設計4.pptx",
+      "bytes": 1453127,
+      "sha256": "8e1cde92146b4d23615ab772e98451c4ffc91fd060b436bea4abb9c57e4574d3"
+    },
+    {
+      "path": "03_CJM_顧客旅程/第03週_CJM_初版.docx",
+      "bytes": 934807,
+      "sha256": "612ecc83065d0335368ef9ca28720850bfe3c0053b7a7a085a322817ba1785c6"
+    },
+    {
+      "path": "03_CJM_顧客旅程/第03週_CJM_初版.md",
+      "bytes": 19093,
+      "sha256": "978b59b3518cee56e61a5a67c92daedaba5ee3c4ed8fc69afc4dad557c3082a8"
+    },
+    {
+      "path": "03_CJM_顧客旅程/第03週_CJM_初版.pptx",
+      "bytes": 104679,
+      "sha256": "351a58892e0ce0690d3bccc8a0d9252e27790fc725b3456cb00959a807713ad9"
+    },
+    {
+      "path": "03_CJM_顧客旅程/第03週_CJM_滾動修正.docx",
+      "bytes": 934744,
+      "sha256": "6bb486b330973158905d804039d3a68b009ac0d05fc63dd9b780165a6f76f657"
+    },
+    {
+      "path": "03_CJM_顧客旅程/第03週_CJM_滾動修正.md",
+      "bytes": 19302,
+      "sha256": "d3c0920040cf4c8214d09ec92f30028639ff86a66c08fd353c9078cad8e91d4f"
+    },
+    {
+      "path": "03_CJM_顧客旅程/第03週_CJM_滾動修正.pptx",
+      "bytes": 104612,
+      "sha256": "7fc89fbff23e1f9c54a3b575c60e5b7d8cd47b288e2238ae586ecf1af02d7565"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/Taiwan Breakfast Market Blueprint.pdf",
+      "bytes": 16745846,
+      "sha256": "72bd63c89be6758ff8c50f5091ef96e1ac62d87a0708be15ed266e5184775532"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/Taiwan_Breakfast_Market_Blueprint.pptx",
+      "bytes": 18227282,
+      "sha256": "fd151d6cbc3f3cf14372903f43146b34eaef4f7509c7ca42a2f2e89db71067dd"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/taiwan_breakfast_personas.docx",
+      "bytes": 42722,
+      "sha256": "e14c88bc1496f7bae61e622c40ec0165b4e8389f2c6a0a9c2be5cd2c591132af"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/taiwan_breakfast_personas.md",
+      "bytes": 8649,
+      "sha256": "d17127d0e55b4381a273ef8ece4fc07c1be759c74f7ae0e7054e6eb68e024641"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/taiwan_breakfast_persona_analysis.md",
+      "bytes": 3771,
+      "sha256": "bcb51464f83ab36a53751b0b992ca71626200c3770053e2ab6519633c732db9e"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/taiwan_breakfast_persona_dashboard.png",
+      "bytes": 433827,
+      "sha256": "bfa811483b848a4bae872fee2ed8f1ad7ed174d44b33c7701ea65fb807634e71"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/taiwan_breakfast_research.docx",
+      "bytes": 46790,
+      "sha256": "cf009baa65d472d6e8f012c6f7c71a91ff66dbd26642c11cbc0e672e6a5dd8ac"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/taiwan_breakfast_research.md",
+      "bytes": 16142,
+      "sha256": "711d8254d3b34cc06f8c16a608e5d46a62bd7c9bf155089505d2a36c057bbc64"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/The_200_Billion_Breakfast_Strategy.pptx",
+      "bytes": 16412992,
+      "sha256": "2e360a26346bdf22ede61454a4ffbd5d4821789b01d3cbdbf7f95f9312b13e36"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/台灣早餐產業6大商業模式與顧客Persona簡報.pdf",
+      "bytes": 15452186,
+      "sha256": "87c4b6c955ed0dace4b84fcd9507c6fa688b9c804346ac334087f1dfab08d673"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/台灣早餐產業商業模式解析.png",
+      "bytes": 5544953,
+      "sha256": "0058f156e8b82c2362b026fc67f232d8bc726c1656977a0af5fcc35c3f7bb0fa"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/第02週_行業分析與Persona_New.docx",
+      "bytes": 478448,
+      "sha256": "7e36b803b06d1d2ce1214324e6d91cfc7cdb8791636147aafa7acd3be45c82c0"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/第02週_行業分析與Persona_New.md",
+      "bytes": 33160,
+      "sha256": "81d112a2172e9b23fb73fcbefe1ac4c6da7eda62c2ddc1908d71508babdb6d24"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/第02週_行業分析與Persona_New.pptx",
+      "bytes": 118658,
+      "sha256": "cd597a31ccd0069469e2670cafc135d52852ab350ab061bcb89bfa0c520fa2f3"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/第02週_行業分析與Persona_舊版.docx",
+      "bytes": 940967,
+      "sha256": "1b3242df3274daf01a25becc3c8ee05f1e79e878704cb3ca8c237c5dd928ff9f"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/第02週_行業分析與Persona_舊版.md",
+      "bytes": 22818,
+      "sha256": "8fa80a659e2f68d966891d2560bda6c07e78cea0076e7992fef1cff951649910"
+    },
+    {
+      "path": "02_服務設計_行業分析＆Persona/第02週_行業分析與Persona_舊版.pptx",
+      "bytes": 96750,
+      "sha256": "770574a88699014885716aa81372b1b149319c2ba6d3de98883527031b8fd3ba"
+    }
+  ]
+}

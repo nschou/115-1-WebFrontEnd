@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCR-09 取餐櫃面板｜線框原型</title>
+<link rel="stylesheet" href="../assets/tokens.css"><link rel="stylesheet" href="../assets/wire.css">
+<link rel="stylesheet" href="../assets/base.css"><link rel="stylesheet" href="screen.css"></head>
+<body data-state="default" data-mode="color">
+<div class="devbar" role="group" aria-label="狀態切換">
+  <strong>SCR-09</strong><span>取餐櫃面板</span><span class="spacer"></span><button data-set-state="default">default</button><button data-set-state="loading">loading</button><button data-set-state="error">error</button><button data-set-state="success">success</button><button data-set-state="interrupted">interrupted</button><button data-toggle-mode>線框模式</button>
+</div>
+<main class="app app--tablet" aria-live="polite">
+  <section class="state state-default">
+    <h2 class="k-title">請輸入取餐號碼</h2>
+    <div data-element="E-52" class="code-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <button class="k-scan" data-action="locker-scan">或掃描通知上的 QR Code</button>
+    <div class="keypad">
+      <button>1</button><button>2</button><button>3</button>
+      <button>4</button><button>5</button><button>6</button>
+      <button>7</button><button>8</button><button>9</button>
+      <button class="warn" data-action="locker-clear">清除</button><button>0</button><button class="ok" data-action="locker-open">確認</button>
+    </div>
+    <p class="k-hint">號碼在取餐通知上（例：A-03）</p>
+  </section>
+  <section class="state state-loading">
+    <h2 class="k-title">驗證中⋯</h2><div class="skel skel-block"></div>
+  </section>
+  <section class="state state-error">
+    <h2 class="k-title err">號碼或開櫃碼不正確</h2>
+    <p class="k-hint">請確認通知上的號碼，重新輸入一次。</p>
+    <button class="k-big">重新輸入</button>
+  </section>
+  <section class="state state-success">
+    <h2 class="k-title ok">A-03 櫃已開啟</h2>
+    <p class="k-hint">請取走餐點，並關上櫃門。</p>
+    <p class="k-count">10 秒後自動返回</p>
+  </section>
+  <section class="state state-interrupted">
+    <h2 class="k-title">輸入逾時</h2>
+    <p class="k-hint">為了安全，已取消本次操作。請重新開始。</p>
+    <button class="k-big">重新開始</button>
+  </section>
+  <footer class="foot" data-wire-outline><span class="msg-id">SCR-09</span></footer>
+</main>
+<script src="../assets/theme.js"></script>
+<script src="../assets/state-switcher.js"></script>
+<script src="../assets/story-data.js"></script>
+<script src="../assets/story-runner.js"></script>
+</body></html>

@@ -1,0 +1,27 @@
+/* ===========================================================
+   tokens-display.css — 遠距尺度（來自 DESIGN-DISPLAY.md）
+   KDS：24 吋、2 公尺　看板：55 吋、4 公尺
+   字高規則：可讀 ≥ 距離/200、掃視 ≥ 距離/100
+   =========================================================== */
+:root {
+  --dsp-head: 36px;        /* 頁首 */
+  --dsp-title: 48px;       /* 大標 */
+  --dsp-clock: 36px;       /* 時鐘 */
+  --dsp-number: 96px;      /* 看板取餐號碼（4m ÷ 100 = 40mm ≈ 63px，取 96） */
+  --dsp-label: 32px;       /* 「可取餐」標籤（4m ÷ 200 = 20mm ≈ 32px） */
+  --dsp-sub: 42px;         /* 製作中號碼 */
+  --dsp-order: 48px;       /* KDS 訂單號（2m ÷ 100 = 20mm ≈ 72px，保守取 48） */
+  --dsp-item: 32px;        /* KDS 品項（2m ÷ 200 = 10mm ≈ 36px，取 32） */
+  --dsp-timer: 48px;       /* 計時器 */
+  --dsp-note: 48px;        /* 空／錯狀態文字 */
+  --dsp-note-sm: 32px;
+  --dsp-banner: 28px;
+  --dsp-tap-h: 120px;      /* 觸控目標 ≥88 */
+  --dsp-tap-w: 240px;
+  --dsp-pad: 96px;         /* 看板左右邊距 */
+  --dsp-pad-y: 72px;
+  --dsp-gap: 48px;         /* 卡片間距 */
+  --dsp-cell-h: 220px;
+  --dsp-card-h: 420px;
+  --dsp-note-pad: 120px;
+}

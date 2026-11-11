@@ -1,0 +1,23 @@
+/* SCR-06 專屬：篩選 chips、訂單列 */
+.chips { display: flex; gap: var(--space-sm); padding: 0 var(--space-md) var(--space-sm); }
+.chip {
+  padding: var(--space-xs) var(--space-md); border-radius: var(--radius-full);
+  border: var(--hairline) solid var(--color-border); background: var(--color-surface);
+  font: 600 var(--text-sm)/1.4 var(--font-sans); color: var(--color-muted); cursor: pointer;
+}
+.chip.on { background: var(--color-primary); color: var(--color-on-primary); border-color: var(--color-primary); }
+.orders { list-style: none; margin: 0; padding: 0 var(--space-md); }
+.order {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-md);
+  padding: var(--space-md); margin-bottom: var(--space-sm);
+  background: var(--color-surface); border: var(--hairline) solid var(--color-border);
+  border-left: var(--space-xs) solid var(--color-border); border-radius: var(--radius-default);
+}
+.order .no { font-weight: 700; font-size: var(--text-lg); }
+.order .meta { color: var(--color-muted); font-size: var(--text-sm); }
+.urgent { border-left-color: var(--color-error); }
+.is-new { border-left-color: var(--color-accent); background: var(--color-accent-weak); }
+.flag { border-left-color: var(--color-muted); }
+.tag { font-size: var(--text-xs); padding: 2px var(--space-sm); border-radius: var(--radius-full); background: var(--color-surface-alt); }
+.tag-warn { background: var(--color-accent-weak); color: var(--color-on-accent-weak); }
+.btn-primary.sm { margin-top: 0; padding: var(--space-xs) var(--space-md); font-size: var(--text-sm); }

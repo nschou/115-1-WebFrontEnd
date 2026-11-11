@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>走查台｜體驗層證據</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/wire.css">
+<link rel="stylesheet" href="assets/hub.css">
+<link rel="stylesheet" href="assets/review.css">
+</head>
+<body data-mode="color">
+<header class="hub-head">
+  <div>
+    <h1>走查台</h1>
+    <p class="muted">規則層由 `verify-stories` 自動判定；<b>體驗層只能人做</b>，做完勾在這裡。</p>
+  </div>
+  <div><a class="start" href="index.html">← 回入口頁</a> <a class="start" href="../../validation/16_review_guide.md">走查手冊</a></div>
+</header>
+
+<div id="progress" class="rv-progress"></div>
+<div id="list"></div>
+
+<div class="rv-actions">
+  <button id="copy" class="start">複製報告</button>
+  <button id="reset" class="rv-reset">重設</button>
+  <span class="muted" id="hint">勾選會自動存在這台電腦（localStorage）。</span>
+</div>
+
+<script src="assets/theme.js"></script>
+<script src="assets/review-data.js"></script>
+<script src="assets/review-report.js"></script>
+<script src="assets/review.js"></script>
+</body></html>

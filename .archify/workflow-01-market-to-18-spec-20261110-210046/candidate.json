@@ -1,0 +1,299 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "01_market → 18_spec 產生流程",
+    "locale": "zh-TW",
+    "output": ".archify/workflow-01-market-to-18-spec-20261110-210046/01-market-to-18-spec.html",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    { "id": "service", "label": "服務探索｜W2–W4" },
+    { "id": "decision", "label": "物件、資訊流與決策｜W5" },
+    { "id": "ux", "label": "需求與 UX｜W6" },
+    { "id": "spec", "label": "規格彙整｜W7" }
+  ],
+  "phases": [
+    { "id": "explore", "label": "探索服務問題", "fromCol": 0, "toCol": 1, "variant": "default" },
+    { "id": "decide", "label": "決策與 baseline", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "design_ux", "label": "Design、需求與 UX", "fromCol": 4, "toCol": 5, "variant": "default" }
+  ],
+  "groups": [
+    { "id": "service_foundation", "label": "01–04｜服務問題與 Blueprint", "lane": "service", "fromCol": 0, "toCol": 2 },
+    { "id": "decision_baseline", "label": "05–08｜物件、資訊流、決策與 baseline", "lane": "decision", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "design_contract", "label": "09–10｜Design 與 tokens", "lane": "decision", "fromCol": 4, "toCol": 4 },
+    { "id": "requirements_ux", "label": "11–17｜需求、UX、線框與 AC", "lane": "ux", "fromCol": 4, "toCol": 5 },
+    { "id": "spec_freeze", "label": "18｜完整需求契約", "lane": "spec", "fromCol": 5, "toCol": 5, "variant": "emphasis" }
+  ],
+  "mainPath": [
+    "market",
+    "persona",
+    "cjm",
+    "blueprint",
+    "objects",
+    "decisions",
+    "baseline",
+    "service_requirements",
+    "role_tasks",
+    "userstory_b",
+    "elements",
+    "ux",
+    "wireframes",
+    "userstory_i_ac",
+    "spec"
+  ],
+  "semanticChecks": {
+    "allowedRoots": ["market"],
+    "allowedTerminals": ["spec"],
+    "requiredPaths": [
+      { "from": "market", "to": "spec" },
+      { "from": "blueprint", "to": "baseline" },
+      { "from": "baseline", "to": "spec" }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "market",
+      "lane": "service",
+      "col": 0,
+      "type": "external",
+      "label": "01_market",
+      "sublabel": "市場選擇、機會與限制",
+      "tag": "W2",
+      "icon": "start"
+    },
+    {
+      "id": "persona",
+      "lane": "service",
+      "col": 1,
+      "type": "backend",
+      "label": "02_persona",
+      "sublabel": "老闆、顧客、支持系統",
+      "tag": "W2",
+      "icon": "person",
+      "yOffset": -62
+    },
+    {
+      "id": "cjm",
+      "lane": "service",
+      "col": 1,
+      "type": "backend",
+      "label": "03_cjm",
+      "sublabel": "旅程、情緒、痛點與機會",
+      "tag": "W3",
+      "icon": "clock",
+      "yOffset": 62
+    },
+    {
+      "id": "blueprint",
+      "lane": "service",
+      "col": 2,
+      "type": "backend",
+      "label": "04_blueprint",
+      "sublabel": "前台、後台、支援與候選",
+      "tag": "W4｜選項版",
+      "icon": "active"
+    },
+    {
+      "id": "objects",
+      "lane": "decision",
+      "col": 2,
+      "type": "backend",
+      "label": "05_objects",
+      "sublabel": "物件、生命週期與觀測者",
+      "tag": "W5",
+      "icon": "backend",
+      "yOffset": -176
+    },
+    {
+      "id": "infoflow",
+      "lane": "decision",
+      "col": 2,
+      "type": "messagebus",
+      "label": "06_infoflow",
+      "sublabel": "變更、等待、時效與競爭",
+      "tag": "W5",
+      "icon": "messagebus",
+      "yOffset": 112
+    },
+    {
+      "id": "decisions",
+      "lane": "decision",
+      "col": 3,
+      "type": "security",
+      "label": "07_decisions",
+      "sublabel": "SD-01–SD-11 採用、理由、代價",
+      "tag": "W5｜11／11",
+      "icon": "decision",
+      "yOffset": -74
+    },
+    {
+      "id": "baseline",
+      "lane": "decision",
+      "col": 3,
+      "type": "database",
+      "label": "08_service-design-baseline",
+      "sublabel": "唯一凍結的服務設計基準",
+      "tag": "W5｜開放選項 0",
+      "icon": "database",
+      "yOffset": 74
+    },
+    {
+      "id": "design",
+      "lane": "decision",
+      "col": 4,
+      "type": "backend",
+      "label": "09_DESIGN",
+      "sublabel": "視覺／互動設計契約",
+      "tag": "W5",
+      "icon": "backend",
+      "yOffset": -72
+    },
+    {
+      "id": "tokens",
+      "lane": "decision",
+      "col": 4,
+      "type": "backend",
+      "label": "10_tokens.css",
+      "sublabel": "可重用視覺尺度",
+      "tag": "W5",
+      "icon": "backend",
+      "yOffset": 72
+    },
+    {
+      "id": "service_requirements",
+      "lane": "ux",
+      "col": 4,
+      "type": "backend",
+      "label": "11_service-requirements",
+      "sublabel": "跨來源服務需求索引",
+      "tag": "W6",
+      "icon": "backend",
+      "yOffset": -192
+    },
+    {
+      "id": "role_tasks",
+      "lane": "ux",
+      "col": 4,
+      "type": "backend",
+      "label": "12_role-tasks",
+      "sublabel": "七格角色任務契約",
+      "tag": "W6",
+      "icon": "person",
+      "yOffset": -64
+    },
+    {
+      "id": "userstory_b",
+      "lane": "ux",
+      "col": 4,
+      "type": "backend",
+      "label": "13_UserStory-B",
+      "sublabel": "需求側價值／意圖",
+      "tag": "W6",
+      "icon": "flag",
+      "yOffset": 64
+    },
+    {
+      "id": "elements",
+      "lane": "ux",
+      "col": 5,
+      "type": "backend",
+      "label": "14_elements",
+      "sublabel": "資訊元素、來源與操作去處",
+      "tag": "W6",
+      "icon": "backend",
+      "yOffset": -204
+    },
+    {
+      "id": "ux",
+      "lane": "ux",
+      "col": 5,
+      "type": "frontend",
+      "label": "15_UX",
+      "sublabel": "畫面、狀態、流程與限制",
+      "tag": "W6",
+      "icon": "frontend",
+      "yOffset": -68
+    },
+    {
+      "id": "wireframes",
+      "lane": "ux",
+      "col": 5,
+      "type": "frontend",
+      "label": "16_wireframes",
+      "sublabel": "結構與路徑的線框證據",
+      "tag": "W6",
+      "icon": "frontend",
+      "yOffset": 68
+    },
+    {
+      "id": "userstory_i_ac",
+      "lane": "ux",
+      "col": 5,
+      "type": "backend",
+      "label": "17_UserStory-I_AC",
+      "sublabel": "介面路徑與可驗收條件",
+      "tag": "W6｜validation 後",
+      "icon": "success",
+      "yOffset": 204
+    },
+    {
+      "id": "spec",
+      "lane": "spec",
+      "col": 5,
+      "type": "external",
+      "label": "18_spec",
+      "sublabel": "完整業務需求契約",
+      "tag": "W7｜交給實作與驗收",
+      "icon": "external"
+    }
+  ],
+  "edges": [
+    { "id": "market-persona", "from": "market", "to": "persona", "label": "市場區隔與限制", "variant": "emphasis", "role": "main" },
+    { "id": "persona-cjm", "from": "persona", "to": "cjm", "label": "情境、目標、痛點", "variant": "emphasis", "role": "main" },
+    { "id": "cjm-blueprint", "from": "cjm", "to": "blueprint", "label": "前台行動與機會", "variant": "emphasis", "role": "main" },
+    { "id": "blueprint-objects", "from": "blueprint", "to": "objects", "label": "對象、狀態、交接", "variant": "emphasis", "role": "main" },
+    { "id": "blueprint-infoflow", "from": "blueprint", "to": "infoflow", "label": "失敗、候選、交接", "variant": "dashed", "role": "branch" },
+    { "id": "objects-decisions", "from": "objects", "to": "decisions", "label": "物件約束", "variant": "emphasis", "role": "main" },
+    { "id": "infoflow-decisions", "from": "infoflow", "to": "decisions", "label": "時效與競爭", "variant": "emphasis" },
+    { "id": "decisions-baseline", "from": "decisions", "to": "baseline", "label": "採用、理由、代價", "variant": "emphasis", "role": "main" },
+    { "id": "baseline-design", "from": "baseline", "to": "design", "label": "服務約束", "variant": "dashed", "role": "branch" },
+    { "id": "design-tokens", "from": "design", "to": "tokens", "label": "設計契約", "variant": "dashed" },
+    { "id": "baseline-requirements", "from": "baseline", "to": "service_requirements", "label": "服務基準", "variant": "emphasis", "role": "main" },
+    { "id": "service-requirements-role-tasks", "from": "service_requirements", "to": "role_tasks", "label": "來源、角色、狀態", "variant": "emphasis", "role": "main" },
+    { "id": "role-tasks-userstory-b", "from": "role_tasks", "to": "userstory_b", "label": "任務萃取價值", "variant": "emphasis", "role": "main" },
+    { "id": "userstory-b-elements", "from": "userstory_b", "to": "elements", "label": "價值與資訊需求", "variant": "emphasis", "role": "main" },
+    { "id": "elements-ux", "from": "elements", "to": "ux", "label": "元素與操作", "variant": "emphasis", "role": "main" },
+    { "id": "ux-wireframes", "from": "ux", "to": "wireframes", "label": "結構與狀態", "variant": "emphasis", "role": "main" },
+    { "id": "wireframes-userstory-i-ac", "from": "wireframes", "to": "userstory_i_ac", "label": "走查後寫路徑與 AC", "variant": "emphasis", "role": "main" },
+    { "id": "userstory-i-ac-spec", "from": "userstory_i_ac", "to": "spec", "label": "追溯與驗收證據", "variant": "emphasis", "role": "main" },
+    { "id": "tokens-ux", "from": "tokens", "to": "ux", "label": "視覺尺度", "variant": "dashed", "role": "branch" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "主線閱讀方式",
+      "items": [
+        "實線是主要產生路徑；虛線是平行輸入或補充依據",
+        "01_market 到 18_spec 的文件編號保持連續"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "關鍵收斂點",
+      "items": [
+        "04_blueprint 保留候選方案，不直接進入 Design、UX 或 spec",
+        "07_decisions 逐項選定方案；08_service-design-baseline 開放選項為 0"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "下游契約",
+      "items": [
+        "15_UX 與 16_wireframes 形成可走的結構與路徑",
+        "17_UserStory-I_AC 提供路徑與驗收證據，18_spec 只彙整並追溯"
+      ]
+    }
+  ]
+}

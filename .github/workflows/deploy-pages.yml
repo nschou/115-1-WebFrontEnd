@@ -1,0 +1,64 @@
+name: Deploy course website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate website scripts
+        run: |
+          node --check 00_教案網站/assets/guide-data.js
+          node --check 00_教案網站/assets/site.js
+          node --check 00_教案網站/assets/reader.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const vm = require('vm');
+          const context = { window: {} };
+          vm.runInNewContext(fs.readFileSync('00_教案網站/assets/guide-data.js', 'utf8'), context);
+          const data = context.window.GUIDE_DATA;
+          const missing = data.stages.flatMap(stage => stage.docs.filter(file => !fs.existsSync(path.resolve('00_教案網站', file))));
+          if (data.stages.length !== 19 || missing.length) {
+            console.error({ stages: data.stages.length, missing });
+            process.exit(1);
+          }
+          console.log(`Validated ${data.stages.length} learning nodes and ${data.stages.reduce((n, s) => n + s.docs.length, 0)} document links.`);
+          NODE
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static repository
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

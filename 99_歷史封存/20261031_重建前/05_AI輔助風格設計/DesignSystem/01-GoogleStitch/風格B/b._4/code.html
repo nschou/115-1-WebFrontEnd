@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f4;color:#1c1c19;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","outline-variant":"#d9c2ba","on-surface":"#1c1c19","secondary-fixed-dim":"#ffb68e","tertiary-container":"#186a21","on-tertiary":"#ffffff","secondary":"#9b4500","surface-tint":"#8f4c31","inverse-surface":"#31302d","primary-fixed-dim":"#ffb599","surface-container-low":"#f6f3ee","on-tertiary-container":"#95e88f","primary-fixed":"#ffdbce","on-secondary-fixed-variant":"#763300","tertiary-fixed-dim":"#88d982","on-secondary-fixed":"#331200","on-surface-variant":"#53433d","inverse-primary":"#ffb599","primary-container":"#8c4a2f","surface-container-highest":"#e5e2dd","surface-container":"#f0ede9","on-error-container":"#93000a","secondary-fixed":"#ffdbca","tertiary-fixed":"#a3f69c","on-secondary-container":"#682c00","surface-bright":"#fcf9f4","on-primary-fixed-variant":"#72361c","on-background":"#1c1c19","background":"#fcf9f4","outline":"#86736c","on-tertiary-fixed-variant":"#005312","surface-variant":"#e5e2dd","on-primary-container":"#ffc9b5","inverse-on-surface":"#f3f0eb","on-error":"#ffffff","on-primary-fixed":"#370e00","surface-dim":"#dcdad5","error":"#ba1a1a","tertiary":"#005011","surface-container-high":"#ebe8e3","primary":"#6f331a","secondary-container":"#fd8a42","on-primary":"#ffffff","on-secondary":"#ffffff","surface":"#fcf9f4","error-container":"#ffdad6","on-tertiary-fixed":"#002204"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-md":"2rem","space-sm":"0.5rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-md":"1.5rem","gutter":"1rem","margin":"1rem","gutter-lg":"2rem","space-md":"1rem","margin-lg":"3rem","space-xs":"0.25rem"},fontFamily:{"headline-xl":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-lg":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-md":["16px",{lineHeight:"26px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex flex-col justify-center gap-space-xs"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">NEXUS BREAKFAST</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">復興旗艦店 · 溫暖接單中</span></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- 頂部通勤即時看板 -->
+<section class="mt-space-md mb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">通勤即時看板</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          出餐節奏順暢
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm">
+<!-- 現場製作預估 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">skillet</span>
+            現場製作預估
+          </span>
+<div class="mt-space-xs flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">6-8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">分鐘</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 mt-1">現點現烤，熱騰出爐</span>
+</div>
+<!-- 智慧保溫櫃狀態 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock_clock</span>
+            智慧取餐保溫櫃
+          </span>
+<div class="mt-space-xs flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-tertiary">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">格空位</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 mt-1">可排程 · 無接觸速取</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm">免排隊零等待，手機預約抵達直接輸入代碼開櫃。</span>
+</div>
+</div>
+</section>
+<!-- 今日推薦橫額 -->
+<section class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_cafe</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">工程師暖心首選 · 今日推薦</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">晨間限定</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="inline-block w-1.5 h-3.5 bg-primary-container rounded-full"></span>
+<span class="font-label-md text-label-md text-on-surface">主廚特調活力滿分雙響配</span>
+</div>
+<div class="space-y-space-sm">
+<!-- 推薦餐點 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex items-center justify-between gap-space-sm">
+<img class="w-16 h-16 rounded-lg object-cover shrink-0" data-alt="Artisanal hearty high-protein breakfast sandwich with fluffy scrambled eggs, melted aged cheddar, layered on thick rye sourdough bread, warm morning lighting, rustic ceramic board, earth tones and warm terracotta aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBndnUczIERTQbFeFa72jrbMmybDe76XEeaCLNl01KmjscHP0wfVcU6keYNVssMUXvy0YaanvChVash0j_GguPrOJhZ_OWFYvmenrkB6AHxoAdI8M6rHY5YG1d3QohfImZprZ7Ip7YWu3FbJDcphW0nZ-3BZdVHAePJLAm8k_mNWo1FYoIEI_XSEpw6GUxJluXXa2Wgs2k6CXxh3uISO6say0n_6DcLJw0KomKTO6ko3yoEi_aiRWMXAg"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">高蛋白起司嫩蛋黑麥堡</h3>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">牧場放牧蛋</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">天然黑麥發酵</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-label-md text-label-md text-primary font-bold">NT$ 85</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">timer</span>
+                5分出餐
+              </span>
+</div>
+</div>
+<button aria-label="加入 高蛋白起司嫩蛋黑麥堡" class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- 推薦餐點 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex items-center justify-between gap-space-sm">
+<img class="w-16 h-16 rounded-lg object-cover shrink-0" data-alt="Chilled cold brew artisanal oat milk tea in a clear rounded glass bottle with minimal label, soft natural morning sun casting gentle shadow on an oat cream linen surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdgqfK56r0yc8uyQej_tm0EjV5wvy_uUBrRJzC34PvfhNcjU99nFKzfOtI1_midRvPI_BS_h-2LxzbvWBxNroWh_fXQWl4k2auQCpsafGZk0F_bcfAAthDKOWegylS6RgrRe4OksaLdNmIESPa1RHlddLrK4xnW6a2WYXoJ3J8zAtKrRqMy2eaKlsShOamrobK_CwU2Abw0OVYHXwdfFFJyGmHHR_Y3UVTIQP7xQ_1EyT6IqSfvcD65Q"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">低GI冷萃燕麥奶茶</h3>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">無添加糖</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">瑞典燕麥奶</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-label-md text-label-md text-primary font-bold">NT$ 55</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+                即取現裝
+              </span>
+</div>
+</div>
+<button aria-label="加入 低GI冷萃燕麥奶茶" class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 菜單分類標籤 -->
+<section class="mb-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<!-- 選中態：陶土褐底 -->
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">lunch_dining</span>
+        主餐專區
+      </button>
+<!-- 未選中態 -->
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md whitespace-nowrap active:bg-surface-container flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">set_meal</span>
+        超值套餐
+      </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md whitespace-nowrap active:bg-surface-container flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">coffee</span>
+        研磨飲品
+      </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md whitespace-nowrap active:bg-surface-container flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        元氣加購
+      </button>
+</div>
+</section>
+<!-- 餐點品項列表 -->
+<section class="space-y-space-md mb-24">
+<!-- 餐點 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md items-start">
+<img class="w-24 h-24 rounded-lg object-cover shrink-0" data-alt="Tender sous-vide chicken breast toast with sunny side up egg and fresh crisp greens, served on warm toasted country bread, warm studio morning sunlight, cozy breakfast vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACvESm-xcmbLxzaGnkQxQ-4N79UViYePsH1GeeWF0VFRR9gH0idSSLzZozq3MPnz23g3LlZobpanqxGGCV4Hegqd6ArDJhsDw2PT-EJmgq5gK25yHYqQa193bccTzb9EZfSff1qw5riT_E5_37tiMlWs7-JHLgirW0nlLsSyl149r7sfo6Xw6mp_wX765rnxT2hm996R84EP9iWKme9G4bYOzqW3N83n8Y8WH9kmjbrpgwTeZarXwrjg"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">香煎舒肥雞胸蛋吐司</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">特選國產低脂舒肥雞胸肉，搭配慢火香煎放牧晨蛋與全麥烘烤吐司。</p>
+<div class="flex items-center gap-space-sm mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              4分快速出餐
+            </span>
+<span>·</span>
+<span class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+              410 kcal
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">NT$ 75</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 份</span>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          選購
+        </button>
+</div>
+</div>
+<!-- 餐點 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md items-start">
+<img class="w-24 h-24 rounded-lg object-cover shrink-0" data-alt="Thick and juicy double beef patty burger with dripping melted sharp cheddar cheese, warm toasted sesame bun, rustic morning table setting, soft warm morning daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2RFIMdBRze4zS5otzojK25Y9l4nMJi5BEJ4pVtzYkCsMh_eY4teOBs8l1DEi0LxvR7yc0thlkwSnu2wffp4rPN_ExDdlxRYAIak5RlXJk7JiPbaaxbMReYWxTWVu9QN5Igrufp90Ktle4Vx-_Rx_9slAtwyKfaDYbPtAV22Oz9XzD-iZRi_8Msy2kP8q8wUzyNgSfYLUwo9A2Pt2Avn1tB_KQrJJArC__KlaYRT2DVcIhQ4bwZpzLtQ"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">雙層起司厚牛堡</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">100% 紐澳純牛肉手打厚肉排，雙層熔岩切達起司與手工洋蔥醬。</p>
+<div class="flex items-center gap-space-sm mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">outdoor_grill</span>
+              6分現烤出餐
+            </span>
+<span>·</span>
+<span class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+              580 kcal
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">NT$ 95</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 份</span>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          選購
+        </button>
+</div>
+</div>
+<!-- 餐點 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md items-start">
+<img class="w-24 h-24 rounded-lg object-cover shrink-0" data-alt="Golden crisp Taiwanese handmade flaky egg crepe roll sliced into bite-sized pieces on a light warm stoneware plate, tender scallions and farm egg filling, peaceful bright kitchen light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9QtQM9qERP6vqgaxruViSUAHXXtz2f1gnIjfC2AL3AY7rGfXqkHn7pZca3b4DttRP4KVlhJymMAZYVcOe5A8vRD06UQcGFYy46vQuXzY037BRNvMdKWrPjJD6VQCBN-RdKc-kuXvLGsgIV_jV6HJwgCbFrZ1fFch91cLgPVMyawhaNAzqoaW_fId4oidgpLLcynGT1XJVgvu_LYsEfCHsTTaxdjQ5z6huqlSCTMjiRSCR7Lgn8pRsZQ"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">經典手工脆皮蛋餅</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">古法老麵揉製酥脆餅皮，雙倍蔥花與有機紅殼蛋香氣四溢。</p>
+<div class="flex items-center gap-space-sm mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">flash_on</span>
+              3分快煎出餐
+            </span>
+<span>·</span>
+<span class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+              320 kcal
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">NT$ 45</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 份</span>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          選購
+        </button>
+</div>
+</div>
+</section>
+<!-- 底部購物車浮動條 -->
+<div class="fixed bottom-20 inset-x-margin z-40 max-w-lg mx-auto">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm pl-space-xs min-w-0">
+<div class="relative w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-[11px] font-bold flex items-center justify-center shadow-sm">
+            2
+          </span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">已選 2 項餐點</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">NT$ 140</span>
+</div>
+</div>
+<button class="h-12 px-space-md rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center gap-1.5 shadow-sm active:scale-98 transition-transform shrink-0" type="button">
+<span>前往結帳</span>
+<span class="font-label-sm text-label-sm opacity-80">(選取餐時間)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,40,24,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] transition-colors text-primary font-bold" data-path="today-order" href="#"><span class="material-symbols-outlined text-[24px]">bakery_dining</span><span class="font-label-sm text-label-sm">今日點餐</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] text-on-surface-variant transition-colors hover:text-on-surface" data-path="pickup-status" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">取餐進度</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] text-on-surface-variant transition-colors hover:text-on-surface" data-path="favorites" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="font-label-sm text-label-sm">常用最愛</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] text-on-surface-variant transition-colors hover:text-on-surface" data-path="account" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">會員帳戶</span></a></div></nav></body></html>

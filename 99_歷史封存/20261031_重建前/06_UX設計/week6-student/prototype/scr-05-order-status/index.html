@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCR-05 訂單狀態｜線框原型</title>
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/wire.css">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="screen.css">
+</head>
+<body data-state="default" data-mode="color">
+
+<div class="devbar" role="group" aria-label="狀態切換">
+  <strong>SCR-05</strong><span>訂單狀態</span>
+  <span class="spacer"></span>
+  <button data-set-state="default">default</button>
+  <button data-set-state="loading">loading</button>
+  <button data-set-state="empty">empty</button>
+  <button data-set-state="error">error</button>
+  <button data-set-state="success">success</button>
+  <button data-set-state="interrupted">interrupted</button>
+  <button data-toggle-mode>線框模式</button>
+</div>
+
+<main class="app" aria-live="polite">
+  <header class="topbar" data-wire-outline>
+    <a class="back" href="#" aria-label="返回">←</a>
+    <h1>訂單狀態</h1>
+    <span data-element="E-21" class="order-no">#1042</span>
+  </header>
+
+  <section class="state state-default">
+    <h2 class="status">已確認</h2>
+    <p class="eta">預計 <strong>08:25</strong> 可取餐</p>
+    <ol class="track" data-progress aria-label="訂單進度">
+      <li class="done">已下單</li><li class="done">已確認</li>
+      <li class="current">製作中</li><li>可取餐</li>
+    </ol>
+    <p class="hint">進度會自動更新，不用重整。</p>
+  </section>
+
+  <section class="state state-loading" aria-busy="true">
+    <p class="hint" data-loading>正在取得訂單狀態⋯</p>
+    <div class="skel skel-title"></div><div class="skel skel-line"></div><div class="skel skel-block"></div>
+  </section>
+
+  <section class="state state-empty">
+    <p class="empty-icon" aria-hidden="true">🥡</p>
+    <h2 class="status">目前沒有進行中的訂單</h2>
+    <p class="hint">點餐後會在這裡看到進度。</p>
+    <a class="btn-primary" href="#">去點餐</a>
+  </section>
+
+  <section class="state state-error">
+    <h2 class="status">已確認</h2>
+    <p class="eta">預計 <strong>08:25</strong> 可取餐</p>
+    <div class="banner banner-warn" role="alert">
+      <strong>通知沒送到</strong><span>請直接看店內看板，或按下方重新整理。</span>
+    </div>
+    <button class="btn-secondary" type="button" data-action="refresh-status">重新整理</button>
+  </section>
+
+  <section class="state state-success">
+    <h2 class="status status-success">可取餐</h2>
+    <div class="pickup-card">
+      <div class="pickup-cell"><span class="label">櫃位</span><strong class="value" data-pickup-no data-locker-no>A-03</strong></div>
+      <div class="pickup-cell"><span class="label">開櫃碼</span><strong class="value mono" data-locker-code>8821</strong></div>
+    </div>
+    <p class="hint">到店後直接到 A 區取餐櫃，輸入開櫃碼即可。</p>
+  </section>
+
+  <section class="state state-interrupted">
+    <h2 class="status">已送出修改要求</h2>
+    <div class="banner banner-info">
+      <strong>等待店員確認</strong><span>製作中的餐點無法修改，店員確認後會更新狀態。</span>
+    </div>
+    <p class="hint">目前狀態：製作中</p>
+  </section>
+
+  <footer class="foot" data-wire-outline><span class="msg-id">MSG-11 / 12 / 13 / 14 / 15</span></footer>
+</main>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/state-switcher.js"></script>
+<script src="../assets/story-data.js"></script>
+<script src="../assets/story-runner.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* SCR-01 專屬 */
+.hero {
+  padding: var(--space-lg); margin-bottom: var(--space-lg);
+  background: var(--color-surface); border: var(--hairline) solid var(--color-border);
+  border-left: var(--space-xs) solid var(--color-accent);
+  border-radius: var(--radius-md);
+}
+.hero h2 { margin: 0 0 var(--space-xs); font-size: var(--text-xl); line-height: var(--line-tight); }
+.hero .muted { margin: 0 0 var(--space-sm); font-size: var(--text-sm); }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-sm); margin-bottom: var(--space-md); }
+.tile {
+  padding: var(--space-md) var(--space-xs); text-align: center; text-decoration: none;
+  background: var(--color-surface); border: var(--hairline) solid var(--color-border);
+  border-radius: var(--radius-default); color: var(--color-text); font-size: var(--text-sm);
+}

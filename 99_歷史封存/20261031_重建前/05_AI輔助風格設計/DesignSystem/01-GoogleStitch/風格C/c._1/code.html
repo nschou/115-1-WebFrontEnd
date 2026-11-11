@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-fixed": "#d7e5e8", "on-primary-fixed-variant": "#204c5a", "secondary-container": "#ff793c", "on-tertiary-fixed": "#111e20", "background": "#f7faf9", "surface-dim": "#d7dbda", "secondary-fixed": "#ffdbce", "on-tertiary-fixed-variant": "#3c494c", "on-primary-container": "#7ca6b6", "inverse-surface": "#2d3131", "error-container": "#ffdad6", "on-primary": "#ffffff", "primary-fixed-dim": "#a2cddd", "tertiary-fixed-dim": "#bbc9cc", "on-secondary-fixed": "#370e00", "outline": "#71787b", "surface-container-lowest": "#ffffff", "tertiary": "#172426", "secondary-fixed-dim": "#ffb598", "surface-tint": "#3a6472", "inverse-on-surface": "#eef1f0", "surface": "#f7faf9", "on-background": "#181c1c", "on-secondary-container": "#642100", "primary": "#00252f", "surface-container-low": "#f1f4f3", "surface-container-high": "#e6e9e8", "on-primary-fixed": "#001f28", "on-error-container": "#93000a", "outline-variant": "#c1c8cb", "on-secondary": "#ffffff", "surface-container": "#ebeeed", "surface-bright": "#f7faf9", "secondary": "#a53c00", "surface-variant": "#e0e3e2", "inverse-primary": "#a2cddd", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#bee9fa", "primary-container": "#0b3c49", "on-surface-variant": "#41484b", "on-tertiary-container": "#95a2a5", "on-surface": "#181c1c", "tertiary-container": "#2c393c", "surface-container-highest": "#e0e3e2", "on-secondary-fixed-variant": "#7e2c00" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-xl": "2rem", "margin-md": "2rem", "space-sm": "0.5rem", "margin-lg": "3rem", "space-2xl": "3rem", "space-lg": "1.5rem", "gutter": "1rem", "space-md": "1rem", "gutter-md": "1.5rem", "margin": "1rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md-bold": ["Plus Jakarta Sans"], "display-order-num": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md-bold": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-order-num": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button class="w-11 h-11 flex items-center justify-center text-on-surface rounded-lg hover:bg-surface-container active:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-primary-container tracking-tight truncate">Locker Qr Pass</h1></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- 頂部即時狀態橫幅 -->
+<div class="bg-primary-container text-on-primary px-margin py-3.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="relative flex h-3 w-3 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm truncate text-on-primary">餐點已送達取餐櫃</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">55°C 恆溫保鮮存放中・晨光熱騰騰</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest/20 px-2.5 py-1 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">thermostat</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary-fixed">55°C 溫熱</span>
+</div>
+</div>
+</div>
+<div class="p-margin flex flex-col gap-space-lg">
+<!-- 取餐核心憑證卡片 (Level 1) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden relative">
+<!-- 暖橙精選亮條 -->
+<div class="h-1.5 w-full bg-secondary"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- 頂端識別與倒數 -->
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 bg-secondary-fixed/50 text-on-secondary-fixed px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[15px] text-secondary">lock_open</span>
+<span class="font-label-md text-label-md">取餐憑證已生效</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>有效剩餘 18 分鐘</span>
+</div>
+</div>
+<!-- 櫃號與密碼雙核心看板 -->
+<div class="grid grid-cols-2 gap-space-sm py-space-xs">
+<!-- 櫃號 -->
+<div class="bg-surface-container-low rounded-lg p-3.5 flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">專屬智慧取餐櫃</span>
+<span class="font-display-order-num text-display-order-num text-primary-container tracking-tight mt-0.5">A-03</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold mt-0.5">第 1 列・第 3 格</span>
+</div>
+<!-- 開櫃取餐密碼 -->
+<div class="bg-surface-container-low rounded-lg p-3.5 flex flex-col items-center justify-center text-center relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-10 h-10 bg-secondary-fixed/30 rounded-full"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4位數取餐密碼</span>
+<span class="font-display-order-num text-display-order-num text-secondary tracking-widest mt-0.5 font-black">8821</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">觸控面板直接輸入</span>
+</div>
+</div>
+<!-- 智慧條碼與 QR Code 區域 -->
+<div class="bg-surface-container-low rounded-lg p-4 flex flex-col items-center gap-3">
+<div class="w-full flex justify-center items-center py-1">
+<!-- 擬真條碼 SVG -->
+<svg class="w-4/5 h-12 text-primary" fill="currentColor" viewbox="0 0 240 48">
+<rect height="48" width="3" x="0" y="0"></rect>
+<rect height="48" width="2" x="6" y="0"></rect>
+<rect height="48" width="4" x="11" y="0"></rect>
+<rect height="48" width="1" x="18" y="0"></rect>
+<rect height="48" width="5" x="22" y="0"></rect>
+<rect height="48" width="2" x="30" y="0"></rect>
+<rect height="48" width="3" x="36" y="0"></rect>
+<rect height="48" width="2" x="42" y="0"></rect>
+<rect height="48" width="4" x="48" y="0"></rect>
+<rect height="48" width="1" x="56" y="0"></rect>
+<rect height="48" width="6" x="60" y="0"></rect>
+<rect height="48" width="2" x="70" y="0"></rect>
+<rect height="48" width="4" x="76" y="0"></rect>
+<rect height="48" width="1" x="84" y="0"></rect>
+<rect height="48" width="5" x="88" y="0"></rect>
+<rect height="48" width="3" x="96" y="0"></rect>
+<rect height="48" width="2" x="102" y="0"></rect>
+<rect height="48" width="4" x="108" y="0"></rect>
+<rect height="48" width="1" x="116" y="0"></rect>
+<rect height="48" width="5" x="120" y="0"></rect>
+<rect height="48" width="2" x="128" y="0"></rect>
+<rect height="48" width="4" x="134" y="0"></rect>
+<rect height="48" width="3" x="142" y="0"></rect>
+<rect height="48" width="1" x="148" y="0"></rect>
+<rect height="48" width="5" x="152" y="0"></rect>
+<rect height="48" width="2" x="160" y="0"></rect>
+<rect height="48" width="4" x="166" y="0"></rect>
+<rect height="48" width="2" x="174" y="0"></rect>
+<rect height="48" width="3" x="180" y="0"></rect>
+<rect height="48" width="5" x="186" y="0"></rect>
+<rect height="48" width="2" x="194" y="0"></rect>
+<rect height="48" width="3" x="200" y="0"></rect>
+<rect height="48" width="4" x="206" y="0"></rect>
+<rect height="48" width="2" x="214" y="0"></rect>
+<rect height="48" width="4" x="220" y="0"></rect>
+<rect height="48" width="2" x="228" y="0"></rect>
+<rect height="48" width="6" x="234" y="0"></rect>
+</svg>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-full text-center">
+<span class="material-symbols-outlined text-[16px] text-primary">qr_code_scanner</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">置於櫃體感應區下方 10 公分即可自動辨識</span>
+</div>
+</div>
+<!-- 核心開櫃互動按鈕 -->
+<button class="w-full h-12 bg-primary-container text-on-primary rounded-lg flex items-center justify-center gap-space-sm font-label-lg text-label-lg shadow-sm hover:bg-primary active:scale-[0.99] transition-all" id="remoteOpenBtn">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">sensors</span>
+<span>一鍵藍牙感應・遠端彈開櫃門</span>
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+</button>
+</div>
+</div>
+<!-- 門市動線與櫃位指引 (點陣立體示意圖) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">grid_view</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">取餐櫃牆點陣位置</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">信義門市 1F 取餐廊道</span>
+</div>
+<!-- 櫃位視覺矩陣 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-3">
+<!-- 櫃號 A 排 (保溫溫熱區) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+<span class="font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              A 列 (恆溫 55°C 熟食專櫃)
+            </span>
+<span>第 1 列</span>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="h-14 bg-surface-container rounded-lg flex flex-col items-center justify-center text-on-surface-variant opacity-70">
+<span class="font-label-md text-label-md font-bold">A-01</span>
+<span class="font-label-sm text-label-sm">使用中</span>
+</div>
+<div class="h-14 bg-surface-container rounded-lg flex flex-col items-center justify-center text-on-surface-variant opacity-70">
+<span class="font-label-md text-label-md font-bold">A-02</span>
+<span class="font-label-sm text-label-sm">使用中</span>
+</div>
+<!-- 目標櫃位 -->
+<div class="h-14 bg-primary-container text-on-primary rounded-lg flex flex-col items-center justify-center shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary px-1.5 py-0.2 rounded-bl font-label-sm text-[9px] text-on-secondary font-bold">您的餐點</div>
+<span class="font-headline-sm text-headline-sm text-on-primary font-bold">A-03</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>待取中
+              </span>
+</div>
+<div class="h-14 bg-surface-container rounded-lg flex flex-col items-center justify-center text-on-surface-variant opacity-70">
+<span class="font-label-md text-label-md font-bold">A-04</span>
+<span class="font-label-sm text-label-sm">閒置</span>
+</div>
+</div>
+</div>
+<!-- 櫃號 B 排 (冷藏/飲品區) -->
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+<span class="font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+              B 列 (低溫冷藏 4°C 鮮食區)
+            </span>
+<span>第 2 列</span>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="h-12 bg-surface-container rounded-lg flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-md text-label-md font-bold">B-01</span>
+</div>
+<div class="h-12 bg-surface-container rounded-lg flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-md text-label-md font-bold">B-02</span>
+</div>
+<div class="h-12 bg-surface-container rounded-lg flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-md text-label-md font-bold">B-03</span>
+</div>
+<div class="h-12 bg-surface-container rounded-lg flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-md text-label-md font-bold">B-04</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3 步驟無腦引導 -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col items-center text-center">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-primary flex items-center justify-center font-label-md text-label-md font-bold mb-1.5">1</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">抵達核對</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">確認櫃面螢幕</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col items-center text-center">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold mb-1.5">2</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">輸入密碼</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">鍵入 8821 或感應</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col items-center text-center">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-primary flex items-center justify-center font-label-md text-label-md font-bold mb-1.5">3</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">取餐關門</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">自動彈開取餐</span>
+</div>
+</div>
+</div>
+<!-- 櫃內餐點明細核對 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">restaurant</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">櫃內餐點明細核對</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">共 2 件品項</span>
+</div>
+<div class="flex flex-col gap-space-sm divide-y-0">
+<!-- 餐點品項 1 -->
+<div class="flex items-center gap-space-md p-2 bg-surface-container-low rounded-lg">
+<img class="w-14 h-14 rounded-lg object-cover shrink-0" data-alt="A freshly baked warm whole-grain rye burger with melted cheddar cheese and folded organic egg, styled in clean modern culinary lighting with warm amber accents, resting in an eco-friendly breakfast box." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyya8rPnhfV6qHgnIhHQkoRCQrVmYlj8Z21AVWMeSbu7_MxTWTBNev_v8_wsNlaaQ38m2KVkHnroyL4tvw4qkLrf1Fkv_pm0nqIXHvOyCQtlD60qc1YU7iUgPOrDuVnaSH5f10ciy-YVfwkKzmVqCJpJi4WcS40ZExXloI5TRMQANGrKS2JKGxEccbWxAXyLnr2wjEqT3nUhU8hMV1ZuWFX8p0ev8Bt4K4AIwRijFTw89dOZbCbSMQOA"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-body-md-bold text-body-md-bold text-on-surface truncate">低碳黑麥起司蛋堡</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">半熟有機荷包蛋・無加糖花生醬・切達厚起司</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary px-2">x1</span>
+</div>
+<!-- 餐點品項 2 -->
+<div class="flex items-center gap-space-md p-2 bg-surface-container-low rounded-lg">
+<img class="w-14 h-14 rounded-lg object-cover shrink-0" data-alt="Cold brew oat milk tea in a sleek branded transparent bottle, featuring iced condensation and rich coffee-tan colors, captured in warm minimalist daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCopuWGlQ0B3zcsGBDRECUYfhqVf1Pw7WJnM2rcopxbJZjnb8IbWkl122N_J4jD3GzhU6vmcLlnbMm1VQl9isENRphVFzS4n0rFWNI3nAGRlXQY5KsKkNb2hR-B5MBObEgERS3IaGivN03iCihwx-gaXGQLEprBa7w1J9yrvKH9wn5IcwSFt6w5kgTRFJCOJl6OLXjwHJ8z_9TCr8EHDC02qO_QA6gLRYjs3UBsfOKbhhXEdhezOazJ6w"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-body-md-bold text-body-md-bold text-on-surface truncate">極萃冷萃燕麥奶茶</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">微冰・無糖・瑞典燕麥奶濃萃配方</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary px-2">x1</span>
+</div>
+</div>
+</div>
+<!-- 門市支援與操作按鈕 -->
+<div class="flex flex-col gap-space-sm pt-2">
+<button class="w-full h-12 bg-secondary text-on-secondary rounded-lg flex items-center justify-center gap-space-sm font-label-lg text-label-lg shadow-sm hover:opacity-95 active:scale-[0.99] transition-all" id="finishPickupBtn">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>我已取餐完畢，關閉櫃門</span>
+</button>
+<div class="flex items-center justify-between gap-space-md">
+<button class="flex-1 h-11 bg-surface-container text-on-surface-variant rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>呼叫門市人員</span>
+</button>
+<button class="flex-1 h-11 bg-surface-container text-on-surface-variant rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>密碼失效重整</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // 輕量微互動回饋
+  const openBtn = document.getElementById('remoteOpenBtn');
+  const finishBtn = document.getElementById('finishPickupBtn');
+
+  if (openBtn) {
+    openBtn.addEventListener('click', () => {
+      openBtn.disabled = true;
+      openBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] animate-spin">sync</span>
+        <span>連線中・正在解鎖 A-03 櫃門...</span>
+      `;
+      setTimeout(() => {
+        openBtn.classList.remove('bg-primary-container');
+        openBtn.classList.add('bg-secondary');
+        openBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">door_open</span>
+          <span>A-03 櫃門已自動彈開！</span>
+        `;
+      }, 1200);
+    });
+  }
+
+  if (finishBtn) {
+    finishBtn.addEventListener('click', () => {
+      if (confirm('已確認自 A-03 取出所有餐點並順手帶上櫃門？')) {
+        finishBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">task_alt</span>
+          <span>取餐完成，祝您用餐愉快！</span>
+        `;
+        finishBtn.classList.replace('bg-secondary', 'bg-primary');
+        finishBtn.disabled = true;
+      }
+    });
+  }
+</script></main></body></html>

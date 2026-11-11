@@ -1,0 +1,163 @@
+/* ⚠ 本檔同步自 toolkit/範例_DESIGN_10章_平衡現代/tokens.css（v1.1）
+   Design.md 換版時，請重新複製此檔，不要手改。
+   v1.1：語意別名改為指向 --m3-*（ADR-004），換色票只需改第 ① 層。 */
+/* ============================================================
+   tokens.css — 雲端早餐店｜平衡現代（Balanced Modern）v1.0
+   來源：DESIGN.md 10 章（第 2–8 章由 Google Stitch 匯出，
+         第 1／9／10 章由人機協作補上）
+   雙層設計：
+     ① --m3-*    工具原始色票（47 個，供元件內部使用）
+     ② 語意別名   人與 AI 實際使用的一層（--color-*，來自第 3 章散文）
+   規則：畫面只准用語意別名；要換風格 → 只改這個檔。
+   ============================================================ */
+:root {
+  /* ---------- ① M3 原始色票（YAML 逐字） ----------
+     ⚠ 這一層共 47 色，但下層 ② 只引用其中 12 個：
+        background／surface-container-lowest／surface-container-low／
+        on-surface／on-surface-variant／surface-variant／
+        primary-container／on-primary／secondary-container／
+        on-secondary-container／error／tertiary-container
+     其餘（例如 --m3-primary: #003633）沒有任何 --color-* 指向它，
+     **改它們畫面不會有任何變化**——它們是與 DESIGN.md 的對照、也是未來元件的備用。
+     要換風格：改「被 ② 引用」的那 12 個。 */
+  --m3-surface: #f7f9fb;
+  --m3-surface-dim: #d8dadc;
+  --m3-surface-bright: #f7f9fb;
+  --m3-surface-container-lowest: #ffffff;
+  --m3-surface-container-low: #f2f4f6;
+  --m3-surface-container: #eceef0;
+  --m3-surface-container-high: #e6e8ea;
+  --m3-surface-container-highest: #e0e3e5;
+  --m3-on-surface: #191c1e;
+  --m3-on-surface-variant: #404847;
+  --m3-inverse-surface: #2d3133;
+  --m3-inverse-on-surface: #eff1f3;
+  --m3-outline: #707977;
+  --m3-outline-variant: #bfc8c6;
+  --m3-surface-tint: #316763;
+  --m3-primary: #003633;
+  --m3-on-primary: #ffffff;
+  --m3-primary-container: #134e4a;
+  --m3-on-primary-container: #87beb8;
+  --m3-inverse-primary: #9ad1cb;
+  --m3-secondary: #9d4300;
+  --m3-on-secondary: #ffffff;
+  --m3-secondary-container: #fd761a;
+  --m3-on-secondary-container: #5c2400;
+  --m3-tertiary: #003824;
+  --m3-on-tertiary: #ffffff;
+  --m3-tertiary-container: #005136;
+  --m3-on-tertiary-container: #35cc92;
+  --m3-error: #ba1a1a;
+  --m3-on-error: #ffffff;
+  --m3-error-container: #ffdad6;
+  --m3-on-error-container: #93000a;
+  --m3-primary-fixed: #b5ede7;
+  --m3-primary-fixed-dim: #9ad1cb;
+  --m3-on-primary-fixed: #00201e;
+  --m3-on-primary-fixed-variant: #144f4b;
+  --m3-secondary-fixed: #ffdbca;
+  --m3-secondary-fixed-dim: #ffb690;
+  --m3-on-secondary-fixed: #341100;
+  --m3-on-secondary-fixed-variant: #783200;
+  --m3-tertiary-fixed: #6ffbbe;
+  --m3-tertiary-fixed-dim: #4edea3;
+  --m3-on-tertiary-fixed: #002113;
+  --m3-on-tertiary-fixed-variant: #005236;
+  --m3-background: #f7f9fb;
+  --m3-on-background: #191c1e;
+  --m3-surface-variant: #e0e3e5;
+
+  /* ---------- ② 語意別名（全部指向 ①，單一來源） ----------
+     規則：改 ① 的色票 → 畫面自動跟著變（ADR-004）。
+     下列 4 個是「M3 沒有對應語意」的補充值，維持實色並標註原因。 */
+  --color-bg:           var(--m3-background);
+  --color-surface:      var(--m3-surface-container-lowest);
+  --color-surface-alt:  var(--m3-surface-container-low);
+  --color-text:         var(--m3-on-surface);
+  --color-muted:        var(--m3-on-surface-variant);
+  --color-border:       var(--m3-surface-variant);
+  --color-primary:      var(--m3-primary-container);
+  --color-on-primary:   var(--m3-on-primary);
+  --color-accent:       var(--m3-secondary-container);
+  --color-on-accent-weak: var(--m3-on-secondary-container);  /* 淺橙底上的深字（AA） */
+  --color-error:        var(--m3-error);
+  --color-success:      var(--m3-tertiary-container);
+
+  /* 補充值（M3 無對應語意，保留實色） */
+  --color-warn:         #F59E0B;   /* M3 無 warning 語意 */
+  --color-accent-weak:  #FFF7ED;   /* 極淺底色，accent 的 8% 混白；M3 無此階 */
+  --color-error-weak:   #FEF2F2;   /* 同上，error 的 6% 混白 */
+  --color-disabled:     #94A3B8;   /* M3 以 on-surface 38% 表達，非實色 */
+
+  /* ---------- Typography（第 4 章，10 級） ---------- */
+  --font-sans: "Noto Sans", "PingFang TC", "Heiti TC", "Microsoft JhengHei", system-ui, -apple-system, sans-serif;
+
+  --text-headline-xl: 32px;      --lh-headline-xl: 40px;
+  --text-headline-xl-m: 26px;    --lh-headline-xl-m: 34px;
+  --text-headline-lg: 22px;      --lh-headline-lg: 28px;
+  --text-headline-sm: 18px;      --lh-headline-sm: 24px;
+  --text-body-lg: 16px;          --lh-body-lg: 24px;
+  --text-body-md: 14px;          --lh-body-md: 20px;
+  --text-body-sm: 12px;          --lh-body-sm: 16px;
+  --text-label-lg: 15px;         --lh-label-lg: 20px;
+  --text-label-md: 13px;         --lh-label-md: 18px;
+  --text-label-sm: 11px;         --lh-label-sm: 14px;
+
+  /* 相容別名（原型與舊檔使用） */
+  --text-xs: var(--text-body-sm);
+  --text-sm: var(--text-body-md);
+  --text-base: var(--text-body-lg);
+  --text-lg: var(--text-headline-sm);
+  --text-xl: var(--text-headline-xl-m);
+  --line-tight: 1.25;
+  --line-base: 1.6;
+
+  /* ---------- Spacing（第 5 章，4/8px 基準） ---------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --gutter: 12px;
+  --gutter-mobile: 8px;
+  --margin: 16px;
+  --margin-mobile: 16px;
+
+  /* ---------- Radius（第 7 章） ---------- */
+  --radius-sm: 4px;
+  --radius-default: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --radius-food-image: 10px;
+
+  /* ---------- Elevation（第 6 章） ---------- */
+  --elev-0: none;
+  --elev-1: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --elev-2: 0 -4px 16px -2px rgba(15, 23, 42, 0.06);
+  --elev-3: 0 12px 28px -4px rgba(19, 78, 74, 0.12);
+
+  /* 相容別名 */
+  --shadow-1: var(--elev-1);
+  --shadow-2: var(--elev-3);
+
+  /* ---------- Motion（第 9 章） ---------- */
+  --motion-fast: 150ms;
+  --motion-base: 200ms;
+  --motion-slow: 250ms;
+  --motion-display: 300ms;
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+
+  /* ---------- Size（第 8 章：菜單卡右側 88×88 圖） ---------- */
+  --size-thumb: 88px;
+
+  /* ---------- Canvas（原型用；實作由裝置決定） ---------- */
+  --canvas-mobile: 375px;
+  --canvas-mobile-h: 812px;
+  --canvas-tablet: 768px;
+  --canvas-display: 1920px;
+  --hairline: 1px;
+}

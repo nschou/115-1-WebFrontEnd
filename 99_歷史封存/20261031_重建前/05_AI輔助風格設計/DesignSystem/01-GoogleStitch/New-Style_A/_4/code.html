@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#76777d", "on-secondary-fixed": "#001d31", "tertiary-fixed-dim": "#b9c7e0", "surface-container-low": "#eff4ff", "on-secondary-fixed-variant": "#004b73", "on-surface-variant": "#45464d", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "on-tertiary": "#ffffff", "on-primary-container": "#7c839b", "on-primary": "#ffffff", "on-background": "#0b1c30", "secondary-fixed": "#cce5ff", "outline-variant": "#c6c6cd", "secondary-container": "#5bb8fe", "on-surface": "#0b1c30", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#d5e3fd", "surface-tint": "#565e74", "primary-container": "#131b2e", "tertiary-container": "#0d1c2f", "surface-variant": "#d3e4fe", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "primary-fixed": "#dae2fd", "inverse-surface": "#213145", "surface-dim": "#cbdbf5", "error-container": "#ffdad6", "inverse-on-surface": "#eaf1ff", "secondary": "#006398", "tertiary": "#000000", "secondary-fixed-dim": "#93ccff", "on-secondary-container": "#00476e", "on-primary-fixed-variant": "#3f465c", "primary-fixed-dim": "#bec6e0", "surface": "#f8f9ff", "surface-container": "#e5eeff", "on-tertiary-container": "#76859b", "on-tertiary-fixed-variant": "#3a485c", "on-tertiary-fixed": "#0d1c2f", "surface-container-high": "#dce9ff", "background": "#f8f9ff", "inverse-primary": "#bec6e0", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-primary-fixed": "#131b2e", "primary": "#000000" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "0.75rem", "margin": "1rem", "space-md": "0.75rem", "space-xl": "1.5rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-desktop": "1.25rem" }, "fontFamily": { "body-md": ["Geist"], "label-code": ["JetBrains Mono"], "label-telemetry": ["JetBrains Mono"], "display-lg": ["Geist"], "body-lg": ["Geist"], "headline-md": ["Geist"], "display-lg-mobile": ["Geist"], "body-sm": ["Geist"], "headline-sm": ["Geist"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-code": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "label-telemetry": ["11px", { "lineHeight": "14px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary-fixed text-[18px]">memory</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">雲端早餐</span><span class="font-label-telemetry text-label-telemetry text-secondary uppercase tracking-wider">v2.4</span></div><div class="flex items-center gap-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">信義數位旗艦店</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-telemetry text-label-telemetry text-secondary">4-6 MIN</span></div></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="系統遙測狀態" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin space-y-space-md">
+<!-- 頂部深色高對比訂單狀態儀表板 -->
+<section class="bg-primary-container text-surface rounded-xl p-space-md shadow-sm">
+<!-- Header Row: 訂單編號與連線遙測狀態 -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-primary-container">ORDER ID</span>
+<span class="font-label-code text-label-code text-primary-fixed font-semibold tracking-wide">#CB-2048</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-highest/10 px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-label-telemetry text-label-telemetry text-secondary-fixed tracking-tight">WS CONNECTED</span>
+</div>
+</div>
+<!-- 核心計時監控區 -->
+<div class="bg-tertiary-container rounded-lg p-space-md flex flex-col items-center justify-center relative overflow-hidden my-space-xs">
+<div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[140px] text-surface">precision_manufacturing</span>
+</div>
+<div class="flex items-center justify-center gap-space-md w-full">
+<!-- 緊湊型 SVG 倒數監控環 (72x72) -->
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 64 64">
+<circle class="text-on-tertiary-container/30" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4.5"></circle>
+<circle class="text-secondary-container" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175.9" stroke-dashoffset="44" stroke-linecap="round" stroke-width="4.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-label-code text-label-code text-surface font-semibold">75%</span>
+</div>
+</div>
+<!-- 倒數文字資訊 -->
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-tertiary-container">預計</span>
+<span class="font-headline-md text-headline-md text-surface font-bold tracking-tight">04</span>
+<span class="font-headline-sm text-headline-sm text-surface">分</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-container">後出餐</span>
+</div>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-telemetry text-label-telemetry text-on-tertiary-container">ETA 出餐時刻</span>
+<span class="font-label-code text-label-code text-secondary-fixed font-semibold">08:14</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 取餐櫃預約狀態標籤 -->
+<div class="mt-space-sm bg-surface-container-highest/15 rounded-lg px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">lock_clock</span>
+<span class="font-body-sm text-body-sm text-surface font-medium">智慧溫控櫃：B 區恆溫格位</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-secondary-container">入櫃自動發送 PIN</span>
+</div>
+</section>
+<!-- 備餐流程追蹤 (核心四步驟狀態機) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">timeline</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">KDS 即時工序追蹤</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-secondary">STAGE 03 / 04</span>
+</div>
+<!-- 步驟條容器 -->
+<div class="relative pl-6 space-y-space-md my-space-sm">
+<!-- 縱向追蹤進度槽 -->
+<div class="absolute left-2.5 top-2.5 bottom-2.5 w-0.5 bg-surface-container-high -translate-x-1/2"></div>
+<div class="absolute left-2.5 top-2.5 h-[68%] w-0.5 bg-secondary -translate-x-1/2"></div>
+<!-- 步驟 1: 完成 -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-semibold">訂單接收完成</span>
+<span class="font-label-code text-label-telemetry text-on-surface-variant">08:06</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">雲端廚房分派系統排程：信義數位旗艦店 KDS 隊列</p>
+</div>
+</div>
+<!-- 步驟 2: 完成 -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-semibold">精準溫控烹調製作</span>
+<span class="font-label-code text-label-telemetry text-on-surface-variant">08:08</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">低溫舒肥烹調完成，高溫進行雙面煎烤封汁程序</p>
+</div>
+</div>
+<!-- 步驟 3: 進行中 (高亮卡片) -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-bold">溫控複檢與熱封出餐</span>
+<span class="font-label-telemetry text-label-telemetry bg-secondary text-on-secondary px-1.5 py-0.2 rounded">執行中</span>
+</div>
+<span class="font-label-code text-label-telemetry text-secondary font-semibold">08:11</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">出餐專員進行 60°C 核心測溫，核對標籤無誤後熱封包裝</p>
+<div class="mt-2 flex items-center gap-2 bg-surface-container-lowest px-2 py-1 rounded">
+<span class="material-symbols-outlined text-secondary text-[16px]">thermostat</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface">實測溫度：63.4°C (標準達標)</span>
+</div>
+</div>
+</div>
+<!-- 步驟 4: 即將進行 -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">pending</span>
+</div>
+<div class="flex-1 opacity-70">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">移送智慧保溫取餐櫃</span>
+<span class="font-label-code text-label-telemetry text-on-surface-variant">預估 08:14</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">系統自動開啟 B 區櫃門並推送專屬取餐條碼與密碼</p>
+</div>
+</div>
+</div>
+<!-- 溫控品質保證徽章 -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-space-sm flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">餐點恆溫監控保障協定</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">出爐後全程維持 60°C 以上恆溫環境，保留最佳賞味脆度</span>
+</div>
+</div>
+</section>
+<!-- 顧客通勤距離與店內地圖導航卡片 -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">near_me</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">實時抵達同步</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-secondary bg-surface-container px-2 py-0.5 rounded">GPS SYNC</span>
+</div>
+<!-- 距離測算看板 -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg mb-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">目前與門市距離</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">120</span>
+<span class="font-body-sm text-body-sm text-on-surface">公尺</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant mx-1"></span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">步行約 2 分鐘</span>
+</div>
+</div>
+<button class="h-9 px-3 bg-primary text-on-primary rounded text-body-sm font-body-md font-medium flex items-center gap-1 active:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>開啟步行導引</span>
+</button>
+</div>
+<!-- 地圖定位視圖 -->
+<div class="w-full h-32 rounded-lg bg-cover bg-center relative overflow-hidden flex flex-col justify-end p-2.5" data-location="台北市信義區松高路12號" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBewV-bu9DmAbrf54avfGp7ox2YMPDwObN-mwGwjMEBcakVBJF6NK8e7XKLnoqwu_qu7_BYvc_GePD1lxBfwxDsorl1TwZIlUfUbefHHVAJ1AWC4f-KHj-NmcigZQQbi5AgysPjEZf2MVo0IwUse-GnxPeKSpZRmul_oG4dn7vY5EolkIm1GLRtr5fJUQ6P1wPPVzGcv6wxVqAU4FK0ze5xMlI_rnLCG2_817K4ZicD1K8yni2VDw4C');">
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px]"></div>
+<div class="relative z-10 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1.5 rounded flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[18px]">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">信義旗艦店・1F 智慧取餐區</span>
+</div>
+<span class="font-label-code text-label-telemetry text-on-surface-variant">松高路 12 號</span>
+</div>
+</div>
+</section>
+<!-- 訂單品項收折清單 (共 2 份・NT$ 195) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between cursor-pointer" id="order-summary-toggle">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">receipt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">明細確認 (2份)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-headline-sm text-on-surface font-semibold">NT$ 195</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="order-toggle-chevron">expand_more</span>
+</div>
+</div>
+<!-- 收折展開區塊 -->
+<div class="mt-space-sm pt-space-sm space-y-space-sm" id="order-items-container">
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-label-code text-secondary font-semibold">1x</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">舒肥雞胸溫泉蛋吐司</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">加起司 / 吐司微焦 / 溫泉蛋半熟</span>
+</div>
+</div>
+<span class="font-label-code text-body-md text-on-surface font-medium">NT$ 125</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-label-code text-secondary font-semibold">1x</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">冷萃黑咖啡 (冰)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">固定去冰 / 無糖 360ml</span>
+</div>
+</div>
+<span class="font-label-code text-body-md text-on-surface font-medium">NT$ 70</span>
+</div>
+<!-- 支付與發票技術資訊 -->
+<div class="pt-space-xs flex items-center justify-between font-label-telemetry text-label-telemetry text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">account_balance_wallet</span>
+<span>LINE Pay (已支付)</span>
+</div>
+<span>載具發票：/ABC7890</span>
+</div>
+</div>
+</section>
+<!-- 底部即時協助按鈕區 -->
+<section class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-10 bg-surface-container-lowest text-on-surface rounded font-body-md text-body-md font-medium flex items-center justify-center gap-1.5 shadow-sm active:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>聯絡信義店專員</span>
+</button>
+<button class="h-10 px-4 bg-surface-container text-on-surface-variant rounded font-body-md text-body-md font-medium flex items-center justify-center gap-1 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">emergency_home</span>
+<span>報到協助</span>
+</button>
+</section>
+</div>
+<script>
+  (function() {
+    const toggle = document.getElementById('order-summary-toggle');
+    const container = document.getElementById('order-items-container');
+    const chevron = document.getElementById('order-toggle-chevron');
+    
+    if (toggle && container && chevron) {
+      toggle.addEventListener('click', () => {
+        const isHidden = container.classList.toggle('hidden');
+        chevron.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-on-surface bg-surface-container font-medium"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-feed" href="#"><span class="material-symbols-outlined text-[22px]">restaurant</span><span class="font-body-sm text-body-sm tracking-tight">點餐首頁</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="live-order" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-body-sm text-body-sm tracking-tight">即時訂單</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg transition-colors text-on-surface bg-surface-container font-medium" data-path="prep-progress" href="#"><span class="material-symbols-outlined text-[22px]">hourglass_top</span><span class="font-body-sm text-body-sm tracking-tight">等待進度</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="locker-pickup" href="#"><span class="material-symbols-outlined text-[22px]">mark_email_unread</span><span class="font-body-sm text-body-sm tracking-tight">取餐通知</span></a></div></nav></body></html>

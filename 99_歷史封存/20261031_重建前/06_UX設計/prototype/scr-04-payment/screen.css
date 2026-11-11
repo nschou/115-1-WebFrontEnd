@@ -1,0 +1,10 @@
+/* SCR-04 專屬：付款方式 */
+.total { padding: var(--space-sm) 0 var(--space-lg); font-size: var(--text-lg); font-weight: 700; }
+.pay { border: 0; margin: 0 0 var(--space-sm); padding: 0; }
+.pay-opt {
+  display: block; padding: var(--space-md); margin-bottom: var(--space-sm);
+  background: var(--color-surface); border: var(--hairline) solid var(--color-border);
+  border-radius: var(--radius-default); font-size: var(--text-base);
+}
+.pay-opt:has(input:checked) { border-color: var(--color-primary); background: var(--color-surface-alt); }
+.btn-block { display: block; }

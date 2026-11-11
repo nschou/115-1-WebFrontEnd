@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#76777d", "on-secondary-fixed": "#001d31", "tertiary-fixed-dim": "#b9c7e0", "surface-container-low": "#eff4ff", "on-secondary-fixed-variant": "#004b73", "on-surface-variant": "#45464d", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "on-tertiary": "#ffffff", "on-primary-container": "#7c839b", "on-primary": "#ffffff", "on-background": "#0b1c30", "secondary-fixed": "#cce5ff", "outline-variant": "#c6c6cd", "secondary-container": "#5bb8fe", "on-surface": "#0b1c30", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#d5e3fd", "surface-tint": "#565e74", "primary-container": "#131b2e", "tertiary-container": "#0d1c2f", "surface-variant": "#d3e4fe", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "primary-fixed": "#dae2fd", "inverse-surface": "#213145", "surface-dim": "#cbdbf5", "error-container": "#ffdad6", "inverse-on-surface": "#eaf1ff", "secondary": "#006398", "tertiary": "#000000", "secondary-fixed-dim": "#93ccff", "on-secondary-container": "#00476e", "on-primary-fixed-variant": "#3f465c", "primary-fixed-dim": "#bec6e0", "surface": "#f8f9ff", "surface-container": "#e5eeff", "on-tertiary-container": "#76859b", "on-tertiary-fixed-variant": "#3a485c", "on-tertiary-fixed": "#0d1c2f", "surface-container-high": "#dce9ff", "background": "#f8f9ff", "inverse-primary": "#bec6e0", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-primary-fixed": "#131b2e", "primary": "#000000" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "0.75rem", "margin": "1rem", "space-md": "0.75rem", "space-xl": "1.5rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-desktop": "1.25rem" }, "fontFamily": { "body-md": ["Geist"], "label-code": ["JetBrains Mono"], "label-telemetry": ["JetBrains Mono"], "display-lg": ["Geist"], "body-lg": ["Geist"], "headline-md": ["Geist"], "display-lg-mobile": ["Geist"], "body-sm": ["Geist"], "headline-sm": ["Geist"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-code": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "label-telemetry": ["11px", { "lineHeight": "14px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-xs flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="返回" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">Item Customizer</h1></div><div class="flex items-center gap-space-xs pr-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- 頂部遙測進度條與微狀態 -->
+<div class="px-gutter pt-space-xs pb-space-sm bg-surface-container-lowest shadow-[0_1px_3px_rgba(15,23,42,0.05)]">
+<!-- 階段進程 -->
+<div class="flex items-center justify-between text-label-telemetry font-label-telemetry uppercase tracking-wider mb-space-xs">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-4 h-4 rounded-sm bg-surface-container flex items-center justify-center text-[10px] text-on-surface font-semibold">1</span>
+<span>選餐完成</span>
+</div>
+<span class="text-outline-variant text-[10px]">▶</span>
+<div class="flex items-center gap-1.5 text-secondary font-bold">
+<span class="w-4 h-4 rounded-sm bg-primary text-on-primary flex items-center justify-center text-[10px]">2</span>
+<span>確認下單</span>
+</div>
+<span class="text-outline-variant text-[10px]">▶</span>
+<div class="flex items-center gap-1.5 text-outline">
+<span class="w-4 h-4 rounded-sm bg-surface-container-high flex items-center justify-center text-[10px] text-on-surface-variant">3</span>
+<span>密碼取餐</span>
+</div>
+</div>
+<!-- 0秒取餐狀態欄 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-body-sm font-body-sm text-secondary font-medium">預先入櫃保溫・0秒零接觸快速提取</span>
+</div>
+<span class="text-label-telemetry font-label-telemetry text-secondary font-bold">ACTIVE POD</span>
+</div>
+</div>
+<div class="px-gutter space-y-space-md mt-space-sm">
+<!-- 取餐門市與溫控櫃配置 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="text-label-telemetry font-label-telemetry text-secondary bg-surface-container px-1.5 py-0.5 rounded-sm">STORE #04</span>
+<h2 class="text-headline-sm font-headline-sm text-on-surface font-semibold">信義數位旗艦店</h2>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">台北市信義區信義路五段 7 號（捷運世貿站 2 號出口旁）</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">storefront</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-2 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock_clock</span>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">智慧取餐櫃無接觸自取</span>
+</div>
+<span class="text-label-telemetry font-label-telemetry bg-secondary-container/40 text-on-secondary-container px-2 py-0.5 rounded-sm font-semibold">60°C 溫控保鮮</span>
+</div>
+</div>
+<!-- 智慧預約出餐時段選擇器 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface text-[18px]">schedule</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold">智慧預約出餐時段</h3>
+</div>
+<span class="text-label-telemetry font-label-telemetry text-outline text-[10px]">DYNAMIC DISPATCH</span>
+</div>
+<!-- 矩陣時段按鈕 -->
+<div class="grid grid-cols-2 gap-space-xs" id="timeSlotContainer">
+<!-- 選項 1 -->
+<button class="time-slot-btn text-left p-space-sm rounded-lg bg-surface-container-low transition-all" onclick="selectTimeSlot(this, '即刻取餐')" type="button">
+<div class="flex justify-between items-start">
+<span class="text-body-md font-body-md font-semibold text-on-surface">立即出餐</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-transparent">check_circle</span>
+</div>
+<p class="text-label-telemetry font-label-telemetry text-on-surface-variant mt-1">約 6-8 分鐘後出櫃</p>
+</button>
+<!-- 選項 2 (預設推薦) -->
+<button class="time-slot-btn active-slot text-left p-space-sm rounded-lg bg-surface-container-highest transition-all relative" onclick="selectTimeSlot(this, '08:15')" type="button">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-label-telemetry font-label-telemetry bg-secondary text-on-secondary px-1 py-0.5 rounded-sm text-[9px]">推薦捷運班次</span>
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface mt-0.5">08:15</div>
+</div>
+<span class="check-icon material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+<p class="text-label-telemetry font-label-telemetry text-secondary font-medium mt-1">預估 18 分鐘後出櫃</p>
+</button>
+<!-- 選項 3 -->
+<button class="time-slot-btn text-left p-space-sm rounded-lg bg-surface-container-low transition-all" onclick="selectTimeSlot(this, '08:25')" type="button">
+<div class="flex justify-between items-start">
+<span class="text-body-md font-body-md font-semibold text-on-surface">08:25</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-transparent">check_circle</span>
+</div>
+<p class="text-label-telemetry font-label-telemetry text-on-surface-variant mt-1">通勤充裕 (28分後)</p>
+</button>
+<!-- 選項 4 -->
+<button class="time-slot-btn text-left p-space-sm rounded-lg bg-surface-container-low transition-all" onclick="selectTimeSlot(this, '08:35')" type="button">
+<div class="flex justify-between items-start">
+<span class="text-body-md font-body-md font-semibold text-on-surface">08:35</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-transparent">check_circle</span>
+</div>
+<p class="text-label-telemetry font-label-telemetry text-on-surface-variant mt-1">預約離峰 (38分後)</p>
+</button>
+</div>
+<!-- 溫控算力狀態註記 -->
+<div class="flex items-center gap-1.5 px-space-xs text-body-sm font-body-sm text-outline">
+<span class="material-symbols-outlined text-[15px] text-secondary">thermostat</span>
+<span>系統依下車即時動態算力出餐，入櫃後以紅外線恆溫燈保鮮保持酥脆。</span>
+</div>
+</div>
+<!-- 選食品項清單 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold">餐點項目 (2)</h3>
+<span class="text-label-telemetry font-label-telemetry text-on-surface-variant">BATCH #TX-9021</span>
+</div>
+<!-- Item 1: 吐司 -->
+<div class="flex gap-space-sm items-center py-2">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close up studio shot of sous-vide chicken breast sandwich on crisp toasted sourdough with a soft poached egg yolk oozing out, overhead warm lighting, sleek minimalist presentation on steel slate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtvURSkMahb3Qb6FDiiaOX_PVp3T9TkOgApd3LBdqqUMfP-oXDacpfOKQtixZqveVmApiumym7yqLUgeKQECJGVOOBnT0teRrK7Vdym72E-B8DB0T36Qa1uesEzQpjvsmGYqFrn3cCQWY1j_axK5FfWlLO4q9h1x3WqfBXmbGd9tUG_s37Ek5kg0AA_7tPIBR3MsE7PBTv8EBPNrRjk6W639IfZQci5nd-bqOh1KpCij-hYAKl5Sdl"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h4 class="text-body-md font-body-md font-semibold text-on-surface truncate">低溫慢烤舒肥雞胸溫泉蛋吐司</h4>
+<span class="text-label-code font-label-code font-semibold text-on-surface ml-2">NT$115</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant truncate mt-0.5">
+            半熟蛋・無美乃滋・加烤洋蔥
+          </div>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-label-telemetry font-label-telemetry text-outline">QTY: 01</span>
+<span class="text-label-telemetry font-label-telemetry text-secondary bg-surface-container px-1 rounded-sm">480 KCAL</span>
+</div>
+</div>
+</div>
+<!-- Item 2: 冷萃咖啡 -->
+<div class="flex gap-space-sm items-center py-2">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A tall minimalist glass tumbler of iced cloud cold brew coffee with silky foaming crema top, dark roasted hue, frosty condensation on clean glass, set against an industrial brushed metal counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPJiGEgp7F6ROuXLu4s2-uDmSKGrF2F_ctjJi_N2A7-_LSx3aZHae9uPcqM97Ltzbc-QXQtVz8m4HqWfnosbzQ0pN1nWxq-jFYl9IiFkwtiHhwZYHSdeoK9RGQ0ZEmgHK81tVjjVqQXEZwecNVXUB6ZmIaS5bMVujBIoe9LpvV1AQy8mWNvFBqQxA7G4V6oOmLnQdBaLb9vmd8WrIPC7o5NKQf8tIlEo8rHSGTuSps_BaxqxPiudkE"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h4 class="text-body-md font-body-md font-semibold text-on-surface truncate">冰雲朵冷萃黑咖啡</h4>
+<span class="text-label-code font-label-code font-semibold text-on-surface ml-2">NT$65</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant truncate mt-0.5">
+            無糖・正常冰・中杯 (12oz)
+          </div>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-label-telemetry font-label-telemetry text-outline">QTY: 01</span>
+<span class="text-label-telemetry font-label-telemetry text-secondary bg-surface-container px-1 rounded-sm">12 KCAL</span>
+</div>
+</div>
+</div>
+<!-- 環保袋勾選 -->
+<div class="flex items-center justify-between pt-space-xs mt-space-xs bg-surface-container-low px-space-sm py-2 rounded-lg">
+<label class="flex items-center gap-2 cursor-pointer select-none" for="ecoBagCheck">
+<input checked="" class="w-4 h-4 rounded-sm bg-surface-container-lowest text-primary accent-primary" id="ecoBagCheck" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">響應環保自備取餐袋 (不需加購環保紙袋)</span>
+</label>
+<span class="text-label-telemetry font-label-telemetry text-secondary font-bold">+NT$0</span>
+</div>
+<!-- 費用明細 -->
+<div class="space-y-1.5 pt-space-sm text-body-sm font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>餐點小計</span>
+<span class="font-label-code text-label-code text-on-surface">NT$ 180</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+            通勤早鳥即時立折
+          </span>
+<span class="font-label-code text-label-code font-semibold">-NT$ 15</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="flex items-center gap-1">恆溫晶片保鮮倉儲服務</span>
+<span class="text-label-telemetry font-label-telemetry text-secondary font-semibold">FREE</span>
+</div>
+<div class="flex justify-between items-baseline pt-2 text-on-surface font-semibold">
+<span class="text-body-md font-body-md">應付總額</span>
+<span class="font-label-code text-headline-sm font-bold text-on-surface">NT$ 165</span>
+</div>
+</div>
+</div>
+<!-- 極速支付方式 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold">快速支付方式</h3>
+<span class="text-label-telemetry font-label-telemetry text-outline">SECURE SSL 256</span>
+</div>
+<div class="space-y-space-xs" id="paymentOptions">
+<!-- Apple Pay (預設) -->
+<label class="pay-option flex items-center justify-between p-space-sm rounded-lg bg-surface-container-highest cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="w-4 h-4 accent-primary text-primary" name="payMethod" type="radio" value="apple"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-body-md font-body-md font-semibold text-on-surface">Apple Pay</span>
+<span class="text-label-telemetry font-label-telemetry bg-surface text-secondary px-1 py-0.5 rounded-sm text-[10px]">FAST TOUCH</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">快速雙擊側邊按鍵以 Face ID 結帳</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface text-[20px]">contactless</span>
+</label>
+<!-- LINE Pay -->
+<label class="pay-option flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 accent-primary text-primary" name="payMethod" type="radio" value="line"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-body-md font-body-md font-semibold text-on-surface">LINE Pay</span>
+<span class="text-label-telemetry font-label-telemetry text-secondary text-[10px]">POINTS AVAILABLE</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">支援 LINE POINTS 折抵點數</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">account_balance_wallet</span>
+</label>
+<!-- 信用卡 / 簽帳卡 -->
+<label class="pay-option flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 accent-primary text-primary" name="payMethod" type="radio" value="card"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-body-md font-body-md font-semibold text-on-surface">信用卡 / 簽帳金融卡</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">已綁定星展商業永續卡 (結尾 8821)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">credit_card</span>
+</label>
+<!-- 雲端儲值卡 -->
+<label class="pay-option flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 accent-primary text-primary" name="payMethod" type="radio" value="wallet"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-body-md font-body-md font-semibold text-on-surface">雲端科技儲值卡</span>
+<span class="text-label-telemetry font-label-telemetry text-outline text-[10px]">餘額: NT$820</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">自動扣款免驗證，每筆額外享 3% 科技金</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">token</span>
+</label>
+</div>
+</div>
+</div>
+<!-- 底部固定操作列 -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md px-gutter py-space-sm pb-safe shadow-[0_-2px_10px_rgba(15,23,42,0.08)]">
+<div class="max-w-md mx-auto flex flex-col gap-2">
+<!-- 快捷摘要標籤 -->
+<div class="flex items-center justify-between px-space-xs text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>預約取餐：<strong class="text-on-surface font-semibold" id="bottomPickupTime">今日 08:15</strong></span>
+</div>
+<div class="text-label-code font-label-code text-on-surface font-medium">小計 NT$ 165</div>
+</div>
+<!-- 送出下單按鈕 -->
+<button class="w-full h-[42px] bg-primary hover:bg-inverse-surface active:bg-inverse-surface text-on-primary rounded-lg flex items-center justify-center gap-2 font-body-md font-semibold transition-all" id="checkoutBtn" onclick="triggerCheckout()" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>確認下單並啟動即時廚房 (付款 NT$ 165)</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function selectTimeSlot(button, time) {
+    const buttons = document.querySelectorAll('.time-slot-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('active-slot', 'bg-surface-container-highest');
+      btn.classList.add('bg-surface-container-low');
+      const icon = btn.querySelector('.check-icon');
+      if (icon) {
+        icon.classList.remove('text-secondary');
+        icon.classList.add('text-transparent');
+      }
+    });
+
+    button.classList.add('active-slot', 'bg-surface-container-highest');
+    button.classList.remove('bg-surface-container-low');
+    const activeIcon = button.querySelector('.check-icon');
+    if (activeIcon) {
+      activeIcon.classList.remove('text-transparent');
+      activeIcon.classList.add('text-secondary');
+    }
+
+    const timeDisplay = document.getElementById('bottomPickupTime');
+    if (timeDisplay) {
+      timeDisplay.textContent = time === '即刻取餐' ? '立即出櫃 (約6-8分)' : '今日 ' + time;
+    }
+  }
+
+  // 監聽付款方式點擊高亮
+  const payRadios = document.querySelectorAll('input[name="payMethod"]');
+  payRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      document.querySelectorAll('.pay-option').forEach(opt => {
+        opt.classList.remove('bg-surface-container-highest');
+        opt.classList.add('bg-surface-container-low');
+      });
+      const parentLabel = e.target.closest('.pay-option');
+      if (parentLabel) {
+        parentLabel.classList.remove('bg-surface-container-low');
+        parentLabel.classList.add('bg-surface-container-highest');
+      }
+    });
+  });
+
+  function triggerCheckout() {
+    const btn = document.getElementById('checkoutBtn');
+    btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span> 系統排程雲端廚房中...`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-secondary');
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span> 訂單已建立！取餐碼 #8820`;
+    }, 900);
+  }
+</script></main></body></html>
