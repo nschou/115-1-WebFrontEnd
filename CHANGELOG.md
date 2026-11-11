@@ -11,12 +11,12 @@
 - 補上動態線框操作手冊、遠距顯示契約、Design 審查紀錄與 validation 報告；`18_spec.md` 同步為 11/11 畫面、53 個元素。
 - 不使用自行縮寫；拆解與測試統一寫成「拆解並測試（decompose and test）」。
 - 學生入口補上「從 W1 開始、依週次實作、示範案例只作對照、遇到證據不足要回上游」的學習引導；W1 講義與操作手冊同步加入相同流程。
-- 新增 `00_教案網站/` 學習導航網站：包含 W1 起步、18 檔主線、19 個學習節點、每階段 AI 參考 Prompt、文件連結、進度標記與搜尋。
-- 新增 `00_教案網站/reader.html` 與閱讀器資產，使用固定版本的 marked、DOMPurify、Mermaid；教材連結可進入美化閱讀頁，並保留原始 Markdown 連結與檔案白名單。
+- 新增 `00_CourseSite/` 學習導航網站：包含 W1 起步、18 檔主線、19 個學習節點、每階段 AI 參考 Prompt、文件連結、進度標記與搜尋。
+- 新增 `00_CourseSite/reader.html` 與閱讀器資產，使用固定版本的 marked、DOMPurify、Mermaid；教材連結可進入美化閱讀頁，並保留原始 Markdown 連結與檔案白名單。
 - 建立 GitHub repository／Pages 部署基礎：根目錄入口、`.nojekyll`、`.gitignore`、`.github/workflows/deploy-pages.yml` 與 repository README；網站以完整 repository 為靜態根目錄。
 - 補上 GitHub Pages 第一次啟用的操作：repository Settings → Pages → Source 選擇 GitHub Actions。
 - 補充 Pages API 回傳 `Get Pages site failed` 時的處理：先以 `main`／`/(root)` 暫時啟用 branch publishing，再切回 GitHub Actions；不新增 Jekyll 或 Static HTML 的重複 workflow。
-- GitHub Pages 已可使用；教學網站入口為 `https://nschou.github.io/115-1-WebFrontEnd/00_%E6%95%99%E6%A1%88%E7%B6%B2%E7%AB%99/index.html`。
+- GitHub Pages 已可使用；教學網站入口為 `https://nschou.github.io/115-1-WebFrontEnd/00_CourseSite/index.html`。
 ### 驗證
 
 - 已檢查現行主線引用，舊檔名改為 `00_方法論主線與檢查點.md`。

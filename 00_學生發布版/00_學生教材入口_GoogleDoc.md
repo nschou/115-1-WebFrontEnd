@@ -6,7 +6,7 @@
 >
 > **目前發布範圍**：W1–W7：服務設計到 Spec
 
-> **教案網站版**：若在課程專案中以 HTTP server 開啟，可使用 `../00_教案網站/index.html` 作為互動導覽；網站只負責導航與 Prompt 呈現，正式來源仍是本入口、W1–W7 文件與 Prototype。
+> **教案網站版**：若在課程專案中以 HTTP server 開啟，可使用 `../00_CourseSite/index.html` 作為互動導覽；網站只負責導航與 Prompt 呈現，正式來源仍是本入口、W1–W7 文件與 Prototype。
 
 ---
 

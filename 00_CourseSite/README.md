@@ -22,7 +22,7 @@ npx serve .
 再開啟：
 
 ```text
-00_教案網站/index.html
+00_CourseSite/index.html
 ```
 
 也可以使用任何能提供靜態檔案的 HTTP server。不要直接以 `file://` 開啟，否則部分瀏覽器會限制連結與剪貼簿功能。
@@ -37,7 +37,7 @@ npx serve .
 https://nschou.github.io/115-1-WebFrontEnd/
 ```
 
-根目錄 `index.html` 會導向 `00_教案網站/index.html`。不要只上傳 `00_教案網站/` 子目錄，因為閱讀器需要讀取同一 repository 內的教材 Markdown、Prototype 與檢查工具。
+根目錄 `index.html` 會導向 `00_CourseSite/index.html`。不要只上傳 `00_CourseSite/` 子目錄，因為閱讀器需要讀取同一 repository 內的教材 Markdown、Prototype 與檢查工具。
 
 第一次啟用 GitHub Pages 時，請在 repository 的 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。設定完成後，`.github/workflows/deploy-pages.yml` 會在 `main` 推送時自動驗證並部署。
 

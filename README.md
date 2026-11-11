@@ -5,8 +5,8 @@
 ## 學生網站
 
 - GitHub Pages：部署後由 repository 根入口進入
-- 本地入口：`00_教案網站/index.html`
-- 教材閱讀器：`00_教案網站/reader.html?file=...`
+- 本地入口：`00_CourseSite/index.html`
+- 教材閱讀器：`00_CourseSite/reader.html?file=...`
 
 網站提供：
 
@@ -24,7 +24,7 @@
 npx serve .
 ```
 
-開啟 `00_教案網站/index.html`。不要以 `file://` 直接開啟，因為 Markdown reader 需要 HTTP fetch 與 CDN 資源。
+開啟 `00_CourseSite/index.html`。不要以 `file://` 直接開啟，因為 Markdown reader 需要 HTTP fetch 與 CDN 資源。
 
 ## 啟用 GitHub Pages
 
@@ -34,7 +34,7 @@ npx serve .
 2. 在 **Build and deployment → Source** 選擇 **GitHub Actions**。
 3. 儲存後重新執行 `Deploy course website` workflow，或再推送一次 commit。
 
-Workflow 會先驗證網站 JavaScript 與 19 個學習節點的教材連結，再把整個 repository 部署為靜態網站。根目錄入口會導向 `00_教案網站/index.html`。
+Workflow 會先驗證網站 JavaScript 與 19 個學習節點的教材連結，再把整個 repository 部署為靜態網站。根目錄入口會導向 `00_CourseSite/index.html`。
 
 ### Pages 顯示 `Get Pages site failed`
 
