@@ -42,7 +42,7 @@
       '<span>不通過 <b>' + fail + '</b></span>' +
       '<span>待驗 <b>' + todo + '</b></span>' +
       '<span>不適用 <b>' + na + '</b></span>' +
-      '<span class="muted">規則層是自動的（23 條），這裡是體驗層</span>';
+      '<span class="muted">規則層是自動的（25 條），這裡是體驗層</span>';
   }
 
   document.addEventListener("click", function (e) {

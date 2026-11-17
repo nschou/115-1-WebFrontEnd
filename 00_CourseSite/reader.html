@@ -15,6 +15,8 @@
       <span><b>服務設計到 Spec</b><small>教材閱讀器</small></span>
     </a>
     <div class="top-actions">
+      <a class="ghost" href="flow.html">一頁流程圖</a>
+      <a class="ghost" href="materials.html">教材索引</a>
       <a class="ghost reader-home" href="index.html">回到學習導航</a>
     </div>
   </header>
@@ -36,8 +38,12 @@
     <article id="document" class="markdown-body" aria-live="polite"></article>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+  <!-- 本地優先（可完全離線）；載不到才回 CDN -->
+  <script src="assets/vendor/marked.min.js"></script>
+  <script>if (!window.marked) document.write('<script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"><\/script>');</script>
+  <script src="assets/vendor/purify.min.js"></script>
+  <script>if (!window.DOMPurify) document.write('<script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"><\/script>');</script>
+  <script src="assets/vendor/mermaid.min.js"></script>
+  <script>if (!window.mermaid) document.write('<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"><\/script>');</script>
   <script src="assets/guide-data.js"></script>
   <script src="assets/reader.js"></script>

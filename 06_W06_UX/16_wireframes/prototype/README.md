@@ -1,6 +1,6 @@
 # prototype／螢幕原型（HTML 版線框）
 
-> **入口**：先開 `index.html` —— 一頁看全 10 條故事、21 個動作、13 條自動檢查。
+> **入口**：先開 `index.html` —— 一頁看全 11 條故事、21 個動作、25 條自動檢查。
 
 > 把 `UX.md` 的 11 個螢幕做成**可切換狀態的 HTML 線框**。
 > 不是最終實作，是「規格的可執行版本」——用 Design.md 的 token 長出來的線框。
@@ -143,7 +143,7 @@ node lint-tokens.mjs
 | 指令 | 檢查什麼 |
 |---|---|
 | `node lint-tokens.mjs` | 版面規範：未定義 token、寫死色碼、>2px 硬寫、狀態數 |
-| `node verify-stories.mjs` | 故事與 AC：結構＋內容，輸出 23 條 PASS／FAIL |
+| `node verify-stories.mjs` | 故事與 AC：結構＋內容，輸出 25 條 PASS／FAIL |
 | `node selftest-stories.mjs` | 負向測試：故意做錯，確認檢查會紅 |
 | `node check-all.mjs` | **一支指令跑完四層**（業務／資訊／版面／實作＋負向），結果寫進入口頁 |
 | `node smoke-dom.mjs` | 用假 DOM 跑入口頁與走查台，確認頁面會正常渲染 |
@@ -168,3 +168,15 @@ node lint-tokens.mjs
 | 4 | 人 | 灰階 3 秒測試 |
 
 > AI 最常犯三個錯：①寫死 hex ②只做 happy path ③把「可取餐」寫在製作中狀態。
+## 影響分析（impact.mjs）
+
+「改一個東西，哪些頁面／資料／文件要跟著改」——SDD 的核心演練。
+
+```
+node impact.mjs --ac AC-12                 # 改一條驗收條件
+node impact.mjs --screen scr-03-checkout   # 改一個頁面
+node impact.mjs --element E-16             # 改一個元素
+node impact.mjs --task T-06                # 改一條任務
+```
+
+輸出：受影響的 AC／頁面／資料欄位／動作、要重跑的檢查、提到這些 ID 的文件。

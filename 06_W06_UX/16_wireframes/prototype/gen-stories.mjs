@@ -16,12 +16,13 @@ const D = globalThis.STORY_DATA;
 
 const scrLabel = s => s.replace("wire-", "SCR-").replace(/^SCR-(\d+)-.*$/, "SCR-$1");
 
-/* 一、User Story 表：先列業務意圖（US-B），再列介面路徑（US-I） */
-const usHead = "| ID | US-B（業務意圖） | US-I（介面路徑） | 路徑 | AC | 來源痛點 |\n|---|---|---|---|---|---|";
+/* 一、User Story 表：先列 US-B 來源，再列業務意圖與介面路徑 */
+const usHead = "| ID | US-B 來源 | US-B（業務意圖） | US-I（介面路徑） | 路徑 | AC | 來源痛點 |\n|---|---|---|---|---|---|---|";
 const usRows = D.stories.map(s => {
   const p = s.path.map(scrLabel).join(" → ");
   const ac = [...new Set([...(s.ac || []), ...(s.guard || [])])].join("、");
-  return "| " + s.id + " | " + (s.usB || s.us || s.title) + " | " + (s.usI || s.us || s.title) + " | " + p + " | " + ac + " | " + (s.pain || "—") + " |";
+  const usBIds = (s.usBIds || []).join("、") || "N/A";
+  return "| " + s.id + " | " + usBIds + " | " + (s.usB || s.us || s.title) + " | " + (s.usI || s.us || s.title) + " | " + p + " | " + ac + " | " + (s.pain || "—") + " |";
 }).join("\n");
 
 /* 四、驗證等級表 */

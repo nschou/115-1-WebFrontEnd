@@ -12,7 +12,10 @@
     "../00_學生發布版/00_學生教材入口_GoogleDoc.md",
     "../00_課程中間回顧與思考框架.md"
   ];
-  var allowed = new Set(extraFiles.concat(window.GUIDE_DATA.stages.flatMap(function (s) { return s.docs; }))
+  var demoFiles = Object.keys(window.GUIDE_DATA.demoLinks || {}).reduce(function (all, id) {
+    return all.concat((window.GUIDE_DATA.demoLinks[id] || []).map(function (link) { return link.href; }));
+  }, []);
+  var allowed = new Set(extraFiles.concat(window.GUIDE_DATA.stages.flatMap(function (s) { return s.docs; }), demoFiles)
     .map(function (file) { return new URL(file, location.href).pathname; }));
 
   function setStatus(message, isError) {
@@ -29,11 +32,17 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
+  /* 允許：同源、且是 .md／文字檔。原本靠白名單，新增文件就要改名單，
+     結果 D_交付物 這類新目錄永遠打不開。靜態課程站所有檔案本來就是公開的。 */
+  function isAllowedPath(url) {
+    if (url.origin !== location.origin) return false;
+    return /\.(md|txt|css)$/i.test(url.pathname);
+  }
   function resolveRequested(file) {
     if (!file) return null;
     var url;
     try { url = new URL(file, location.href); } catch (e) { return null; }
-    if (url.origin !== location.origin || !allowed.has(url.pathname)) return null;
+    if (!isAllowedPath(url) && !allowed.has(url.pathname)) return null;
     return url;
   }
   function sourceLabel(url) {
@@ -58,7 +67,11 @@
       if (!href || href[0] === "#" || /^(https?:|mailto:|javascript:)/i.test(href)) return;
       var target;
       try { target = new URL(href, baseUrl); } catch (e) { return; }
-      if (target.origin !== location.origin || !allowed.has(target.pathname)) return;
+      if (!isAllowedPath(target) && !allowed.has(target.pathname)) {
+        // 非 md（例如 flow.html）：保留原連結，但改成絕對網址，避免以 reader.html 為基準解析錯誤
+        link.href = target.href;
+        return;
+      }
       var rawPath = target.pathname + target.search + target.hash;
       link.href = "reader.html?file=" + encodeURIComponent(rawPath);
       link.target = "_self";
@@ -94,6 +107,9 @@
     pathNode.textContent = sourceLabel(url) + "（原始文字檔）";
   }
   async function load() {
+    if (location.protocol === "file:") {
+      return fail("閱讀器需要透過網站開啟（fetch 在 file:// 會被瀏覽器封鎖）。請用本機伺服器或 GitHub Pages。");
+    }
     var url = resolveRequested(requested);
     if (!url) return fail("這個檔案不在閱讀器允許的教材清單中。請從課程網站的文件連結進入。 ");
     rawLink.href = url.href;
@@ -109,7 +125,13 @@
         setStatus("這是原始文字檔；Markdown 與 Mermaid 渲染只套用於 .md 文件。", false);
         return;
       }
-      if (!window.marked || !window.DOMPurify) throw new Error("Markdown renderer 尚未載入；請確認網路連線或 CDN 可用。");
+      if (!window.marked || !window.DOMPurify) {
+        /* 離線降級：CDN 不可用時仍可讀原始文字（Mermaid 會顯示為程式碼區塊） */
+        titleNode.textContent = decodeURIComponent(url.pathname.split("/").pop());
+        renderPlainText(text, url);
+        setStatus("離線降級：Markdown 渲染器（CDN）未載入，以下為原始文字。", true);
+        return;
+      }
       var html = window.marked.parse(text, { renderer: configureMarked(), gfm: true, breaks: false, headerIds: false, mangle: false });
       article.innerHTML = window.DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
       transformLinks(url);

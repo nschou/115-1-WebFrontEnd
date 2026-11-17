@@ -13,8 +13,92 @@ window.GUIDE_DATA = {
     { id: "W4", title: "服務藍圖", range: "04" },
     { id: "W5", title: "物件、決策與 Design", range: "05–10" },
     { id: "W6", title: "需求到 UX", range: "11–17" },
-    { id: "W7", title: "Spec", range: "18" }
+    { id: "W7", title: "Spec", range: "18" },
+    { id: "W11", title: "SDD clarify", range: "18_spec → research" },
+    { id: "W12", title: "架構研究", range: "research" },
+    { id: "W13", title: "方案設計", range: "plan" },
+    { id: "W14", title: "工作切片與實作", range: "tasks → implement" },
+    { id: "W15", title: "整合與驗證", range: "test → review" },
+    { id: "W16", title: "T1、發表與反思", range: "T1 → reflection" }
   ],
+  relations: [
+    { from: "00", to: "01", label: "工作區 → 市場選擇" },
+    { from: "01", to: "02", label: "市場限制 → Persona" },
+    { from: "02", to: "03", label: "角色情境 → 顧客旅程" },
+    { from: "03", to: "04", label: "痛點與機會 → 服務藍圖" },
+    { from: "04", to: "05", label: "交接與物件 → 業務物件" },
+    { from: "05", to: "06", label: "物件生命週期 → 資訊流" },
+    { from: "06", to: "07", label: "時效與競爭 → 服務決策" },
+    { from: "07", to: "08", label: "採用方案 → 服務基準" },
+    { from: "08", to: "09", label: "服務基準 → Design 契約" },
+    { from: "09", to: "10", label: "設計規則 → Design Tokens" },
+    { from: "08", to: "11", label: "服務基準 → 服務需求" },
+    { from: "11", to: "12", label: "需求索引 → 角色任務" },
+    { from: "12", to: "13", label: "角色任務 → User Story-B" },
+    { from: "13", to: "14", label: "業務價值 → 資訊元素" },
+    { from: "14", to: "15", label: "資訊元素 → UX 狀態與流程" },
+    { from: "15", to: "16", label: "UX 契約 → Wireframe 與 Prototype" },
+    { from: "16", to: "17", label: "Prototype 走查 → User Story-I 與 AC" },
+    { from: "13", to: "17", label: "US-B → US-I／AC 追溯" },
+    { from: "15", to: "17", label: "UX 狀態 → AC 驗收" },
+    { from: "17", to: "18", label: "路徑與 AC → 系統級 Spec" },
+    { from: "18", to: "19", label: "Spec → clarify 與 T0" },
+    { from: "19", to: "20", label: "研究問題 → 架構比較" },
+    { from: "18", to: "20", label: "Spec 約束 → research" },
+    { from: "20", to: "21", label: "研究取捨 → plan" },
+    { from: "18", to: "21", label: "需求契約 → 共同架構" },
+    { from: "21", to: "22", label: "plan → 可驗收工作切片" },
+    { from: "22", to: "23", label: "tasks → implement／verify" },
+    { from: "18", to: "23", label: "AC → 整合驗證" },
+    { from: "23", to: "24", label: "驗證證據 → T1 與反思" }
+  ],
+  demoLinks: {
+    "11": [
+      { label: "服務需求索引", href: "../00_學生發布版/98_示範案例/雲端早餐店/11_service-requirements.md" }
+    ],
+    "12": [
+      { label: "角色任務參考", href: "../00_學生發布版/98_示範案例/雲端早餐店/12_role-tasks.md" }
+    ],
+    "13": [
+      { label: "User Story-B 參考", href: "../00_學生發布版/98_示範案例/雲端早餐店/13_UserStory-B.md" }
+    ],
+    "14": [
+      { label: "資訊元素參考", href: "../00_學生發布版/98_示範案例/雲端早餐店/14_elements.md" }
+    ],
+    "15": [
+      { label: "UX 參考", href: "../00_學生發布版/98_示範案例/雲端早餐店/15_UX.md" }
+    ],
+    "16": [
+      { label: "開啟 Prototype", href: "../00_學生發布版/98_示範案例/雲端早餐店/16_wireframes/prototype/index.html" },
+      { label: "開啟 Prototype 走查台", href: "../00_學生發布版/98_示範案例/雲端早餐店/16_wireframes/prototype/review.html" }
+    ],
+    "17": [
+      { label: "User Story-I 與 AC", href: "../00_學生發布版/98_示範案例/雲端早餐店/17_UserStory-I_AC.md" },
+      { label: "Prototype 走查報告", href: "../00_學生發布版/98_示範案例/雲端早餐店/validation/review-report.md" }
+    ],
+    "18": [
+      { label: "最終 18_spec", href: "../98_示範案例/雲端早餐店/18_spec.md" }
+    ],
+    "19": [
+      { label: "research.md 初稿", href: "../98_示範案例/雲端早餐店/research.md" }
+    ],
+    "20": [
+      { label: "research.md 研究結論", href: "../98_示範案例/雲端早餐店/research.md" }
+    ],
+    "21": [
+      { label: "plan.md 整合方案", href: "../98_示範案例/雲端早餐店/plan.md" }
+    ],
+    "22": [
+      { label: "tasks.md 工作切片", href: "../98_示範案例/雲端早餐店/tasks.md" }
+    ],
+    "23": [
+      { label: "Prototype 與驗證入口", href: "../00_學生發布版/98_示範案例/雲端早餐店/16_wireframes/prototype/index.html" },
+      { label: "validation 報告", href: "../00_學生發布版/98_示範案例/雲端早餐店/validation/review-report.md" }
+    ],
+    "24": [
+      { label: "課程計畫與評估", href: "../00_AI輔助教學計畫對應與課程執行方案.md" }
+    ]
+  },
   stages: [
     {
       id: "00", week: "W1", title: "建立工作區", file: "00_project-brief.md",
@@ -427,8 +511,8 @@ User Story-B 與元素：
       question: "線框是否真的能走完路徑？",
       goal: "把 UX 契約轉成可走的線框與動態 Prototype，並驗證狀態與操作後果。",
       inputs: ["14_elements.md", "15_UX.md", "09_DESIGN.md", "10_tokens.css"],
-      outputs: "畫面、狀態、入口、出口、Prototype、四層檢查與人工走查。",
-      handoff: "把已走查的畫面路徑與證據交給 17_UserStory-I_AC。",
+      outputs: "畫面、狀態、入口、出口、Prototype、四層檢查與人工走查；並保留來源資料、產生工具與驗證結果。",
+      handoff: "把已走查的畫面路徑、機器可讀資料、工具執行結果與 validation 證據交給 17_UserStory-I_AC。",
       traps: ["直接手畫漂亮畫面", "修改產生檔", "沒有錯誤狀態", "只跑自動檢查不做人工走查"],
       docs: ["../06_W06_UX/16_wireframes/00_Prototype整合操作手冊.md", "../00_學生發布版/98_示範案例/雲端早餐店/16_wireframes/prototype/index.html", "../00_學生發布版/98_示範案例/雲端早餐店/16_wireframes/prototype/review.html"],
       prompt: String.raw`${"{{共用規則}}"}
@@ -451,12 +535,12 @@ UX 契約：
     {
       id: "17", week: "W6", title: "User Story-I 與 AC", file: "17_UserStory-I_AC.md",
       question: "介面路徑如何落地？怎樣算通過？",
-      goal: "把走查後的介面路徑與狀態規則寫成可驗收的 User Story-I 與 AC。",
+      goal: "把走查後的介面路徑與狀態規則寫成可驗收的 User Story-I 與 AC，並解釋它與 US-B 的多對多關係。",
       inputs: ["13_UserStory-B.md", "15_UX.md", "16_wireframes/", "validation"],
-      outputs: "介面路徑、EARS AC、自動／人工／使用者驗證等級。",
+      outputs: "介面路徑、US-B→US-I 追溯矩陣、EARS AC、自動／人工／使用者驗證等級。",
       handoff: "把正式 Story、AC 與驗證證據交給 18_spec.md。",
-      traps: ["直接複製畫面文字", "AC 沒有狀態或觸發條件", "正式檔與 generated 檔並存", "把未測試寫成通過"],
-      docs: ["../00_學生發布版/98_示範案例/雲端早餐店/17_UserStory-I_AC.md", "../06_W06_UX/17_UserStory-I_AC/README.md", "../00_學生發布版/98_示範案例/雲端早餐店/validation/review-report.md"],
+      traps: ["直接複製畫面文字", "AC 沒有狀態或觸發條件", "正式檔與 generated 檔並存", "把未測試寫成通過", "把 US-B 與 US-I 強制做成 1：1"],
+      docs: ["../00_學生發布版/98_示範案例/雲端早餐店/17_UserStory-I_AC.md", "../00_學生發布版/98_示範案例/雲端早餐店/validation/review-report.md", "../06_W06_UX/16_wireframes/00_Prototype整合操作手冊.md"],
       prompt: String.raw`${"{{共用規則}}"}
 
 本次階段：17_UserStory-I_AC.md
@@ -466,23 +550,25 @@ UX、Prototype 與 validation：
 {{貼上 SCR、實際路徑、走查證據與未完成範圍}}
 
 請協助我建立介面路徑與 Acceptance Criteria：
-1. 將每條 US-B 轉成實際介面路徑 US-I，回指 SCR、任務與業務目的。
-2. 使用 EARS 寫 AC：觸發條件、系統行為、狀態、禁止事項與可觀察結果要清楚。
-3. 每條 AC 標示 auto、manual、human 或 N/A 的驗證方式；沒有證據不能標成 pass。
-4. 找出 Prototype、UX、Story 與業務規則不一致的地方並停止產生草稿。
-5. 保持 17_UserStory-I_AC.md 為唯一正式檔；story-data.js 是機器可讀來源，不能建立平行 generated 正式檔。
+1. 先建立 US-B→US-I 追溯矩陣；US-I 以可走查路徑計數，不要求與 US-B 1：1。
+2. 將每條 US-B 對應到一條或多條 US-I，或明確標示既有路徑／N/A；不可默默刪除。
+3. 將每條 US-B 轉成實際介面路徑 US-I，回指 SCR、任務與業務目的。
+4. 使用 EARS 寫 AC：觸發條件、系統行為、狀態、禁止事項與可觀察結果要清楚。
+5. 每條 AC 標示 auto、manual、human 或 N/A 的驗證方式；沒有證據不能標成 pass。
+6. 找出 Prototype、UX、Story 與業務規則不一致的地方並停止產生草稿。
+7. 保持 17_UserStory-I_AC.md 為唯一正式檔；story-data.js 是機器可讀來源，不能建立平行 generated 正式檔。
 
-輸出：追溯矩陣 → 矛盾與缺口 → US-I 草稿 → AC 清單 → 驗證計畫。`
+輸出：US-B→US-I 追溯矩陣 → 矛盾與缺口 → US-I 草稿 → AC 清單 → 驗證計畫。`
     },
     {
       id: "18", week: "W7", title: "Specification", file: "18_spec.md",
       question: "如何交付完整、可追溯的業務規格？",
-      goal: "彙整已驗證的服務與 UX 契約，交給後續實作與 SpecKit。",
-      inputs: ["08–17", "validation", "Design audit", "Prototype 證據"],
-      outputs: "需求、來源、驗收、限制、證據索引與 SpecKit 銜接資料。",
-      handoff: "交給 SpecKit specify／plan；不是直接跳過需求分析進入 tasks。",
-      traps: ["第一次在 Spec 決定服務規則", "加入技術架構", "複製貼上造成矛盾", "只交 18_spec 沒有中間證據"],
-      docs: ["../00_學生發布版/07_W07_Spec/00_W07_學生操作手冊.md", "../00_學生發布版/98_示範案例/雲端早餐店/18_spec.md", "../07_W07_Spec/18_spec/check-project-integrity.mjs"],
+      goal: "將 `01_market.md`～`18_spec.md` 的完整證據鏈收斂成服務級總規格；`18_spec.md` 同時是本課程系統級的 SDD `spec.md`，第 11 週 clarify 後進入整體 `research.md`。",
+      inputs: ["01–18", "validation", "Design audit", "Prototype 證據"],
+      outputs: "`18_spec.md`：整個服務的需求、來源、驗收、限制、證據索引與垂直切片入口。",
+      handoff: "以完成的系統級 `18_spec.md` 交給第 11 週 clarify 與整體 `research.md`；功能切片留在同一份 spec、plan、tasks，不另建立平行 spec。",
+      traps: ["第一次在 Spec 決定服務規則", "把技術架構偷偷寫進業務需求", "複製貼上造成矛盾", "把跨功能系統切成彼此獨立的 spec／plan，造成整合斷裂"],
+      docs: ["../98_示範案例/雲端早餐店/18_spec.md", "../00_學生發布版/98_示範案例/雲端早餐店/18_spec.md", "../07_W07_Spec/18_spec/18_spec_README.md"],
       prompt: String.raw`${"{{共用規則}}"}
 
 本次階段：18_spec.md
@@ -491,15 +577,158 @@ UX、Prototype 與 validation：
 驗證與 Design 證據：
 {{貼上 check 結果、validation/review-report.md、09_DESIGN_audit.md、Prototype 路徑}}
 
-請協助我整理 18_spec.md：
+請協助我完成 18_spec.md；它是本課程系統級 SDD spec.md：
 1. 只彙整已存在且已驗證的服務需求、角色、流程、規則、限制與 Acceptance Criteria。
 2. 每條需求回指來源與驗收；每個驗收條件回指 Prototype 或 validation 證據。
 3. 檢查 08 baseline、15 UX、17 User Story-I_AC、Prototype 與 validation 是否有矛盾；有矛盾先停止並列差異。
 4. 不要新增服務決策，不要加入 React、API、資料庫、部署或其他技術架構。
 5. 明確列出 N/A 的驗證範圍；N/A 不是 PASS，也不能保留未說明的 pending。
-6. 最後產生 SpecKit handoff：哪些內容給 specify，哪些內容給 plan，哪些證據保留為參考。
+6. 依十章骨架完成整個服務的需求、體驗、非功能、假設限制與附錄；確保需求意圖、範圍、不做範圍、例外、AC 與驗證方式完整。
+7. 在同一份 spec 內標示功能區塊、跨功能依賴與第一個 vertical slice；不要另造 feature spec 或技術方案。
 
-輸出：來源盤點 → 矛盾檢查 → 需求與 AC 追溯表 → Spec 草稿 → SpecKit handoff → 交件前檢查表。`
+輸出：來源盤點 → 矛盾檢查 → 需求與 AC 追溯表 → 完成的 18_spec.md → research questions → 交件前檢查表。`
+    },
+    {
+      id: "19", week: "W11", title: "SDD clarify 與架構研究啟動", file: "research.md",
+      question: "如何從完整證據鏈澄清系統級規格，找出跨功能關係與第一個垂直切片？",
+      goal: "以 18_spec.md、Prototype、Design、UX 與 validation 建立 T0，澄清需求意圖、限制、例外、共同資料與架構研究問題。",
+      inputs: ["18_spec.md", "Prototype", "Design／UX", "validation"],
+      outputs: "18_spec.md 澄清紀錄、架構研究問題清單、research.md 初稿與 T0 基線。",
+      handoff: "把已澄清的系統需求與研究問題交給 W12 完成整體架構研究。",
+      traps: ["把技術偏好當成需求", "把功能拆成平行 spec", "沒有留下 T0", "把未決事項寫成正式規則"],
+      docs: ["../98_示範案例/雲端早餐店/18_spec.md", "../98_示範案例/雲端早餐店/research.md", "../00_AI輔助教學計畫對應與課程執行方案.md"],
+      prompt: String.raw`${"{{共用規則}}"}
+
+本次階段：系統級 18_spec.md clarify 與 research.md 啟動
+請先閱讀完整證據鏈與 validation：
+{{貼上 18_spec.md、Prototype、Design、UX 與 validation 摘要}}
+
+請依序輸出：
+1. 已知需求意圖、跨功能關係、限制、例外與不做範圍。
+2. 仍然矛盾、缺資料或需要人工決定的問題。
+3. 第一個垂直切片與它涵蓋的 AC。
+4. research questions；每題標示來源、影響與需要比較的方案。
+5. T0：不用 AI 時，我應該能解釋的需求與架構風險。
+
+不要直接選定技術；先把研究問題與決策門寫清楚。`
+    },
+    {
+      id: "20", week: "W12", title: "整體架構研究", file: "research.md",
+      question: "哪些架構選擇能滿足需求、時效、一致性與降級條件？",
+      goal: "比較資訊架構與技術方案，說明來源、替代方案、取捨、風險與尚待決定的邊界。",
+      inputs: ["18_spec.md", "research questions", "Design／UX／Prototype 約束"],
+      outputs: "完整 research.md、決策矩陣、來源、取捨理由與未決風險。",
+      handoff: "把已研究的架構選擇與限制交給 W13 形成整合 plan.md。",
+      traps: ["只列工具名稱沒有取捨", "引用沒有回到需求", "把示範限制寫成正式業務規則", "忽略降級與競爭條件"],
+      docs: ["../98_示範案例/雲端早餐店/18_spec.md", "../98_示範案例/雲端早餐店/research.md", "../00_AI輔助教學計畫對應與課程執行方案.md"],
+      prompt: String.raw`${"{{共用規則}}"}
+
+本次階段：research.md
+系統需求與研究問題：
+{{貼上 18_spec.md 的架構輸入契約與 research questions}}
+
+請對每個研究問題建立比較表：
+1. 候選方案與適用條件。
+2. 對時效、一致性、唯一性、冪等、降級、可維護性的影響。
+3. 來源與證據。
+4. 採用、拒絕或保留的理由。
+5. 對 plan.md、資料模型、契約與測試的影響。
+
+不替未決的業務規則做決定；示範限制要和正式生產決策分開。`
+    },
+    {
+      id: "21", week: "W13", title: "整合方案設計", file: "plan.md",
+      question: "如何把 spec 與 research 轉成可實作、可驗證的共同架構？",
+      goal: "建立元件與資料流邊界、資料模型、命令／回應／事件契約、交易策略、降級與驗證方案。",
+      inputs: ["18_spec.md", "research.md", "Design／UX／Prototype 約束"],
+      outputs: "plan.md、data-model、contracts、quickstart 與風險／回退方案。",
+      handoff: "把整合方案交給 W14 切出可獨立驗收的工作。",
+      traps: ["plan 重新定義需求", "缺少錯誤與中斷路徑", "只畫架構不定義契約", "沒有驗證命令"],
+      docs: ["../98_示範案例/雲端早餐店/18_spec.md", "../98_示範案例/雲端早餐店/research.md", "../98_示範案例/雲端早餐店/plan.md"],
+      prompt: String.raw`${"{{共用規則}}"}
+
+本次階段：plan.md
+輸入：
+{{貼上 18_spec.md、research.md、Design／UX／Prototype 約束}}
+
+請建立整合方案：
+1. 元件、資料流與責任邊界。
+2. 核心資料模型與唯一性、交易、冪等、版本規則。
+3. 命令、回應、事件與錯誤契約。
+4. 狀態轉換、權限、重連與降級策略。
+5. 第一個垂直切片的完成條件、測試、回退與 quickstart。
+6. 每項選擇回指需求與 research 證據。
+
+不得為了方便實作而刪除 spec 的 AC 或 N/A 邊界。`
+    },
+    {
+      id: "22", week: "W14", title: "工作切片與 AI 實作", file: "tasks.md",
+      question: "如何依 plan 的依賴關係切出可執行、可驗收的工作？",
+      goal: "從 plan.md 依序切出契約、資料、狀態、第一個垂直切片、事件同步與驗證工作。",
+      inputs: ["plan.md", "18_spec.md", "research.md"],
+      outputs: "tasks.md、每項工作的依賴／完成條件／驗證方式，以及可檢視的實作變更。",
+      handoff: "把可追溯的 tasks 與程式交給 W15 整合、測試與架構審查。",
+      traps: ["tasks 只列檔案不列驗收", "跳過資料與狀態核心", "把畫面完成當成端到端完成", "AI 產出未經人工檢視"],
+      docs: ["../98_示範案例/雲端早餐店/18_spec.md", "../98_示範案例/雲端早餐店/plan.md", "../98_示範案例/雲端早餐店/tasks.md"],
+      prompt: String.raw`${"{{共用規則}}"}
+
+本次階段：tasks.md
+輸入：
+{{貼上 18_spec.md、plan.md 與 research.md 的決策摘要}}
+
+請依依賴順序切分工作：
+1. 每項工作標示來源章節、REQ、AC 與前置依賴。
+2. 完成條件必須是可觀察結果，不是「完成程式」。
+3. 驗證方式要能抓到非法狀態、重複付款、競爭寫入、舊事件與降級錯誤。
+4. 先完成共同契約、資料模型與狀態核心，再做第一個垂直切片。
+5. 產生或修改程式後，先人工檢視，再執行窄範圍驗證。
+
+不要新增 spec 沒有的需求，也不要把未驗證的 AI 輸出寫成通過。`
+    },
+    {
+      id: "23", week: "W15", title: "整合與架構驗證", file: "tasks.md → verify",
+      question: "實作是否符合 spec、plan、tasks 與使用者可觀察驗收？",
+      goal: "整合第一個垂直切片，執行契約、狀態、競爭、重連、AC、無障礙與人工走查，留下失敗與修正證據。",
+      inputs: ["18_spec.md", "plan.md", "tasks.md", "程式碼", "測試與 Prototype 證據"],
+      outputs: "測試報告、程式檢視紀錄、無障礙／人工走查證據、Prompt／Token／修正紀錄。",
+      handoff: "把可追溯的成品與證據交給 W16 做 T1、發表與反思。",
+      traps: ["只跑 happy path", "把自動通過當成體驗通過", "忽略 N/A 與未決限制", "修正後沒有回指需求"],
+      docs: ["../98_示範案例/雲端早餐店/18_spec.md", "../98_示範案例/雲端早餐店/plan.md", "../98_示範案例/雲端早餐店/tasks.md", "../98_示範案例/雲端早餐店/validation/review-report.md"],
+      prompt: String.raw`${"{{共用規則}}"}
+
+本次階段：整合、測試與架構審查
+輸入：
+{{貼上 tasks.md、程式碼變更、測試輸出與人工走查證據}}
+
+請建立驗證矩陣：
+1. 每個 task 對應的測試、命令輸出與人工證據。
+2. 每個 AC 的實際結果與失敗時的回退路徑。
+3. 契約、狀態轉換、冪等、競爭、重連、降級與無障礙檢查。
+4. 區分 PASS、FAIL、N/A；不得把 N/A 改寫成 PASS。
+5. 指出程式、plan 或 spec 的矛盾，提出最小修正並回指來源。
+
+沒有實際輸出或人工觀察，就標示為未驗證。`
+    },
+    {
+      id: "24", week: "W16", title: "T1、成果發表與反思", file: "T1 / reflection",
+      question: "離開 AI 後，能否解釋架構、定位錯誤並說明取捨？",
+      goal: "完成無 AI 後測、成果發表與個人反思，對照 T0／T1、AI 加速與誤導、驗證方法與研究限制。",
+      inputs: ["T0 基線", "成品與驗證證據", "18_spec.md", "research.md", "plan.md", "tasks.md"],
+      outputs: "T1 作答、成果展示、個人反思與資料封存。",
+      handoff: "把學習結果、限制與可重現證據封存，作為下一輪課程改善依據。",
+      traps: ["把作品展示當成學習證據", "只描述 AI 做了什麼", "沒有比較 T0／T1", "沒有說明如何驗證"],
+      docs: ["../00_AI輔助教學計畫對應與課程執行方案.md", "../00_課程中間回顧與思考框架.md", "../98_示範案例/雲端早餐店/18_spec.md"],
+      prompt: String.raw`${"{{共用規則}}"}
+
+本次階段：T1、成果發表與反思
+請不要請 AI 代答 T1。完成無 AI 作答與成果展示後，再用 AI 協助整理反思：
+1. 我能否不看 AI 解釋需求、架構、狀態與取捨？
+2. 我能否定位一個錯誤並提出可驗證修正？
+3. 哪些地方 AI 加速了工作？哪些地方造成誤導？
+4. 我使用了哪些工具與人工證據確認結果？
+5. T0 與 T1 的差異、研究限制與下一輪改進是什麼？
+
+反思必須區分事實、觀察、推論與尚待確認事項。`
     }
   ]
 };

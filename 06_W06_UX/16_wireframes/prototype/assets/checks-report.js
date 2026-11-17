@@ -1,8 +1,8 @@
 /* 由 verify-stories.mjs 自動產生，不要手改 */
 globalThis.CHECKS_REPORT = {
-  "generatedAt": "2026-11-11T07:14:54.789Z",
-  "total": 23,
-  "passed": 23,
+  "generatedAt": "2026-11-17T17:37:58.401Z",
+  "total": 25,
+  "passed": 25,
   "fails": 0,
   "checks": [
     {
@@ -164,6 +164,20 @@ globalThis.CHECKS_REPORT = {
       "screen": "scr-07-kds",
       "state": "interrupted",
       "desc": "缺貨要能通知店員",
+      "ok": true
+    },
+    {
+      "id": "AC-24",
+      "screen": "scr-10-menu-admin",
+      "state": "default",
+      "desc": "菜單維護頁要能看見供應狀態與儲存變更",
+      "ok": true
+    },
+    {
+      "id": "AC-25",
+      "screen": "scr-11-report",
+      "state": "default",
+      "desc": "銷售報表要能看見今日營收與熱銷品",
       "ok": true
     }
   ]

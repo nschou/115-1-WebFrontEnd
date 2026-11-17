@@ -3,7 +3,7 @@
   "diagram_type": "architecture",
   "meta": {
     "title": "雲端早餐店 Prototype 前端網站架構",
-    "subtitle": "11 個靜態畫面共用一套狀態、故事、主題與驗證資產",
+    "subtitle": "11 個靜態畫面由機器可讀資料、共用狀態、故事與工具鏈形成可驗證 Prototype",
     "locale": "zh-TW",
     "output": "prototype-frontend-architecture.html",
     "quality_profile": "showcase"
@@ -117,9 +117,9 @@
     {
       "id": "story-data",
       "type": "frontend",
-      "label": "故事與驗收單一事實來源",
-      "sublabel": "story-data.js｜23 AC｜stories／actions／checks",
-      "tag": "共用資料",
+      "label": "機器可讀故事與驗收資料",
+      "sublabel": "tasks.js｜elements.js｜story-data.js｜23 AC",
+      "tag": "Prototype 單一事實",
       "icon": "database",
       "pos": [600, 300],
       "size": [240, 82]
@@ -137,8 +137,8 @@
     {
       "id": "verification-suite",
       "type": "backend",
-      "label": "靜態驗證工具鏈",
-      "sublabel": "verify-stories｜lint-tokens｜check-all｜smoke-dom",
+      "label": "Prototype 生成與驗證工具鏈",
+      "sublabel": "gen-tables｜derive-wires｜gen-stories｜checks",
       "tag": "Node CLI",
       "icon": "backend",
       "pos": [600, 700],
@@ -224,8 +224,8 @@
     { "id": "runtime-to-payment", "from": "shared-runtime", "to": "payment-external", "label": "pay：模擬成功／失敗", "variant": "security" },
     { "id": "runtime-to-storage", "from": "shared-runtime", "to": "browser-storage", "label": "儲存主題偏好" },
     { "id": "review-to-storage", "from": "review-workbench", "to": "browser-storage", "label": "儲存走查狀態與證據" },
-    { "id": "story-to-verification", "from": "story-data", "to": "verification-suite", "label": "提供故事／AC／元素定義" },
-    { "id": "verification-to-reports", "from": "verification-suite", "to": "generated-reports", "label": "產生檢查與四層摘要", "variant": "dashed" },
+    { "id": "story-to-verification", "from": "story-data", "to": "verification-suite", "label": "讀取任務／元素／故事／AC，產生與檢查" },
+    { "id": "verification-to-reports", "from": "verification-suite", "to": "generated-reports", "label": "產生線框表／故事／四層摘要", "variant": "dashed" },
     { "id": "review-to-report", "from": "review-workbench", "to": "generated-reports", "label": "複製人工走查報告", "variant": "dashed" },
     { "id": "reports-to-hub", "from": "generated-reports", "to": "prototype-hub", "label": "入口頁載入上次結果" }
   ],
@@ -250,11 +250,11 @@
     },
     {
       "dot": "rose",
-      "title": "驗證與證據邊界",
+      "title": "工具鏈與驗證證據",
       "items": [
-        "verify-stories.mjs 讀取 story-data、HTML 與任務／元素資料，檢查故事路徑、AC 與頁面結構。",
-        "check-all.mjs 串起業務、資訊、版面、實作與負向測試，產生入口頁讀取的摘要。",
-        "review.html／review.js 保存人工體驗走查；這與自動規則檢查分開。"
+        "tasks.js、elements.js、story-data.js 是可執行資料；不能把產生檔當成第二套規格。",
+        "gen-tables／derive-wires／gen-stories／check-layout-order 負責產生或推導；verify-stories／lint-tokens／selftest-stories／check-all／smoke-dom 負責檢查。",
+        "review.html／review.js 保存人工體驗走查；自動規則通過不能取代人工走查。"
       ]
     },
     {

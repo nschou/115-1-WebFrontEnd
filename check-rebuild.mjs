@@ -15,6 +15,8 @@ const mainline = [
   "16_wireframes", "17_UserStory-I_AC.md", "18_spec.md"
 ];
 const example = "98_示範案例/雲端早餐店";
+const deliverables = ["D1_決策書.md", "D2_頁面與流動.md", "D3_資料模型.md", "D4_API規格.md", "D5_驗收條件.md", "D6_非功能三條.md"];
+deliverables.forEach(f => need(`${example}/D_交付物/${f}`));
 mainline.forEach(name => need(`${example}/${name}`));
 
 const weekly = [
@@ -23,6 +25,13 @@ const weekly = [
 ];
 for (const [dir, prefix] of weekly) {
   for (const suffix of ["上課講義.md", "上課簡報.pptx", "教師教學指引.md", "學生操作手冊.md", "學生工具包.zip"]) need(`${dir}/${prefix}_${suffix}`);
+}
+
+const bp = fs.readFileSync(path.join(root, example, "04_blueprint.md"), "utf8");
+if (!bp.includes("被否決")) fail.push("04_blueprint 缺少「被否決的候選」段落");
+else {
+  const rejected = bp.split("\n").filter(l => /^\|\s*R-\d/.test(l)).length;
+  if (rejected < 2) fail.push("04_blueprint 的被否決候選少於 2 條（現有 " + rejected + "）");
 }
 
 const decisions = fs.readFileSync(path.join(root, example, "07_decisions.md"), "utf8");
@@ -34,6 +43,18 @@ for (const oldDir of ["01_課程總覽", "02_服務設計_行業分析＆Persona
 need("99_歷史封存/20261031_重建前/manifest.sha256.json");
 need("CHANGELOG.md");
 need("adr/ADR-006_18檔主線與週次重建.md");
+
+// tools/ 是給學生下載的副本，必須與來源一致
+const toolsPairs = [
+  ["tools/check-spec.mjs", "07_W07_Spec/18_spec/check-spec.mjs"],
+  ["tools/check-wording.mjs", "check-wording.mjs"],
+  ["tools/check-project-integrity.mjs", "07_W07_Spec/18_spec/check-project-integrity.mjs"],
+];
+for (const [copy, src] of toolsPairs) {
+  const a = path.join(root, copy), b = path.join(root, src);
+  if (!fs.existsSync(a) || !fs.existsSync(b)) { fail.push("tools 缺檔：" + copy); continue; }
+  if (fs.readFileSync(a, "utf8") !== fs.readFileSync(b, "utf8")) fail.push("tools 副本與來源不同步：" + copy + "（重新複製）");
+}
 
 console.log(`mainline: ${mainline.length} artifacts`);
 console.log(`weekly roots: ${weekly.length}`);

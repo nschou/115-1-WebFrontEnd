@@ -1,6 +1,6 @@
 # 18_spec｜導讀
 
-> 第 7 週：把已驗證的主線證據收斂成 `18_spec.md`（業務需求匯總，不含技術名）。
+> 第 7 週：把已驗證的主線證據收斂成 `18_spec.md`；在本課程中，它就是系統級的 SDD `spec.md`。官方 feature template 提供寫作元素，但本課程不拆成多份獨立 spec／plan。
 
 | 檔案 | 給誰 | 內容 |
 |---|---|---|
@@ -10,10 +10,11 @@
 | `18_spec_template.md` | 學生 | 十章骨架 |
 | `18_spec.md` | 學生（完成後） | 本案完整 spec |
 | `check-spec.mjs` | 學生／教師 | 技術名、來源、AC 與章節檢查 |
+| `../../98_示範案例/雲端早餐店/00_因果鏈回推_三例.md` | 學生 | 三條 spec 條文的六層回推示範 |
 
 ## 本週在做什麼
 
-前段先完成 `08_service-design-baseline.md`、`11`–`17` 與 validation；本週只把證據排成可追溯、可驗收的 `18_spec.md`。
+前段先完成 `08_service-design-baseline.md`、`11`–`17` 與 validation；本週把證據排成可追溯、可驗收的系統級 `18_spec.md`。第 11 週在同一份文件內完成 clarify、標示垂直切片，再進入整體 `research.md`。
 
 ## 這週在做什麼
 
@@ -36,8 +37,8 @@
 |---|---|---|
 | W2–W5 | `01_market`～`10_tokens` | 需求、已定案服務方案與設計限制 |
 | W6 | `11_service-requirements`～`17_UserStory-I_AC`、validation | spec 的直接證據 |
-| **W7** | `18_spec.md` | 去重、追溯、鎖定業務需求 |
-| W8+ | `plan.md` | 技術規劃（spec 不寫的東西在這裡） |
+| **W7** | `18_spec.md` | 完成並審計本課程系統級的 SDD `spec.md` |
+| W11+ | `research.md`、`plan.md` | 整體技術研究與架構規劃；功能切片留在同一份 spec／plan／tasks |
 
 ## 一句話
 

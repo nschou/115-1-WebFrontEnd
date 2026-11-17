@@ -1,6 +1,6 @@
 # 13_UserStory-B｜需求側 User Story
 
-> US-B（Business／業務意圖）在角色任務與 CJM 痛點之後產出。它描述誰想完成什麼價值，不描述介面路徑；US-I 與 AC 另見 `17_UserStory-I_AC.md`。
+> US-B（Business／業務意圖）在角色任務與 CJM 痛點之後產出。它描述誰想完成什麼價值，不描述介面路徑；US-I 與 AC 另見 `17_UserStory-I_AC.md`。US-B 與 US-I 的數量不必相同：前者按業務意圖計數，後者按可走查路徑計數，必須用來源／REQ／SCR／狀態／AC 追溯，不可用編號或數量假設 1：1。
 
 | ID | US-B | 來源痛點／CJM | 承接任務 | 服務需求 |
 |---|---|---|---|---|

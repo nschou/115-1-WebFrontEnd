@@ -25,4 +25,4 @@
 
 - 可適用的 11 項原型／助教／無障礙／文案檢查：11/11 PASS。
 - 外部使用者、店家現場與實體設備的 3 項：3 N/A；這是範例範圍聲明，不是通過，也不是待驗項目。
-- 規則層另由 `node verify-stories.mjs` 驗證 23/23 AC；四層總檢查由 `node check-all.mjs` 驗證。
+- 規則層另由 `node verify-stories.mjs` 驗證 25/25 AC；四層總檢查由 `node check-all.mjs` 驗證。

@@ -1,3 +1,5 @@
+
+> 名詞：降級（主要管道失效時改用替代管道，例：通知送不出去就改看店內看板；不是把功能關掉）。
 ---
 name: Balanced Modern Morning
 colors:

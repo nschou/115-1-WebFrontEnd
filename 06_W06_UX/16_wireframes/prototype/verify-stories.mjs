@@ -234,6 +234,30 @@ D.stories.forEach(s => {
     if (row.indexOf(a) === -1) { console.log("  ✗ 文件漂移：" + s.id + " 缺少 " + a); fails++; }
   });
 });
+const businessIds = new Set(D.businessStoryIds || []);
+const coveredBusinessIds = new Set();
+D.stories.forEach(s => {
+  const ids = s.usBIds || [];
+  if (!ids.length) { console.log("  ✗ " + s.id + " 沒有 US-B 來源 ID"); fails++; }
+  ids.forEach(id => {
+    if (!businessIds.has(id)) { console.log("  ✗ " + s.id + " 使用未知 US-B：" + id); fails++; }
+    coveredBusinessIds.add(id);
+  });
+  const row = usRows.find(r => r.indexOf("| " + s.id + " |") === 0 || r.indexOf("| " + s.id + " ") === 0);
+  ids.forEach(id => {
+    if (row && row.indexOf("| " + id + " |") === -1 && row.indexOf(id) === -1) {
+      console.log("  ✗ 文件漂移：" + s.id + " 缺少 US-B 來源 " + id);
+      fails++;
+    }
+  });
+});
+const missingBusinessIds = [...businessIds].filter(id => !coveredBusinessIds.has(id));
+if (missingBusinessIds.length) {
+  console.log("  ✗ 沒有 US-I 承接的 US-B：" + missingBusinessIds.join("、"));
+  fails += missingBusinessIds.length;
+} else {
+  console.log("  ✓ 每個 US-B 都至少由一條 US-I 承接；可重複出現表示分支或串接");
+}
 console.log(fails === 0 ? "  ✓ 結構全部通過（含文件一致性）" : "  ✗ 結構問題 " + fails + " 個");
 
 console.log("\n【內容檢查（靜態掃 HTML）】");

@@ -1,7 +1,7 @@
 /* 由 check-all.mjs 產生，不要手改 */
 globalThis.CHECK_SUMMARY = {
-  "generatedAt": "2026-11-11T07:17:38.667Z",
-  "allOk": false,
+  "generatedAt": "2026-11-13T14:16:06.595Z",
+  "allOk": true,
   "layers": [
     {
       "key": "business",
@@ -39,7 +39,7 @@ globalThis.CHECK_SUMMARY = {
     {
       "key": "impl",
       "name": "實作層：版面規範與頁面渲染",
-      "ok": false,
+      "ok": true,
       "details": [
         {
           "script": "lint-tokens.mjs",
@@ -47,7 +47,7 @@ globalThis.CHECK_SUMMARY = {
         },
         {
           "script": "smoke-dom.mjs",
-          "ok": false
+          "ok": true
         }
       ]
     },

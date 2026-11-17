@@ -1,8 +1,9 @@
-# 18_spec.md 範本（十章骨架）
+# 18_spec.md 範本（本課程系統級 SDD spec.md 的十章骨架）
 
 > 把 `[ ]` 換成你的內容；每章最後都有「這樣算完成」。
-> **規則：不得出現技術名**（Redis／Kafka／WebSocket／框架名）。
-> **輸入契約**：W5 以 `07_decisions.md` 將 `04_blueprint.md` 凍結為 `08_service-design-baseline.md`；W6 依序完成 `11_service-requirements.md`、`12_role-tasks.md`、`13_UserStory-B.md`、`14_elements.md`、`15_UX.md`、`16_wireframes/` 與 `17_UserStory-I_AC.md`。`18_spec.md` 只彙整與追溯，不首次設計需求、資訊或線框。
+> **層級說明：** `18_spec.md` 保留整個整合服務的脈絡、跨功能關係與完整證據；官方 feature template 的 Summary、User Scenarios、Edge Cases、Functional Requirements、Key Entities、Success Criteria、Assumptions 等元素可套用在同一份系統規格中。
+> **規則：** 不得出現技術名（Redis／Kafka／WebSocket／框架名）；技術方案留給 `research.md` 與 `plan.md`。功能切片標示在本文件與後續 `tasks.md`，不另造平行 spec。
+> **輸入契約：** W5 以 `07_decisions.md` 將 `04_blueprint.md` 凍結為 `08_service-design-baseline.md`；W6 依序完成 `11_service-requirements.md`、`12_role-tasks.md`、`13_UserStory-B.md`、`14_elements.md`、`15_UX.md`、`16_wireframes/` 與 `17_UserStory-I_AC.md`。`18_spec.md` 只彙整、追溯與審計，不首次設計需求、資訊或線框。
 
 ---
 

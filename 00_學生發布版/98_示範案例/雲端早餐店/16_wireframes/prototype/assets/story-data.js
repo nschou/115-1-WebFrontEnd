@@ -27,8 +27,12 @@
       { id:"AC-20", title:"KDS 依取餐時段排序", verify:"auto" },
       { id:"AC-21", title:"計時器顏色＋數字雙重編碼", verify:"auto" },
       { id:"AC-22", title:"完成只標「待店員確認」", verify:"auto" },
-      { id:"AC-23", title:"缺貨可一鍵通知店員", verify:"auto" }
+      { id:"AC-23", title:"缺貨可一鍵通知店員", verify:"auto" },
+      { id:"AC-24", title:"老闆可儲存菜單供應狀態", verify:"auto" },
+      { id:"AC-25", title:"老闆可查看營收與熱銷品", verify:"auto" }
     ],
+
+    businessStoryIds: ["US-B-01","US-B-02","US-B-03","US-B-04","US-B-05","US-B-06","US-B-07","US-B-08","US-B-09","US-B-10"],
 
     /* 每個可點元件「點下去會發生什麼」（一句話） */
     notes: {
@@ -62,27 +66,29 @@
     durations: { "submit-order": 2000, "pay": 2500, "locker-open": 1500, "save-menu": 1500, "kds-complete": 800 },
 
     stories: [
-      { id:"US-01", title:"下單前先選好取餐時段", usB:"作為趕時間的通勤顧客，我想要在下單前先決定取餐時段，以便到店不用等。", us:"在下單前選好取餐時段，路徑為菜單 → 下單確認 → 結帳。", pain:"不知道要等多久", start:"scr-02-menu",
+      { id:"US-01", usBIds:["US-B-01"], title:"下單前先選好取餐時段", usB:"作為趕時間的通勤顧客，我想要在下單前先決定取餐時段，以便到店不用等。", us:"在下單前選好取餐時段，路徑為菜單 → 下單確認 → 結帳。", pain:"不知道要等多久", start:"scr-02-menu",
         path:["scr-02-menu","scr-03-checkout","scr-04-payment"],
         ac:["AC-01","AC-02","AC-03"], guard:[] },
-      { id:"US-02", title:"送出前看到完整金額與品項", usB:"作為第一次使用的顧客，我想要在送出前看到完整金額與品項，以便確認沒有點錯。", us:"在送出前確認完整金額與品項，路徑為下單確認。", pain:"不確定總金額", start:"scr-03-checkout",
+      { id:"US-02", usBIds:["US-B-02"], title:"送出前看到完整金額與品項", usB:"作為第一次使用的顧客，我想要在送出前看到完整金額與品項，以便確認沒有點錯。", us:"在送出前確認完整金額與品項，路徑為下單確認。", pain:"不確定總金額", start:"scr-03-checkout",
         path:["scr-03-checkout"], ac:["AC-01","AC-04"], guard:[] },
-      { id:"US-03", title:"用行動支付完成付款", usB:"作為顧客，我想要用平常使用的行動支付完成付款，以便不用準備零錢。", us:"選擇付款方式並完成付款，路徑為結帳 → 訂單狀態。", pain:"排隊付款", start:"scr-04-payment",
+      { id:"US-03", usBIds:["US-B-03"], title:"用行動支付完成付款", usB:"作為顧客，我想要用平常使用的行動支付完成付款，以便不用準備零錢。", us:"選擇付款方式並完成付款，路徑為結帳 → 訂單狀態。", pain:"排隊付款", start:"scr-04-payment",
         path:["scr-04-payment","scr-05-order-status"], ac:["AC-06","AC-07"], guard:[] },
-      { id:"US-04", title:"付款失敗時知道錢有沒有被扣", usB:"作為付款失敗的顧客，我想要知道錢到底有沒有被扣，以便決定要不要重試。", us:"付款失敗時確認付款結果與可用出路，路徑為結帳。", pain:"不敢再按一次", start:"scr-04-payment",
+      { id:"US-04", usBIds:["US-B-03"], title:"付款失敗時知道錢有沒有被扣", usB:"作為顧客，我想要用平常使用的行動支付完成付款，以便不用準備零錢。", us:"付款失敗時確認付款結果與可用出路，路徑為結帳。", pain:"不敢再按一次", start:"scr-04-payment",
         path:["scr-04-payment"], ac:["AC-08"], guard:[] },
-      { id:"US-05", title:"隨時知道餐點做到哪", usB:"作為通勤路上的顧客，我想要隨時知道餐點做到哪，以便決定什麼時候出發。", us:"查看餐點目前進度，路徑為訂單狀態。", pain:"CJM 最低點 −2", start:"scr-05-order-status",
+      { id:"US-05", usBIds:["US-B-04"], title:"隨時知道餐點做到哪", usB:"作為通勤路上的顧客，我想要隨時知道餐點做到哪，以便決定什麼時候出發。", us:"查看餐點目前進度，路徑為訂單狀態。", pain:"CJM 最低點 −2", start:"scr-05-order-status",
         path:["scr-05-order-status"], ac:["AC-10","AC-11"], guard:["AC-11"] },
-      { id:"US-06", title:"一眼看到號碼與櫃位", usB:"作為快到店的顧客，我想要一眼看到取餐號碼與櫃位，以便不用在櫃前翻手機。", us:"查看取餐號碼並完成取餐，路徑為訂單狀態 → 取餐櫃。", pain:"號碼字太小", start:"scr-05-order-status",
+      { id:"US-06", usBIds:["US-B-05"], title:"一眼看到號碼與櫃位", usB:"作為快到店的顧客，我想要一眼看到取餐號碼與櫃位，以便不用在櫃前翻手機。", us:"查看取餐號碼並完成取餐，路徑為訂單狀態 → 取餐櫃。", pain:"號碼字太小", start:"scr-05-order-status",
         path:["scr-05-order-status","scr-09-locker"], ac:["AC-13","AC-14"], guard:[] },
-      { id:"US-07", title:"一眼看出哪張單最急", usB:"作為尖峰時段的店員，我想要一眼看出哪張單最急，以便不漏單。", us:"依急迫度辨識要先處理的訂單，路徑為店員訂單台。", pain:"紙本單找不到", start:"scr-06-staff-orders",
+      { id:"US-07", usBIds:["US-B-06"], title:"一眼看出哪張單最急", usB:"作為尖峰時段的店員，我想要一眼看出哪張單最急，以便不漏單。", us:"依急迫度辨識要先處理的訂單，路徑為店員訂單台。", pain:"紙本單找不到", start:"scr-06-staff-orders",
         path:["scr-06-staff-orders"], ac:["AC-16"], guard:[] },
-      { id:"US-08", title:"一次完成入櫃與通知", usB:"作為店員，我想要在餐點備妥時一次完成入櫃與通知，以便少一個步驟。", us:"完成入櫃並通知顧客，路徑為店員訂單台。", pain:"入櫃與通知分兩次", start:"scr-06-staff-orders",
+      { id:"US-08", usBIds:["US-B-07"], title:"一次完成入櫃與通知", usB:"作為店員，我想要在餐點備妥時一次完成入櫃與通知，以便少一個步驟。", us:"完成入櫃並通知顧客，路徑為店員訂單台。", pain:"入櫃與通知分兩次", start:"scr-06-staff-orders",
         path:["scr-06-staff-orders"], ac:["AC-17"], guard:[] },
-      { id:"US-09", title:"廚師完成後先等待店員確認", usB:"作為廚師，我想要在餐點完成時先交給店員確認，以便避免顧客提前前往取餐。", us:"廚師標記完成後等待店員確認，路徑為 KDS → 訂單狀態。", pain:"廚師完成≠可取餐", start:"scr-07-kds",
+      { id:"US-09", usBIds:["US-B-09"], title:"廚師完成後先等待店員確認", usB:"作為廚師，我想要在餐點完成時先交給店員確認，以便避免顧客提前前往取餐。", us:"廚師標記完成後等待店員確認，路徑為 KDS → 訂單狀態。", pain:"廚師完成≠可取餐", start:"scr-07-kds",
         path:["scr-07-kds","scr-05-order-status"], ac:["AC-12","AC-22"], guard:["AC-12","AC-11"] },
-      { id:"US-10", title:"缺貨時標記並通知店員", usB:"作為廚師，我想要在缺貨時標記品項，以便店員立刻通知顧客換品項。", us:"標記缺貨並通知店員，路徑為 KDS → 店員訂單台。", pain:"缺貨要跑去前面講", start:"scr-07-kds",
-        path:["scr-07-kds","scr-06-staff-orders"], ac:["AC-23"], guard:[] }
+      { id:"US-10", usBIds:["US-B-08"], title:"缺貨時標記並通知店員", usB:"作為廚師，我想要在缺貨時標記品項，以便店員立刻通知顧客換品項。", us:"標記缺貨並通知店員，路徑為 KDS → 店員訂單台。", pain:"缺貨要跑去前面講", start:"scr-07-kds",
+        path:["scr-07-kds","scr-06-staff-orders"], ac:["AC-23"], guard:[] },
+      { id:"US-11", usBIds:["US-B-10"], title:"維護菜單並查看營收", usB:"作為老闆，我想要查看日／週營收與品項表現，以便決定明天備料與菜單。", us:"維護菜單供應狀態並查看營收與品項表現，路徑為菜單維護 → 銷售報表。", pain:"紙本資料難以統計", start:"scr-10-menu-admin",
+        path:["scr-10-menu-admin","scr-11-report"], ac:["AC-24","AC-25"], guard:[] }
     ],
 
     actions: [
@@ -212,7 +218,13 @@
         check:{ containsText:"03:12" } },
       { id:"AC-23", story:"US-10", screen:"scr-07-kds", state:"interrupted", verify:"auto",
         desc:"缺貨要能通知店員",
-        check:{ containsText:"通知店員" } }
+        check:{ containsText:"通知店員" } },
+      { id:"AC-24", story:"US-11", screen:"scr-10-menu-admin", state:"default", verify:"auto",
+        desc:"菜單維護頁要能看見供應狀態與儲存變更",
+        check:{ all:[{containsText:"供應中"},{containsText:"儲存變更"}] } },
+      { id:"AC-25", story:"US-11", screen:"scr-11-report", state:"default", verify:"auto",
+        desc:"銷售報表要能看見今日營收與熱銷品",
+        check:{ all:[{containsText:"今日營收"},{containsText:"熱銷品"}] } }
     ]
   };
 })(globalThis);

@@ -53,6 +53,8 @@
     var s = stageById(currentId());
     var previous = data.stages[data.stages.indexOf(s) - 1];
     var next = data.stages[data.stages.indexOf(s) + 1];
+    var relations = (data.relations || []).filter(function (r) { return r.from === s.id || r.to === s.id; });
+    var demoLinks = (data.demoLinks && data.demoLinks[s.id]) || [];
     var detail = document.getElementById("stage-detail");
     detail.id = "stage-detail";
     detail.innerHTML =
@@ -67,11 +69,21 @@
           infoBlock("完成後產出", '<p>' + esc(s.outputs) + '</p>') +
           infoBlock("交給下一階段", '<p>' + esc(s.handoff) + '</p>') +
           infoBlock("學生常見卡關", '<ul>' + s.traps.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul>') +
-          '<div class="info-block"><h3>教材與工具</h3><div class="doc-links">' + s.docs.map(function (x) { return '<a class="doc-link" href="' + esc(docHref(x)) + '" target="_blank" rel="noopener">閱讀 ' + esc(x.split("/").pop()) + ' ↗</a>'; }).join("") + '</div></div>' +
+          '<div class="info-block"><h3>文件與工具</h3><div class="doc-links">' + s.docs.map(function (x) { return '<a class="doc-link" href="' + esc(docHref(x)) + '" target="_blank" rel="noopener">閱讀 ' + esc(x.split("/").pop()) + ' ↗</a>'; }).join("") + '</div></div>' +
         '</div>' +
         '<div class="prompt-box"><div class="prompt-top"><b>AI 參考 Prompt</b><button class="copy-btn" id="copy-prompt" type="button">複製 Prompt</button></div><pre id="prompt-text">' + esc(s.prompt) + '</pre><p class="prompt-note">複製後，請把 {{...}} 替換成自己的資料；先附上上游文件，再要求 AI 產生草稿。AI 的輸出必須人工檢查，不能直接當成正式文件。</p></div>' +
       '</div>' +
-      '<div class="stage-footer">' + (previous ? '<a class="next-link" href="#stage-' + previous.id + '">← 上一階段：' + esc(previous.title) + '</a>' : '<span></span>') + (next ? '<a class="next-link" href="#stage-' + next.id + '">下一階段：' + esc(next.title) + ' →</a>' : '<span class="muted">已到最後一階段：接續 SpecKit</span>') + '</div>';
+      '<div class="reference-grid">' +
+        infoBlock("前後與相關節點", '<div class="reference-links">' + (relations.length ? relations.map(function (r) {
+          var outgoing = r.from === s.id;
+          var other = stageById(outgoing ? r.to : r.from);
+          return '<a class="reference-link" href="#stage-' + other.id + '"><span>' + (outgoing ? "下游" : "上游") + '</span><b>' + esc(other.title) + '</b><small>' + esc(r.label) + '</small></a>';
+        }).join("") : '<p class="muted">尚未建立跨節點參照。</p>') + '</div>') +
+        infoBlock("示範專案快捷入口", '<div class="doc-links">' + (demoLinks.length ? demoLinks.map(function (x) {
+          return '<a class="doc-link demo-link" href="' + esc(docHref(x.href)) + '" target="_blank" rel="noopener">' + esc(x.label) + ' ↗</a>';
+        }).join("") : '<p class="muted">本階段尚無直接示範入口，請先看文件與工具。</p>') + '</div>') +
+      '</div>' +
+      '<div class="stage-footer">' + (previous ? '<a class="next-link" href="#stage-' + previous.id + '">← 上一階段：' + esc(previous.title) + '</a>' : '<span></span>') + (next ? '<a class="next-link" href="#stage-' + next.id + '">下一階段：' + esc(next.title) + ' →</a>' : '<span class="muted">已到課程最後一階段：封存學習與驗證證據</span>') + '</div>';
 
     document.getElementById("complete-stage").addEventListener("click", function () {
       state.done[s.id] = !state.done[s.id];

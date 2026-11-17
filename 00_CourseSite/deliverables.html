@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 份交付物 ↔ 18 檔證據｜服務設計到 Spec</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">6</span><span><b>交付物</b><small>18 檔證據的收斂</small></span></a>
+    <a class="back-link" href="index.html">← 回課程首頁</a>
+  </header>
+  <main class="doc-shell">
+    <section class="panel page-doc">
+      <p class="eyebrow">DELIVERABLES</p>
+      <h1>6 份交付物，18 檔證據</h1>
+      <p class="lead">18 檔是「推理的順序」，不是「交付的清單」。你只需要交出 6 份；其餘 12 檔是驗證你推得對不對的材料，老師會看，但不必每週維持完美。</p>
+
+      <h2>你要交出的 6 份</h2>
+      <div class="deliv-grid">
+      <article class="deliv-card">
+        <span class="deliv-code">D1</span>
+        <h3>決策書（Why）</h3>
+        <p>每條決策：依據、代價、被推翻的候選。未來需求變更時，先回來看這一條。</p>
+        <p class="deliv-absorbs"><b>吸收</b> 01–08、11<br><b>產出</b> SD-01–11 全定案</p>
+      </article>
+      <article class="deliv-card">
+        <span class="deliv-code">D2</span>
+        <h3>頁面與流動</h3>
+        <p>有哪些頁面、之間怎麼流動、每一頁的狀態機與樣式契約。</p>
+        <p class="deliv-absorbs"><b>吸收</b> 09、10、15、16<br><b>產出</b> 頁面清單／流動圖／狀態機</p>
+      </article>
+      <article class="deliv-card">
+        <span class="deliv-code">D3</span>
+        <h3>資料模型</h3>
+        <p>物件、屬性、誰觀測、生命週期——前後端共享的唯一事實。</p>
+        <p class="deliv-absorbs"><b>吸收</b> 05、06、14<br><b>產出</b> OBJ／欄位／生命週期</p>
+      </article>
+      <article class="deliv-card">
+        <span class="deliv-code">D4</span>
+        <h3>API 規格</h3>
+        <p>由 D2＋D3 推導：端點、參數、回傳、錯誤碼、權限。</p>
+        <p class="deliv-absorbs"><b>吸收</b> 新增（14、15、16 上游）<br><b>產出</b> 端點 × 參數 × 回傳</p>
+      </article>
+      <article class="deliv-card">
+        <span class="deliv-code">D5</span>
+        <h3>驗收條件（AC）</h3>
+        <p>業務 AC、介面 AC、禁止型 AC；每條指回一個狀態轉換。</p>
+        <p class="deliv-absorbs"><b>吸收</b> 12、13、17<br><b>產出</b> 可自動驗證的條件</p>
+      </article>
+      <article class="deliv-card">
+        <span class="deliv-code">D6</span>
+        <h3>非功能三條</h3>
+        <p>瀏覽器記憶體上限、互動反應時間、降級行為。</p>
+        <p class="deliv-absorbs"><b>吸收</b> 06、15<br><b>產出</b> 三條可量測的要求</p>
+      </article>
+      </div>
+
+      <h2>18 檔 → 6 交付物 對照</h2>
+      <table class="map-table">
+        <thead><tr><th>#</th><th>檔案</th><th>歸屬</th><th>它在做什麼</th></tr></thead>
+        <tbody>
+      <tr><td>01</td><td><code>market.md</code></td><td class="tag-deliv">D1 決策書</td><td>證據：市場選擇與限制</td></tr>
+      <tr><td>02</td><td><code>persona.md</code></td><td class="tag-deliv">D1 決策書</td><td>證據：三層角色</td></tr>
+      <tr><td>03</td><td><code>cjm.md</code></td><td class="tag-deliv">D1 決策書</td><td>證據：時間軸與痛點</td></tr>
+      <tr><td>04</td><td><code>blueprint.md</code></td><td class="tag-deliv">D1 決策書</td><td>證據＋候選方案</td></tr>
+      <tr><td>05</td><td><code>objects.md</code></td><td class="tag-deliv">D3 資料模型</td><td>物件與生命週期</td></tr>
+      <tr><td>06</td><td><code>infoflow.md</code></td><td class="tag-deliv">D3／D6</td><td>時效、競爭、降級需求</td></tr>
+      <tr><td>07</td><td><code>decisions.md</code></td><td class="tag-deliv">D1 決策書</td><td>SD-01–11 定案</td></tr>
+      <tr><td>08</td><td><code>service-design-baseline.md</code></td><td class="tag-deliv">D1 決策書</td><td>凍結的基準</td></tr>
+      <tr><td>09</td><td><code>DESIGN.md</code></td><td class="tag-deliv">D2 頁面與流動</td><td>樣式契約</td></tr>
+      <tr><td>10</td><td><code>tokens.css</code></td><td class="tag-deliv">D2 頁面與流動</td><td>視覺尺度</td></tr>
+      <tr><td>11</td><td><code>service-requirements.md</code></td><td class="tag-deliv">D1／D5</td><td>需求索引</td></tr>
+      <tr><td>12</td><td><code>role-tasks.md</code></td><td class="tag-deliv">D5 AC</td><td>任務句（AC 的來源）</td></tr>
+      <tr><td>13</td><td><code>UserStory-B.md</code></td><td class="tag-deliv">D5 AC</td><td>需求側意圖</td></tr>
+      <tr><td>14</td><td><code>elements.md</code></td><td class="tag-deliv">D3／D4</td><td>元素＝資料欄位的來源</td></tr>
+      <tr><td>15</td><td><code>UX.md</code></td><td class="tag-deliv">D2 頁面與流動</td><td>畫面、狀態、文案</td></tr>
+      <tr><td>16</td><td><code>wireframes/</code></td><td class="tag-deliv">D2 頁面與流動</td><td>線框與路徑證據</td></tr>
+      <tr><td>17</td><td><code>UserStory-I_AC.md</code></td><td class="tag-deliv">D5 AC</td><td>US-I 與驗收條件</td></tr>
+      <tr><td>18</td><td><code>spec.md</code></td><td class="tag-gen">產生檔</td><td>由 D1–D6 產生</td></tr>
+        </tbody>
+      </table>
+
+      <h2>為什麼不讓 18 份都當交付物</h2>
+      <p class="lead">不是因為不重要，而是三個現實限制：</p>
+      <table class="map-table">
+        <thead><tr><th>限制</th><th>說明</th><th>對策</th></tr></thead>
+        <tbody>
+          <tr><td>重疊</td><td>13 ↔ 17（US-B／US-I）、14 ↔ 15 ↔ 16（元素／畫面／線框）、18（全部再收一次）</td><td>同一件事只在一處定義，其餘用引用或產生</td></tr>
+          <tr><td>檢核上限</td><td>18 檔 × 平均 5 條條件 ≈ 90 條人工判斷；人一次只能可靠處理 5±2 條</td><td>人工檢查限 5 條，其餘交給脚本</td></tr>
+          <tr><td>SDD 要的東西</td><td>SDD 進入實作時只讀四樣：頁面、流動、資料、API（外加驗收）</td><td>把這四樣做厚，其餘做薄</td></tr>
+        </tbody>
+      </table>
+
+      <h2>看完成的 6 份（雲端早餐店案例）</h2>
+      <p class="lead">請從本頁開啟：連結會經由閱讀器渲染。直接開 <code>.md</code> 檔只會看到原始文字。</p>
+      <ul class="deliv-links">
+          <li><a href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2FD_%E4%BA%A4%E4%BB%98%E7%89%A9%2FD1_%E6%B1%BA%E7%AD%96%E6%9B%B8.md">D1 決策書</a></li>
+          <li><a href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2FD_%E4%BA%A4%E4%BB%98%E7%89%A9%2FD2_%E9%A0%81%E9%9D%A2%E8%88%87%E6%B5%81%E5%8B%95.md">D2 頁面與流動</a></li>
+          <li><a href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2FD_%E4%BA%A4%E4%BB%98%E7%89%A9%2FD3_%E8%B3%87%E6%96%99%E6%A8%A1%E5%9E%8B.md">D3 資料模型</a></li>
+          <li><a href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2FD_%E4%BA%A4%E4%BB%98%E7%89%A9%2FD4_API%E8%A6%8F%E6%A0%BC.md">D4 API 規格</a></li>
+          <li><a href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2FD_%E4%BA%A4%E4%BB%98%E7%89%A9%2FD5_%E9%A9%97%E6%94%B6%E6%A2%9D%E4%BB%B6.md">D5 驗收條件</a></li>
+          <li><a href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2FD_%E4%BA%A4%E4%BB%98%E7%89%A9%2FD6_%E9%9D%9E%E5%8A%9F%E8%83%BD%E4%B8%89%E6%A2%9D.md">D6 非功能三條</a></li>
+      </ul>
+
+      <h2>延伸：三個條文的回推示範</h2>
+      <p class="lead">挑三個性質不同的條文（業務規則／資料模型／非功能時效），從 spec 一路往回推到市場與 Persona。</p>
+      <p><a class="primary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E5%9B%A0%E6%9E%9C%E9%8F%88%E5%9B%9E%E6%8E%A8_%E4%B8%89%E4%BE%8B.md">開啟回推示範</a>
+         <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_spec%E5%88%B0research_plan%E7%9A%84%E9%A9%97%E8%AD%89.md">看 spec → research → plan 的驗證</a></p>
+
+      <h2>教學補充：工程是怎麼推進的</h2>
+      <p class="lead">七個真實案例（含我自己判斷錯的地方）：症狀 → 誤判 → 證據 → 修法 → 防護。</p>
+      <p>
+        <a class="primary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E5%B7%A5%E7%A8%8B%E6%8E%A8%E9%80%B2%E7%B4%80%E9%8C%84_%E5%95%8F%E9%A1%8C%E7%99%BC%E7%8F%BE%E8%88%87%E8%A7%A3%E6%B1%BA.md">工程推進紀錄</a>
+        <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E5%90%8D%E8%A9%9E%E5%B1%95%E9%96%8B_%E9%81%8E%E5%BA%A6%E6%BF%83%E7%B8%AE%E7%94%A8%E8%AA%9E.md">名詞展開（30 條）</a>
+        <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E5%B7%A5%E7%A8%8B%E6%8E%A8%E9%80%B2%E7%B4%80%E9%8C%84_%E4%BD%9C%E6%A5%AD%E7%AF%84%E6%9C%AC.md">作業範本</a>
+        <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E9%A0%98%E5%9F%9F%E7%8B%80%E6%85%8B%E8%88%87UI%E7%8B%80%E6%85%8B.md">領域狀態 vs UI 狀態</a>
+        <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E7%89%A9%E4%BB%B6%E5%AE%9A%E7%BE%A9_%E5%9F%BA%E6%95%B8%E8%88%87%E8%BA%AB%E5%88%86.md">物件定義：基數與身分</a>
+        <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E7%B4%99%E7%AD%86%E5%88%B0spec_%E4%B8%89%E5%B1%A4%E5%B0%8D%E6%87%89.md">紙筆 → UX → spec</a>
+      </p>
+
+      <div class="notice">
+        <strong>一句話</strong>
+        <p>證據層保留、交付層收斂、生成層自動。<code>18_spec.md</code> 是最後由 D1–D6 產生的，不是手寫的第三份規格。</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

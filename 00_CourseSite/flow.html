@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="一頁看懂：紙筆 → 畫面 → 契約（spec.md）的三層分工、紙筆五題與兩個極限。">
+  <title>一頁流程圖｜紙筆 → 畫面 → 契約</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="回到學習導航">
+      <span class="brand-mark">18</span>
+      <span><b>服務設計到 Spec</b><small>一頁流程圖</small></span>
+    </a>
+    <div class="top-actions">
+      <a class="secondary" href="index.html">回學習導航</a>
+      <a class="ghost" href="deliverables.html">看 6 份交付物</a>
+    </div>
+  </header>
+
+  <main class="doc-shell">
+    <section class="panel page-doc flow-hero">
+      <p class="eyebrow">ONE PAGE</p>
+      <h1>先紙筆，再畫面，最後才是契約</h1>
+      <p class="lead">在寫第一行程式之前，我們只做三件事：<b>用紙筆確認對不對</b>、<b>用畫面確認順不順</b>、<b>用一份不含工具的契約說清楚</b>。這頁是那三層的縮圖；完整說明見文末連結。</p>
+      <div class="flow-quote">「想像全部透過紙張、筆和說話來運作。」——紙筆階段只要出現工具名，就代表你跳到後面去了。</div>
+    </section>
+
+    <section class="panel page-doc">
+      <h2>代號對照（先看這張，再看內文）</h2>
+      <table class="map-table">
+        <tr><th>代號</th><th>意思</th><th>代號</th><th>意思</th></tr>
+        <tr><td><b>S1</b></td><td>草稿</td><td><b>S5</b></td><td>製作完成（待店員確認）</td></tr>
+        <tr><td><b>S2</b></td><td>已下單</td><td><b>S6</b></td><td>可取餐</td></tr>
+        <tr><td><b>S3</b></td><td>已確認</td><td><b>S7</b></td><td>已取餐</td></tr>
+        <tr><td><b>S4</b></td><td>製作中</td><td><b>SX1–SX4</b></td><td>例外：缺貨／付款失敗／通知未送達／修改待確認</td></tr>
+        <tr><td><b>S0</b></td><td>尚未建立訂單（狀態機之前）</td><td></td><td></td></tr>
+      </table>
+    </section>
+
+    <section class="flow-layers">
+      <article class="flow-layer">
+        <span class="flow-step">1</span>
+        <h2>紙筆</h2>
+        <p class="flow-q">誰、在什麼狀態、拿什麼、交給誰、代價與例外。</p>
+        <dl>
+          <dt>判準</dt><dd>紙＋筆＋說話就能跑完</dd>
+          <dt>產出</dt><dd>01 市場 · 02 Persona · 03 旅程 · 04 藍圖 · 05 物件 · 06 資訊流 · 07 決策</dd>
+          <dt>不含</dt><dd>工具、畫面、資料表</dd>
+        </dl>
+      </article>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <article class="flow-layer">
+        <span class="flow-step">2</span>
+        <h2>畫面</h2>
+        <p class="flow-q">任務要變成什麼介面？什麼時候看到什麼？</p>
+        <dl>
+          <dt>判準</dt><dd>每個狀態都畫得出、說得出理由</dd>
+          <dt>產出</dt><dd>09 設計 · 10 tokens · 11 需求 · 12 任務句 · 14 元素 · 15 UX · 16 線框 · 17 AC</dd>
+          <dt>不含</dt><dd>實作方式、元件庫</dd>
+        </dl>
+      </article>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <article class="flow-layer">
+        <span class="flow-step">3</span>
+        <h2>契約</h2>
+        <p class="flow-q">把前兩層的定案，寫成可被研究與計畫消費的規格。</p>
+        <dl>
+          <dt>判準</dt><dd>可追溯、可驗收、不含工具</dd>
+          <dt>產出</dt><dd>18_spec.md（由 D1–D6 彙整）</dd>
+          <dt>不含</dt><dd>技術選擇、架構</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="panel page-doc">
+      <h2>紙筆階段要回答的五題</h2>
+      <ol class="flow-five">
+        <li><b>誰有問題？</b>為什麼值得解。<span>01、02</span></li>
+        <li><b>他在哪一段最痛？</b>旅程的最低點。<span>03</span></li>
+        <li><b>誰把工作交給誰？</b>交接條件、失敗會怎樣。<span>04</span></li>
+        <li><b>有哪些東西被傳遞、被改變？</b>有幾個、怎麼認。<span>05</span></li>
+        <li><b>選了哪個做法？</b>代價是什麼、否決了什麼。<span>07、04 §4</span></li>
+      </ol>
+    </section>
+
+    <section class="panel page-doc">
+      <h2>紙筆的兩個極限</h2>
+      <div class="flow-limits">
+        <article>
+          <h3>測不出規模</h3>
+          <p>紙上能模擬 5 張單，測不出「尖峰 3 分鐘 40 單」。</p>
+          <p class="flow-fix">補：尖峰量與競爭熱點（06 資訊流）</p>
+        </article>
+        <article>
+          <h3>測不出「要多久看到」與「同時發生」</h3>
+          <p>紙上沒有「兩個人同時改同一張單」，也沒有「多久之內要看到新狀態」。</p>
+          <p class="flow-fix"><b>要補兩件事：</b>①<b>多久要看到</b>——訂單狀態一變，顧客手機／店長訂單台／廚房顯示器／店內看板都要在 <b>1 秒內</b>看到新狀態；②<b>不能各記各的</b>——四個地方必須讀<b>同一份</b>訂單狀態，不能各自留一份，否則會出現兩個版本。</p>
+        </article>
+      </div>
+      <p class="note-line"><b>所以正確說法是：</b>紙筆測「對不對」，量化參數測「撐不撐得住」。</p>
+    </section>
+
+    <section class="panel page-doc flow-callout">
+      <h2>紙筆最容易漏的一欄：顯示時機與權限</h2>
+      <p>紙上的資訊是<b>全部可見</b>的，真實服務不是。要分三件事寫清楚：</p>
+      <table class="map-table">
+        <tr><th>要寫清楚的事</th><th>例子</th><th>為什麼紙筆容易漏</th></tr>
+        <tr><td><b>顯示時機</b>：誰在什麼狀態下才看得到</td><td>取餐號碼要到 <b>S6（可取餐）</b>才顯示；<b>S5（製作完成，待店員確認）</b>之前不得顯示</td><td>紙上沒有「狀態」，所有欄位攤開就看得到</td></tr>
+        <tr><td><b>角色權限</b>：哪個角色能看什麼、能做什麼</td><td>顧客看不到別人的付款；店員不能替顧客按下「已取餐」</td><td>紙本靠人記住「這張不該給他看」；系統要靠規則寫死</td></tr>
+        <tr><td><b>前提條件</b>：操作成立前必須先滿足什麼</td><td>指派櫃位的前提是「店員已確認入櫃」；確認付款的前提是「付款結果已回報」</td><td>紙上沒有先後限制，先做後補也看不出錯</td></tr>
+      </table>
+      <p class="note-line">這一欄會直接變成 spec 的「顯示規則」與「操作前提」。它不是視覺偏好：如果顧客在餐點還沒備妥時就看到號碼，他會提早到櫃前等，造成櫃前壅塞，店員還得分神解釋。</p>
+    </section>
+
+    <section class="panel page-doc">
+      <h2>spec 的四個條件</h2>
+      <div class="flow-chips">
+        <span>可追溯：指得回任務、物件、決策</span>
+        <span>可驗收：說得出怎樣算做到</span>
+        <span>不含工具：技術名 = 0</span>
+        <span>可被消費：研究與計畫拿得去用</span>
+      </div>
+      <h2 style="margin-top:28px">之後的接縫</h2>
+      <div class="flow-seam">
+        <span>spec</span><i>→</i><span>OOA（概念模型，仍不含技術）</span><i>→</i><span>OOD（Entity／VO、狀態模式、資料落點）</span>
+      </div>
+      <p class="note-line">業務給事實，OOA 給概念，OOD 給選擇。</p>
+    </section>
+
+    <section class="panel page-doc">
+      <h2>交件前：一支指令</h2>
+      <pre class="flow-code">node check-all.mjs</pre>
+      <p class="note-line">物件對接 · 教材結構 · 教學網站 · 總規格 · 原型四層；全部通過才交件。</p>
+    </section>
+
+    <section class="panel page-doc">
+      <h2>完整說明</h2>
+      <p>
+        <a class="primary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E7%B4%99%E7%AD%86%E5%88%B0spec_%E4%B8%89%E5%B1%A4%E5%B0%8D%E6%87%89.md">紙筆 → UX → spec（完整版）</a>
+        <a class="primary" href="reader.html?file=..%2F02_W02_%E5%B8%82%E5%A0%B4%E8%88%87Persona%2F00_%E5%85%B8%E7%AF%84%E6%95%99%E6%A1%88_%E7%B4%99%E6%9C%AC%E6%97%A9%E9%A4%90%E5%BA%97.md">典範教案：紙本早餐店</a>
+        <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E5%B7%A5%E7%A8%8B%E6%8E%A8%E9%80%B2%E7%B4%80%E9%8C%84_%E5%95%8F%E9%A1%8C%E7%99%BC%E7%8F%BE%E8%88%87%E8%A7%A3%E6%B1%BA.md">工程推進紀錄</a>
+        <a class="secondary" href="reader.html?file=..%2F98_%E7%A4%BA%E7%AF%84%E6%A1%88%E4%BE%8B%2F%E9%9B%B2%E7%AB%AF%E6%97%A9%E9%A4%90%E5%BA%97%2F00_%E5%90%8D%E8%A9%9E%E5%B1%95%E9%96%8B_%E9%81%8E%E5%BA%A6%E6%BF%83%E7%B8%AE%E7%94%A8%E8%AA%9E.md">名詞展開</a>
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <span>這頁是導覽，不是規格；正式內容仍以教材 Markdown 與檢查腳本為準。</span>
+      <a href="index.html">← 回學習導航</a>
+    </footer>
+  </main>
+</body>
+</html>

@@ -93,7 +93,7 @@
 - `12_role-tasks.md` 是**供應側的角色任務契約**，不要和 Spec Driven Development 的實作 `tasks` 混淆。
 - `13_UserStory-B.md` 是**需求側的價值／意圖敘述**，不是畫面操作說明。
 
-### US-B、US-I、AC 的順序
+### US-B、US-I、AC 的順序與數量
 
 ```text
 CJM 痛點＋角色任務
@@ -103,6 +103,10 @@ CJM 痛點＋角色任務
   → AC：怎樣算通過？
   → Spec：彙整已驗證契約
 ```
+
+`US-B` 按業務意圖計數；`US-I` 按可走查的介面路徑計數，所以不是 1：1。多個 US-B 可能共用一條路徑，US-I 因而較少；一個 US-B 也可能因成功、失敗／重試或不同角色分支而形成多個 US-I。每條 US-I 都要回指 US-B、REQ／任務、SCR、狀態與 AC；每條 US-B 都要有 US-I 或明確的 N/A／既有路徑承接。
+
+教材示範案例目前是 11 條 US-I 覆蓋 10 條 US-B；US-B-03 由付款成功與付款失敗兩條 US-I 分支共同實作。這只是案例結果，不是配對規則；不要為了湊數而拆開或合併故事。
 
 ---
 
@@ -126,20 +130,24 @@ CJM 痛點＋角色任務
 
 - 第 1–2 週：無 AI 基本功前測與基本 HTML／CSS／JavaScript 練習。
 - 第 3 週：AI 協作流程不計分試行；先學會記錄 Prompt、來源與錯誤。
-- 第 4、6、8、10 週：四次正式追蹤，每次都有「先自己做 → 指揮 AI → 驗證反思」。
+- 第 4、6、8、10 週：原定四次正式追蹤；現有資料如實保存，不把後續 SDD 教學硬切成四輪。
+- 第 10 週已完成每位學生 3 分鐘分享：2 分鐘說明 AI 協作方式，1 分鐘說明 AI 幫不上忙的地方。
 - 期中與期末：都會有無 AI 核心任務；AI 不能代替基本功。
 
 可以使用 AI 的階段，仍然要保留上游文件、Prompt、修改理由、Token／回合紀錄與驗證報告。AI 產出不是正式答案；沒有來源的內容必須標為「待確認」。
 
-## 3B. 目前已完成十週後的六週安排
+## 3B. 目前已完成十週後的六週 SDD 安排
 
-前十週是 AI 協作使用訓練與服務設計主線；接下來六週進入新的資訊架構（Information Architecture, IA）與程式框架領域。前十週不從學習紀錄中刪除，但本次驗證會從新領域重新建立基線。
+前十週的 `01_market.md`～`18_spec.md`、Prototype、Design、UX 與 validation 是完整需求與體驗證據鏈；`18_spec.md` 是**服務級總規格，也是本課程系統級的 SDD `spec.md`**。接下來六週訓練的是系統架構師如何澄清同一份系統規格、研究整體架構、指揮 AI 與驗證程式，不是把每個功能拆成彼此獨立的 spec／plan。
 
-- 第 11 週（本週）：心得分享、`T0_IA-Framework` 無 AI 基線與資訊架構導入。
-- 第 12–15 週：每週一輪「A 無 AI 核心 → B AI 協作 → C 測試與反思」。
-- 第 16 週：`T1_IA-Framework` 無 AI 後測、成果發表與學習反思。
+- 第 11 週：以完整證據鏈審計並澄清系統級 `18_spec.md`，在同一份文件內標示功能區塊與第一個 vertical slice；教師導讀資訊架構，開始整體 `research.md`。
+- 第 12 週：完成 client/server、HTML／CSS／JavaScript、React、非同步、schema、RESTful／gRPC 與 serverless 的架構研究。
+- 第 13 週：從系統級 `18_spec.md`、`research.md` 與已驗證的 Design／UX／Prototype 約束產生整合的 `plan.md`、data-model、contracts 與 quickstart。
+- 第 14 週：從同一份 `plan.md` 產生 `tasks.md`，交給 AI 實作第一個垂直切片；學生檢查程式。
+- 第 15 週：整合、測試、無障礙、部署與架構審查。
+- 第 16 週：無 AI 後測、成果發表與反思。
 
-可以使用 AI 的部分，仍要保留規格、Prompt、修改理由、Token／回合紀錄與驗證報告。AI 產出不是正式答案；沒有來源的內容必須標為「待確認」。
+AI 可以協助研究、比較、產生與修改程式；學生仍要負責需求意圖、架構取捨、來源、程式檢視與驗證。AI 能否提高學習效率是本階段要驗證的問題，不是預設答案。
 
 ## 4. 每週教材下載
 
@@ -273,6 +281,28 @@ CJM 痛點＋角色任務
 - Wireframe 能實際走完路徑
 - US-I 與 AC 能回指狀態與業務規則
 
+Prototype 不是把畫面截圖集中在一起，而是由正式文件轉成可執行的規格模型：
+
+```text
+正式文件：12_role-tasks.md、14_elements.md、15_UX.md、09_DESIGN.md、10_tokens.css
+        ↓ 人工整理
+機器可讀資料：assets/tasks.js、elements.js、story-data.js
+        ↓ Node 工具
+產生與檢查：gen-tables、derive-wires、gen-stories、check-layout-order
+        ↓
+Prototype：HTML／CSS／JS、狀態、故事、AC
+        ↓
+自動驗證：verify-stories、lint-tokens、selftest-stories、check-all、smoke-dom
+        ↓
+瀏覽器人工走查 → validation 證據
+```
+
+要分清楚：正式文件是需求與設計來源；`tasks.js`、`elements.js`、`story-data.js` 是可執行資料；產生檔不能手改；自動檢查不能取代人工走查。完整指令與改動對照見 `06_W06_UX/16_wireframes/00_Prototype整合操作手冊.md`。
+
+### W6 → W7 的交接
+
+交給 `18_spec.md` 的不只是 Prototype 畫面，而是「來源、資料、工具、結果」的完整證據：哪些規則由哪個 JS／JSON（或機器可讀資料）表達、哪些腳本產生或檢查、哪些結果是 PASS／FAIL／N/A，以及人工走查發現的問題。
+
 ### W7：Spec
 
 你要完成：
@@ -286,7 +316,22 @@ CJM 痛點＋角色任務
 - 技術實作名詞不進入業務 Spec
 - 需求、Story、AC、UX 與線框可以互相追溯
 
-進入 SpecKit 前，先確認 `18_spec.md` 不是孤立文件。它要和 User Story／AC、UX、Wireframe／Prototype、Design、tokens、theme 與 validation 證據一起使用；不必把所有內容複製到同一份 spec，但每個引用都必須能開啟、能追溯。
+`18_spec.md` 是本課程系統級的 SDD `spec.md`，不是要再拆成多份獨立 spec。它保留整個服務的脈絡、跨功能關係、需求、UX、Prototype、AC 與 validation 證據；功能區塊與第一個 vertical slice 直接標示在同一份文件、`plan.md` 與 `tasks.md` 中。
+
+SDD 的固定交接是：
+
+```text
+01_market.md～17_UserStory-I_AC.md、Prototype、Design、UX、validation
+        ├→ constitution.md：跨功能、長期有效的原則與治理
+        └→ 18_spec.md（本課程系統級 SDD spec.md）
+             → clarify
+             → research.md → plan.md → tasks.md
+             → AI implement → 測試、程式檢視與人工驗證
+```
+
+`18_spec.md` 的官方模板元素仍然適用：Summary、User Scenarios、Edge Cases、Functional Requirements、Key Entities、Success Criteria、Assumptions；只是本課程將它套用在整合服務，而不是把每個功能各自複製成另一份 spec。
+
+`18_spec.md` 不直接決定 React、API、schema 或資料庫；技術選擇要在 `research.md` 說明來源、替代方案、取捨與風險。
 
 ---
 

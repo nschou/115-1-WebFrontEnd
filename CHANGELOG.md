@@ -1,4 +1,39 @@
 # CHANGELOG
+## 2026-11-13｜SDD 技術教學主線重整
+
+### 變更
+
+- 將第 11–16 週主線改為單一整合服務的 SDD 證據鏈：`01_market.md`～`17_UserStory-I_AC.md`、Prototype、Design、UX、validation → `constitution.md` → `18_spec.md`（本課程系統級 `spec.md`）→ `research.md` → `plan.md` → `tasks.md` → AI implement → 測試與架構驗證；垂直切片留在同一條鏈內。
+- 將資訊架構導讀納入 `research.md`：client/server、HTML／CSS／JavaScript、CSS framework、React、非同步、Zod schema、RESTful／gRPC 與 serverless database。
+- 移除以固定 A／B／C 四輪作業綁架第 11–16 週教學的規劃；研究指標改為嵌入 SDD 交接點，成功或失敗都如實記錄。
+- 修正前一版把 GitHub Spec Kit 的 feature-oriented 預設誤當成課程必要拆分的解讀：`18_spec.md` 同時是服務級總規格與本課程系統級 SDD `spec.md`；不另建立彼此獨立的 feature spec／research／plan，再事後整合。
+- 補強 W6→W7 的 Prototype 教學交接：正式文件 → `tasks.js`／`elements.js`／`story-data.js` → Node 產生工具 → 自動驗證 → 瀏覽器人工走查 → validation 證據。
+- 修正雲端早餐店示範案例的追溯漂移：`story-data.js` 明確記錄 `usBIds`；11 條 US-I 覆蓋 10 條 US-B，US-B-03 由成功／失敗兩條 US-I 分支實作；補上 US-B-10 的菜單／報表 US-I 與 AC-24／AC-25。
+- 同步 W6／W7 週次教材、學生發布版、`18_spec` 範例與 validation 證據；舊的 23 AC／20 REQ 摘要已移除，七個學生工具包重新封裝。
+- 課程網站 `00_CourseSite` 擴充 W11–W16 的 SDD 交接導航，新增 `research.md`、`plan.md`、`tasks.md`、實作驗證與 T1 反思的階段、Prompt、文件連結與進度地圖。
+- TASK-001 明確記錄 RQ-01～RQ-05 的第一階段決策邊界，並同步 `research.md`、`plan.md` 與 `tasks.md` 的交接限制。
+- 課程網站改為交互參照學習網站與示範專案入口：每個節點可查看上游／下游／跨階段關係、教材文件與 Prototype／validation／SDD 快捷入口。
+### 驗證
+
+- `node --check 00_CourseSite/assets/guide-data.js` PASS。
+- 已檢查 `18_spec.md` 的十章、來源／AC／驗證契約，以及 `check-spec.mjs` 的對應定義。
+- 已檢查教師方案、學生入口與課程導航的 SDD 交接順序與第 10／11 週敘述一致；舊的 Phase 1 A／B／C 與 `T0_IA-Framework` 規劃已移除。
+- Prototype 架構圖與 `01_market`→`18_spec` 流程圖的 HTML 檢查 PASS；兩份 Archify candidate 的 showcase validation PASS。
+- 課程網站瀏覽器驗證：25 個階段顯示、W11–W16 導覽可用、43 個文件連結回應 200。
+- 交互參照驗證：25 個節點、29 條關係、17 個示範入口、所有示範檔案存在；瀏覽器實測 User Story-I、Prototype 與驗證報告連結可開啟。
+
+
+## 2026-11-12｜第 10 週 AI 協作分享紀錄修正
+
+### 變更
+
+- 將「每位學生 3 分鐘分享：2 分鐘說明 AI 協作方式、1 分鐘說明 AI 幫不上忙的地方」標記為第 10 週已完成活動。
+- 修正剩餘六週安排：第 11 週改為 `T0_IA-Framework` 無 AI 基線與資訊架構導入，不再重複列入分享。
+
+### 驗證
+
+- 已檢查教師方案與學生入口的週次敘述一致。
+
 ## 2026-11-11｜課程中間回顧、學生思考框架與術語修正
 
 ### 變更
@@ -131,3 +166,112 @@
 - 七份來源版手冊均已寫入並同步至學生發布版。
 - 每週手冊均明確列出正式輸出檔案、下游輸入與交付檢查。
 - `node package-student.mjs` 已成功重建 W1–W7；新版手冊已封裝並同步至七個學生工具包。
+
+---
+
+## 2026-11-14｜第 1–3 步：交付物收斂（18 → 6）
+
+| 步 | 產出 |
+|---|---|
+| 1 | `00_CourseSite/deliverables.html`（完整對照）＋首頁新區塊「你只需要交出 6 份」 |
+| 2 | `06_W06_UX/16_wireframes/prototype/impact.mjs`（改 AC／頁面／元素／任務 → 受影響清單） |
+| 3 | `98_示範案例/雲端早餐店/D_交付物/`（D1–D6）＋`gen-deliverables.mjs`＋案例索引 |
+
+**設計原則**：18 檔是推理順序、6 份是交付清單；D1–D6 由上游**產生**，不手寫第二份真相。
+
+**驗證**：`check-rebuild.mjs` 已把 D1–D6 列為必要產物；四層檢查全綠。
+---
+
+## 2026-11-14｜留痕三項：依據欄、依據檢查、被否決候選
+
+| # | 項目 | 結果 |
+|---|---|---|
+| 1 | `18_spec`（案例＋範例）需求表加 **依據** 欄 | 22 條全部指回 SD-01–11 |
+| 2 | `check-spec.mjs` 新增「②b 需求依據」 | 缺依據或指到不存在的決策 → 紅燈 |
+| 3 | `04_blueprint` 新增「被否決的候選與理由」（R-1～R-5）＋`check-rebuild` 驗證 | 少於 2 條 → FAIL |
+| 4 | `D1_決策書` 產生器一併輸出被否決候選 | D1 現在同時有「採用」與「不採用」 |
+
+**量化**：`18_spec` 的 SD 引用從 **2 次 → 26 次**（理由有了出口）。
+
+**為什麼**：只記「做了什麼」會失憶；要記「為什麼不是另一個」——那是三端（業務／開發／AI）唯一共同需要的深度。
+---
+
+## 2026-11-14｜修復教材閱讀器（Markdown＋Mermaid）
+
+**症狀**：閱讀器停在「正在載入文件…」，不顯示任何內容。
+
+**根因**：`00_CourseSite/assets/reader.js` 的 `extraFiles` 宣告被刪，但 `allowed` 仍引用它 → 載入即 `ReferenceError: extraFiles is not defined`，整個 IIFE 中止。
+
+| 修正 | 內容 |
+|---|---|
+| 補回宣告 | `extraFiles = [學生教材入口、課程中間回顧]`（與 `demoLinks` 併入白名單） |
+| 離線降級 | CDN（marked／DOMPurify）不可用時改顯示原始文字，不再整頁失敗 |
+| file:// 提示 | 用 `file://` 開啟時明確說明 fetch 會被封鎖 |
+| 新增檢查 | `check-site.mjs`：假 DOM 跑 reader 管線（連線／離線兩種）＋站內連結斷鏈檢查 |
+
+**驗證**：`node check-site.mjs` 全部通過；`check-rebuild.mjs` PASS。
+
+---
+
+## 2026-11-15｜check-all.mjs：交件前單一入口
+
+| 項目 | 內容 |
+|---|---|
+| 新增 | 根目錄 `check-all.mjs`，一次跑五項檢查並給結果表 |
+| 包含 | 物件對接、教材結構、教學網站、總規格、原型四層（含負向測試） |
+| 參數 | `--quiet`／`--json`／`--only=<names>`／`--list` |
+| 修正 | 安靜模式以工作區暫存檔擷取輸出（沙箱環境不能開管線） |
+| 實測 | 5 項全綠，約 2–3 秒 |
+
+
+---
+
+## 2026-11-15｜一頁流程圖上線，列為 W1 指定閱讀
+
+| 項目 | 內容 |
+|---|---|
+| 新增 | `00_CourseSite/flow.html`：紙筆 → 畫面 → 契約（三層卡、紙筆五題、兩個極限、資訊釋放、spec 四條件、OOA/OOD 接縫） |
+| 首頁 | hero 加「看一頁流程圖」；新增「先紙筆，再畫面，最後才是契約」面板；footer 加連結 |
+| 導覽 | `deliverables.html`、`reader.html` topbar 加「一頁流程圖」 |
+| W1 | 講義（兩份）新增 §0.1「開課前先看」；操作手冊（兩份）加 5 分鐘提示 |
+| 修正 | `reader.js`：非 .md 的同源連結改為絕對網址（否則以 reader.html 為基準解析會錯） |
+| 檢查 | `check-site.mjs` 納入 `flow.html`（8 連結、3 個閱讀器連結） |
+
+
+---
+
+## 2026-11-16｜用語檢查：數字要有主詞
+
+| 項目 | 內容 |
+|---|---|
+| 新增 | `check-wording.mjs`：①「≤1 秒」沒說誰／看到什麼 → 錯誤 ②隱喻（防塞車、骨牌、打臉…）→ 錯誤 ③術語裸用（冪等、快照、降級…）→ 警告 |
+| 修正 | W2 講義「第一張骨牌」→ 起點／問題；W5「打臉」→ 矛盾；W5 手冊與 06_infoflow README 的「≤1 秒」補主詞 |
+| 整合 | `check-all.mjs` 加入第 6 項「用語」，交件前一次檢查 |
+| 實測 | 195 份文件，0 錯誤 |
+
+
+---
+
+## 2026-11-16｜用語檢查升級為 strict（術語也要展開）
+
+| 項目 | 內容 |
+|---|---|
+| 詞彙 | 16 份文件在開頭加「名詞：降級／冪等／快照／競態…」一句話展開 |
+| 規則 | `check-wording.mjs` 改為「每份檔案第一次出現要展開」，之後可用術語 |
+| 升級 | `check-all.mjs` 的用語檢查改用 `--strict`（警告＝錯誤） |
+| 豁免 | `CHANGELOG.md`（會引用舊說法）、`00_名詞展開`（本身就是定義） |
+| 修正 | 掃描器誤將 Markdown 註記插入 4 個 HTML 檔 → 已移除，並限制只掃 `.md`、跳過點開頭目錄 |
+| 實測 | 157 份 md，0 錯誤、0 警告；6 項檢查全綠 |
+
+
+---
+
+## 2026-11-16｜教材索引改為 data-driven
+
+| 項目 | 內容 |
+|---|---|
+| 新增 | `00_CourseSite/assets/materials-data.mjs`：教材索引唯一來源（11 筆） |
+| 新增 | `gen-materials.mjs`：由資料檔產生 `materials.html` |
+| 檢查 | `check-site` 新增：①索引目標檔存在 ②materials.html 與資料同步（未同步會紅） |
+| 入口 | 首頁、flow、deliverables、reader 的導覽都加「教材索引」 |
+| 流程 | 改資料 → `node gen-materials.mjs` → `node check-all.mjs` |

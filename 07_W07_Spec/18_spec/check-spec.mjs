@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * check-spec.mjs — spec.md 的三項指標檢查
+ * check-spec.mjs — 18_spec.md 服務級總規格的三項指標檢查
  * 用法：node check-spec.mjs [檔案]（預設 18_spec_example.md）
  */
 import fs from "node:fs";
@@ -9,7 +9,9 @@ import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const target = process.argv[2] || "18_spec_example.md";
-const file = path.isAbsolute(target) ? target : path.join(root, target);
+const file = path.isAbsolute(target)
+  ? target
+  : (fs.existsSync(path.resolve(target)) ? path.resolve(target) : path.join(root, target));
 if (!fs.existsSync(file)) { console.log("找不到檔案：" + file); process.exit(1); }
 const md = fs.readFileSync(file, "utf8");
 
@@ -48,6 +50,28 @@ else {
   noAC.forEach(l => console.log("  ✗ 缺驗收：" + l.slice(0, 48) + "…"));
   fails += noSrc.length + noAC.length;
   if (!noSrc.length && !noAC.length) console.log("  ✓ 每條需求都有來源與驗收");
+}
+
+/* ②b 依據：每條需求都要指回一條決策（SD-xx） */
+console.log("\n【②b 需求依據（標準 100%）】");
+const candidates = [
+  path.join(path.dirname(file), "07_decisions.md"),          // 學生專案：與 spec 同層
+  path.join(root, "../../98_示範案例/雲端早餐店/07_decisions.md"), // 課程示範案例
+];
+const decisionsPath = candidates.find((p) => fs.existsSync(p)) || candidates[0];
+const SD = new Set();
+if (fs.existsSync(decisionsPath)) {
+  for (const m of fs.readFileSync(decisionsPath, "utf8").matchAll(/SD-\d{2}/g)) SD.add(m[0]);
+}
+const noBasis = reqLines.filter(l => !/SD-\d{2}/.test(l));
+const badBasis = reqLines.flatMap(l => (l.match(/SD-\d{2}/g) || []).filter(x => !SD.has(x)));
+if (!reqLines.length) console.log("  ✗ 找不到 REQ 清單");
+else {
+  console.log("  需求 " + reqLines.length + " 條｜缺依據 " + noBasis.length + "｜指到不存在的決策 " + badBasis.length);
+  noBasis.forEach(l => console.log("  ✗ 缺依據：" + l.slice(0, 48) + "…"));
+  badBasis.forEach(x => console.log("  ✗ 不存在的決策：" + x));
+  fails += noBasis.length + badBasis.length;
+  if (!noBasis.length && !badBasis.length) console.log("  ✓ 每條需求都指回一條決策");
 }
 
 /* ③ 十章 */

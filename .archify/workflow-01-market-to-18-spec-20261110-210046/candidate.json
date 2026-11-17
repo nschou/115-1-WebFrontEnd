@@ -221,9 +221,9 @@
       "lane": "ux",
       "col": 5,
       "type": "frontend",
-      "label": "16_wireframes",
-      "sublabel": "結構與路徑的線框證據",
-      "tag": "W6",
+      "label": "Prototype",
+      "sublabel": "16_wireframes｜JS＋Node",
+      "tag": "W6｜可執行規格",
       "icon": "frontend",
       "yOffset": 68
     },
@@ -233,7 +233,7 @@
       "col": 5,
       "type": "backend",
       "label": "17_UserStory-I_AC",
-      "sublabel": "介面路徑與可驗收條件",
+      "sublabel": "gen-stories＋驗證",
       "tag": "W6｜validation 後",
       "icon": "success",
       "yOffset": 204
@@ -244,8 +244,8 @@
       "col": 5,
       "type": "external",
       "label": "18_spec",
-      "sublabel": "完整業務需求契約",
-      "tag": "W7｜交給實作與驗收",
+      "sublabel": "服務級總規格／系統級 SDD spec.md",
+      "tag": "W7｜交給 research.md",
       "icon": "external"
     }
   ],
@@ -266,7 +266,7 @@
     { "id": "userstory-b-elements", "from": "userstory_b", "to": "elements", "label": "價值與資訊需求", "variant": "emphasis", "role": "main" },
     { "id": "elements-ux", "from": "elements", "to": "ux", "label": "元素與操作", "variant": "emphasis", "role": "main" },
     { "id": "ux-wireframes", "from": "ux", "to": "wireframes", "label": "結構與狀態", "variant": "emphasis", "role": "main" },
-    { "id": "wireframes-userstory-i-ac", "from": "wireframes", "to": "userstory_i_ac", "label": "走查後寫路徑與 AC", "variant": "emphasis", "role": "main" },
+    { "id": "wireframes-userstory-i-ac", "from": "wireframes", "to": "userstory_i_ac", "label": "工具鏈與走查後寫路徑與 AC", "variant": "emphasis", "role": "main" },
     { "id": "userstory-i-ac-spec", "from": "userstory_i_ac", "to": "spec", "label": "追溯與驗收證據", "variant": "emphasis", "role": "main" },
     { "id": "tokens-ux", "from": "tokens", "to": "ux", "label": "視覺尺度", "variant": "dashed", "role": "branch" }
   ],
@@ -291,8 +291,9 @@
       "dot": "violet",
       "title": "下游契約",
       "items": [
-        "15_UX 與 16_wireframes 形成可走的結構與路徑",
-        "17_UserStory-I_AC 提供路徑與驗收證據，18_spec 只彙整並追溯"
+        "15_UX 與 16_wireframes 形成可走的結構與路徑。",
+        "Prototype 以 JS 資料與 Node 工具產生／檢查：gen-tables、derive-wires、gen-stories、verify-stories、check-all。",
+        "17_UserStory-I_AC 提供路徑與驗收證據；18_spec 是本課程系統級 SDD spec，第 11 週 clarify 後交給 research.md，垂直切片留在同一份 plan/tasks。"
       ]
     }
   ]
