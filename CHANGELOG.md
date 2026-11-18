@@ -1,4 +1,15 @@
 # CHANGELOG
+## 2026-11-18｜GitHub Pages 教學網站部署驗證修正
+
+### 變更
+
+- 修正 Pages workflow 將教學網站學習節點數誤判為 19 個；目前網站包含 00–25 共 26 個節點。
+
+### 驗證
+
+- `node check-site.mjs` PASS。
+- `node check-all.mjs --only=site` PASS。
+
 ## 2026-11-13｜SDD 技術教學主線重整
 
 ### 變更

@@ -37,7 +37,7 @@ jobs:
           vm.runInNewContext(fs.readFileSync('00_CourseSite/assets/guide-data.js', 'utf8'), context);
           const data = context.window.GUIDE_DATA;
           const missing = data.stages.flatMap(stage => stage.docs.filter(file => !fs.existsSync(path.resolve('00_CourseSite', file))));
-          if (data.stages.length !== 19 || missing.length) {
+          if (data.stages.length !== 26 || missing.length) {
             console.error({ stages: data.stages.length, missing });
             process.exit(1);
           }
