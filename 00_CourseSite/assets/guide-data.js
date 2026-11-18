@@ -42,15 +42,15 @@ window.GUIDE_DATA = {
     { from: "13", to: "17", label: "US-B → US-I／AC 追溯" },
     { from: "15", to: "17", label: "UX 狀態 → AC 驗收" },
     { from: "17", to: "18", label: "路徑與 AC → 系統級 Spec" },
-    { from: "18", to: "19", label: "Spec → clarify 與 T0" },
-    { from: "19", to: "20", label: "研究問題 → 架構比較" },
-    { from: "18", to: "20", label: "Spec 約束 → research" },
-    { from: "20", to: "21", label: "研究取捨 → plan" },
-    { from: "18", to: "21", label: "需求契約 → 共同架構" },
-    { from: "21", to: "22", label: "plan → 可驗收工作切片" },
-    { from: "22", to: "23", label: "tasks → implement／verify" },
-    { from: "18", to: "23", label: "AC → 整合驗證" },
-    { from: "23", to: "24", label: "驗證證據 → T1 與反思" }
+    { from: "18", to: "20", label: "Spec → clarify 與 T0" },
+    { from: "20", to: "21", label: "研究問題 → 架構比較" },
+    { from: "18", to: "21", label: "Spec 約束 → research" },
+    { from: "21", to: "22", label: "研究取捨 → plan" },
+    { from: "18", to: "22", label: "需求契約 → 共同架構" },
+    { from: "22", to: "23", label: "plan → 可驗收工作切片" },
+    { from: "23", to: "24", label: "tasks → implement／verify" },
+    { from: "18", to: "24", label: "AC → 整合驗證" },
+    { from: "24", to: "25", label: "驗證證據 → T1 與反思" }
   ],
   demoLinks: {
     "11": [
@@ -589,7 +589,18 @@ UX、Prototype 與 validation：
 輸出：來源盤點 → 矛盾檢查 → 需求與 AC 追溯表 → 完成的 18_spec.md → research questions → 交件前檢查表。`
     },
     {
-      id: "19", week: "W11", title: "SDD clarify 與架構研究啟動", file: "research.md",
+      id: "19", week: "W11", title: "技術與架構", file: "tech.html",
+      question: "全端架構要怎麼講清楚，才能做架構規劃與技術選型？",
+      goal: "用十二講把 Web 全端講清楚：請求生命週期、瀏覽器渲染、樣式策略、前端框架與狀態、型別與結構定義、ORM、serverless 資料庫、REST 契約、身分驗證與授權、即時更新與可觀測性、一致性與冪等（idempotent）、選型方法。",
+      inputs: ["18_spec.md", "research 的問題清單", "十二講教材（講義＋操作手冊）"],
+      outputs: "十二講的可驗收產出：四層圖、介面契約、權限矩陣、一致性規則、選型矩陣與 ADR。",
+      handoff: "帶著「契約、資料模型、選型理由」進入 W12–W16 的 research／plan／tasks；選型理由寫成 ADR。",
+      traps: ["只比功能，不比維運與鎖定", "把系統當成所有問題的解法", "沒有量測就說 1 秒做得到", "把前端當成安全邊界"],
+      docs: ["../90_技術與架構/00_課程地圖.md", "../90_技術與架構/01_全端地圖與請求生命週期/00_講義.md", "../90_技術與架構/01_全端地圖與請求生命週期/00_學生操作手冊.md", "tech.html"],
+      prompt: "請根據我提供的 18_spec.md 與 research 的問題清單，幫我列出架構評估要回答的五個問題：哪一層、什麼限制、可選方案、代價、何時翻案。每個方案都要標明對應的需求與非功能條件；沒有依據的內容標為待確認，不要自行補出數字或供應商。最後輸出一張決策矩陣（準則、權重、評分）與一篇 ADR 草稿。"
+    },
+    {
+      id: "20", week: "W11", title: "SDD clarify 與架構研究啟動", file: "research.md",
       question: "如何從完整證據鏈澄清系統級規格，找出跨功能關係與第一個垂直切片？",
       goal: "以 18_spec.md、Prototype、Design、UX 與 validation 建立 T0，澄清需求意圖、限制、例外、共同資料與架構研究問題。",
       inputs: ["18_spec.md", "Prototype", "Design／UX", "validation"],
@@ -613,7 +624,7 @@ UX、Prototype 與 validation：
 不要直接選定技術；先把研究問題與決策門寫清楚。`
     },
     {
-      id: "20", week: "W12", title: "整體架構研究", file: "research.md",
+      id: "21", week: "W12", title: "整體架構研究", file: "research.md",
       question: "哪些架構選擇能滿足需求、時效、一致性與降級條件？",
       goal: "比較資訊架構與技術方案，說明來源、替代方案、取捨、風險與尚待決定的邊界。",
       inputs: ["18_spec.md", "research questions", "Design／UX／Prototype 約束"],
@@ -637,7 +648,7 @@ UX、Prototype 與 validation：
 不替未決的業務規則做決定；示範限制要和正式生產決策分開。`
     },
     {
-      id: "21", week: "W13", title: "整合方案設計", file: "plan.md",
+      id: "22", week: "W13", title: "整合方案設計", file: "plan.md",
       question: "如何把 spec 與 research 轉成可實作、可驗證的共同架構？",
       goal: "建立元件與資料流邊界、資料模型、命令／回應／事件契約、交易策略、降級與驗證方案。",
       inputs: ["18_spec.md", "research.md", "Design／UX／Prototype 約束"],
@@ -662,7 +673,7 @@ UX、Prototype 與 validation：
 不得為了方便實作而刪除 spec 的 AC 或 N/A 邊界。`
     },
     {
-      id: "22", week: "W14", title: "工作切片與 AI 實作", file: "tasks.md",
+      id: "23", week: "W14", title: "工作切片與 AI 實作", file: "tasks.md",
       question: "如何依 plan 的依賴關係切出可執行、可驗收的工作？",
       goal: "從 plan.md 依序切出契約、資料、狀態、第一個垂直切片、事件同步與驗證工作。",
       inputs: ["plan.md", "18_spec.md", "research.md"],
@@ -686,7 +697,7 @@ UX、Prototype 與 validation：
 不要新增 spec 沒有的需求，也不要把未驗證的 AI 輸出寫成通過。`
     },
     {
-      id: "23", week: "W15", title: "整合與架構驗證", file: "tasks.md → verify",
+      id: "24", week: "W15", title: "整合與架構驗證", file: "tasks.md → verify",
       question: "實作是否符合 spec、plan、tasks 與使用者可觀察驗收？",
       goal: "整合第一個垂直切片，執行契約、狀態、競爭、重連、AC、無障礙與人工走查，留下失敗與修正證據。",
       inputs: ["18_spec.md", "plan.md", "tasks.md", "程式碼", "測試與 Prototype 證據"],
@@ -710,7 +721,7 @@ UX、Prototype 與 validation：
 沒有實際輸出或人工觀察，就標示為未驗證。`
     },
     {
-      id: "24", week: "W16", title: "T1、成果發表與反思", file: "T1 / reflection",
+      id: "25", week: "W16", title: "T1、成果發表與反思", file: "T1 / reflection",
       question: "離開 AI 後，能否解釋架構、定位錯誤並說明取捨？",
       goal: "完成無 AI 後測、成果發表與個人反思，對照 T0／T1、AI 加速與誤導、驗證方法與研究限制。",
       inputs: ["T0 基線", "成品與驗證證據", "18_spec.md", "research.md", "plan.md", "tasks.md"],

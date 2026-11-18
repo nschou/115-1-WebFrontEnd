@@ -1,0 +1,42 @@
+/* 隨堂測驗 */
+.quiz-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 16px; }
+.quiz-card { display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: var(--surface); text-decoration: none; }
+.quiz-card span { color: var(--muted); font-size: 13px; }
+.quiz-form { display: grid; gap: 12px; max-width: 420px; margin: 16px 0; }
+.quiz-form label { display: grid; gap: 4px; font-size: 14px; }
+.quiz-form input { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+.quiz-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; position: sticky; top: 0; background: var(--canvas); padding: 10px 0; }
+.timer { font-variant-numeric: tabular-nums; font-size: 22px; font-weight: 700; }
+.timer.danger { color: #b3261e; }
+.q { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 12px 0; background: var(--surface); }
+.q-text { margin: 0 0 8px; }
+.opt { display: block; padding: 4px 0; cursor: pointer; }
+.q textarea { width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+.quiz-actions { margin: 18px 0 40px; }
+.warn { color: #8a5a00; font-size: 13px; }
+.print-only { display: none; }
+.sheet { font-size: 12pt; line-height: 1.6; }
+.sheet h1 { font-size: 16pt; margin: 0 0 8px; }
+.sheet table.meta { border-collapse: collapse; margin-bottom: 12px; }
+.sheet table.meta td { border: 1px solid #999; padding: 4px 8px; }
+.pq { margin: 10px 0; page-break-inside: avoid; }
+.pq .opts { list-style: none; padding-left: 18px; margin: 4px 0; }
+.pq .opts .picked { font-weight: 700; }
+.pq .ans { border-left: 3px solid #999; padding-left: 8px; min-height: 1.4em; }
+.sheet .foot { margin-top: 16px; font-size: 10pt; color: #444; }
+@media print {
+  .topbar, .no-print, .site-footer { display: none !important; }
+  .doc-shell { padding: 0 !important; max-width: none !important; }
+  .print-only { display: block !important; }
+  .quiz-shell { display: none !important; }
+}
+@media (max-width: 720px) {
+  .quiz-head { position: static; }
+}
+
+/* 測驗：AI 標示 */
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; margin-left: 6px; }
+.ai-ok { background: #e6f4ea; color: #1e6b33; }
+.ai-no { background: #fdecea; color: #a12622; }
+.quiz-head .badge { margin-left: 0; }
+h3 + .quiz-list { margin-top: 10px; }

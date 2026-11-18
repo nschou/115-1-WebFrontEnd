@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="隨堂測驗：15 分鐘、交卷後產生 PDF，上傳 Teams。">
+  <title>隨堂測驗｜服務設計到 Spec</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/quiz.css">
+</head>
+<body>
+  <header class="topbar no-print">
+    <a class="brand" href="index.html" aria-label="回到學習導航">
+      <span class="brand-mark">Q</span>
+      <span><b>隨堂測驗</b><small>15 分鐘</small></span>
+    </a>
+    <div class="top-actions">
+      <a class="ghost" href="tech.html">技術架構</a>
+      <a class="ghost" href="weeks.html">每週流程</a>
+      <a class="ghost" href="materials.html">教材索引</a>
+      <a class="secondary" href="index.html">回學習導航</a>
+    </div>
+  </header>
+
+  <main class="doc-shell">
+    <section class="panel page-doc quiz-shell">
+      <p class="eyebrow">QUIZ</p>
+      <div id="app">載入中…</div>
+      <noscript><p>此頁需要 JavaScript。</p></noscript>
+    </section>
+    <section id="print-root" class="print-only"></section>
+  </main>
+
+  <script src="assets/quiz-data.js"></script>
+  <script src="assets/quiz.js"></script>
+</body>
+</html>

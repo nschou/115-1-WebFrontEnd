@@ -102,7 +102,7 @@ console.log("\n【教材索引】");
 
 /* ---------- ② 站內連結 ---------- */
 console.log("\n【站內連結】");
-for (const page of ["index.html", "reader.html", "deliverables.html", "flow.html", "materials.html"]) {
+for (const page of ["index.html", "reader.html", "deliverables.html", "flow.html", "materials.html", "case.html", "tech.html", "quiz.html", "weeks.html"]) {
   const p = path.join(site, page);
   if (!fs.existsSync(p)) { bad("缺頁面：" + page); continue; }
   const html = fs.readFileSync(p, "utf8");

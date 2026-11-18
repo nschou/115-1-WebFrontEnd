@@ -101,11 +101,20 @@
   }
 
   function infoBlock(title, body) { return '<div class="info-block"><h3>' + esc(title) + '</h3>' + body + '</div>'; }
+  function applyView() {
+    var home = currentId() === "00";
+    var nodes = document.querySelectorAll(".home-only");
+    for (var i = 0; i < nodes.length; i++) {
+      if (home) nodes[i].removeAttribute("hidden");
+      else nodes[i].setAttribute("hidden", "");
+    }
+  }
   function renderAll() {
     renderNav(document.getElementById("search").value);
     renderProgress();
     renderMap();
     renderStage();
+    applyView();
   }
 
   document.getElementById("search").addEventListener("input", function () { renderNav(this.value); });

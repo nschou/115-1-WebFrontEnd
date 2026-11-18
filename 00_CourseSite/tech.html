@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="技術與架構：W11–W16 十二講。">
+  <title>技術與架構｜服務設計到 Spec</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="回到學習導航">
+      <span class="brand-mark">12</span>
+      <span><b>技術與架構</b><small>W11–W16</small></span>
+    </a>
+    <div class="top-actions">
+      <a class="ghost" href="case.html">案例走讀</a>
+      <a class="ghost" href="quiz.html">隨堂測驗</a>
+      <a class="ghost" href="materials.html">教材索引</a>
+      <a class="secondary" href="index.html">回學習導航</a>
+    </div>
+  </header>
+
+  <main class="doc-shell">
+    <section class="panel page-doc">
+      <p class="eyebrow">TECH & ARCHITECTURE</p>
+      <h1>技術與架構：十二講</h1>
+      <p class="lead">以 Web 前端為主，但把全端講清楚。<b>每講一個可驗收產出</b>，練習一律回到示範案例；作業與期末專案仍用你自己的版本。</p>
+      <p><a class="primary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F00_%E8%AA%B2%E7%A8%8B%E5%9C%B0%E5%9C%96.md">課程地圖與主題檢視</a></p>
+      <table class="map-table">
+        <tr><th>週</th><th>講</th><th>主題</th><th>教材</th></tr>
+        <tr>
+          <td>W11</td>
+          <td>1</td>
+          <td><b>全端地圖與一次請求的生命週期</b><br><span class="muted">產出：四層圖＋三個卡點</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F01_%E5%85%A8%E7%AB%AF%E5%9C%B0%E5%9C%96%E8%88%87%E8%AB%8B%E6%B1%82%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F01_%E5%85%A8%E7%AB%AF%E5%9C%B0%E5%9C%96%E8%88%87%E8%AB%8B%E6%B1%82%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W11</td>
+          <td>2</td>
+          <td><b>瀏覽器：HTML／CSS／JS 與渲染路徑</b><br><span class="muted">產出：指出哪一步會卡住</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F02_%E7%80%8F%E8%A6%BD%E5%99%A8%E8%88%87%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%91%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F02_%E7%80%8F%E8%A6%BD%E5%99%A8%E8%88%87%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%91%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W12</td>
+          <td>3</td>
+          <td><b>樣式策略：工具優先／元件庫／設計系統</b><br><span class="muted">產出：三條路各寫優缺點</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F03_%E6%A8%A3%E5%BC%8F%E7%AD%96%E7%95%A5%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F03_%E6%A8%A3%E5%BC%8F%E7%AD%96%E7%95%A5%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W12</td>
+          <td>4</td>
+          <td><b>React＋渲染模式＋伺服器端／用戶端狀態</b><br><span class="muted">產出：為一頁選模式並畫資料流</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F04_React%E8%88%87%E7%8B%80%E6%85%8B%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F04_React%E8%88%87%E7%8B%80%E6%85%8B%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W13</td>
+          <td>5</td>
+          <td><b>TypeScript＋Zod：結構定義當唯一事實</b><br><span class="muted">產出：由 schema 產型別與驗證</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F05_TypeScript%E8%88%87Zod%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F05_TypeScript%E8%88%87Zod%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W13</td>
+          <td>6</td>
+          <td><b>資料模型與 ORM（Prisma／Drizzle）</b><br><span class="muted">產出：同一模型寫兩次</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F06_%E8%B3%87%E6%96%99%E6%A8%A1%E5%9E%8B%E8%88%87ORM%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F06_%E8%B3%87%E6%96%99%E6%A8%A1%E5%9E%8B%E8%88%87ORM%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W14</td>
+          <td>7</td>
+          <td><b>資料庫與 serverless（連線池、遷移）</b><br><span class="muted">產出：上線前五個風險</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F07_%E8%B3%87%E6%96%99%E5%BA%AB%E8%88%87serverless%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F07_%E8%B3%87%E6%96%99%E5%BA%AB%E8%88%87serverless%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W14</td>
+          <td>8</td>
+          <td><b>REST 契約（contract）與錯誤處理</b><br><span class="muted">產出：一份 API 契約</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F08_REST%E5%A5%91%E7%B4%84%E8%88%87%E9%8C%AF%E8%AA%A4%E8%99%95%E7%90%86%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F08_REST%E5%A5%91%E7%B4%84%E8%88%87%E9%8C%AF%E8%AA%A4%E8%99%95%E7%90%86%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W15</td>
+          <td>9</td>
+          <td><b>身分驗證（authentication）與授權（authorization）</b><br><span class="muted">產出：權限矩陣＋三條禁用規則</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F09_%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89%E8%88%87%E6%8E%88%E6%AC%8A%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F09_%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89%E8%88%87%E6%8E%88%E6%AC%8A%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W15</td>
+          <td>10</td>
+          <td><b>即時更新（SSE／WebSocket／輪詢）與可觀測性</b><br><span class="muted">產出：為 1 秒需求選一個並寫事件紀錄</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F10_%E5%8D%B3%E6%99%82%E6%9B%B4%E6%96%B0%E8%88%87%E5%8F%AF%E8%A7%80%E6%B8%AC%E6%80%A7%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F10_%E5%8D%B3%E6%99%82%E6%9B%B4%E6%96%B0%E8%88%87%E5%8F%AF%E8%A7%80%E6%B8%AC%E6%80%A7%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W16</td>
+          <td>11</td>
+          <td><b>一致性、冪等（idempotent）、競態條件（race condition）</b><br><span class="muted">產出：付款與號碼各一條規則</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F11_%E4%B8%80%E8%87%B4%E6%80%A7%E5%86%AA%E7%AD%89%E8%88%87%E7%AB%B6%E6%85%8B%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F11_%E4%B8%80%E8%87%B4%E6%80%A7%E5%86%AA%E7%AD%89%E8%88%87%E7%AB%B6%E6%85%8B%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+        <tr>
+          <td>W16</td>
+          <td>12</td>
+          <td><b>選型方法：決策矩陣（decision matrix）與 ADR</b><br><span class="muted">產出：用案例五個決策評分</span></td>
+          <td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F12_%E9%81%B8%E5%9E%8B%E6%96%B9%E6%B3%95%2F00_%E8%AC%9B%E7%BE%A9.md">講義</a>
+       <a class="ghost" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F12_%E9%81%B8%E5%9E%8B%E6%96%B9%E6%B3%95%2F00_%E5%AD%B8%E7%94%9F%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A.md">手冊</a></td>
+        </tr>
+      </table>
+      <p class="note-line">尚未產出的講次會標示「尚未產出」；產出後重新執行 <code>node gen-tech.mjs</code> 即可更新。</p>
+    </section>
+
+    <section class="panel page-doc">
+      <h2>實驗與量測（教學研究）</h2>
+      <p class="lead">上課與量測的完整設計：六週教案、交叉任務、前後測、段考、作業模板、表單與同意書。</p>
+      <p><a class="primary" href="weeks.html">看每週流程</a> <a class="secondary" href="quiz.html">開始線上測驗</a>（15 分鐘，交卷後產生 PDF）</p>
+      <table class="map-table">
+        <tr><th>項目</th><th>說明</th><th>連結</th></tr>
+        <tr><td><b>六週教案（W11–W16）</b></td><td class="muted">每週 3 小時、兩個技術主題、量測點</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F00_%E5%85%AD%E9%80%B1%E6%95%99%E6%A1%88.md">線上觀看</a></td></tr>
+        <tr><td><b>crossover 任務設計</b></td><td class="muted">同構任務、分組交換、rubric</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F01_crossover%E4%BB%BB%E5%8B%99%E8%A8%AD%E8%A8%88.md">線上觀看</a></td></tr>
+        <tr><td><b>前測／後測題本</b></td><td class="muted">題本 A／B、rubric、施測說明</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F02_%E5%89%8D%E5%BE%8C%E6%B8%AC%E9%A1%8C%E6%9C%AC.md">線上觀看</a></td></tr>
+        <tr><td><b>段考題本（無 AI＋AI 擴展）</b></td><td class="muted">兩階段 60＋60、gap 算法</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F03_%E6%AE%B5%E8%80%83%E9%A1%8C%E6%9C%AC.md">線上觀看</a></td></tr>
+        <tr><td><b>三段式作業模板（A／B／C）</b></td><td class="muted">手寫核心／指揮 AI／驗證報告</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F04_%E4%BD%9C%E6%A5%AD%E6%A8%A1%E6%9D%BF_ABC.md">線上觀看</a></td></tr>
+        <tr><td><b>作業單 R1：訂單狀態頁</b></td><td class="muted">A 無 AI、B 有 AI、C 驗證報告</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F04a_%E4%BD%9C%E6%A5%AD%E5%96%AE_R1.md">線上觀看</a></td></tr>
+        <tr><td><b>作業單 R2：介面契約</b></td><td class="muted">A 無 AI、B 有 AI、C 驗證報告</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F04b_%E4%BD%9C%E6%A5%AD%E5%96%AE_R2.md">線上觀看</a></td></tr>
+        <tr><td><b>作業單 R3：一致性與權限</b></td><td class="muted">A 無 AI、B 有 AI、C 驗證報告（整合）</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F04c_%E4%BD%9C%E6%A5%AD%E5%96%AE_R3.md">線上觀看</a></td></tr>
+        <tr><td><b>量測表單</b></td><td class="muted">ARCS、觀察表、埋錯 10 題、prompt 分類、token CSV</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F05_%E9%87%8F%E6%B8%AC%E8%A1%A8%E5%96%AE.md">線上觀看</a></td></tr>
+        <tr><td><b>知情同意書</b></td><td class="muted">研究目的、資料處理、退出權利</td><td><a class="secondary" href="reader.html?file=..%2F90_%E6%8A%80%E8%A1%93%E8%88%87%E6%9E%B6%E6%A7%8B%2F%E5%AF%A6%E9%A9%97%E8%88%87%E9%87%8F%E6%B8%AC%2F06_%E7%9F%A5%E6%83%85%E5%90%8C%E6%84%8F%E6%9B%B8.md">線上觀看</a></td></tr>
+      </table>
+    </section>
+    <footer class="site-footer">
+      <span>本頁由 <code>gen-tech.mjs</code> 產生，請勿手改。</span>
+      <a href="index.html">← 回學習導航</a>
+    </footer>
+  </main>
+</body>
+</html>

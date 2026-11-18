@@ -32,4 +32,17 @@ export const MATERIALS = [
   { audience: "ref", type: "方法", group: "方法", title: "工程推進紀錄（七個案例）", desc: "症狀 → 誤判 → 證據 → 修法 → 防護", href: "../98_示範案例/雲端早餐店/00_工程推進紀錄_問題發現與解決.md", kind: "doc" },
   { audience: "ref", type: "方法", group: "方法", title: "名詞展開（30+ 條）", desc: "四端／六態／冪等／降級／單一狀態來源…一句話展開", href: "../98_示範案例/雲端早餐店/00_名詞展開_過度濃縮用語.md", kind: "doc" }
   ,{ audience: "learn", type: "工具", group: "工具", title: "工具與檢查腳本（下載與執行）", desc: "三個 .mjs 放 tools/、在哪個目錄跑、參數與常見錯誤", href: "../tools/README.md", kind: "doc" }
+  ,{ audience: "ref", type: "導覽", group: "導覽", title: "示範案例走讀（01 → 18）", desc: "照順序看一次案例：每份回答什麼、下一份接什麼", href: "case.html", kind: "page" }
+  ,{ audience: "teach", type: "講義", group: "技術與架構", title: "技術與架構：課程地圖（W11–W16）", desc: "八項主題檢視、P0/P1、十二講、台灣用語對照", href: "../90_技術與架構/00_課程地圖.md", kind: "doc" }
+  ,{ audience: "teach", type: "講義", group: "技術與架構", title: "第 1 講講義：全端地圖與請求生命週期", desc: "四層、八步、狀態碼、HTTPS/CORS、快取、拆解 1 秒", href: "../90_技術與架構/01_全端地圖與請求生命週期/00_講義.md", kind: "doc" }
+  ,{ audience: "learn", type: "操作手冊", group: "技術與架構", title: "第 1 講手冊：全端地圖與請求生命週期", desc: "六個步驟，每步有「這樣算完成」", href: "../90_技術與架構/01_全端地圖與請求生命週期/00_學生操作手冊.md", kind: "doc" }
+  ,{ audience: "ref", type: "導覽", group: "導覽", title: "技術與架構（十二講）", desc: "W11–W16 十二講的主題與教材入口", href: "tech.html", kind: "page" }
+  ,{ audience: "teach", type: "教案", group: "技術與架構", title: "六週教案：技術與架構＋教學實驗", desc: "W11–W16 流程、crossover 規則、量測點", href: "../90_技術與架構/實驗與量測/00_六週教案.md", kind: "doc" }
+  ,{ audience: "learn", type: "作業", group: "技術與架構", title: "三段式作業模板（A／B／C）", desc: "手寫核心 40／指揮 AI 30／驗證報告 30", href: "../90_技術與架構/實驗與量測/04_作業模板_ABC.md", kind: "doc" }
+  ,{ audience: "ref", type: "導覽", group: "技術與架構", title: "實驗與量測（研究設計）", desc: "前後測、段考、crossover、量測表單、同意書", href: "tech.html", kind: "page" }
+  ,{ audience: "learn", type: "測驗", group: "技術與架構", title: "線上隨堂測驗（8 份）", desc: "每份 15 分鐘；交卷後產生 PDF，上傳 Teams", href: "quiz.html", kind: "page" }
+  ,{ audience: "learn", type: "作業", group: "技術與架構", title: "作業單 R1：訂單狀態頁", desc: "A 無 AI／B 有 AI／C 驗證報告", href: "../90_技術與架構/實驗與量測/04a_作業單_R1.md", kind: "doc" }
+  ,{ audience: "learn", type: "作業", group: "技術與架構", title: "作業單 R2：介面契約", desc: "A 無 AI／B 有 AI／C 驗證報告", href: "../90_技術與架構/實驗與量測/04b_作業單_R2.md", kind: "doc" }
+  ,{ audience: "learn", type: "作業", group: "技術與架構", title: "作業單 R3：一致性與權限", desc: "整合驗收與反思", href: "../90_技術與架構/實驗與量測/04c_作業單_R3.md", kind: "doc" }
+  ,{ audience: "learn", type: "導覽", group: "技術與架構", title: "每週流程（W11–W16）", desc: "前測→教學→後測→作業，全部在同一頁", href: "weeks.html", kind: "page" }
 ];

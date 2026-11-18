@@ -102,7 +102,7 @@ for (const c of selected) {
   let captured = "";
   if (quiet || asJson) {
     // 沙箱與部分環境不能開管線擷取子程序輸出，改用工作區暫存檔
-    const logPath = path.join(ROOT, ".check-all.tmp.log");
+    const logPath = path.join(ROOT, ".check-all." + process.pid + ".log");
     const fd = fs.openSync(logPath, "w");
     const r = spawnSync(process.execPath, [abs, ...(c.args || [])], { cwd: c.cwd, stdio: ["ignore", fd, fd], encoding: "utf8", env: process.env });
     fs.closeSync(fd);
