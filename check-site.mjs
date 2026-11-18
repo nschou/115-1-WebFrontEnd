@@ -100,6 +100,34 @@ console.log("\n【教材索引】");
   else ok("materials.html 與資料檔同步");
 }
 
+/* ---------- ⑤b 階段課堂連結 ---------- */
+console.log("\n【階段課堂連結】");
+{
+  const gd = fs.readFileSync(path.join(site, "assets", "guide-data.js"), "utf8");
+  const win = {};
+  new Function("window", gd)(win);
+  const qd = fs.readFileSync(path.join(site, "assets", "quiz-data.js"), "utf8");
+  const win2 = {};
+  new Function("window", qd)(win2);
+  const setIds = new Set((win2.QUIZ_DATA.sets || []).map((s) => s.id));
+  const sess = win.GUIDE_SESSION || {};
+  const problems = [];
+  Object.keys(sess).forEach((id) => {
+    const c = sess[id];
+    [c.pre, c.post].filter(Boolean).forEach((u) => {
+      const m = /^quiz\.html\?set=([^&]+)/.exec(u);
+      if (!m) problems.push(id + " 測驗連結格式錯：" + u);
+      else if (!setIds.has(m[1])) problems.push(id + " 測驗不存在：" + m[1]);
+    });
+    (c.links || []).forEach((l) => {
+      if (!fs.existsSync(path.join(site, decodeURIComponent(l.href.split("?")[0])))) problems.push(id + " 連結失效：" + l.href);
+    });
+    if (c.homework && !fs.existsSync(path.join(site, decodeURIComponent(c.homework)))) problems.push(id + " 作業單失效：" + c.homework);
+  });
+  if (problems.length) problems.forEach((x) => bad(x));
+  else ok("階段課堂連結 " + Object.keys(sess).length + " 個階段全部有效");
+}
+
 /* ---------- ② 站內連結 ---------- */
 console.log("\n【站內連結】");
 for (const page of ["index.html", "reader.html", "deliverables.html", "flow.html", "materials.html", "case.html", "tech.html", "quiz.html", "weeks.html"]) {

@@ -236,3 +236,9 @@ h2 { margin: 5px 0 12px; font-size: clamp(24px, 4vw, 42px); line-height: 1.2; le
   .flow-arrow { transform: rotate(90deg); padding: 4px 0; }
   .flow-limits { grid-template-columns: 1fr; }
 }
+
+/* 本堂課（階段頁） */
+.session-list { display: grid; gap: 6px; }
+.session-row { display: flex; gap: 8px; align-items: baseline; }
+.sess-tag { flex: 0 0 44px; font-size: 12px; color: var(--muted); }
+.sess-primary { font-weight: 700; }

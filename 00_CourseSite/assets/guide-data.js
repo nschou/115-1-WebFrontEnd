@@ -747,3 +747,78 @@ UX、Prototype 與 validation：
 window.GUIDE_DATA.stages.forEach(function (stage) {
   stage.prompt = stage.prompt.replace("{{共用規則}}", window.GUIDE_DATA.sharedPrompt);
 });
+
+window.GUIDE_SESSION = {
+  "19": {
+    pre: "quiz.html?set=T0", post: "quiz.html?set=W11post",
+    links: [
+      { label: "講義 1", href: "../90_技術與架構/01_全端地圖與請求生命週期/00_講義.md" },
+      { label: "手冊 1", href: "../90_技術與架構/01_全端地圖與請求生命週期/00_學生操作手冊.md" },
+      { label: "講義 2", href: "../90_技術與架構/02_瀏覽器與渲染路徑/00_講義.md" },
+      { label: "手冊 2", href: "../90_技術與架構/02_瀏覽器與渲染路徑/00_學生操作手冊.md" },
+      { label: "每週流程", href: "weeks.html" }
+    ],
+    homework: "../90_技術與架構/實驗與量測/04a_作業單_R1.md"
+  },
+  "20": {
+    pre: "quiz.html?set=T0", post: "quiz.html?set=W11post",
+    links: [ { label: "每週流程", href: "weeks.html" } ],
+    homework: "../90_技術與架構/實驗與量測/04a_作業單_R1.md"
+  },
+  "21": {
+    pre: "quiz.html?set=W12pre", post: "quiz.html?set=W12post",
+    links: [
+      { label: "講義 3", href: "../90_技術與架構/03_樣式策略/00_講義.md" },
+      { label: "手冊 3", href: "../90_技術與架構/03_樣式策略/00_學生操作手冊.md" },
+      { label: "講義 4", href: "../90_技術與架構/04_React與狀態/00_講義.md" },
+      { label: "手冊 4", href: "../90_技術與架構/04_React與狀態/00_學生操作手冊.md" },
+      { label: "每週流程", href: "weeks.html" }
+    ],
+    homework: "../90_技術與架構/實驗與量測/04a_作業單_R1.md"
+  },
+  "22": {
+    pre: "quiz.html?set=W13pre", post: "quiz.html?set=W13post",
+    links: [
+      { label: "講義 5", href: "../90_技術與架構/05_TypeScript與Zod/00_講義.md" },
+      { label: "手冊 5", href: "../90_技術與架構/05_TypeScript與Zod/00_學生操作手冊.md" },
+      { label: "講義 6", href: "../90_技術與架構/06_資料模型與ORM/00_講義.md" },
+      { label: "手冊 6", href: "../90_技術與架構/06_資料模型與ORM/00_學生操作手冊.md" },
+      { label: "每週流程", href: "weeks.html" }
+    ],
+    homework: "../90_技術與架構/實驗與量測/04a_作業單_R1.md"
+  },
+  "23": {
+    pre: "quiz.html?set=W14pre", post: "quiz.html?set=W14post",
+    links: [
+      { label: "講義 7", href: "../90_技術與架構/07_資料庫與serverless/00_講義.md" },
+      { label: "手冊 7", href: "../90_技術與架構/07_資料庫與serverless/00_學生操作手冊.md" },
+      { label: "講義 8", href: "../90_技術與架構/08_REST契約與錯誤處理/00_講義.md" },
+      { label: "手冊 8", href: "../90_技術與架構/08_REST契約與錯誤處理/00_學生操作手冊.md" },
+      { label: "每週流程", href: "weeks.html" }
+    ],
+    homework: "../90_技術與架構/實驗與量測/04b_作業單_R2.md"
+  },
+  "24": {
+    pre: "quiz.html?set=W15pre", post: "quiz.html?set=W15post",
+    links: [
+      { label: "講義 9", href: "../90_技術與架構/09_身分驗證與授權/00_講義.md" },
+      { label: "手冊 9", href: "../90_技術與架構/09_身分驗證與授權/00_學生操作手冊.md" },
+      { label: "講義 10", href: "../90_技術與架構/10_即時更新與可觀測性/00_講義.md" },
+      { label: "手冊 10", href: "../90_技術與架構/10_即時更新與可觀測性/00_學生操作手冊.md" },
+      { label: "每週流程", href: "weeks.html" }
+    ],
+    homework: "../90_技術與架構/實驗與量測/04b_作業單_R2.md"
+  },
+  "25": {
+    pre: "quiz.html?set=W16pre", post: "quiz.html?set=W16post",
+    links: [
+      { label: "講義 11", href: "../90_技術與架構/11_一致性冪等與競態/00_講義.md" },
+      { label: "手冊 11", href: "../90_技術與架構/11_一致性冪等與競態/00_學生操作手冊.md" },
+      { label: "講義 12", href: "../90_技術與架構/12_選型方法/00_講義.md" },
+      { label: "手冊 12", href: "../90_技術與架構/12_選型方法/00_學生操作手冊.md" },
+      { label: "全範圍後測（無 AI）", href: "quiz.html?set=T3" },
+      { label: "每週流程", href: "weeks.html" }
+    ],
+    homework: "../90_技術與架構/實驗與量測/04c_作業單_R3.md"
+  }
+};

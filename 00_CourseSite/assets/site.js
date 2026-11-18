@@ -69,6 +69,7 @@
           infoBlock("完成後產出", '<p>' + esc(s.outputs) + '</p>') +
           infoBlock("交給下一階段", '<p>' + esc(s.handoff) + '</p>') +
           infoBlock("學生常見卡關", '<ul>' + s.traps.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul>') +
+          renderSession(s) +
           '<div class="info-block"><h3>文件與工具</h3><div class="doc-links">' + s.docs.map(function (x) { return '<a class="doc-link" href="' + esc(docHref(x)) + '" target="_blank" rel="noopener">閱讀 ' + esc(x.split("/").pop()) + ' ↗</a>'; }).join("") + '</div></div>' +
         '</div>' +
         '<div class="prompt-box"><div class="prompt-top"><b>AI 參考 Prompt</b><button class="copy-btn" id="copy-prompt" type="button">複製 Prompt</button></div><pre id="prompt-text">' + esc(s.prompt) + '</pre><p class="prompt-note">複製後，請把 {{...}} 替換成自己的資料；先附上上游文件，再要求 AI 產生草稿。AI 的輸出必須人工檢查，不能直接當成正式文件。</p></div>' +
@@ -100,6 +101,31 @@
     });
   }
 
+  var WEEK_DOCS = {
+    W1: ["01_W01_課程總覽", "W01"], W2: ["02_W02_市場與Persona", "W02"], W3: ["03_W03_CJM", "W03"],
+    W4: ["04_W04_Blueprint", "W04"], W5: ["05_W05_物件決策與Design", "W05"], W6: ["06_W06_UX", "W06"],
+    W7: ["07_W07_Spec", "W07"]
+  };
+  function renderSession(s) {
+    var cfg = (window.GUIDE_SESSION || {})[s.id];
+    if (!cfg) {
+      var wd = WEEK_DOCS[s.week];
+      if (!wd) return "";
+      var dir = wd[0], wk = wd[1];
+      return infoBlock("本堂課（本週教材）", '<div class="session-list">' +
+        '<div class="session-row"><span class="sess-tag">講義</span><a class="doc-link" href="' + esc(docHref("../" + dir + "/00_" + wk + "_上課講義.md")) + '" target="_blank" rel="noopener">本週講義 ↗</a></div>' +
+        '<div class="session-row"><span class="sess-tag">手冊</span><a class="doc-link" href="' + esc(docHref("../" + dir + "/00_" + wk + "_學生操作手冊.md")) + '" target="_blank" rel="noopener">本週操作手冊 ↗</a></div>' +
+        '</div>');
+    }
+    var rows = [];
+    if (cfg.pre) rows.push('<div class="session-row"><span class="sess-tag">前測</span><a class="doc-link sess-primary" href="' + esc(cfg.pre) + '">開始前測（不可使用 AI）</a></div>');
+    (cfg.links || []).forEach(function (l) {
+      rows.push('<div class="session-row"><span class="sess-tag">教材</span><a class="doc-link" href="' + esc(docHref(l.href)) + '" target="_blank" rel="noopener">' + esc(l.label) + ' ↗</a></div>');
+    });
+    if (cfg.post) rows.push('<div class="session-row"><span class="sess-tag">後測</span><a class="doc-link sess-primary" href="' + esc(cfg.post) + '">開始後測（可使用 AI）</a></div>');
+    if (cfg.homework) rows.push('<div class="session-row"><span class="sess-tag">作業</span><a class="doc-link" href="' + esc(docHref(cfg.homework)) + '" target="_blank" rel="noopener">本週作業單 ↗</a></div>');
+    return infoBlock("本堂課（依序完成）", '<div class="session-list">' + rows.join("") + '</div>');
+  }
   function infoBlock(title, body) { return '<div class="info-block"><h3>' + esc(title) + '</h3>' + body + '</div>'; }
   function applyView() {
     var home = currentId() === "00";
