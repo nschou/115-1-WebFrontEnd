@@ -118,6 +118,37 @@
         '</div>');
     }
     var rows = [];
+    if (cfg.units && cfg.units.length) {
+      var ut = '<table class="session-table"><tr><th>單元</th><th>講次（講義／手冊）</th><th>前測</th><th>後測</th><th>作業</th></tr>';
+      cfg.units.forEach(function (u) {
+        var lec = u.lectures.map(function (l) {
+          var base = "../90_技術與架構/" + l.folder + "/";
+          return "講 " + l.no + " <a class=\"doc-link\" href=\"" + esc(docHref(base + "00_講義.md")) + "\" target=\"_blank\" rel=\"noopener\">講義</a> / <a class=\"doc-link\" href=\"" + esc(docHref(base + "00_學生操作手冊.md")) + "\" target=\"_blank\" rel=\"noopener\">手冊</a>";
+        }).join("<br>");
+        ut += '<tr><td>U' + u.no + '<br><span class="muted">' + esc(u.title) + '</span></td><td>' + lec + '</td>' +
+          '<td><a class="doc-link sess-primary" href="' + esc(u.pre) + '">前測</a></td>' +
+          '<td><a class="doc-link sess-primary" href="' + esc(u.post) + '">後測</a></td>' +
+          '<td><a class="doc-link" href="' + esc(docHref(u.homework)) + '" target="_blank" rel="noopener">作業單 ↗</a></td></tr>';
+      });
+      ut += '</table>';
+      if (cfg.extra && cfg.extra.length) {
+        ut += '<div class="session-list">' + cfg.extra.map(function (e) {
+          return '<div class="session-row"><span class="sess-tag">連結</span><a class="doc-link" href="' + esc(e.href) + '">' + esc(e.label) + '</a></div>';
+        }).join("") + '</div>';
+      }
+      return infoBlock("6 個單元（每 2 講：前測 → 教學 → 後測 → 作業）", '<div class="session-lectures">' + ut + '</div>');
+    }
+    if (cfg.lectures && cfg.lectures.length) {
+      var table = '<table class="session-table"><tr><th>講</th><th>講義</th><th>手冊</th></tr>';
+      cfg.lectures.forEach(function (lec) {
+        var base = "../90_技術與架構/" + lec.folder + "/";
+        table += '<tr><td>' + lec.no + '</td>' +
+          '<td><a class="doc-link" href="' + esc(docHref(base + "00_講義.md")) + '" target="_blank" rel="noopener">講義 ' + lec.no + ' ↗</a></td>' +
+          '<td><a class="doc-link" href="' + esc(docHref(base + "00_學生操作手冊.md")) + '" target="_blank" rel="noopener">手冊 ' + lec.no + ' ↗</a></td></tr>';
+      });
+      table += '</table>';
+      rows.push('<div class="session-lectures">' + table + '</div>');
+    }
     if (cfg.pre) rows.push('<div class="session-row"><span class="sess-tag">前測</span><a class="doc-link sess-primary" href="' + esc(cfg.pre) + '">開始前測（不可使用 AI）</a></div>');
     (cfg.links || []).forEach(function (l) {
       rows.push('<div class="session-row"><span class="sess-tag">教材</span><a class="doc-link" href="' + esc(docHref(l.href)) + '" target="_blank" rel="noopener">' + esc(l.label) + ' ↗</a></div>');

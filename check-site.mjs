@@ -123,6 +123,26 @@ console.log("\n【階段課堂連結】");
       if (!fs.existsSync(path.join(site, decodeURIComponent(l.href.split("?")[0])))) problems.push(id + " 連結失效：" + l.href);
     });
     if (c.homework && !fs.existsSync(path.join(site, decodeURIComponent(c.homework)))) problems.push(id + " 作業單失效：" + c.homework);
+    (c.units || []).forEach((u) => {
+      [u.pre, u.post].filter(Boolean).forEach((x) => {
+        const m = /^quiz\.html\?set=([^&]+)/.exec(x);
+        if (!m) problems.push(id + " 單元測驗格式錯：" + x);
+        else if (!setIds.has(m[1])) problems.push(id + " 單元測驗不存在：" + m[1]);
+      });
+      (u.lectures || []).forEach((lec) => {
+        ["00_講義.md", "00_學生操作手冊.md"].forEach((f) => {
+          const rel = "../90_技術與架構/" + lec.folder + "/" + f;
+          if (!fs.existsSync(path.join(site, decodeURIComponent(rel)))) problems.push(id + " 單元講次失效：" + rel);
+        });
+      });
+      if (u.homework && !fs.existsSync(path.join(site, decodeURIComponent(u.homework)))) problems.push(id + " 單元作業失效：" + u.homework);
+    });
+    (c.lectures || []).forEach((lec) => {
+      ["00_講義.md", "00_學生操作手冊.md"].forEach((f) => {
+        const rel = "../90_技術與架構/" + lec.folder + "/" + f;
+        if (!fs.existsSync(path.join(site, decodeURIComponent(rel)))) problems.push(id + " 講次檔案失效：" + rel);
+      });
+    });
   });
   if (problems.length) problems.forEach((x) => bad(x));
   else ok("階段課堂連結 " + Object.keys(sess).length + " 個階段全部有效");

@@ -242,3 +242,9 @@ h2 { margin: 5px 0 12px; font-size: clamp(24px, 4vw, 42px); line-height: 1.2; le
 .session-row { display: flex; gap: 8px; align-items: baseline; }
 .sess-tag { flex: 0 0 44px; font-size: 12px; color: var(--muted); }
 .sess-primary { font-weight: 700; }
+
+/* 12 講表格（階段 19） */
+.session-table { width: 100%; border-collapse: collapse; margin: 4px 0 10px; font-size: 13px; }
+.session-table th, .session-table td { border-bottom: 1px solid var(--line); padding: 6px 4px; text-align: left; }
+.session-table th { color: var(--muted); font-weight: 500; }
+.session-lectures { max-height: 320px; overflow: auto; }

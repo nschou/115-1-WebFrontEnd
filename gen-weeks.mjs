@@ -15,22 +15,22 @@ const MEAS = TECH + "實驗與量測/";
 const WEEKS = [
   { id: "W11", pre: "T0", preTitle: "前測（全範圍基線）", post: "W11post",
     l1: ["1", "01_全端地圖與請求生命週期"], l2: ["2", "02_瀏覽器與渲染路徑"],
-    hw: MEAS + "04a_作業單_R1.md", note: "本週：知情同意、ARCS 前測、T0 基線" },
+    hw: MEAS + "04a_作業單_R1.md", note: "H1：訂單狀態頁；知情同意、ARCS 前測、T0 基線" },
   { id: "W12", pre: "W12pre", post: "W12post",
     l1: ["3", "03_樣式策略"], l2: ["4", "04_React與狀態"],
-    hw: MEAS + "04a_作業單_R1.md", note: "R1 啟動；前測含 W11 保留題" },
+    hw: MEAS + "04d_作業單_H2.md", note: "H2：樣式策略與資料流；前測含 W11 保留題" },
   { id: "W13", pre: "W13pre", post: "W13post",
     l1: ["5", "05_TypeScript與Zod"], l2: ["6", "06_資料模型與ORM"],
-    hw: MEAS + "04a_作業單_R1.md", note: "R1 收件；前測含 W12 保留題" },
+    hw: MEAS + "04e_作業單_H3.md", note: "H3：結構定義與錯誤；前測含 W12 保留題" },
   { id: "W14", pre: "W14pre", post: "W14post",
     l1: ["7", "07_資料庫與serverless"], l2: ["8", "08_REST契約與錯誤處理"],
-    hw: MEAS + "04b_作業單_R2.md", note: "R2 啟動；前測含 W13 保留題" },
+    hw: MEAS + "04b_作業單_R2.md", note: "H4：契約與連線策略；前測含 W13 保留題" },
   { id: "W15", pre: "W15pre", post: "W15post",
     l1: ["9", "09_身分驗證與授權"], l2: ["10", "10_即時更新與可觀測性"],
-    hw: MEAS + "04b_作業單_R2.md", note: "R2 收件；埋錯測驗" },
+    hw: MEAS + "04f_作業單_H5.md", note: "H5：權限與即時選型；埋錯測驗" },
   { id: "W16", pre: "W16pre", post: "W16post",
     l1: ["11", "11_一致性冪等與競態"], l2: ["12", "12_選型方法"],
-    hw: MEAS + "04c_作業單_R3.md", note: "R3 收件、T3 全範圍後測、成果展" }
+    hw: MEAS + "04c_作業單_R3.md", note: "H6：一致性與選型；T3 全範圍後測、成果展" }
 ];
 
 const weekCard = (w) => `
