@@ -26,6 +26,19 @@
     function p(n) { return n < 10 ? "0" + n : "" + n; }
     return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) + " " + p(d.getHours()) + ":" + p(d.getMinutes()) + ":" + p(d.getSeconds());
   }
+  function topicName() {
+    if (set.id === "T0" || set.id === "T3") return "全範圍";
+    var t = set.title || "";
+    var i = t.indexOf("：");
+    if (i >= 0) return t.slice(i + 1).trim();
+    var m = t.match(/（([^）]+)）/);
+    return m ? m[1] : t;
+  }
+  function fileBase() {
+    var kind = set.kind === "pre" ? "前測" : "後測";
+    var name = (student.sid || "學號") + "-" + kind + "-" + topicName();
+    return name.replace(/[\\/:*?"<>|]/g, "_");
+  }
   function aiBadge() {
     return set.aiAllowed
       ? '<span class="badge ai-ok">本份可用 AI</span>'
@@ -110,6 +123,7 @@
     if (timerId) { clearInterval(timerId); timerId = null; }
     var used = startedAt ? Math.round((Date.now() - startedAt) / 1000) : set.minutes * 60;
     var html = '<h2>已交卷</h2><p class="muted">學號：' + esc(student.sid) + '｜姓名：' + esc(student.name) + '｜用時：' + fmt(used) + (auto ? "（時間到自動交卷）" : "") + '</p>';
+    html += '<p class="muted">PDF 檔名：<b>' + esc(fileBase()) + '.pdf</b></p>';
     if (set.aiAllowed) {
       html += '<div class="quiz-form"><label>token 用量（看截圖填）<input id="tok" placeholder="例如 12345"></label><label>對話回合數<input id="turns" placeholder="例如 8"></label></div><p class="warn">請先截圖 token 用量頁面（含日期與模型）。</p>';
     }
@@ -119,7 +133,11 @@
       tokenInfo.tokens = (document.getElementById("tok") || {}).value || "";
       tokenInfo.turns = (document.getElementById("turns") || {}).value || "";
       buildPrint(used, auto);
+      var oldTitle = document.title;
+      document.title = fileBase();
       window.print();
+      window.addEventListener("afterprint", function () { document.title = oldTitle; }, { once: true });
+      setTimeout(function () { document.title = oldTitle; }, 1500);
     });
     document.getElementById("again").addEventListener("click", function () { location.reload(); });
   }
@@ -143,7 +161,7 @@
       }
       html += '</div>';
     });
-    html += '<p class="foot">上傳 Teams 作業區，檔名：' + esc(set.id) + '_學號_姓名.pdf</p></div>';
+    html += '<p class="foot">上傳 Teams 作業區，檔名：' + esc(fileBase()) + '.pdf</p></div>';
     printRoot.innerHTML = html;
   }
 
