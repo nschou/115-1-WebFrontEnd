@@ -47,4 +47,5 @@ export const MATERIALS = [
   ,{ audience: "learn", type: "導覽", group: "技術與架構", title: "每週流程（W11–W16）", desc: "前測→教學→後測→作業，全部在同一頁", href: "weeks.html", kind: "page" }
   ,{ audience: "teach", type: "講義", group: "技術與架構", title: "第 0 講：開發環境（Bun／Next.js／Prisma／Neon）", desc: "安裝、設定、驗證與常見錯誤", href: "../90_技術與架構/00_開發環境/00_講義.md", kind: "doc" }
   ,{ audience: "learn", type: "操作手冊", group: "技術與架構", title: "環境手冊：把環境裝起來", desc: "Step 0–10，每步有完成條件", href: "../90_技術與架構/00_開發環境/00_學生操作手冊.md", kind: "doc" }
+  ,{ audience: "ref", type: "附錄", group: "技術與架構", title: "附錄：gRPC 開發環境（選做）", desc: "proto、server、client 與瀏覽器端成本", href: "../90_技術與架構/00_開發環境/01_附錄_gRPC環境.md", kind: "doc" }
 ];
