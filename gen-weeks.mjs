@@ -75,7 +75,8 @@ const html = `<!doctype html>
       <h1>每週流程：15 前測 → 教學 → 15 後測 → 作業</h1>
       <p class="lead">上課不用離開這個網站：前測與後測在 <b>quiz.html</b>，講義與手冊用閱讀器打開，作業單在這裡領取。只有「使用 AI 與其他工具」需要切換視窗。</p>
       <p><a class="primary" href="quiz.html">測驗列表</a> <a class="secondary" href="tech.html">12 講總覽</a> <a class="secondary" href="reader.html?file=${enc(MEAS + "00_六週教案.md")}">六週教案</a></p>
-      <p class="note-line">前測不可使用 AI；後測可用 AI（交卷前要截圖 token）。每份 15 分鐘，時間到自動交卷並產生 PDF。</p>
+      <p class="note-line">前測不可使用 AI；後測可用 AI（交卷前要截圖 token）。</p>
+      <div class="callout"><b>開課前先完成：第 0 講（開發環境）</b><br>Bun、Next.js、Prisma、Neon、Tailwind 裝好再上 W11；<a class="secondary" href="reader.html?file=${enc(TECH + "00_開發環境/00_學生操作手冊.md")}">環境手冊</a> <a class="ghost" href="reader.html?file=${enc(TECH + "00_開發環境/00_講義.md")}">第 0 講講義</a></div>每份 15 分鐘，時間到自動交卷並產生 PDF。</p>
     </section>
 ${WEEKS.map(weekCard).join("\n")}
     <footer class="site-footer">

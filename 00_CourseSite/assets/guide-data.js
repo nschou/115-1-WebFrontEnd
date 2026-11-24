@@ -758,7 +758,7 @@ window.GUIDE_SESSION = {
       { no: 5, title: "權限與即時選型", lectures: [{ no: 9, folder: "09_身分驗證與授權" }, { no: 10, folder: "10_即時更新與可觀測性" }], pre: "quiz.html?set=W15pre", post: "quiz.html?set=W15post", homework: "../90_技術與架構/實驗與量測/04f_作業單_H5.md" },
       { no: 6, title: "一致性與選型", lectures: [{ no: 11, folder: "11_一致性冪等與競態" }, { no: 12, folder: "12_選型方法" }], pre: "quiz.html?set=W16pre", post: "quiz.html?set=W16post", homework: "../90_技術與架構/實驗與量測/04c_作業單_R3.md" }
     ],
-    extra: [ { label: "每週流程", href: "weeks.html" }, { label: "課程地圖", href: "reader.html?file=" + encodeURIComponent("../90_技術與架構/00_課程地圖.md") } ]
+    extra: [ { label: "第 0 講：開發環境", href: "reader.html?file=" + encodeURIComponent("../90_技術與架構/00_開發環境/00_講義.md") }, { label: "環境手冊", href: "reader.html?file=" + encodeURIComponent("../90_技術與架構/00_開發環境/00_學生操作手冊.md") }, { label: "每週流程", href: "weeks.html" }, { label: "課程地圖", href: "reader.html?file=" + encodeURIComponent("../90_技術與架構/00_課程地圖.md") } ]
   },
   "20": {
     pre: "quiz.html?set=T0", post: "quiz.html?set=W11post",
