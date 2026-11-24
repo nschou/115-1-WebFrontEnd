@@ -1,6 +1,6 @@
 /* 由 check-all.mjs 產生，不要手改 */
 globalThis.CHECK_SUMMARY = {
-  "generatedAt": "2026-11-24T18:48:31.181Z",
+  "generatedAt": "2026-11-24T18:52:15.407Z",
   "allOk": true,
   "layers": [
     {
