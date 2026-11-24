@@ -15,7 +15,9 @@ window.QUIZ_DATA = {
         { id:"T0-5", type:"single", text:"「顧客看不到別人的訂單」屬於下列哪一項？", options:["身分驗證（確認你是誰）","授權（確認你能做什麼）","快取（把資料暫存起來）","渲染（把資料畫成畫面）"] },
         { id:"T0-6", type:"short", text:"列出一次網頁請求八個步驟中的任三個。" },
         { id:"T0-7", type:"single", text:"要讓資料「可以舊幾秒」，主要靠什麼設定？", options:["快取有效期（Cache-Control 標頭）","資料庫索引","增加伺服器數量","改狀態碼"] },
-        { id:"T0-8", type:"short", text:"你的系統中，哪一項資料最需要「強一致（consistency，讀到的一定是最新版本）」？為什麼？" }
+        { id:"T0-8", type:"short", text:"你的系統中，哪一項資料最需要「強一致（consistency，讀到的一定是最新版本）」？為什麼？" },
+        { id:"T0-9", type:"single", text:"Bun（JavaScript 的執行環境）在這門課主要用來做什麼？", options:["執行專案與安裝套件","設計資料庫","畫介面","傳送電子郵件"] },
+        { id:"T0-10", type:"single", text:"Tailwind CSS（工具優先的樣式框架）的樣式主要寫在哪裡？", options:["HTML 的 class","資料庫","JavaScript 變數","伺服器設定檔"] }
       ] },
     { id: "W11post", kind: "post", aiAllowed: true, minutes: 15,
       title: "W11 後測：全端地圖與渲染",
@@ -24,7 +26,8 @@ window.QUIZ_DATA = {
         { id:"W11p-1", type:"short", text:"畫出你的四層架構（用戶端／邊緣／伺服器／資料層），並標出請求與回應的方向。" },
         { id:"W11p-2", type:"single", text:"哪一種腳本載入屬性代表「HTML 解析完才依序執行」？", options:["一般 script（下載並執行，會阻塞解析）","async（下載完就執行，順序不保證）","defer（解析完才依序執行）","module（以模組方式載入）"] },
         { id:"W11p-3", type:"short", text:"說明你的系統中，哪一步最可能超過 1 秒，怎麼量？" },
-        { id:"W11p-4", type:"short", text:"（不可使用 AI）寫出瀏覽器渲染路徑六步中的任三步。", noAI:true }
+        { id:"W11p-4", type:"short", text:"（不可使用 AI）寫出瀏覽器渲染路徑六步中的任三步。", noAI:true },
+        { id:"W11p-5", type:"single", text:"Next.js（React 的應用框架）主要負責什麼？", options:["路由與渲染","資料庫","樣式","版本控制"] }
       ] },
     { id: "W12pre", kind: "pre", aiAllowed: false, minutes: 15,
       title: "W12 前測：樣式策略與前端狀態",
@@ -33,7 +36,8 @@ window.QUIZ_DATA = {
         { id:"W12r-1", type:"single", text:"「元件庫（component library）」與「設計系統（design system）」的主要差別是什麼？", options:["免費與付費的差別","元件庫給你可修改的元件原始碼；設計系統給整套世界觀、規範與元件","一個只能用在 React","兩者沒有差別"] },
         { id:"W12r-2", type:"short", text:"為什麼顏色要集中在設計變數（design tokens，例如 --color-primary）而不是寫死在元件裡？" },
         { id:"W12r-3", type:"single", text:"「展開／收合」屬於哪一種狀態？", options:["伺服器端狀態（真相在伺服器）","用戶端狀態（只存在畫面）","資料庫狀態","網路狀態"] },
-        { id:"W12r-4", type:"short", text:"（上週保留）四層架構中，哪一層負責把檔案送到離使用者最近的節點？", noAI:true }
+        { id:"W12r-4", type:"short", text:"（上週保留）四層架構中，哪一層負責把檔案送到離使用者最近的節點？", noAI:true },
+        { id:"W12r-5", type:"short", text:"Tailwind 的 class 與設計變數（design tokens）怎麼搭配？" }
       ] },
     { id: "W12post", kind: "post", aiAllowed: true, minutes: 15,
       title: "W12 後測：樣式策略與前端狀態",
@@ -78,7 +82,8 @@ window.QUIZ_DATA = {
         { id:"W14p-1", type:"short", text:"為「查詢取餐號碼」寫一個 REST（以資源為中心的介面風格）端點：方法、路徑、輸入、輸出。" },
         { id:"W14p-2", type:"single", text:"新增一個欄位到 API（應用程式介面）回應，通常屬於哪一種變更？", options:["破壞性變更（舊用戶端會壞）","非破壞性變更（舊用戶端仍可用）","版本升級","錯誤"] },
         { id:"W14p-3", type:"short", text:"說明你的資料庫連線策略，為什麼不會把連線用完。" },
-        { id:"W14p-4", type:"short", text:"（不可使用 AI）寫出一個 4xx（用戶端錯誤）與一個 5xx（伺服器錯誤）的例子，並說明該不該重試。", noAI:true }
+        { id:"W14p-4", type:"short", text:"（不可使用 AI）寫出一個 4xx（用戶端錯誤）與一個 5xx（伺服器錯誤）的例子，並說明該不該重試。", noAI:true },
+        { id:"W14p-5", type:"single", text:"哪一種情況最適合 gRPC（遠端程序呼叫框架）而不是 REST（以資源為中心的介面風格）？", options:["服務與服務之間的高頻呼叫","瀏覽器直接呼叫","需要 HTTP 快取","公開 API（應用程式介面）"] }
       ] },
     { id: "W15pre", kind: "pre", aiAllowed: false, minutes: 15,
       title: "W15 前測：驗證授權與即時更新",
@@ -114,7 +119,8 @@ window.QUIZ_DATA = {
         { id:"W16p-1", type:"short", text:"寫出付款的冪等（idempotent）規則：同一個付款請求重送兩次，怎麼只扣一次？" },
         { id:"W16p-2", type:"single", text:"決策矩陣（decision matrix，用準則與權重比較選項）至少要有哪三樣？", options:["準則、權重、評分","標題、作者、日期","版本、價格、授權","前端、後端、資料庫"] },
         { id:"W16p-3", type:"short", text:"用一個決策寫 ADR（架構決策紀錄）的六個欄位（可簡寫）。" },
-        { id:"W16p-4", type:"short", text:"（不可使用 AI）說明你系統中哪一項資料可以「最終一致（eventual consistency，短暫落後但最後相同）」，為什麼。", noAI:true }
+        { id:"W16p-4", type:"short", text:"（不可使用 AI）說明你系統中哪一項資料可以「最終一致（eventual consistency，短暫落後但最後相同）」，為什麼。", noAI:true },
+        { id:"W16p-5", type:"single", text:"前端要直接呼叫、且需要瀏覽器原生支援，應選哪一種介面風格？", options:["REST（以資源為中心）","gRPC（遠端程序呼叫）","FTP","SMTP"] }
       ] },
     { id: "T3", kind: "post", aiAllowed: false, minutes: 15,
       title: "W16 全範圍後測（無 AI）",
@@ -127,7 +133,9 @@ window.QUIZ_DATA = {
         { id:"T3-5", type:"single", text:"「店員不能替顧客按下『已取餐』」屬於哪一項？", options:["身分驗證","授權","快取","渲染"] },
         { id:"T3-6", type:"short", text:"列出瀏覽器渲染路徑六步中的任三步。" },
         { id:"T3-7", type:"single", text:"事件序號（sequence）的用途是什麼？", options:["判斷事件的新舊","加密","壓縮","計費"] },
-        { id:"T3-8", type:"short", text:"你的系統中，哪一項資料可以容許「最終一致」？為什麼？" }
+        { id:"T3-8", type:"short", text:"你的系統中，哪一項資料可以容許「最終一致」？為什麼？" },
+        { id:"T3-9", type:"single", text:"Prisma（ORM，物件關聯對映）的角色是什麼？", options:["把資料表變成程式物件","CSS 框架","測試工具","部署平台"] },
+        { id:"T3-10", type:"single", text:"shadcn/ui 是什麼？", options:["以 Tailwind 為基礎、把元件原始碼放進專案的集合","資料庫","瀏覽器","部署平台"] }
       ] }
   ]
 };
