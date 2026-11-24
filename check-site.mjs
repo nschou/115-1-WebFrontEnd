@@ -148,6 +148,25 @@ console.log("\n【階段課堂連結】");
   else ok("階段課堂連結 " + Object.keys(sess).length + " 個階段全部有效");
 }
 
+/* ---------- ⑤c 測驗題目用語 ---------- */
+console.log("\n【測驗題目用語】");
+{
+  const qd = fs.readFileSync(path.join(site, "assets", "quiz-data.js"), "utf8");
+  const win = {};
+  new Function("window", qd)(win);
+  const ABBR = /\b(CSR|SSR|SSG|SSE|ORM|REST|CORS|CDN|API|N\+1|PATCH|GET|POST|DELETE|UI|UX|SQL|DB|S[1-7])\b(?![（，])/;
+  const issues = [];
+  (win.QUIZ_DATA.sets || []).forEach((s) => {
+    (s.questions || []).forEach((q) => {
+      [q.text].concat(q.options || []).forEach((txt) => {
+        if (ABBR.test(txt)) issues.push(s.id + "/" + q.id + "：" + String(txt).slice(0, 40));
+      });
+    });
+  });
+  if (issues.length) issues.slice(0, 10).forEach((x) => bad("縮寫未展開：" + x));
+  else ok("題目與選項沒有未展開的縮寫");
+}
+
 /* ---------- ② 站內連結 ---------- */
 console.log("\n【站內連結】");
 for (const page of ["index.html", "reader.html", "deliverables.html", "flow.html", "materials.html", "case.html", "tech.html", "quiz.html", "weeks.html"]) {
