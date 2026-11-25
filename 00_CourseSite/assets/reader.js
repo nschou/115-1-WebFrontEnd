@@ -116,7 +116,7 @@
     rawLink.href = url.href;
     pathNode.textContent = sourceLabel(url);
     try {
-      var response = await fetch(url.href);
+      var response = await fetch(url.href, { cache: "no-store" });
       if (!response.ok) throw new Error("HTTP " + response.status);
       var text = await response.text();
       var extension = url.pathname.split(".").pop().toLowerCase();
