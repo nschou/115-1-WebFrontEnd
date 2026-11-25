@@ -190,6 +190,20 @@ console.log("\n【教材連結】");
   }
   if (issues.length) issues.slice(0, 10).forEach((x) => bad("教材連結失效：" + x));
   else ok("教材內的練習資料連結全部有效");
+
+  const unlinked = [];
+  for (const f of mdFiles) {
+    const lines = fs.readFileSync(f, "utf8").split("\n");
+    let inFence = false;
+    lines.forEach((line, i) => {
+      if (/^\s*\`\`\`/.test(line)) { inFence = !inFence; return; }
+      if (inFence) return;
+      const stripped = line.replace(/\]\([^)]*\)/g, "]");
+      if (/00_練習資料\//.test(stripped)) unlinked.push(path.basename(f) + ":" + (i + 1));
+    });
+  }
+  if (unlinked.length) unlinked.slice(0, 10).forEach((x) => bad("練習資料路徑未加連結：" + x));
+  else ok("練習資料路徑都已加上連結");
 }
 
 /* ---------- ② 站內連結 ---------- */
