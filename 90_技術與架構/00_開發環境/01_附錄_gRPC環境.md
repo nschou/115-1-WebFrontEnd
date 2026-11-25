@@ -5,19 +5,19 @@
 
 ## 1. 安裝
 
-````powershell
+```powershell
 bun add @grpc/grpc-js @grpc/proto-loader
-````
+```
 
 需要產生強型別時再加：
 
-````powershell
+```powershell
 bun add -d ts-proto
-````
+```
 
 ## 2. 定義服務
 
-````proto
+```proto
 // proto/order.proto
 syntax = "proto3";
 package order;
@@ -26,11 +26,11 @@ service OrderService {
 }
 message OrderRequest { string id = 1; }
 message OrderReply { string id = 1; string status = 2; }
-````
+```
 
 ## 3. 伺服器
 
-````ts
+```ts
 // server.ts
 import * as grpc from "@grpc/grpc-js";
 import * as loader from "@grpc/proto-loader";
@@ -45,11 +45,11 @@ server.addService(proto.order.OrderService.service, {
 server.bindAsync("0.0.0.0:50051", grpc.ServerCredentials.createInsecure(), () => {
   console.log("gRPC on 50051");
 });
-````
+```
 
 ## 4. 用戶端
 
-````ts
+```ts
 // client.ts
 import * as grpc from "@grpc/grpc-js";
 import * as loader from "@grpc/proto-loader";
@@ -62,7 +62,7 @@ client.GetOrder({ id: "1042" }, (err: any, res: any) => {
   if (err) throw err;
   console.log(res);
 });
-````
+```
 
 ## 5. 執行
 
