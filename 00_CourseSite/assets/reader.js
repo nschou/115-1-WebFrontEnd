@@ -36,7 +36,7 @@
      結果 D_交付物 這類新目錄永遠打不開。靜態課程站所有檔案本來就是公開的。 */
   function isAllowedPath(url) {
     if (url.origin !== location.origin) return false;
-    return /\.(md|txt|css)$/i.test(url.pathname);
+    return /\.(md|txt)$/i.test(url.pathname);
   }
   function resolveRequested(file) {
     if (!file) return null;
@@ -70,6 +70,7 @@
       if (!isAllowedPath(target) && !allowed.has(target.pathname)) {
         // 非 md（例如 flow.html）：保留原連結，但改成絕對網址，避免以 reader.html 為基準解析錯誤
         link.href = target.href;
+        if (/\.(css|json|ps1|zip|csv|html)$/i.test(target.pathname)) link.setAttribute("download", "");
         return;
       }
       var rawPath = target.pathname + target.search + target.hash;
