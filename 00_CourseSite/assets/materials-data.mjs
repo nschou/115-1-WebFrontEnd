@@ -48,4 +48,6 @@ export const MATERIALS = [
   ,{ audience: "teach", type: "講義", group: "技術與架構", title: "第 0 講：開發環境（Bun／Next.js／Prisma／Neon）", desc: "安裝、設定、驗證與常見錯誤", href: "../90_技術與架構/00_開發環境/00_講義.md", kind: "doc" }
   ,{ audience: "learn", type: "操作手冊", group: "技術與架構", title: "環境手冊：把環境裝起來", desc: "Step 0–10，每步有完成條件", href: "../90_技術與架構/00_開發環境/00_學生操作手冊.md", kind: "doc" }
   ,{ audience: "ref", type: "附錄", group: "技術與架構", title: "附錄：gRPC 開發環境（選做）", desc: "proto、server、client 與瀏覽器端成本", href: "../90_技術與架構/00_開發環境/01_附錄_gRPC環境.md", kind: "doc" }
+  ,{ audience: "ref", type: "素材", group: "技術與架構", title: "課堂練習資料（落後可用）", desc: "系統摘要、訂單 JSON、API 契約、示範網站", href: "../90_技術與架構/00_練習資料/00_使用說明.md", kind: "doc" }
+  ,{ audience: "ref", type: "素材", group: "技術與架構", title: "練習資料：早餐店系統摘要", desc: "四層、角色、狀態、頁面、資料表、API", href: "../90_技術與架構/00_練習資料/01_系統摘要.md", kind: "doc" }
 ];

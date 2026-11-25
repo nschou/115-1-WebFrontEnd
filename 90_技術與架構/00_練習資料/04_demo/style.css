@@ -1,0 +1,29 @@
+:root {
+  --color-primary: #1d4ed8;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --radius-card: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif;
+  background: #f3f4f6;
+  color: var(--color-text);
+}
+
+.wrap { max-width: 720px; margin: 32px auto; padding: 0 16px; }
+h1 { font-size: 24px; margin: 0 0 8px; }
+.hint { color: #6b7280; font-size: 14px; }
+
+.list { display: grid; gap: 12px; }
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.badge { color: #2563eb; font-weight: 700; }
+.muted { color: #6b7280; font-size: 13px; }

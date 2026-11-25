@@ -1,0 +1,132 @@
+{
+  "note": "示例資料，供課堂練習使用",
+  "orders": [
+    {
+      "id": "1042",
+      "status": "S5",
+      "items": [
+        {
+          "name": "蛋餅",
+          "quantity": 2
+        },
+        {
+          "name": "豆漿",
+          "quantity": 1
+        }
+      ],
+      "pickupNumber": null,
+      "locker": null
+    },
+    {
+      "id": "1043",
+      "status": "S6",
+      "items": [
+        {
+          "name": "漢堡",
+          "quantity": 1
+        }
+      ],
+      "pickupNumber": "A-1043",
+      "locker": "3"
+    },
+    {
+      "id": "1044",
+      "status": "S4",
+      "items": [
+        {
+          "name": "蘿蔔糕",
+          "quantity": 1
+        },
+        {
+          "name": "奶茶",
+          "quantity": 1
+        }
+      ],
+      "pickupNumber": null,
+      "locker": null
+    },
+    {
+      "id": "1045",
+      "status": "S3",
+      "items": [
+        {
+          "name": "鐵板麵",
+          "quantity": 1
+        }
+      ],
+      "pickupNumber": null,
+      "locker": null
+    },
+    {
+      "id": "1046",
+      "status": "S7",
+      "items": [
+        {
+          "name": "蛋餅",
+          "quantity": 1
+        }
+      ],
+      "pickupNumber": "A-1046",
+      "locker": "1"
+    },
+    {
+      "id": "1047",
+      "status": "SX1",
+      "items": [
+        {
+          "name": "總匯三明治",
+          "quantity": 1
+        }
+      ],
+      "pickupNumber": null,
+      "locker": null
+    },
+    {
+      "id": "1048",
+      "status": "S2",
+      "items": [
+        {
+          "name": "豆漿",
+          "quantity": 2
+        }
+      ],
+      "pickupNumber": null,
+      "locker": null
+    },
+    {
+      "id": "1049",
+      "status": "S6",
+      "items": [
+        {
+          "name": "漢堡",
+          "quantity": 2
+        },
+        {
+          "name": "紅茶",
+          "quantity": 2
+        }
+      ],
+      "pickupNumber": "B-1049",
+      "locker": "5"
+    },
+    {
+      "id": "1050",
+      "status": "S4",
+      "items": [
+        {
+          "name": "蛋餅",
+          "quantity": 3
+        }
+      ],
+      "pickupNumber": null,
+      "locker": null
+    },
+    {
+      "id": "1051",
+      "status": "S1",
+      "items": [],
+      "pickupNumber": null,
+      "locker": null
+    }
+  ]
+}
