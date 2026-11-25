@@ -1,6 +1,6 @@
 /* 由 verify-stories.mjs 自動產生，不要手改 */
 globalThis.CHECKS_REPORT = {
-  "generatedAt": "2026-11-25T06:11:21.931Z",
+  "generatedAt": "2026-11-25T06:27:30.004Z",
   "total": 25,
   "passed": 25,
   "fails": 0,

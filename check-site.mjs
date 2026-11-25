@@ -204,6 +204,17 @@ console.log("\n【教材連結】");
   }
   if (unlinked.length) unlinked.slice(0, 10).forEach((x) => bad("練習資料路徑未加連結：" + x));
   else ok("練習資料路徑都已加上連結");
+
+  const brokenRel = [];
+  for (const f of mdFiles) {
+    const txt = fs.readFileSync(f, "utf8");
+    for (const m of txt.matchAll(/\]\((\.\.\/[^)#?]+)/g)) {
+      const rel = decodeURIComponent(m[1]);
+      if (!fs.existsSync(path.resolve(path.dirname(f), rel))) brokenRel.push(path.basename(f) + " → " + rel);
+    }
+  }
+  if (brokenRel.length) brokenRel.slice(0, 10).forEach((x) => bad("教材內部相對連結失效：" + x));
+  else ok("教材內部相對連結全部有效");
 }
 
 /* ---------- ② 站內連結 ---------- */
