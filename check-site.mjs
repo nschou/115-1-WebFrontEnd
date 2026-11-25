@@ -167,6 +167,31 @@ console.log("\n【測驗題目用語】");
   else ok("題目與選項沒有未展開的縮寫");
 }
 
+/* ---------- ⑤d 教材內的練習資料連結 ---------- */
+console.log("\n【教材連結】");
+{
+  const tech = path.join(root, "90_技術與架構");
+  const mdFiles = [];
+  const walk = (d) => {
+    for (const f of fs.readdirSync(d)) {
+      const full = path.join(d, f);
+      if (fs.statSync(full).isDirectory()) walk(full);
+      else if (f.endsWith(".md")) mdFiles.push(full);
+    }
+  };
+  if (fs.existsSync(tech)) walk(tech);
+  const issues = [];
+  for (const f of mdFiles) {
+    const txt = fs.readFileSync(f, "utf8");
+    for (const m of txt.matchAll(/\]\(\.\.\/00_練習資料\/([^)#?]+)/g)) {
+      const rel = decodeURIComponent(m[1]);
+      if (!fs.existsSync(path.join(tech, "00_練習資料", rel))) issues.push(path.basename(f) + " → " + rel);
+    }
+  }
+  if (issues.length) issues.slice(0, 10).forEach((x) => bad("教材連結失效：" + x));
+  else ok("教材內的練習資料連結全部有效");
+}
+
 /* ---------- ② 站內連結 ---------- */
 console.log("\n【站內連結】");
 for (const page of ["index.html", "reader.html", "deliverables.html", "flow.html", "materials.html", "case.html", "tech.html", "quiz.html", "weeks.html"]) {
